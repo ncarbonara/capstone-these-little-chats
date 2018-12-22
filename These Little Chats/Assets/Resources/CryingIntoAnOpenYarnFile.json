@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Start",
+		"tags": " ",
+		"body": "<<clearPortrait Steve>>\n<<changeTrustValue Xander increase>>\n<<changeTrustValue Dana increase>>\n<<changeTrustValue Steve decrease>>\n\n<<if $visited_start_before is true>>\nSteve, D--... Hey, you've been here before\n[[Sure have! Next, pls!|NextNode]]\n<<else>>\nSteve, Dana and Xander, oh my!\n<<set $visited_start_before to true>>\n[[Next, pls!|NextNode]]\n<<endif>>\n",
+		"position": {
+			"x": -332,
+			"y": 1174
+		},
+		"colorID": 0
+	},
+	{
+		"title": "NextNode",
+		"tags": "",
+		"body": "<<changeTrustValue Xander decrease>>\n<<changeTrustValue Dana decrease>>\n<<changeTrustValue Steve increase>>\n\n<<activateNeutralPortrait Steve>>\n\n\nBoyhowdy, what a sudden reversal!\n[[Wow, it sure was!|WowYes]]\n[[Pff, I saw it coming...|WowNo]]",
+		"position": {
+			"x": 50,
+			"y": 1135
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WowYes",
+		"tags": "",
+		"body": "<<activateHappyPortrait Steve>>\nRight? It's crazy!\n[[Let's do it again!|Start]]\n",
+		"position": {
+			"x": -105,
+			"y": 1406
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WowNo",
+		"tags": "",
+		"body": "<<clearPortrait Steve>>\nWell, alright then, Mr. Know-it-all. \n\n[[(Restart)|Start]]",
+		"position": {
+			"x": 165,
+			"y": 1386
+		},
+		"colorID": 0
+	}
+]
