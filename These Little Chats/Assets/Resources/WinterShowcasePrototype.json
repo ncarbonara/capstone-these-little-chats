@@ -31,7 +31,7 @@
 	},
 	{
 		"title": "SecondDiscussionOldCopy",
-		"tags": "",
+		"tags": "Old_Draft",
 		"body": "Ruby: \"Yeah, I was just asking! It's been so long since we talked.\"\nRuby: \"I feel like we've been out of touch for too long. It just feels weird. I've missed this, honestly.\"\n<<revealRubyValue Ruby>>\nRuby always was the one to listen to everyone else's problems, to be there for them when they opened up. I hadn't realized how much she'd valued that.\nRuby: \"Anyway, as for me, the whole forensic science thing is still going strong.\"\nAllison: \"So, how's Washington?\"\nRuby: \"Oh, man, it's so cool! I mean it gets a little weird there with all the protests that happen, but y'know, that's D.C.!\"\n->\"Glad to hear you're enjoying it!\"\n    Ruby: \"Yeah, thanks! It's been really cool, just... far away.\"\n    Ruby: \"Y'know. From everybody.\"\n    Lance nods.\n    Lance: \"Yeah, I feel. It's really good to see you all again.\"\n    Allison: \"Yeah, for sure, Ruby, but what you're doing is important to you.\"\n    Allison: \"Besides, you and Franklin are still making the long-distance thing work, right?\"\n    Ruby: \"Oh, well... we're... um...\n    [[AwkwardFranklin]]\n->\"What do they make you study?\"\n    Ruby: \"Oh boy, yeah, there's a lot of bio and chem and whatnot. Like, a ton. Which makes sense, of course.\"\n    Ruby: \"For now I'm still working through a lot of the basic required stuff. It's cool, but it's also pretty tough.\"\n    She sighed.\n    Ruby: \"Honestly, I could use a study buddy. Lance, remember when we used to do that?\"\n    Lance: \"Yeah! You saved my algebra grade!\"\n    Ruby: \"Yeah, well, you saved me from being bored to death in Senor Abalos' class back then!\"\n    ->\"How come you haven't found a study buddy?\"\n        Ruby: \"Well, um, I was getting help from... ah, nevermind.\"\n        Allison: \"From Franklin?\"\n        [[AwkwardFranklin]]\n    ->\"I hope Franklin hasn't been distracting you too much.\"\n        Ruby: \"Well, um, the thing is...uh...\"\n        [[AwkwardFranklin]]\n->\"How've you and Franklin been doing?\"\n    Ruby: \"Oh, we're... um, well, we're...uh...\"\n    [[AwkwardFranklin]]",
 		"position": {
 			"x": 1714,
@@ -41,7 +41,7 @@
 	},
 	{
 		"title": "AwkwardFranklin",
-		"tags": "",
+		"tags": "Old_Draft",
 		"body": "She turned hesitantly to Franklin.\nFranklin, ever the phantom of the room, suddenly seemed very present.\nFranklin: \"Um...\"\nFranklin: \"We broke up.\"\nAllison: \"Oh. Okay, gotcha.\"\n->\"Sorry, we didn't know.\"\n    Allison: \"Yeah. Our mistake.\"\n    Lance: \"I'm sorry to hear that.\"\n    Franklin: \"Yeah, well... Things didn't really work out.\"\n    He just left it there.\n    Lance: \"Are you guys okay?\"\n    Ruby piped up.\n    Ruby: \"Well, it was a little sudden...\"\n    Then, Franklin cut in again.\n    Franklin: \"Right, but it made sense. We both had school, and I'm working alot.\"\n    Allison: \"Oh boy, still?\"\n->\"Is everything okay?\"\n",
 		"position": {
 			"x": 1428,
