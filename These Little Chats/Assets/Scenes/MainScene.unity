@@ -733,64 +733,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222040558}
   m_CullTransparentMesh: 0
---- !u!1 &226950028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 226950029}
-  - component: {fileID: 226950030}
-  m_Layer: 0
-  m_Name: Steve
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &226950029
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 226950028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.359598, y: -31.645145, z: -0.25260928}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &226950030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 226950028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c19cfe1d29d329440ad0a79895201857, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
-  characterPortraitGameObject: {fileID: 2005965681}
-  nameText: {fileID: 84775252}
-  portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 21300000, guid: 1f298915ea6ba427eb07781a6abef127, type: 3}
-  characterHappy: {fileID: 21300000, guid: cd962023ce1d84e8aa5f5a552151711c, type: 3}
-  characterSad: {fileID: 0}
-  characterAngry: {fileID: 0}
-  convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 0}
-  lanceValueIcon: {fileID: 0}
-  allisonValueDisplay: {fileID: 0}
-  allisonValueIcon: {fileID: 0}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
 --- !u!1 &264624101
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,11 +760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25258853aa07d504082787d4d6fa6b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steveTrust: 0
-  danaTrust: 0
-  xanderTrust: 0
-  keithTrustLevel: 0
-  steveComfortWithBeingHere: 0
   conversationsRemaining: 12
   lanceValue: 0
   lanceValueThreshhold: 1
@@ -2018,64 +1955,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1086842450}
   m_CullTransparentMesh: 0
---- !u!1 &1124975222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1124975224}
-  - component: {fileID: 1124975223}
-  m_Layer: 0
-  m_Name: Xander
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1124975223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1124975222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c19cfe1d29d329440ad0a79895201857, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
-  characterPortraitGameObject: {fileID: 0}
-  nameText: {fileID: 84775252}
-  portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 0}
-  characterHappy: {fileID: 0}
-  characterSad: {fileID: 0}
-  characterAngry: {fileID: 0}
-  convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 0}
-  lanceValueIcon: {fileID: 0}
-  allisonValueDisplay: {fileID: 0}
-  allisonValueIcon: {fileID: 0}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
---- !u!4 &1124975224
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1124975222}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.359598, y: -31.645145, z: -0.25260928}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1164686725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,64 +2178,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1215203884}
   m_CullTransparentMesh: 0
---- !u!1 &1255290255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1255290257}
-  - component: {fileID: 1255290256}
-  m_Layer: 0
-  m_Name: Dexter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1255290256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1255290255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c19cfe1d29d329440ad0a79895201857, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
-  characterPortraitGameObject: {fileID: 2005965681}
-  nameText: {fileID: 84775252}
-  portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 21300000, guid: b4bfa12f9fa9e9346b222f1586460d63, type: 3}
-  characterHappy: {fileID: 21300000, guid: 3ebba18ed0029c746a81fe80e3276a9a, type: 3}
-  characterSad: {fileID: 0}
-  characterAngry: {fileID: 0}
-  convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 0}
-  lanceValueIcon: {fileID: 0}
-  allisonValueDisplay: {fileID: 0}
-  allisonValueIcon: {fileID: 0}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
---- !u!4 &1255290257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1255290255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 342.5, y: 77.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350648173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,64 +2877,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1585924829}
   m_CullTransparentMesh: 0
---- !u!1 &1588270551
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1588270553}
-  - component: {fileID: 1588270552}
-  m_Layer: 0
-  m_Name: Dana
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1588270552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1588270551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c19cfe1d29d329440ad0a79895201857, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
-  characterPortraitGameObject: {fileID: 0}
-  nameText: {fileID: 84775252}
-  portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 0}
-  characterHappy: {fileID: 0}
-  characterSad: {fileID: 0}
-  characterAngry: {fileID: 0}
-  convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 0}
-  lanceValueIcon: {fileID: 0}
-  allisonValueDisplay: {fileID: 0}
-  allisonValueIcon: {fileID: 0}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
---- !u!4 &1588270553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1588270551}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.359598, y: -31.645145, z: -0.25260928}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805894197
 GameObject:
   m_ObjectHideFlags: 0

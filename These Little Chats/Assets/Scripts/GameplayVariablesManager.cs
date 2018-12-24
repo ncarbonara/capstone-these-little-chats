@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Contains variables for each of the character's values, the thresholds these varaibles need to
+/// hit for things to change in the branching narrative, as well as the variable containing how
+/// many conversations are remaining before the game ends.
+/// Variables from this script are accessed and changed during gameplay by YarnCommands.cs.
+/// </summary>
 public class GameplayVariablesManager : MonoBehaviour {
-
-    //Old prototype variables
-    public int steveTrust;
-    public int danaTrust;
-    public int xanderTrust;
-    public int keithTrustLevel;
-    public int steveComfortWithBeingHere;
 
     //General variables
     public int conversationsRemaining;
@@ -32,20 +31,10 @@ public class GameplayVariablesManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        steveTrust = 0;
-        danaTrust = 0;
-        xanderTrust = 0;
-        keithTrustLevel = 0;
-
         lanceValue = 0;
         allisonValue = 0;
         franklinValue = 0;
         rubyValue = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 }
