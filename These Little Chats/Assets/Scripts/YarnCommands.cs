@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UI;   //Let's us talk to UI stuff.
-using Yarn.Unity;   //Lets us talk to Yarn stuff, I think.
+using Yarn.Unity;   //Lets us talk to Yarn stuff, I believe.
 
 /// <summary>
-/// Attach this script to each character gameObject in the scene.
+/// Contains all of the functions that can be called from a Yarn sheet to alter character values,
+/// change portraits, etc.
+/// Attach this script to each character gameObject in the scene (The gameObjects called "Lance,"
+/// "Allison," etc).
 /// </summary>
 public class YarnCommands : MonoBehaviour {
 
     public VariableStorageBehaviour variableManager;
 
-    //gameplayVariablesManager is kind of poorly named and confusing, see above
+    //Note to Self: gameplayVariablesManager is kind of poorly named and confusing, because of the
+    //naming of VariableStorageBehaviour. Should probably fix.
     public GameObject gameplayVariablesManager;
     public GameObject characterPortraitGameObject;
     public GameObject nameText;
@@ -50,79 +54,6 @@ public class YarnCommands : MonoBehaviour {
         franklinValueDisplay.gameObject.SetActive(false);
         rubyValueDisplay.gameObject.SetActive(false);
     }
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
-    /*
-    /// <summary>
-    /// (Looks like this is something for Steve/Dana/Xander)
-    /// </summary>
-    /// <param name="increaseOrDecrease"></param>
-    [YarnCommand("changeTrustValue")]
-    public void ChangeTrustValue(string increaseOrDecrease)
-    {
-
-        if (increaseOrDecrease == "increase")
-        {
-            if (this.gameObject.name == "Steve")
-            {
-                gameplayVariablesManager.GetComponent<GameplayVariablesManager>().steveTrust++;
-                Debug.Log("Steve's trust in you has increased!");
-                Debug.Log("Steve Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().steveTrust.ToString());
-            } else if(this.gameObject.name == "Dana")
-            {
-                gameplayVariablesManager.GetComponent<GameplayVariablesManager>().danaTrust++;
-                Debug.Log("Dana's trust in you has increased!");
-                Debug.Log("Dana Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().danaTrust.ToString());
-            } else if(this.gameObject.name == "Xander")
-            {
-                gameplayVariablesManager.GetComponent<GameplayVariablesManager>().xanderTrust++;
-                Debug.Log("Xander's trust in you has increased!");
-                Debug.Log("Xander Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().xanderTrust.ToString());
-            }
-
-        } else if (increaseOrDecrease == "decrease")
-        {
-            if(this.gameObject.name == "Steve")
-            {
-                gameplayVariablesManager.GetComponent<GameplayVariablesManager>().steveTrust--;
-                Debug.Log("Steve's trust in you has decreased!");
-                Debug.Log("Steve Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().steveTrust.ToString());
-            }
-            else if(this.gameObject.name == "Dana")
-            {
-                gameplayVariablesManager.GetComponent<GameplayVariablesManager>().danaTrust--;
-                Debug.Log("Dana's trust in you has decreased!");
-                Debug.Log("Dana Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().danaTrust.ToString());
-            }
-            else if(this.gameObject.name == "Xander")
-            {
-                gameplayVariablesManager.GetComponent<GameplayVariablesManager>().xanderTrust--;
-                Debug.Log("Xander's trust in you has decreased!");
-                Debug.Log("Xander Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().xanderTrust.ToString());
-            }
-        }
-    }
-
-    /// <summary>
-    /// An old function used for a character I made up for a prototype.
-    /// </summary>
-    [YarnCommand("incrementKeithTrust")]
-    public void IncrementKeithTrust()
-    {
-        gameplayVariablesManager.GetComponent<GameplayVariablesManager>().keithTrustLevel++;
-        Debug.Log("Keith Trust: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().keithTrustLevel.ToString());
-
-        //If Keith trust is high/low enough, change the yarn variable, perhaps based on an exposed unity variable we can play with.
-        if(gameplayVariablesManager.GetComponent<GameplayVariablesManager>().keithTrustLevel >= 2)
-        {
-            variableManager.SetValue("$trust_Keith", new Yarn.Value(true));
-        }
-    }
-    */
 
     [YarnCommand("activateNeutralPortrait")]
     public void ActivateNeutralPortrait()
@@ -182,7 +113,7 @@ public class YarnCommands : MonoBehaviour {
 
     }
 
-    //Lance Values
+    //Functions for Lance
     /// <summary>
     /// Reveals Lance's value to the player via an addition to the UI.
     /// </summary>
@@ -233,7 +164,7 @@ public class YarnCommands : MonoBehaviour {
         }
     }
 
-    //Allison Values
+    //Functions for Allison
     /// <summary>
     /// Reveals Allison's value to the player via an addition to the UI.
     /// </summary>
@@ -285,7 +216,7 @@ public class YarnCommands : MonoBehaviour {
         }
     }
 
-    //Franklin Values
+    //Functions for Franklin
     /// <summary>
     /// Reveals to the player what Franklin's value is via an addition to the UI.
     /// </summary>
@@ -337,7 +268,7 @@ public class YarnCommands : MonoBehaviour {
         }
     }
 
-    //Ruby Values
+    //Functions for Ruby
     /// <summary>
     /// Reveals to the player what Ruby's value is via an addition to the UI.
     /// </summary>
@@ -388,12 +319,4 @@ public class YarnCommands : MonoBehaviour {
             rubyValueIcon.GetComponent<Image>().color = Color.green;
         }
     }
-
-    /*
-    public void WhoWillShareInfo()
-    {
-        int[] valueRatings;
-        valueRatings.Add(gameplayVariablesManager.GetComponent<GameplayVariablesManager>().rubyValue);
-    }
-    */
 }

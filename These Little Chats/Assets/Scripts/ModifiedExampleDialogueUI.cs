@@ -24,17 +24,18 @@ SOFTWARE.
 
 */
 
-/*
-NICK AND BEN NOTE: 
-This script is a MODIFIED version of the example script supplied by the fine people who wrote the above message.
-It works slightly differently!
-*/
-
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.Text;
 using System.Collections.Generic;
+
+/*
+NICK AND BEN NOTE: 
+This script is a MODIFIED version of the example script supplied by the fine people who wrote the 
+above license. It has the added feature of displaying/hiding a gameObject background behind the 
+text, but is otherwise identical to the original script.
+*/
 
 namespace Yarn.Unity.Example {
     /// Displays dialogue lines to the player, and sends
@@ -45,7 +46,7 @@ namespace Yarn.Unity.Example {
      * is that you provide the RunLine, RunOptions, RunCommand
      * and DialogueComplete coroutines; what they do is up to you.
      */
-    public class CustomYarnDialogueUI : Yarn.Unity.DialogueUIBehaviour
+    public class ModifiedExampleDialogueUI : Yarn.Unity.DialogueUIBehaviour
     {
 
         /// The object that contains the dialogue and the options.
