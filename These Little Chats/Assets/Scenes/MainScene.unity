@@ -761,14 +761,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationsRemaining: 12
-  lanceValue: 0
-  lanceValueThreshhold: 1
-  allisonValue: 0
-  allisonValueThreshhold: 1
-  franklinValue: 0
-  franklinValueThreshhold: 1
-  rubyValue: 0
-  rubyValueThreshhold: 1
 --- !u!4 &264624103
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,19 +1047,16 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 0}
   portraitBackground: {fileID: 0}
-  characterNeutral: {fileID: 0}
-  characterHappy: {fileID: 0}
-  characterSad: {fileID: 0}
-  characterAngry: {fileID: 0}
+  neutral: {fileID: 0}
+  happy: {fileID: 0}
+  sad: {fileID: 0}
+  angry: {fileID: 0}
   convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 0}
-  lanceValueIcon: {fileID: 0}
-  allisonValueDisplay: {fileID: 0}
-  allisonValueIcon: {fileID: 0}
-  franklinValueDisplay: {fileID: 0}
-  franklinValueIcon: {fileID: 0}
-  rubyValueDisplay: {fileID: 0}
-  rubyValueIcon: {fileID: 0}
+  valueDisplay: {fileID: 0}
+  valueIcon: {fileID: 0}
+  value: 0
+  valueThreshold: 0
+  willShareInfoYarnBool: 
 --- !u!1 &448017637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,19 +1089,16 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
-  characterHappy: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
-  characterSad: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
-  characterAngry: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
+  neutral: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
+  happy: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
+  sad: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
+  angry: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
   convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 222040558}
-  lanceValueIcon: {fileID: 1215203884}
-  allisonValueDisplay: {fileID: 132862022}
-  allisonValueIcon: {fileID: 301479591}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
+  valueDisplay: {fileID: 132862022}
+  valueIcon: {fileID: 301479591}
+  value: 0
+  valueThreshold: 1
+  willShareInfoYarnBool: $allison_will_share_info
 --- !u!4 &448017639
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,19 +1561,16 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
-  characterHappy: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
-  characterSad: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
-  characterAngry: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
+  neutral: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
+  happy: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
+  sad: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
+  angry: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
   convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 222040558}
-  lanceValueIcon: {fileID: 1215203884}
-  allisonValueDisplay: {fileID: 132862022}
-  allisonValueIcon: {fileID: 301479591}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
+  valueDisplay: {fileID: 222040558}
+  valueIcon: {fileID: 1215203884}
+  value: 0
+  valueThreshold: 1
+  willShareInfoYarnBool: $lance_will_share_info
 --- !u!4 &741036656
 Transform:
   m_ObjectHideFlags: 0
@@ -1860,19 +1843,16 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
-  characterHappy: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
-  characterSad: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
-  characterAngry: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
+  neutral: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
+  happy: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
+  sad: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
+  angry: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
   convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 222040558}
-  lanceValueIcon: {fileID: 1215203884}
-  allisonValueDisplay: {fileID: 132862022}
-  allisonValueIcon: {fileID: 301479591}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
+  valueDisplay: {fileID: 289046281}
+  valueIcon: {fileID: 2023804046}
+  value: 0
+  valueThreshold: 1
+  willShareInfoYarnBool: $franklin_will_share_info
 --- !u!4 &991207496
 Transform:
   m_ObjectHideFlags: 0
@@ -2723,19 +2703,16 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  characterNeutral: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
-  characterHappy: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
-  characterSad: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
-  characterAngry: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
+  neutral: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
+  happy: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
+  sad: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
+  angry: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
   convosRemainingText: {fileID: 416179547}
-  lanceValueDisplay: {fileID: 222040558}
-  lanceValueIcon: {fileID: 1215203884}
-  allisonValueDisplay: {fileID: 132862022}
-  allisonValueIcon: {fileID: 301479591}
-  franklinValueDisplay: {fileID: 289046281}
-  franklinValueIcon: {fileID: 2023804046}
-  rubyValueDisplay: {fileID: 1383289301}
-  rubyValueIcon: {fileID: 1350648173}
+  valueDisplay: {fileID: 1383289301}
+  valueIcon: {fileID: 1350648173}
+  value: 0
+  valueThreshold: 1
+  willShareInfoYarnBool: $ruby_will_share_info
 --- !u!4 &1565551905
 Transform:
   m_ObjectHideFlags: 0

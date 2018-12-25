@@ -22,25 +22,22 @@ public class YarnCommands : MonoBehaviour {
     public GameObject nameText;
     public GameObject portraitBackground;
 
-    public Sprite characterNeutral;
-    public Sprite characterHappy;
-    public Sprite characterSad;
-    public Sprite characterAngry;
+    public Sprite neutral;
+    public Sprite happy;
+    public Sprite sad;
+    public Sprite angry;
 
     public GameObject convosRemainingText;
 
-    public GameObject lanceValueDisplay;
-    public GameObject lanceValueIcon;
+    //Alternative generic gameObjects
+    public GameObject valueDisplay;
+    public GameObject valueIcon;
 
-    public GameObject allisonValueDisplay;
-    public GameObject allisonValueIcon;
-
-    public GameObject franklinValueDisplay;
-    public GameObject franklinValueIcon;
-
-    public GameObject rubyValueDisplay;
-    public GameObject rubyValueIcon;
-
+    //Alternative character variables handled directly in this script. Set initial values in the
+    //inspector!
+    public int value;
+    public int valueThreshold;
+    public string willShareInfoYarnBool;
 
     // Use this for initialization
     void Start () {
@@ -49,52 +46,64 @@ public class YarnCommands : MonoBehaviour {
 
         convosRemainingText.GetComponent<Text>().text = gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining.ToString() + " TALKS LEFT";
 
-        lanceValueDisplay.gameObject.SetActive(false);
-        allisonValueDisplay.gameObject.SetActive(false);
-        franklinValueDisplay.gameObject.SetActive(false);
-        rubyValueDisplay.gameObject.SetActive(false);
+        valueDisplay.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Activates this character's portrait display, and switches in their neutral portrait.
+    /// </summary>
     [YarnCommand("activateNeutralPortrait")]
     public void ActivateNeutralPortrait()
     {
-        characterPortraitGameObject.GetComponent<Image>().sprite = characterNeutral;
+        characterPortraitGameObject.GetComponent<Image>().sprite = neutral;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Activates this character's portrait display, and switches in their happy portrait.
+    /// </summary>
     [YarnCommand("activateHappyPortrait")]
     public void ActivateHappyPortrait()
     {
-        characterPortraitGameObject.GetComponent<Image>().sprite = characterHappy;
+        characterPortraitGameObject.GetComponent<Image>().sprite = happy;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Activates this character's portrait display, and switches in their sad portrait.
+    /// </summary>
     [YarnCommand("activateSadPortrait")]
     public void ActivateSadPortrait()
     {
-        characterPortraitGameObject.GetComponent<Image>().sprite = characterSad;
+        characterPortraitGameObject.GetComponent<Image>().sprite = sad;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Activates this character's portrait display, and switches in their angry portrait.
+    /// </summary>
     [YarnCommand("activateAngryPortrait")]
     public void ActivateAngryPortrait()
     {
-        characterPortraitGameObject.GetComponent<Image>().sprite = characterAngry;
+        characterPortraitGameObject.GetComponent<Image>().sprite = angry;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Clears and deactivates all portraits.
+    /// </summary>
     [YarnCommand("clearPortrait")]
     public void ClearPortrait()
     {
@@ -105,218 +114,64 @@ public class YarnCommands : MonoBehaviour {
         portraitBackground.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Causes the UI text for the number of conversations left to tick down one conversation.
+    /// </summary>
     [YarnCommand("passTime")]
     public void passTime()
     {
         gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining--;
         convosRemainingText.GetComponent<Text>().text = gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining.ToString() + " TALKS LEFT";
-
     }
 
-    //Functions for Lance
     /// <summary>
-    /// Reveals Lance's value to the player via an addition to the UI.
+    /// Reveals the character's value to the player via an addition to the UI.
     /// </summary>
-    [YarnCommand("revealLanceValue")]
-    public void RevealLanceValue()
+    [YarnCommand("revealValue")]
+    public void RevealValue()
     {
-        lanceValueDisplay.gameObject.SetActive(true);
+        valueDisplay.gameObject.SetActive(true);
     }
 
     /// <summary>
-    /// Increases Lance's value.
+    /// Increases the character's value.
     /// </summary>
-    [YarnCommand("increaseLanceValue")]
-    public void IncreaseLanceValue()
+    [YarnCommand("increaseValue")]
+    public void IncreaseValue()
     {
-        ChangeLanceValue(true);
+        ChangeValue(true);
     }
 
     /// <summary>
-    /// Decreases Lance's value.
+    /// Decreases the character's value.
     /// </summary>
-    [YarnCommand("decreaseLanceValue")]
-    public void DecreaseLanceValue()
+    [YarnCommand("decreaseValue")]
+    public void DecreaseValue()
     {
-        ChangeLanceValue(false);
+        ChangeValue(false);
     }
 
     /// <summary>
-    /// Handles all the changes for Lance's value, positive or negative.
+    /// Handles all the changes for the character's value, positive or negative.
     /// </summary>
-    void ChangeLanceValue(bool isPositiveChange)
-    {
-        if (isPositiveChange == true)
-        {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().lanceValue++;
-        } else if (isPositiveChange == false)
-        {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().lanceValue--;
-        }
-
-        Debug.Log("Lance Value: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().lanceValue.ToString());
-
-        //If Lance value is high/low enough, change the yarn variable.
-        if(gameplayVariablesManager.GetComponent<GameplayVariablesManager>().lanceValue >= gameplayVariablesManager.GetComponent<GameplayVariablesManager>().lanceValueThreshhold)
-        {
-            variableManager.SetValue("$lance_will_share_info", new Yarn.Value(true));
-            lanceValueIcon.GetComponent<Image>().color = Color.green;
-        }
-    }
-
-    //Functions for Allison
-    /// <summary>
-    /// Reveals Allison's value to the player via an addition to the UI.
-    /// </summary>
-    [YarnCommand("revealAllisonValue")]
-    public void RevealAllisonValue()
-    {
-        allisonValueDisplay.gameObject.SetActive(true);
-    }
-
-    /// <summary>
-    /// Increases Allison's value.
-    /// </summary>
-    [YarnCommand("increaseAllisonValue")]
-    public void IncreaseAllisonValue()
-    {
-        ChangeAllisonValue(true);
-    }
-
-    /// <summary>
-    /// Decreases Allison's value.
-    /// </summary>
-    [YarnCommand("decreaseAllisonValue")]
-    public void DecreaseAllisonValue()
-    {
-        ChangeAllisonValue(false);
-    }
-
-    /// <summary>
-    /// Handles all the changes for Allison's value, positive or negative.
-    /// </summary>
-    void ChangeAllisonValue(bool isPositiveChange)
+    void ChangeValue(bool isPositiveChange)
     {
         if(isPositiveChange == true)
         {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().allisonValue++;
+            value++;
         }
         else if(isPositiveChange == false)
         {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().allisonValue--;
+            value--;
         }
 
-        Debug.Log("Allison Value: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().allisonValue.ToString());
+        Debug.Log(this.gameObject.name + " Value: " + value.ToString());
 
-        //If Allison confidence is high/low enough, change the yarn variable.
-        if(gameplayVariablesManager.GetComponent<GameplayVariablesManager>().allisonValue >= gameplayVariablesManager.GetComponent<GameplayVariablesManager>().allisonValueThreshhold)
+        //If character value is high/low enough, change a Yarn variable of the correct name.
+        if(value >= valueThreshold)
         {
-            variableManager.SetValue("$allison_will_share_info", new Yarn.Value(true));
-            allisonValueIcon.GetComponent<Image>().color = Color.green;
-        }
-    }
-
-    //Functions for Franklin
-    /// <summary>
-    /// Reveals to the player what Franklin's value is via an addition to the UI.
-    /// </summary>
-    [YarnCommand("revealFranklinValue")]
-    public void RevealFranklinValue()
-    {
-        franklinValueDisplay.gameObject.SetActive(true);
-    }
-
-    /// <summary>
-    /// Changes Franklin's value standing in a positive direction.
-    /// </summary>
-    [YarnCommand("increaseFranklinValue")]
-    public void IncreaseFranklinValue()
-    {
-        ChangeFranklinValue(true);
-    }
-
-    /// <summary>
-    /// Changes Franklin's value standing in a negative direction.
-    /// </summary>
-    [YarnCommand("decreaseFranklinValue")]
-    public void DecreaseFranklinValue()
-    {
-        ChangeFranklinValue(false);
-    }
-
-    /// <summary>
-    /// Handles all the changes for Franklin's value, positive or negative.
-    /// </summary>
-    void ChangeFranklinValue(bool isPositiveChange)
-    {
-        if(isPositiveChange == true)
-        {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().franklinValue++;
-        }
-        else if(isPositiveChange == false)
-        {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().franklinValue--;
-        }
-
-        Debug.Log("Franklin Value: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().franklinValue.ToString());
-
-        //If Franklin's value is high/low enough, change the yarn variable, perhaps based on an exposed unity variable we can play with.
-        if(gameplayVariablesManager.GetComponent<GameplayVariablesManager>().franklinValue >= gameplayVariablesManager.GetComponent<GameplayVariablesManager>().franklinValueThreshhold)
-        {
-            variableManager.SetValue("$franklin_will_share_info", new Yarn.Value(true));
-            franklinValueIcon.GetComponent<Image>().color = Color.green;
-        }
-    }
-
-    //Functions for Ruby
-    /// <summary>
-    /// Reveals to the player what Ruby's value is via an addition to the UI.
-    /// </summary>
-    [YarnCommand("revealRubyValue")]
-    public void RevealRubyValue()
-    {
-        rubyValueDisplay.gameObject.SetActive(true);
-    }
-
-    /// <summary>
-    /// Changes Ruby's value standing in a positive direction.
-    /// </summary>
-    [YarnCommand("increaseRubyValue")]
-    public void IncreaseRubyValue()
-    {
-        ChangeRubyValue(true);
-    }
-
-    /// <summary>
-    /// Changes Ruby's value standing in a negative direction.
-    /// </summary>
-    [YarnCommand("decreaseRubyValue")]
-    public void DecreaseRubyValue()
-    {
-        ChangeRubyValue(false);
-    }
-
-    /// <summary>
-    /// Handles all the changes for Ruby's value, positive or negative.
-    /// </summary>
-    void ChangeRubyValue(bool isPositiveChange)
-    {
-        if(isPositiveChange == true)
-        {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().rubyValue++;
-        }
-        else if(isPositiveChange == false)
-        {
-            gameplayVariablesManager.GetComponent<GameplayVariablesManager>().rubyValue--;
-        }
-
-        Debug.Log("Ruby Value: " + gameplayVariablesManager.GetComponent<GameplayVariablesManager>().rubyValue.ToString());
-
-        //If Ruby's value is high/low enough, change the yarn variable.
-        if(gameplayVariablesManager.GetComponent<GameplayVariablesManager>().rubyValue >= gameplayVariablesManager.GetComponent<GameplayVariablesManager>().rubyValueThreshhold)
-        {
-            variableManager.SetValue("$ruby_will_share_info", new Yarn.Value(true));
-            rubyValueIcon.GetComponent<Image>().color = Color.green;
+            variableManager.SetValue(willShareInfoYarnBool, new Yarn.Value(true));
+            valueIcon.GetComponent<Image>().color = Color.green;
         }
     }
 }
