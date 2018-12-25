@@ -10,31 +10,7 @@ using UnityEngine;
 /// </summary>
 public class GameplayVariablesManager : MonoBehaviour {
 
-    //General variables
+    //The number of conversations remaining. 
+    //Set the initial value in the inspector!
     public int conversationsRemaining;
-
-    //Lance's variables
-    public int lanceValue;
-    public int lanceValueThreshhold;
-
-    //Allison's variables
-    public int allisonValue;
-    public int allisonValueThreshhold;
-
-    //Franklin's variables
-    public int franklinValue;
-    public int franklinValueThreshhold;
-
-    //Ruby's variables
-    public int rubyValue;
-    public int rubyValueThreshhold;
-
-    // Use this for initialization
-    void Start () {
-        lanceValue = 0;
-        allisonValue = 0;
-        franklinValue = 0;
-        rubyValue = 0;
-	}
-
 }
