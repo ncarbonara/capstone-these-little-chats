@@ -29,15 +29,23 @@ public class YarnCommands : MonoBehaviour {
 
     public GameObject convosRemainingText;
 
-    //Alternative generic gameObjects
     public GameObject valueDisplay;
     public GameObject valueIcon;
 
-    //Alternative character variables handled directly in this script. Set initial values in the
-    //inspector!
+    //Character variables handled directly in this script. Set initial values in the inspector!
     public int value;
-    public int valueThreshold;
+    public int infoSharingValueThreshold;
     public string willShareInfoYarnBool;
+    public int veryPleasedValueThreshold;
+    public string veryPleasedYarnBool;
+    public int somewhatPleasedValueThreshold;
+    public string somewhatPleasedYarnBool;
+    public int neutralValueThreshold;
+    public string neutralYarnBool;
+    public int somewhatAngryValueThreshold;
+    public string somewhatAngryYarnBool;
+    public int veryAngryValueThreshold;
+    public string veryAngryYarnBool;
 
     // Use this for initialization
     void Start () {
@@ -47,6 +55,8 @@ public class YarnCommands : MonoBehaviour {
         convosRemainingText.GetComponent<Text>().text = gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining.ToString() + " TALKS LEFT";
 
         valueDisplay.gameObject.SetActive(false);
+
+        variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
     }
 
     /// <summary>
@@ -167,11 +177,77 @@ public class YarnCommands : MonoBehaviour {
 
         Debug.Log(this.gameObject.name + " Value: " + value.ToString());
 
+        /*
         //If character value is high/low enough, change a Yarn variable of the correct name.
-        if(value >= valueThreshold)
+        if(value == infoSharingValueThreshold)
         {
             variableManager.SetValue(willShareInfoYarnBool, new Yarn.Value(true));
-            valueIcon.GetComponent<Image>().color = Color.green;
+            valueIcon.GetComponent<Image>().color = Color.blue;
+            Debug.Log(this.gameObject.name + " will share info.");
+        }
+        */
+
+        //Changes a variable in the Yarn sheet that activates "very pleased" text for this 
+        //character
+        if(value == veryPleasedValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = new Color(0, 1, 0, 1);
+            Debug.Log(this.gameObject.name + " is very pleased.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "somewhat pleased" text for this
+        //character
+        if(value == somewhatPleasedValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = new Color(0, 0.5f, 0, 1);
+            Debug.Log(this.gameObject.name + " is somewhat pleased.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "neutral" text for this character
+        if(value == neutralValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = Color.white;
+            Debug.Log(this.gameObject.name + " is feeling neutral.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "somewhat angry" text for this 
+        //character
+        if(value == somewhatAngryValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = new Color(0.5f, 0, 0, 1);
+            Debug.Log(this.gameObject.name + " is somewhat angry.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "very angry" text for this character
+        if(value == veryAngryValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(true));
+            valueIcon.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+            Debug.Log(this.gameObject.name + " is very angry.");
         }
     }
 }

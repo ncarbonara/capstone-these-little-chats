@@ -1055,8 +1055,18 @@ MonoBehaviour:
   valueDisplay: {fileID: 0}
   valueIcon: {fileID: 0}
   value: 0
-  valueThreshold: 0
+  infoSharingValueThreshold: 0
   willShareInfoYarnBool: 
+  veryPleasedValueThreshold: 0
+  veryPleasedYarnBool: 
+  somewhatPleasedValueThreshold: 0
+  somewhatPleasedYarnBool: 
+  neutralValueThreshold: 0
+  neutralYarnBool: 
+  somewhatAngryValueThreshold: 0
+  somewhatAngryYarnBool: 
+  veryAngryValueThreshold: 0
+  veryAngryYarnBool: 
 --- !u!1 &448017637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,8 +1107,18 @@ MonoBehaviour:
   valueDisplay: {fileID: 132862022}
   valueIcon: {fileID: 301479591}
   value: 0
-  valueThreshold: 1
+  infoSharingValueThreshold: 1
   willShareInfoYarnBool: $allison_will_share_info
+  veryPleasedValueThreshold: 2
+  veryPleasedYarnBool: $allison_is_very_pleased
+  somewhatPleasedValueThreshold: 1
+  somewhatPleasedYarnBool: $allison_is_somewhat_pleased
+  neutralValueThreshold: 0
+  neutralYarnBool: $allison_is_feeling_neutral
+  somewhatAngryValueThreshold: -1
+  somewhatAngryYarnBool: $allison_is_somewhat_angry
+  veryAngryValueThreshold: -2
+  veryAngryYarnBool: $allison_is_very_angry
 --- !u!4 &448017639
 Transform:
   m_ObjectHideFlags: 0
@@ -1569,8 +1589,18 @@ MonoBehaviour:
   valueDisplay: {fileID: 222040558}
   valueIcon: {fileID: 1215203884}
   value: 0
-  valueThreshold: 1
+  infoSharingValueThreshold: 1
   willShareInfoYarnBool: $lance_will_share_info
+  veryPleasedValueThreshold: 2
+  veryPleasedYarnBool: $lance_is_very_pleased
+  somewhatPleasedValueThreshold: 1
+  somewhatPleasedYarnBool: $lance_is_somewhat_pleased
+  neutralValueThreshold: 0
+  neutralYarnBool: $lance_is_feeling_neutral
+  somewhatAngryValueThreshold: -1
+  somewhatAngryYarnBool: $lance_is_somewhat_angry
+  veryAngryValueThreshold: -2
+  veryAngryYarnBool: $lance_is_very_angry
 --- !u!4 &741036656
 Transform:
   m_ObjectHideFlags: 0
@@ -1851,8 +1881,18 @@ MonoBehaviour:
   valueDisplay: {fileID: 289046281}
   valueIcon: {fileID: 2023804046}
   value: 0
-  valueThreshold: 1
+  infoSharingValueThreshold: 1
   willShareInfoYarnBool: $franklin_will_share_info
+  veryPleasedValueThreshold: 2
+  veryPleasedYarnBool: $franklin_is_very_pleased
+  somewhatPleasedValueThreshold: 1
+  somewhatPleasedYarnBool: $franklin_is_somewhat_pleased
+  neutralValueThreshold: 0
+  neutralYarnBool: $franklin_is_feeling_neutral
+  somewhatAngryValueThreshold: -1
+  somewhatAngryYarnBool: $franklin_is_somewhat_angry
+  veryAngryValueThreshold: -2
+  veryAngryYarnBool: $franklin_is_very_angry
 --- !u!4 &991207496
 Transform:
   m_ObjectHideFlags: 0
@@ -2711,8 +2751,18 @@ MonoBehaviour:
   valueDisplay: {fileID: 1383289301}
   valueIcon: {fileID: 1350648173}
   value: 0
-  valueThreshold: 1
+  infoSharingValueThreshold: 1
   willShareInfoYarnBool: $ruby_will_share_info
+  veryPleasedValueThreshold: 2
+  veryPleasedYarnBool: $ruby_is_very_pleased
+  somewhatPleasedValueThreshold: 1
+  somewhatPleasedYarnBool: $ruby_is_somewhat_pleased
+  neutralValueThreshold: 0
+  neutralYarnBool: $ruby_is_feeling_neutral
+  somewhatAngryValueThreshold: -1
+  somewhatAngryYarnBool: $ruby_is_somewhat_angry
+  veryAngryValueThreshold: -2
+  veryAngryYarnBool: $ruby_is_very_angry
 --- !u!4 &1565551905
 Transform:
   m_ObjectHideFlags: 0
@@ -3031,7 +3081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: b8f8e22a69d656d4d80acc05f2fd54e4, type: 3}
+  - {fileID: 4900000, guid: 678cc66b3b8727a45b1b0f017d59b016, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
