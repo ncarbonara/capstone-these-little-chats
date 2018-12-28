@@ -50,8 +50,6 @@ public class FeedbackImageManager : MonoBehaviour {
         makeImageFall = false;
 
         journeyLength = higherPosition.y - lowerPosition.y;
-
-        StartReactionMotion();
     }
 
     void Update()

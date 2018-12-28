@@ -304,7 +304,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3fc6c82c12368e47b1041f12aa9d4a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d200aaa4f2a30d42b32fee34793a9a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -599,7 +599,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d61e7656bb3fe4e4f8af3eb47377527d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 036a2e918b596024080463f25ed3cda3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -940,7 +940,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 156f49b23c3c02a49821eee8396d413b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6f9f5e664fca3f4d961e48d96bf0286, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1099,10 +1099,10 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  neutral: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
-  happy: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
-  sad: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
-  angry: {fileID: 21300000, guid: 29c545ab471e84849840c278bd3560a4, type: 3}
+  neutral: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
+  happy: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
+  sad: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
+  angry: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 132862022}
   valueIcon: {fileID: 301479591}
@@ -1253,15 +1253,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 520603441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c96bcb70ed3884eae0b5076d9d49d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d739515f40cb7d498db4d33d88a693f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positiveEmoji: {fileID: 21300000, guid: 691cd5ddaf03ecd4c8d718e268e92062, type: 3}
-  negativeEmoji: {fileID: 21300000, guid: a2d55d668207a0a4c82edb442e2a0176, type: 3}
-  speed: 2
-  movementHeight: 2
-  timeBeforeImageFalls: 1.5
-  timeBeforeSecondhandReactionsAppear: 1.75
+  positiveEmoji: {fileID: 21300000, guid: 7553af7262181364aaef978700cc061a, type: 3}
+  negativeEmoji: {fileID: 21300000, guid: 5469c4f5a321b2c439ebbd0c2121a9aa, type: 3}
+  speed: 0
+  movementHeight: 0
+  timeBeforeImageFalls: 0
+  timeBeforeSecondhandReactionsAppear: 0
 --- !u!114 &520603444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1281,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 691cd5ddaf03ecd4c8d718e268e92062, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7553af7262181364aaef978700cc061a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1381,7 +1381,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 997b21559475c6a46bb06b088602ee21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87e039941fbb0f4459c31f8180ecf219, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1668,10 +1668,10 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  neutral: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
-  happy: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
-  sad: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
-  angry: {fileID: 21300000, guid: f972df58905c0e4459322ba140c235a9, type: 3}
+  neutral: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
+  happy: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
+  sad: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
+  angry: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 222040558}
   valueIcon: {fileID: 1215203884}
@@ -1960,10 +1960,10 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  neutral: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
-  happy: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
-  sad: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
-  angry: {fileID: 21300000, guid: cbc82d34245babc4c863d7b6fc7993e6, type: 3}
+  neutral: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
+  happy: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
+  sad: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
+  angry: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 289046281}
   valueIcon: {fileID: 2023804046}
@@ -2126,7 +2126,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b9475c18fef143444b5e6a865593c7dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af616ff783236574cad1b23a81a3d52e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2714,7 +2714,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3fc6c82c12368e47b1041f12aa9d4a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d200aaa4f2a30d42b32fee34793a9a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2784,7 +2784,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a67db4cf420e2da46859873dd6c450dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 264cfa3d2251fca49a6ea4bb33684d32, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2831,10 +2831,10 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  neutral: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
-  happy: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
-  sad: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
-  angry: {fileID: 21300000, guid: cccf597f574135948916059524a59e2d, type: 3}
+  neutral: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
+  happy: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
+  sad: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
+  angry: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 1383289301}
   valueIcon: {fileID: 1350648173}
@@ -3104,7 +3104,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3fc6c82c12368e47b1041f12aa9d4a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d200aaa4f2a30d42b32fee34793a9a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: 678cc66b3b8727a45b1b0f017d59b016, type: 3}
+  - {fileID: 4900000, guid: b8f8e22a69d656d4d80acc05f2fd54e4, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -3177,7 +3177,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1822770186}
   startNode: Start
   startAutomatically: 1
-  automaticCommands: 1
+  automaticCommands: 0
 --- !u!4 &1822770185
 Transform:
   m_ObjectHideFlags: 0
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822770181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2380c8bbf41ff984f9899bff4921bbb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b6efd39a0013934a9102c51cd5bb0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 585938869}
