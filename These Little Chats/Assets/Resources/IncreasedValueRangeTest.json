@@ -2,7 +2,7 @@
 	{
 		"title": "Start",
 		"tags": "",
-		"body": "<<revealValue Lance>>\n<<revealValue Allison>>\n<<revealValue Ruby>>\n<<revealValue Franklin>>\n<<if $lance_is_very_pleased is true>>\nLance is very pleased!\n<<endif>>\n<<if $lance_is_somewhat_pleased is true>>\nLance is somewhat pleased.\n<<endif>>\n<<if $lance_is_feeling_neutral is true>>\nLance is feeling neutral.\n<<endif>>\n<<if $lance_is_somewhat_angry is true>>\nLance is somewhat angry.\n<<endif>>\n<<if $lance_is_very_angry is true>>\nLance is very angry!\n<<endif>>\n->Please Lance.\n    <<increaseValue Lance>>\n    [[LanceVsAllison]]\n->Anger Lance.\n    <<decreaseValue Lance>>\n    [[LanceVsAllison]]",
+		"body": "<<if $lance_is_very_pleased is true>>\nLance is very pleased!\n<<endif>>\n<<if $lance_is_somewhat_pleased is true>>\nLance is somewhat pleased.\n<<endif>>\n<<if $lance_is_feeling_neutral is true>>\nLance is feeling neutral.\n<<endif>>\n<<if $lance_is_somewhat_angry is true>>\nLance is somewhat angry.\n<<endif>>\n<<if $lance_is_very_angry is true>>\nLance is very angry!\n<<endif>>\n->Please Lance.\n    <<increaseValue Lance>>\n    [[LanceVsAllison]]\n->Anger Lance.\n    <<decreaseValue Lance>>\n    [[LanceVsAllison]]",
 		"position": {
 			"x": 480,
 			"y": 98

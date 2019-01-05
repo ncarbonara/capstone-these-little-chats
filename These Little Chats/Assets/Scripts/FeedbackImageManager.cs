@@ -50,6 +50,8 @@ public class FeedbackImageManager : MonoBehaviour {
         makeImageFall = false;
 
         journeyLength = higherPosition.y - lowerPosition.y;
+
+        //StartReactionMotion();
     }
 
     void Update()
@@ -113,7 +115,7 @@ public class FeedbackImageManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// Called by Fungus to switch the reaction image to positive before StartReactionMotion() has been called.
+    /// Called to switch the reaction image to positive before StartReactionMotion() has been called.
     /// </summary>
     public void SwitchToPositiveImage()
     {
@@ -121,7 +123,7 @@ public class FeedbackImageManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// Called by Fungus to switch the reaction image to negative before StartReactionMotion() has been called.
+    /// Called to switch the reaction image to negative before StartReactionMotion() has been called.
     /// </summary>
     public void SwitchToNegativeImage()
     {
@@ -129,7 +131,7 @@ public class FeedbackImageManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// Called by Fungus to start the reaction motion, after SwitchToPositiveImage() or SwitchToNegativeImage() have been called.
+    /// Called to start the reaction motion, after SwitchToPositiveImage() or SwitchToNegativeImage() have been called.
     /// </summary>
     public void StartReactionMotion()
     {
@@ -152,6 +154,9 @@ public class FeedbackImageManager : MonoBehaviour {
         makeImageFall = true;
     }
 
+    /// <summary>
+    /// Called to start an emoji reaction motion, but at a delay. Allows other emoji reaction motions to take place before this one
+    /// </summary>
     public void StartSecondhandReactionMotion()
     {
         StartCoroutine(DelayBeforeSecondhandReactionImages());
