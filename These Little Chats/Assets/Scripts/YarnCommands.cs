@@ -21,11 +21,14 @@ public class YarnCommands : MonoBehaviour {
     public GameObject characterPortraitGameObject;
     public GameObject nameText;
     public GameObject portraitBackground;
+    public GameObject dialogueText;
 
     public Sprite neutral;
     public Sprite happy;
     public Sprite sad;
     public Sprite angry;
+
+    public Vector3 characterTextBoxPosition;
 
     public GameObject convosRemainingText;
 
@@ -63,17 +66,22 @@ public class YarnCommands : MonoBehaviour {
         variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
     }
 
+
     /// <summary>
     /// Activates this character's portrait display, and switches in their neutral portrait.
     /// </summary>
     [YarnCommand("activateNeutralPortrait")]
     public void ActivateNeutralPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = neutral;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
     }
 
     /// <summary>
@@ -82,11 +90,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateHappyPortrait")]
     public void ActivateHappyPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = happy;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
     }
 
     /// <summary>
@@ -95,11 +107,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateSadPortrait")]
     public void ActivateSadPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = sad;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
     }
 
     /// <summary>
@@ -108,11 +124,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateAngryPortrait")]
     public void ActivateAngryPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = angry;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
         nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
     }
 
     /// <summary>
@@ -262,5 +282,10 @@ public class YarnCommands : MonoBehaviour {
             valueIcon.GetComponent<Image>().color = new Color(1, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is very angry.");
         }
+    }
+
+    void MoveTextboxPosition()
+    {
+        dialogueText.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
     }
 }
