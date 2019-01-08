@@ -1481,7 +1481,7 @@ MonoBehaviour:
   variableManager: {fileID: 1822770182}
   gameplayVariablesManager: {fileID: 264624101}
   characterPortraitGameObject: {fileID: 2005965681}
-  nameText: {fileID: 84775252}
+  nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
   dialogueText: {fileID: 585938869}
   neutral: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
@@ -1710,6 +1710,7 @@ Transform:
   m_Children:
   - {fileID: 1967288581}
   - {fileID: 2157381}
+  - {fileID: 680974434}
   m_Father: {fileID: 1850045828}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2021,6 +2022,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!1 &680974433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680974434}
+  - component: {fileID: 680974436}
+  - component: {fileID: 680974435}
+  m_Layer: 5
+  m_Name: Character Name (Moving Speech Bubble Version)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &680974434
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680974433}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3333333, y: 1.3333333, z: 1}
+  m_Children: []
+  m_Father: {fileID: 585938870}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -284.73, y: -2.3}
+  m_SizeDelta: {x: 103.56, y: 14.39}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &680974435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680974433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &680974436
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680974433}
+  m_CullTransparentMesh: 0
 --- !u!1 &741036654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2127,7 @@ MonoBehaviour:
   variableManager: {fileID: 1822770182}
   gameplayVariablesManager: {fileID: 264624101}
   characterPortraitGameObject: {fileID: 2005965681}
-  nameText: {fileID: 84775252}
+  nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
   dialogueText: {fileID: 585938869}
   neutral: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
@@ -2202,7 +2278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 54.1}
+  m_AnchoredPosition: {x: 0, y: 13}
   m_SizeDelta: {x: 260.2, y: 20.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985056963
@@ -2238,7 +2314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: click
+  m_Text: (Click to Continue)
 --- !u!222 &985056964
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2346,7 +2422,7 @@ MonoBehaviour:
   variableManager: {fileID: 1822770182}
   gameplayVariablesManager: {fileID: 264624101}
   characterPortraitGameObject: {fileID: 2005965681}
-  nameText: {fileID: 84775252}
+  nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
   dialogueText: {fileID: 585938869}
   neutral: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
@@ -3215,6 +3291,85 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1486543987}
   m_CullTransparentMesh: 0
+--- !u!1 &1503785761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 188988, guid: 257318c83ce924ceab451889d4303b20,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503785762}
+  - component: {fileID: 1503785764}
+  - component: {fileID: 1503785763}
+  m_Layer: 5
+  m_Name: Player Dialogue Label (Moving Speech Bubble Version)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1503785762
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 22478342, guid: 257318c83ce924ceab451889d4303b20,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503785761}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1805894198}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 21.2}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1503785763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 11479952, guid: 257318c83ce924ceab451889d4303b20,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503785761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You
+--- !u!222 &1503785764
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 22269104, guid: 257318c83ce924ceab451889d4303b20,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503785761}
+  m_CullTransparentMesh: 0
 --- !u!1 &1541126439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,7 +3469,7 @@ MonoBehaviour:
   variableManager: {fileID: 1822770182}
   gameplayVariablesManager: {fileID: 264624101}
   characterPortraitGameObject: {fileID: 2005965681}
-  nameText: {fileID: 84775252}
+  nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
   dialogueText: {fileID: 585938869}
   neutral: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
@@ -3579,6 +3734,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2020745764}
+  - {fileID: 1503785762}
   m_Father: {fileID: 654006967}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
