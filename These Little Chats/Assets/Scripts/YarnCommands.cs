@@ -21,23 +21,38 @@ public class YarnCommands : MonoBehaviour {
     public GameObject characterPortraitGameObject;
     public GameObject nameText;
     public GameObject portraitBackground;
+    public GameObject dialogueText;
 
     public Sprite neutral;
     public Sprite happy;
     public Sprite sad;
     public Sprite angry;
 
+    public Vector3 characterTextBoxPosition;
+
     public GameObject convosRemainingText;
 
-    //Alternative generic gameObjects
     public GameObject valueDisplay;
     public GameObject valueIcon;
 
-    //Alternative character variables handled directly in this script. Set initial values in the
-    //inspector!
+    //Character variables handled directly in this script. Set initial values in the inspector!
     public int value;
-    public int valueThreshold;
+    public int infoSharingValueThreshold;
     public string willShareInfoYarnBool;
+    public int veryPleasedValueThreshold;
+    public string veryPleasedYarnBool;
+    public int somewhatPleasedValueThreshold;
+    public string somewhatPleasedYarnBool;
+    public int neutralValueThreshold;
+    public string neutralYarnBool;
+    public int somewhatAngryValueThreshold;
+    public string somewhatAngryYarnBool;
+    public int veryAngryValueThreshold;
+    public string veryAngryYarnBool;
+
+    //The gameObject that moves whenever a character responds to something that the player has 
+    //said.
+    public GameObject feedbackObject;
 
     // Use this for initialization
     void Start () {
@@ -47,7 +62,10 @@ public class YarnCommands : MonoBehaviour {
         convosRemainingText.GetComponent<Text>().text = gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining.ToString() + " TALKS LEFT";
 
         valueDisplay.gameObject.SetActive(false);
+
+        variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
     }
+
 
     /// <summary>
     /// Activates this character's portrait display, and switches in their neutral portrait.
@@ -55,11 +73,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateNeutralPortrait")]
     public void ActivateNeutralPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = neutral;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
-        nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
+        nameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
@@ -68,11 +90,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateHappyPortrait")]
     public void ActivateHappyPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = happy;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
-        nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
+        nameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
@@ -81,11 +107,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateSadPortrait")]
     public void ActivateSadPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = sad;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
-        nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
+        nameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
@@ -94,11 +124,15 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateAngryPortrait")]
     public void ActivateAngryPortrait()
     {
+        MoveTextboxPosition();
+
+        /*
         characterPortraitGameObject.GetComponent<Image>().sprite = angry;
         characterPortraitGameObject.GetComponent<Image>().color = Color.white;
 
-        nameText.GetComponent<Text>().text = this.gameObject.name;
         portraitBackground.gameObject.SetActive(true);
+        */
+        nameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
@@ -159,19 +193,99 @@ public class YarnCommands : MonoBehaviour {
         if(isPositiveChange == true)
         {
             value++;
+
+            //Causes the feedback image to change to the currect image and rise/fall to indicate a
+            //change in the character's feelings
+            feedbackObject.GetComponent<FeedbackImageManager>().SwitchToPositiveImage();
+            feedbackObject.GetComponent<FeedbackImageManager>().StartReactionMotion();
         }
         else if(isPositiveChange == false)
         {
             value--;
+            feedbackObject.GetComponent<FeedbackImageManager>().SwitchToNegativeImage();
+            //The "secondhand reaction motion" function is called so that positive reactions always
+            //appear before negative ones, grouping them so as not to overwhelm the player
+            feedbackObject.GetComponent<FeedbackImageManager>().StartSecondhandReactionMotion();
         }
 
         Debug.Log(this.gameObject.name + " Value: " + value.ToString());
 
+        /*
         //If character value is high/low enough, change a Yarn variable of the correct name.
-        if(value >= valueThreshold)
+        if(value == infoSharingValueThreshold)
         {
             variableManager.SetValue(willShareInfoYarnBool, new Yarn.Value(true));
-            valueIcon.GetComponent<Image>().color = Color.green;
+            valueIcon.GetComponent<Image>().color = Color.blue;
+            Debug.Log(this.gameObject.name + " will share info.");
         }
+        */
+
+        //Changes a variable in the Yarn sheet that activates "very pleased" text for this 
+        //character
+        if(value == veryPleasedValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = new Color(0, 1, 0, 1);
+            Debug.Log(this.gameObject.name + " is very pleased.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "somewhat pleased" text for this
+        //character
+        if(value == somewhatPleasedValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = new Color(0, 0.5f, 0, 1);
+            Debug.Log(this.gameObject.name + " is somewhat pleased.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "neutral" text for this character
+        if(value == neutralValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = Color.white;
+            Debug.Log(this.gameObject.name + " is feeling neutral.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "somewhat angry" text for this 
+        //character
+        if(value == somewhatAngryValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(true));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
+            valueIcon.GetComponent<Image>().color = new Color(0.5f, 0, 0, 1);
+            Debug.Log(this.gameObject.name + " is somewhat angry.");
+        }
+
+        //Changes a variable in the Yarn sheet that activates "very angry" text for this character
+        if(value == veryAngryValueThreshold)
+        {
+            variableManager.SetValue(veryPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatPleasedYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
+            variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(true));
+            valueIcon.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+            Debug.Log(this.gameObject.name + " is very angry.");
+        }
+    }
+
+    void MoveTextboxPosition()
+    {
+        dialogueText.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
     }
 }
