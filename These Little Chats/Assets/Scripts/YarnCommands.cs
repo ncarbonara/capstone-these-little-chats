@@ -28,6 +28,10 @@ public class YarnCommands : MonoBehaviour {
     public Sprite sad;
     public Sprite angry;
 
+    public GameObject positivePose;
+    public GameObject neutralPose;
+    public GameObject negativePose;
+
     public Vector3 characterTextBoxPosition;
 
     public GameObject convosRemainingText;
@@ -231,6 +235,11 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             valueIcon.GetComponent<Image>().color = new Color(0, 1, 0, 1);
             Debug.Log(this.gameObject.name + " is very pleased.");
+
+            //Changes the character's pose to the "positive" pose
+            positivePose.gameObject.SetActive(true);
+            neutralPose.gameObject.SetActive(false);
+            negativePose.gameObject.SetActive(false);
         }
 
         //Changes a variable in the Yarn sheet that activates "somewhat pleased" text for this
@@ -244,6 +253,11 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             valueIcon.GetComponent<Image>().color = new Color(0, 0.5f, 0, 1);
             Debug.Log(this.gameObject.name + " is somewhat pleased.");
+
+            //Changes the character's pose to the "positive" pose
+            positivePose.gameObject.SetActive(true);
+            neutralPose.gameObject.SetActive(false);
+            negativePose.gameObject.SetActive(false);
         }
 
         //Changes a variable in the Yarn sheet that activates "neutral" text for this character
@@ -256,6 +270,11 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             valueIcon.GetComponent<Image>().color = Color.white;
             Debug.Log(this.gameObject.name + " is feeling neutral.");
+
+            //Changes the character's pose to the "neutral" pose
+            positivePose.gameObject.SetActive(false);
+            neutralPose.gameObject.SetActive(true);
+            negativePose.gameObject.SetActive(false);
         }
 
         //Changes a variable in the Yarn sheet that activates "somewhat angry" text for this 
@@ -269,6 +288,11 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             valueIcon.GetComponent<Image>().color = new Color(0.5f, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is somewhat angry.");
+
+            //Changes the character's pose to the "negative" pose
+            positivePose.gameObject.SetActive(false);
+            neutralPose.gameObject.SetActive(false);
+            negativePose.gameObject.SetActive(true);
         }
 
         //Changes a variable in the Yarn sheet that activates "very angry" text for this character
@@ -281,6 +305,12 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(true));
             valueIcon.GetComponent<Image>().color = new Color(1, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is very angry.");
+
+            //Changes the character's pose to the "negative" pose
+            positivePose.gameObject.SetActive(false);
+            neutralPose.gameObject.SetActive(false);
+            negativePose.gameObject.SetActive(true);
+
         }
     }
 
