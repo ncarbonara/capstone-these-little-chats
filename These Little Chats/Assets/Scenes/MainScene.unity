@@ -1571,9 +1571,11 @@ MonoBehaviour:
   happy: {fileID: 0}
   sad: {fileID: 0}
   angry: {fileID: 0}
-  positivePose: {fileID: 0}
   neutralPose: {fileID: 0}
-  negativePose: {fileID: 0}
+  positivePosePosition: {x: 0, y: 0, z: 0}
+  neutralPosePosition: {x: 0, y: 0, z: 0}
+  negativePosePosition: {x: 0, y: 0, z: 0}
+  poseLerpSpeed: 0
   characterTextBoxPosition: {x: 0, y: 0, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 0}
@@ -1629,9 +1631,11 @@ MonoBehaviour:
   happy: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
   sad: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
   angry: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
-  positivePose: {fileID: 2040391651}
   neutralPose: {fileID: 24952846}
-  negativePose: {fileID: 1981270683}
+  positivePosePosition: {x: -90.6, y: 60.3, z: 0}
+  neutralPosePosition: {x: -110.6, y: 60.3, z: 0}
+  negativePosePosition: {x: -119.2, y: 50.8, z: 0}
+  poseLerpSpeed: 0.5
   characterTextBoxPosition: {x: 5.294525, y: 1.794968, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 132862022}
@@ -2278,9 +2282,11 @@ MonoBehaviour:
   happy: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
   sad: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
   angry: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
-  positivePose: {fileID: 1997161261}
   neutralPose: {fileID: 100721519}
-  negativePose: {fileID: 787729447}
+  positivePosePosition: {x: 57.2, y: 22.9, z: 0}
+  neutralPosePosition: {x: 69.7, y: 11.4, z: 0}
+  negativePosePosition: {x: 76.1, y: -2.2, z: 0}
+  poseLerpSpeed: 0.5
   characterTextBoxPosition: {x: 9.57, y: -0.88, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 222040558}
@@ -2714,9 +2720,11 @@ MonoBehaviour:
   happy: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
   sad: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
   angry: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
-  positivePose: {fileID: 1226696684}
   neutralPose: {fileID: 1566938073}
-  negativePose: {fileID: 781240679}
+  positivePosePosition: {x: 27, y: 82, z: 0}
+  neutralPosePosition: {x: 34.5, y: 84.10001, z: 0}
+  negativePosePosition: {x: 43, y: 83, z: 0}
+  poseLerpSpeed: 0.5
   characterTextBoxPosition: {x: 7.71, y: 2.31, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 289046281}
@@ -3915,9 +3923,11 @@ MonoBehaviour:
   happy: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
   sad: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
   angry: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
-  positivePose: {fileID: 1622542468}
   neutralPose: {fileID: 1638700101}
-  negativePose: {fileID: 1368324263}
+  positivePosePosition: {x: -49, y: 21, z: 0}
+  neutralPosePosition: {x: -74, y: 1, z: 0}
+  negativePosePosition: {x: -108, y: -5, z: 0}
+  poseLerpSpeed: 0.5
   characterTextBoxPosition: {x: 5.770725, y: -0.7066222, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 1383289301}
@@ -4055,9 +4065,11 @@ MonoBehaviour:
   happy: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
   sad: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
   angry: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
-  positivePose: {fileID: 0}
   neutralPose: {fileID: 0}
-  negativePose: {fileID: 0}
+  positivePosePosition: {x: 0, y: 0, z: 0}
+  neutralPosePosition: {x: 0, y: 0, z: 0}
+  negativePosePosition: {x: 0, y: 0, z: 0}
+  poseLerpSpeed: 0
   characterTextBoxPosition: {x: 230.9, y: 38.80001, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 0}

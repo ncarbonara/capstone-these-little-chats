@@ -28,9 +28,19 @@ public class YarnCommands : MonoBehaviour {
     public Sprite sad;
     public Sprite angry;
 
-    public GameObject positivePose;
+    //public GameObject positivePose;
     public GameObject neutralPose;
-    public GameObject negativePose;
+    //public GameObject negativePose;
+
+    //These are used to store the locations of each of the above pose sprites, so they can be
+    //lerped towards each other, creating the illusion of bodily movement
+    Vector3 currentPosePosition;
+    public Vector3 positivePosePosition;
+    public Vector3 neutralPosePosition;
+    public Vector3 negativePosePosition;
+
+    //The speed at which the pose sprite moves between its different positions
+    public float poseLerpSpeed;
 
     public Vector3 characterTextBoxPosition;
 
@@ -68,6 +78,12 @@ public class YarnCommands : MonoBehaviour {
         valueDisplay.gameObject.SetActive(false);
 
         variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
+
+        /*
+        positivePosePosition = positivePose.GetComponent<Transform>().position;
+        neutralPosePosition = neutralPose.GetComponent<Transform>().position;
+        negativePosePosition = negativePose.GetComponent<Transform>().position;
+        */
     }
 
 
@@ -236,10 +252,19 @@ public class YarnCommands : MonoBehaviour {
             valueIcon.GetComponent<Image>().color = new Color(0, 1, 0, 1);
             Debug.Log(this.gameObject.name + " is very pleased.");
 
+            /*
             //Changes the character's pose to the "positive" pose
             positivePose.gameObject.SetActive(true);
             neutralPose.gameObject.SetActive(false);
             negativePose.gameObject.SetActive(false);
+            */
+
+            //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
+            float startTime = Time.time;
+            float journeyLength = Vector3.Distance(currentPosePosition, positivePosePosition);
+            float distanceCovered = (Time.time - startTime) * poseLerpSpeed;
+            float fracJourney = distanceCovered / journeyLength;
+            neutralPose.GetComponent<Transform>().position = Vector3.Lerp(currentPosePosition, positivePosePosition, fracJourney);
         }
 
         //Changes a variable in the Yarn sheet that activates "somewhat pleased" text for this
@@ -254,10 +279,19 @@ public class YarnCommands : MonoBehaviour {
             valueIcon.GetComponent<Image>().color = new Color(0, 0.5f, 0, 1);
             Debug.Log(this.gameObject.name + " is somewhat pleased.");
 
+            /*
             //Changes the character's pose to the "positive" pose
             positivePose.gameObject.SetActive(true);
             neutralPose.gameObject.SetActive(false);
             negativePose.gameObject.SetActive(false);
+            */
+
+            //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
+            float startTime = Time.time;
+            float journeyLength = Vector3.Distance(currentPosePosition, positivePosePosition);
+            float distanceCovered = (Time.time - startTime) * poseLerpSpeed;
+            float fracJourney = distanceCovered / journeyLength;
+            neutralPose.GetComponent<Transform>().position = Vector3.Lerp(currentPosePosition, positivePosePosition, fracJourney);
         }
 
         //Changes a variable in the Yarn sheet that activates "neutral" text for this character
@@ -271,10 +305,19 @@ public class YarnCommands : MonoBehaviour {
             valueIcon.GetComponent<Image>().color = Color.white;
             Debug.Log(this.gameObject.name + " is feeling neutral.");
 
+            /*
             //Changes the character's pose to the "neutral" pose
             positivePose.gameObject.SetActive(false);
             neutralPose.gameObject.SetActive(true);
             negativePose.gameObject.SetActive(false);
+            */
+
+            //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
+            float startTime = Time.time;
+            float journeyLength = Vector3.Distance(currentPosePosition, neutralPosePosition);
+            float distanceCovered = (Time.time - startTime) * poseLerpSpeed;
+            float fracJourney = distanceCovered / journeyLength;
+            neutralPose.GetComponent<Transform>().position = Vector3.Lerp(currentPosePosition, neutralPosePosition, fracJourney);
         }
 
         //Changes a variable in the Yarn sheet that activates "somewhat angry" text for this 
@@ -289,10 +332,19 @@ public class YarnCommands : MonoBehaviour {
             valueIcon.GetComponent<Image>().color = new Color(0.5f, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is somewhat angry.");
 
+            /*
             //Changes the character's pose to the "negative" pose
             positivePose.gameObject.SetActive(false);
             neutralPose.gameObject.SetActive(false);
             negativePose.gameObject.SetActive(true);
+            */
+
+            //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
+            float startTime = Time.time;
+            float journeyLength = Vector3.Distance(currentPosePosition, negativePosePosition);
+            float distanceCovered = (Time.time - startTime) * poseLerpSpeed;
+            float fracJourney = distanceCovered / journeyLength;
+            neutralPose.GetComponent<Transform>().position = Vector3.Lerp(currentPosePosition, negativePosePosition, fracJourney);
         }
 
         //Changes a variable in the Yarn sheet that activates "very angry" text for this character
@@ -306,11 +358,19 @@ public class YarnCommands : MonoBehaviour {
             valueIcon.GetComponent<Image>().color = new Color(1, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is very angry.");
 
+            /*
             //Changes the character's pose to the "negative" pose
             positivePose.gameObject.SetActive(false);
             neutralPose.gameObject.SetActive(false);
             negativePose.gameObject.SetActive(true);
+            */
 
+            //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
+            float startTime = Time.time;
+            float journeyLength = Vector3.Distance(currentPosePosition, negativePosePosition);
+            float distanceCovered = (Time.time - startTime) * poseLerpSpeed;
+            float fracJourney = distanceCovered / journeyLength;
+            neutralPose.GetComponent<Transform>().position = Vector3.Lerp(currentPosePosition, negativePosePosition, fracJourney);
         }
     }
 
