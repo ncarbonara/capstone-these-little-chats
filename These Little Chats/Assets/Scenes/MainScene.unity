@@ -1491,7 +1491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &416179548
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   positivePosePosition: {x: -90.6, y: 60.3, z: 0}
   neutralPosePosition: {x: -110.6, y: 60.3, z: 0}
   negativePosePosition: {x: -119.2, y: 50.8, z: 0}
-  poseLerpSpeed: 0.5
+  poseLerpSpeed: 1
   characterTextBoxPosition: {x: 5.294525, y: 1.794968, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 132862022}
@@ -2286,7 +2286,7 @@ MonoBehaviour:
   positivePosePosition: {x: 57.2, y: 22.9, z: 0}
   neutralPosePosition: {x: 69.7, y: 11.4, z: 0}
   negativePosePosition: {x: 76.1, y: -2.2, z: 0}
-  poseLerpSpeed: 0.5
+  poseLerpSpeed: 1
   characterTextBoxPosition: {x: 9.57, y: -0.88, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 222040558}
@@ -2724,7 +2724,7 @@ MonoBehaviour:
   positivePosePosition: {x: 27, y: 82, z: 0}
   neutralPosePosition: {x: 34.5, y: 84.10001, z: 0}
   negativePosePosition: {x: 43, y: 83, z: 0}
-  poseLerpSpeed: 0.5
+  poseLerpSpeed: 1
   characterTextBoxPosition: {x: 7.71, y: 2.31, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 289046281}
@@ -3927,7 +3927,7 @@ MonoBehaviour:
   positivePosePosition: {x: -49, y: 21, z: 0}
   neutralPosePosition: {x: -74, y: 1, z: 0}
   negativePosePosition: {x: -108, y: -5, z: 0}
-  poseLerpSpeed: 0.5
+  poseLerpSpeed: 1
   characterTextBoxPosition: {x: 5.770725, y: -0.7066222, z: 0}
   convosRemainingText: {fileID: 416179547}
   valueDisplay: {fileID: 1383289301}
@@ -4582,7 +4582,7 @@ MonoBehaviour:
   lineText: {fileID: 2157379}
   lineTextBackground: {fileID: 1967288580}
   continuePrompt: {fileID: 985056961}
-  textSpeed: 0.001
+  textSpeed: 0
   optionButtons:
   - {fileID: 1805894199}
   - {fileID: 29550114}
