@@ -78,7 +78,7 @@ public class YarnCommands : MonoBehaviour {
 
     //The gameObject that moves whenever a character responds to something that the player has 
     //said.
-    public GameObject feedbackObject;
+    //public GameObject feedbackObject;
 
     // Use this for initialization
     void Start () {
@@ -262,16 +262,16 @@ public class YarnCommands : MonoBehaviour {
 
             //Causes the feedback image to change to the currect image and rise/fall to indicate a
             //change in the character's feelings
-            feedbackObject.GetComponent<FeedbackImageManager>().SwitchToPositiveImage();
-            feedbackObject.GetComponent<FeedbackImageManager>().StartReactionMotion();
+            //feedbackObject.GetComponent<FeedbackImageManager>().SwitchToPositiveImage();
+            //feedbackObject.GetComponent<FeedbackImageManager>().StartReactionMotion();
         }
         else if(isPositiveChange == false)
         {
             value--;
-            feedbackObject.GetComponent<FeedbackImageManager>().SwitchToNegativeImage();
+            //feedbackObject.GetComponent<FeedbackImageManager>().SwitchToNegativeImage();
             //The "secondhand reaction motion" function is called so that positive reactions always
             //appear before negative ones, grouping them so as not to overwhelm the player
-            feedbackObject.GetComponent<FeedbackImageManager>().StartSecondhandReactionMotion();
+            //feedbackObject.GetComponent<FeedbackImageManager>().StartSecondhandReactionMotion();
         }
 
         Debug.Log(this.gameObject.name + " Value: " + value.ToString());
