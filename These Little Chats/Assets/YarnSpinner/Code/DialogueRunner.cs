@@ -115,6 +115,31 @@ namespace Yarn.Unity
             // Load all scripts
             if (sourceText != null) {
                 foreach (var source in sourceText) {
+
+
+                    ///SOME IN-PROGRESS STUFF NICK THREW IN HERE
+                    
+                    //Checks to see if the line of text is a dialogue line
+                    /*
+                    if (source.text.Substring(0, 6) == "Brynn: ")
+                    {
+                        source.text.Remove(0, 6);   //Removes the name marker from the string
+                        source.text.Insert(0, "<<activateNeutralPortrait Brynn>>");
+                    }
+                    */
+
+                    ///MORE IN-PROGRESS STUFF
+
+                    /*
+                    if(source.text.Contains("Brynn: ") == true)
+                    {
+                        int indexOfBrynn = source.text.IndexOf("Brynn: ");
+                        source.text.Remove(indexOfBrynn, indexOfBrynn + 6);   //Removes the name marker from the string
+                        source.text.Insert(indexOfBrynn, "<<activateNeutralPortrait Brynn>>");
+                    }
+                    */
+
+
                     // load and compile the text
                     dialogue.LoadString (source.text, source.name);
                 }
