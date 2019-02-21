@@ -215,25 +215,6 @@ public class YarnCommands : MonoBehaviour {
     }
 
     /// <summary>
-    /// Causes the UI text for the number of conversations left to tick down one conversation.
-    /// </summary>
-    [YarnCommand("passTime")]
-    public void passTime()
-    {
-        gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining--;
-        convosRemainingText.GetComponent<Text>().text = gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining.ToString() + " TALKS LEFT";
-    }
-
-    /// <summary>
-    /// Reveals the character's value to the player via an addition to the UI.
-    /// </summary>
-    [YarnCommand("revealValue")]
-    public void RevealValue()
-    {
-        valueDisplay.gameObject.SetActive(true);
-    }
-
-    /// <summary>
     /// Increases the character's value.
     /// </summary>
     [YarnCommand("increaseValue")]
@@ -476,6 +457,9 @@ public class YarnCommands : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Moves the speech bubble over the head of the appropriate character.
+    /// </summary>
     void MoveTextboxPosition()
     {
         dialogueText.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
