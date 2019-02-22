@@ -21,12 +21,8 @@ public class YarnCommands : MonoBehaviour {
     public GameObject characterPortraitGameObject;
     public GameObject nameText;
     public GameObject portraitBackground;
+    public GameObject dialogueTextContainer;
     public GameObject dialogueText;
-
-    public Sprite neutral;
-    public Sprite happy;
-    public Sprite sad;
-    public Sprite angry;
 
     //public GameObject positivePose;
     public GameObject characterPoseGameObject;
@@ -37,11 +33,21 @@ public class YarnCommands : MonoBehaviour {
     public Sprite neutralPoseImage;
     public Sprite negativePoseImage;
 
+    //The sprite for the character's current pose, based on their current mood. This is stored so
+    //that a character's pose can be overridden from its current mood-based pose and then changed 
+    //back later to what it was before.
+    Sprite defaultPoseImage;
+
     //These are used to store the locations of each of the above pose sprites, so they can be
     //lerped towards each other, creating the illusion of bodily movement
     public Vector3 positivePosePosition;
     public Vector3 neutralPosePosition;
     public Vector3 negativePosePosition;
+
+    //The location of the character's pose sprite, based on their current mood. This is stored so
+    //that a character's pose can be overridden from its current mood-based pose and then changed 
+    //back later to what it was before.
+    Vector3 defaultPosePosition;
 
     //Variables used to allow the lerp to function
     Vector3 currentStartingPosePosition;
@@ -56,15 +62,8 @@ public class YarnCommands : MonoBehaviour {
 
     public Vector3 characterTextBoxPosition;
 
-    public GameObject convosRemainingText;
-
-    public GameObject valueDisplay;
-    public GameObject valueIcon;
-
     //Character variables handled directly in this script. Set initial values in the inspector!
     public int value;
-    public int infoSharingValueThreshold;
-    public string willShareInfoYarnBool;
     public int veryPleasedValueThreshold;
     public string veryPleasedYarnBool;
     public int somewhatPleasedValueThreshold;
@@ -80,14 +79,15 @@ public class YarnCommands : MonoBehaviour {
     //said.
     //public GameObject feedbackObject;
 
+    //The fonts that characters can switch to and from based on if they're speaking as their D&D
+    //characters or not.
+    public Font inCharacterFont;
+    public Font outOfCharacterFont;
+    
     // Use this for initialization
     void Start () {
         nameText.GetComponent<Text>().text = null;
         portraitBackground.gameObject.SetActive(false);
-
-        convosRemainingText.GetComponent<Text>().text = gameplayVariablesManager.GetComponent<GameplayVariablesManager>().conversationsRemaining.ToString() + " TALKS LEFT";
-
-        valueDisplay.gameObject.SetActive(false);
 
         variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
 
@@ -100,6 +100,9 @@ public class YarnCommands : MonoBehaviour {
         startNewLerp = false;
 
         currentStartingPosePosition = neutralPosePosition;
+
+        defaultPoseImage = neutralPoseImage;
+        defaultPosePosition = neutralPosePosition;
     }
 
     void Update()
@@ -151,57 +154,6 @@ public class YarnCommands : MonoBehaviour {
     }
 
     /// <summary>
-    /// Activates this character's portrait display, and switches in their happy portrait.
-    /// </summary>
-    [YarnCommand("activateHappyPortrait")]
-    public void ActivateHappyPortrait()
-    {
-        MoveTextboxPosition();
-
-        /*
-        characterPortraitGameObject.GetComponent<Image>().sprite = happy;
-        characterPortraitGameObject.GetComponent<Image>().color = Color.white;
-
-        portraitBackground.gameObject.SetActive(true);
-        */
-        nameText.GetComponent<Text>().text = this.gameObject.name;
-    }
-
-    /// <summary>
-    /// Activates this character's portrait display, and switches in their sad portrait.
-    /// </summary>
-    [YarnCommand("activateSadPortrait")]
-    public void ActivateSadPortrait()
-    {
-        MoveTextboxPosition();
-
-        /*
-        characterPortraitGameObject.GetComponent<Image>().sprite = sad;
-        characterPortraitGameObject.GetComponent<Image>().color = Color.white;
-
-        portraitBackground.gameObject.SetActive(true);
-        */
-        nameText.GetComponent<Text>().text = this.gameObject.name;
-    }
-
-    /// <summary>
-    /// Activates this character's portrait display, and switches in their angry portrait.
-    /// </summary>
-    [YarnCommand("activateAngryPortrait")]
-    public void ActivateAngryPortrait()
-    {
-        MoveTextboxPosition();
-
-        /*
-        characterPortraitGameObject.GetComponent<Image>().sprite = angry;
-        characterPortraitGameObject.GetComponent<Image>().color = Color.white;
-
-        portraitBackground.gameObject.SetActive(true);
-        */
-        nameText.GetComponent<Text>().text = this.gameObject.name;
-    }
-
-    /// <summary>
     /// Clears and deactivates all portraits.
     /// </summary>
     [YarnCommand("clearPortrait")]
@@ -212,6 +164,78 @@ public class YarnCommands : MonoBehaviour {
 
         nameText.GetComponent<Text>().text = null;
         portraitBackground.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Changes a character's current pose without changing their mood.
+    /// </summary>
+    [YarnCommand("overridePose")]
+    public void OverridePose(string newPose)
+    {
+        //NOTE: Currently these lines also cause the pose image to lerp to the appropriate
+        //position. We may not need these in prototypes that have more finalized art,
+        //possibly, maybe, IDK.
+        if (newPose == "plusTwo")
+        {
+            currentDestinationPosePosition = positivePosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
+            startNewLerp = true;
+            lerpInProcess = true;
+        } else if (newPose == "plusOne")
+        {
+            currentDestinationPosePosition = positivePosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
+            startNewLerp = true;
+            lerpInProcess = true;
+        } else if(newPose == "zero")
+        {
+            currentDestinationPosePosition = neutralPosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = neutralPoseImage;
+            startNewLerp = true;
+            lerpInProcess = true;
+        } else if(newPose == "minusOne")
+        {
+            currentDestinationPosePosition = negativePosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
+            startNewLerp = true;
+            lerpInProcess = true;
+        } else if(newPose == "minusTwo")
+        {
+            currentDestinationPosePosition = negativePosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
+            startNewLerp = true;
+            lerpInProcess = true;
+        }
+    }
+
+    /// <summary>
+    /// Returns a character's current pose from a non-mood-based pose (set by the OverridePose 
+    /// function) to their default mood-based pose
+    /// </summary>
+    [YarnCommand ("returnToDefaultPose")]
+    public void ReturnToDefaultPose()
+    {
+        currentDestinationPosePosition = defaultPosePosition;
+        characterPoseGameObject.GetComponent<Image>().sprite = defaultPoseImage;
+        startNewLerp = true;
+        lerpInProcess = true;
+    }
+
+    /// <summary>
+    /// Changes the current font of the text based on whether a character is speaking "in-character"
+    /// or "out-of-character" (with regards to the D&D game they're playing)
+    /// </summary>
+    /// <param name="font"></param>
+    [YarnCommand ("changeFont")]
+    public void ChangeFont(string font)
+    {
+        if (font == "inCharacter")
+        {
+            dialogueText.GetComponent<Text>().font = inCharacterFont;
+        } else if (font == "outOfCharacter")
+        {
+            dialogueText.GetComponent<Text>().font = outOfCharacterFont;
+        }
     }
 
     /// <summary>
@@ -276,7 +300,6 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
             variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
-            valueIcon.GetComponent<Image>().color = new Color(0, 1, 0, 1);
             Debug.Log(this.gameObject.name + " is very pleased.");
 
             /*
@@ -288,6 +311,8 @@ public class YarnCommands : MonoBehaviour {
 
             currentDestinationPosePosition = positivePosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
+            defaultPoseImage = positivePoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
+            defaultPosePosition = positivePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -314,7 +339,6 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
             variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
-            valueIcon.GetComponent<Image>().color = new Color(0, 0.5f, 0, 1);
             Debug.Log(this.gameObject.name + " is somewhat pleased.");
 
             /*
@@ -326,6 +350,8 @@ public class YarnCommands : MonoBehaviour {
 
             currentDestinationPosePosition = positivePosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
+            defaultPoseImage = positivePoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
+            defaultPosePosition = positivePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -351,7 +377,6 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
             variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
-            valueIcon.GetComponent<Image>().color = Color.white;
             Debug.Log(this.gameObject.name + " is feeling neutral.");
 
             /*
@@ -363,6 +388,8 @@ public class YarnCommands : MonoBehaviour {
 
             currentDestinationPosePosition = neutralPosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = neutralPoseImage;
+            defaultPoseImage = neutralPoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
+            defaultPosePosition = neutralPosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -389,7 +416,6 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
             variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(true));
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
-            valueIcon.GetComponent<Image>().color = new Color(0.5f, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is somewhat angry.");
 
             /*
@@ -401,6 +427,8 @@ public class YarnCommands : MonoBehaviour {
 
             currentDestinationPosePosition = negativePosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
+            defaultPoseImage = negativePoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
+            defaultPosePosition = negativePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -426,7 +454,6 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(neutralYarnBool, new Yarn.Value(false));
             variableManager.SetValue(somewhatAngryYarnBool, new Yarn.Value(false));
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(true));
-            valueIcon.GetComponent<Image>().color = new Color(1, 0, 0, 1);
             Debug.Log(this.gameObject.name + " is very angry.");
 
             /*
@@ -438,6 +465,8 @@ public class YarnCommands : MonoBehaviour {
 
             currentDestinationPosePosition = negativePosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
+            defaultPoseImage = negativePoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
+            defaultPosePosition = negativePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -462,6 +491,6 @@ public class YarnCommands : MonoBehaviour {
     /// </summary>
     void MoveTextboxPosition()
     {
-        dialogueText.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
+        dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
     }
 }

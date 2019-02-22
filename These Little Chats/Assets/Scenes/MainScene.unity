@@ -1566,11 +1566,8 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 0}
   portraitBackground: {fileID: 0}
+  dialogueTextContainer: {fileID: 0}
   dialogueText: {fileID: 0}
-  neutral: {fileID: 0}
-  happy: {fileID: 0}
-  sad: {fileID: 0}
-  angry: {fileID: 0}
   characterPoseGameObject: {fileID: 0}
   positivePoseImage: {fileID: 0}
   neutralPoseImage: {fileID: 0}
@@ -1580,12 +1577,7 @@ MonoBehaviour:
   negativePosePosition: {x: 0, y: 0, z: 0}
   poseLerpSpeed: 0
   characterTextBoxPosition: {x: 0, y: 0, z: 0}
-  convosRemainingText: {fileID: 416179547}
-  valueDisplay: {fileID: 0}
-  valueIcon: {fileID: 0}
   value: 0
-  infoSharingValueThreshold: 0
-  willShareInfoYarnBool: 
   veryPleasedValueThreshold: 0
   veryPleasedYarnBool: 
   somewhatPleasedValueThreshold: 0
@@ -1596,6 +1588,8 @@ MonoBehaviour:
   somewhatAngryYarnBool: 
   veryAngryValueThreshold: 0
   veryAngryYarnBool: 
+  inCharacterFont: {fileID: 0}
+  outOfCharacterFont: {fileID: 0}
 --- !u!1 &448017637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,11 +1622,8 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
-  dialogueText: {fileID: 585938869}
-  neutral: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
-  happy: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
-  sad: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
-  angry: {fileID: 21300000, guid: 799c3165630917f43be0fcf2cbdd175f, type: 3}
+  dialogueTextContainer: {fileID: 585938869}
+  dialogueText: {fileID: 2157378}
   characterPoseGameObject: {fileID: 24952846}
   positivePoseImage: {fileID: 21300000, guid: 13de0d889caa71d4d83d6265fb38e2ce, type: 3}
   neutralPoseImage: {fileID: 21300000, guid: 4d22994b87f938747a5776f89ac31893, type: 3}
@@ -1642,12 +1633,7 @@ MonoBehaviour:
   negativePosePosition: {x: -4.235655, y: 1.905128, z: 0}
   poseLerpSpeed: 2
   characterTextBoxPosition: {x: 1.634565, y: 4.150878, z: 0}
-  convosRemainingText: {fileID: 416179547}
-  valueDisplay: {fileID: 132862022}
-  valueIcon: {fileID: 369698402}
   value: 0
-  infoSharingValueThreshold: 1
-  willShareInfoYarnBool: $allison_will_share_info
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $allison_is_very_pleased
   somewhatPleasedValueThreshold: 1
@@ -1658,6 +1644,8 @@ MonoBehaviour:
   somewhatAngryYarnBool: $allison_is_somewhat_angry
   veryAngryValueThreshold: -2
   veryAngryYarnBool: $allison_is_very_angry
+  inCharacterFont: {fileID: 12800000, guid: 4422b34eca0d7424a883ec42a1ad49d0, type: 3}
+  outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &448017639
 Transform:
   m_ObjectHideFlags: 0
@@ -2277,11 +2265,8 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
-  dialogueText: {fileID: 585938869}
-  neutral: {fileID: 0}
-  happy: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
-  sad: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
-  angry: {fileID: 21300000, guid: 297ec305728c3a5439911d84f3353cb3, type: 3}
+  dialogueTextContainer: {fileID: 585938869}
+  dialogueText: {fileID: 2157378}
   characterPoseGameObject: {fileID: 100721519}
   positivePoseImage: {fileID: 21300000, guid: 6fc6ffa6dde2dfe45b34118e903a2341, type: 3}
   neutralPoseImage: {fileID: 21300000, guid: 0c6e9f0d807040b4f8e3c84c2a1435b3, type: 3}
@@ -2291,12 +2276,7 @@ MonoBehaviour:
   negativePosePosition: {x: 2.704139, y: 0.02182516, z: 0}
   poseLerpSpeed: 2
   characterTextBoxPosition: {x: 13.39633, y: 0.5974763, z: 0}
-  convosRemainingText: {fileID: 416179547}
-  valueDisplay: {fileID: 222040558}
-  valueIcon: {fileID: 2118412062}
   value: 0
-  infoSharingValueThreshold: 1
-  willShareInfoYarnBool: $lance_will_share_info
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $lance_is_very_pleased
   somewhatPleasedValueThreshold: 1
@@ -2307,6 +2287,8 @@ MonoBehaviour:
   somewhatAngryYarnBool: $lance_is_somewhat_angry
   veryAngryValueThreshold: -2
   veryAngryYarnBool: $lance_is_very_angry
+  inCharacterFont: {fileID: 12800000, guid: 4422b34eca0d7424a883ec42a1ad49d0, type: 3}
+  outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &741036656
 Transform:
   m_ObjectHideFlags: 0
@@ -2717,11 +2699,8 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
-  dialogueText: {fileID: 585938869}
-  neutral: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
-  happy: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
-  sad: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
-  angry: {fileID: 21300000, guid: e041aab9706c31c4e86dfde5b9bba152, type: 3}
+  dialogueTextContainer: {fileID: 585938869}
+  dialogueText: {fileID: 2157378}
   characterPoseGameObject: {fileID: 1566938073}
   positivePoseImage: {fileID: 21300000, guid: 5e69093311cf2c844be4eea0bcf781d2, type: 3}
   neutralPoseImage: {fileID: 21300000, guid: ea0b9e49734481449afb955d2cb59971, type: 3}
@@ -2731,12 +2710,7 @@ MonoBehaviour:
   negativePosePosition: {x: 1.527963, y: 3.049324, z: 0}
   poseLerpSpeed: 1
   characterTextBoxPosition: {x: 11.79729, y: 4.186412, z: 0}
-  convosRemainingText: {fileID: 416179547}
-  valueDisplay: {fileID: 289046281}
-  valueIcon: {fileID: 109466956}
   value: 0
-  infoSharingValueThreshold: 1
-  willShareInfoYarnBool: $franklin_will_share_info
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $franklin_is_very_pleased
   somewhatPleasedValueThreshold: 1
@@ -2747,6 +2721,8 @@ MonoBehaviour:
   somewhatAngryYarnBool: $franklin_is_somewhat_angry
   veryAngryValueThreshold: -2
   veryAngryYarnBool: $franklin_is_very_angry
+  inCharacterFont: {fileID: 12800000, guid: 4422b34eca0d7424a883ec42a1ad49d0, type: 3}
+  outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &991207496
 Transform:
   m_ObjectHideFlags: 0
@@ -3928,11 +3904,8 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 617381938}
-  dialogueText: {fileID: 585938869}
-  neutral: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
-  happy: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
-  sad: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
-  angry: {fileID: 21300000, guid: ef319b69daa7b7c4d8b39c3e209777af, type: 3}
+  dialogueTextContainer: {fileID: 585938869}
+  dialogueText: {fileID: 2157378}
   characterPoseGameObject: {fileID: 1638700101}
   positivePoseImage: {fileID: 21300000, guid: cfaf00f9ff18dd246ac27bd4e52de821, type: 3}
   neutralPoseImage: {fileID: 21300000, guid: 8f73bb9c5749d9648ae5897868bb230e, type: 3}
@@ -3942,12 +3915,7 @@ MonoBehaviour:
   negativePosePosition: {x: -3.837674, y: -0.0776701, z: 0}
   poseLerpSpeed: 4
   characterTextBoxPosition: {x: 1.421361, y: -0.006602056, z: 0}
-  convosRemainingText: {fileID: 416179547}
-  valueDisplay: {fileID: 1383289301}
-  valueIcon: {fileID: 319291415}
   value: 0
-  infoSharingValueThreshold: 1
-  willShareInfoYarnBool: $ruby_will_share_info
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $ruby_is_very_pleased
   somewhatPleasedValueThreshold: 1
@@ -3958,6 +3926,8 @@ MonoBehaviour:
   somewhatAngryYarnBool: $ruby_is_somewhat_angry
   veryAngryValueThreshold: -2
   veryAngryYarnBool: $ruby_is_very_angry
+  inCharacterFont: {fileID: 12800000, guid: 4422b34eca0d7424a883ec42a1ad49d0, type: 3}
+  outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1565551905
 Transform:
   m_ObjectHideFlags: 0
@@ -4072,11 +4042,8 @@ MonoBehaviour:
   characterPortraitGameObject: {fileID: 2005965681}
   nameText: {fileID: 84775252}
   portraitBackground: {fileID: 617381938}
-  dialogueText: {fileID: 585938869}
-  neutral: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
-  happy: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
-  sad: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
-  angry: {fileID: 21300000, guid: 02563c18836e9ef4aa1a1f961eee9c02, type: 3}
+  dialogueTextContainer: {fileID: 585938869}
+  dialogueText: {fileID: 2157378}
   characterPoseGameObject: {fileID: 1728637147}
   positivePoseImage: {fileID: 0}
   neutralPoseImage: {fileID: 0}
@@ -4086,12 +4053,7 @@ MonoBehaviour:
   negativePosePosition: {x: 0, y: 0, z: 0}
   poseLerpSpeed: 0
   characterTextBoxPosition: {x: 230.9, y: 38.80001, z: 0}
-  convosRemainingText: {fileID: 416179547}
-  valueDisplay: {fileID: 0}
-  valueIcon: {fileID: 0}
   value: 0
-  infoSharingValueThreshold: 1
-  willShareInfoYarnBool: 
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: 
   somewhatPleasedValueThreshold: 1
@@ -4102,6 +4064,8 @@ MonoBehaviour:
   somewhatAngryYarnBool: 
   veryAngryValueThreshold: -2
   veryAngryYarnBool: 
+  inCharacterFont: {fileID: 12800000, guid: 4422b34eca0d7424a883ec42a1ad49d0, type: 3}
+  outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1575548909
 Transform:
   m_ObjectHideFlags: 0
