@@ -88,6 +88,10 @@ public class YarnCommands : MonoBehaviour {
     public int inCharacterFontSize;
     public int outOfCharacterFontSize;
 
+    //An object that will contain the last line of dialogue that a character said before the player
+    //got to a choice selection point
+    GameObject frozenDialogueText;
+
     // Use this for initialization
     void Start () {
         nameText.GetComponent<Text>().text = null;
@@ -148,6 +152,24 @@ public class YarnCommands : MonoBehaviour {
     {
         dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
         nameText.GetComponent<Text>().text = this.gameObject.name;
+    }
+
+    /// <summary>
+    /// Causes the character to appear or disappear from the screen on command. Currently, the
+    /// function doesn't cause any fancy lerp or visual effect when the character appears, which
+    /// maybe it should at some point.
+    /// </summary>
+    /// <param name="characterIsOnScreen"></param>
+    [YarnCommand("showCharacter")]
+    public void showCharacter(string characterIsOnScreen)
+    {
+        if (characterIsOnScreen == "true")
+        {
+            characterPoseGameObject.SetActive(true);
+        } else if (characterIsOnScreen == "false")
+        {
+            characterPoseGameObject.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -229,6 +251,27 @@ public class YarnCommands : MonoBehaviour {
             dialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
             dialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         }
+    }
+
+    /// <summary>
+    /// Takes the previous line of dialogue text and keeps it onscreen by copying the object itself
+    /// even though YarnSpinner clears the original. Should be called before every choice that
+    /// appears onscreen.
+    /// </summary>
+    [YarnCommand("freezeDialogueText")]
+    public void FreezeDialogueText()
+    {
+        frozenDialogueText = Instantiate(dialogueTextContainer);
+    }
+
+    /// <summary>
+    /// Clears the previous line of dialogue from the screen once the player has chosen an option
+    /// and the story continues. Should be called after every choice the player makes.
+    /// </summary>
+    [YarnCommand("unfreezeDialogueText")]
+    public void UnfreezeDialogueText()
+    {
+        GameObject.Destroy(frozenDialogueText);
     }
 
     /// <summary>
