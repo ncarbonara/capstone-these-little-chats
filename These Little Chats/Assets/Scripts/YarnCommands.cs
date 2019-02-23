@@ -38,13 +38,13 @@ public class YarnCommands : MonoBehaviour {
     //back later to what it was before.
     Sprite defaultPoseImage;
 
-    //These are used to store the locations of each of the above pose sprites, so they can be
+    //These are used to store the positions of each of the above poses, so they can be
     //lerped towards each other, creating the illusion of bodily movement
     public Vector3 positivePosePosition;
     public Vector3 neutralPosePosition;
     public Vector3 negativePosePosition;
 
-    //The location of the character's pose sprite, based on their current mood. This is stored so
+    //The position of the character's pose sprite, based on their current mood. This is stored so
     //that a character's pose can be overridden from its current mood-based pose and then changed 
     //back later to what it was before.
     Vector3 defaultPosePosition;
@@ -76,14 +76,18 @@ public class YarnCommands : MonoBehaviour {
     public string veryAngryYarnBool;
 
     //The gameObject that moves whenever a character responds to something that the player has 
-    //said.
+    //said. No longer used, (but left commented out in case it's ever needed again)
     //public GameObject feedbackObject;
 
-    //The fonts that characters can switch to and from based on if they're speaking as their D&D
-    //characters or not.
+    //The "fonts" (actually typefaces) that characters can switch to and from based on if they're 
+    //speaking as their D&D characters or not
     public Font inCharacterFont;
     public Font outOfCharacterFont;
-    
+
+    //The size of the fonts for in-character and out-of-character dialogue text, respectively
+    public int inCharacterFontSize;
+    public int outOfCharacterFontSize;
+
     // Use this for initialization
     void Start () {
         nameText.GetComponent<Text>().text = null;
@@ -137,33 +141,13 @@ public class YarnCommands : MonoBehaviour {
     }
 
     /// <summary>
-    /// Activates this character's portrait display, and switches in their neutral portrait.
+    /// Moves the speech bubble over the head of the appropriate character.
     /// </summary>
-    [YarnCommand("activateNeutralPortrait")]
-    public void ActivateNeutralPortrait()
+    [YarnCommand("activateSpeechBubble")]
+    public void ActivateSpeechBubble()
     {
-        MoveTextboxPosition();
-
-        /*
-        characterPortraitGameObject.GetComponent<Image>().sprite = neutral;
-        characterPortraitGameObject.GetComponent<Image>().color = Color.white;
-
-        portraitBackground.gameObject.SetActive(true);
-        */
+        dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
         nameText.GetComponent<Text>().text = this.gameObject.name;
-    }
-
-    /// <summary>
-    /// Clears and deactivates all portraits.
-    /// </summary>
-    [YarnCommand("clearPortrait")]
-    public void ClearPortrait()
-    {
-        characterPortraitGameObject.GetComponent<Image>().sprite = null;
-        characterPortraitGameObject.GetComponent<Image>().color = new Vector4 (1, 1, 1, 0);
-
-        nameText.GetComponent<Text>().text = null;
-        portraitBackground.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -232,9 +216,18 @@ public class YarnCommands : MonoBehaviour {
         if (font == "inCharacter")
         {
             dialogueText.GetComponent<Text>().font = inCharacterFont;
+            dialogueText.GetComponent<Text>().fontSize = inCharacterFontSize;
+            dialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         } else if (font == "outOfCharacter")
         {
             dialogueText.GetComponent<Text>().font = outOfCharacterFont;
+            dialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
+            dialogueText.GetComponent<Text>().fontStyle = FontStyle.Normal;
+        } else if(font == "internalMonologue")
+        {
+            dialogueText.GetComponent<Text>().font = outOfCharacterFont;
+            dialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
+            dialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         }
     }
 
@@ -484,13 +477,5 @@ public class YarnCommands : MonoBehaviour {
             neutralPose.GetComponent<Transform>().position = Vector2.Lerp(currentPosePosition, negativePosePosition, fracJourney);
             */
         }
-    }
-
-    /// <summary>
-    /// Moves the speech bubble over the head of the appropriate character.
-    /// </summary>
-    void MoveTextboxPosition()
-    {
-        dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
     }
 }
