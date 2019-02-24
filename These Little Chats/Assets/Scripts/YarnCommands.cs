@@ -254,6 +254,10 @@ public class YarnCommands : MonoBehaviour {
     }
 
     /// <summary>
+    /// NOTE: This function doesn't currently work as desired. As such, all its code has been
+    /// commented out for now, and an extra line added so that it now just clears the character name
+    /// text offscreen.
+    /// 
     /// Takes the previous line of dialogue text and keeps it onscreen by copying the object itself
     /// even though YarnSpinner clears the original. Should be called before every choice that
     /// appears onscreen.
@@ -261,17 +265,28 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("freezeDialogueText")]
     public void FreezeDialogueText()
     {
+        nameText.GetComponent<Text>().text = " ";
+        /*
         frozenDialogueText = Instantiate(dialogueTextContainer);
+        GameObject background = GameObject.Find("Background");
+        frozenDialogueText.transform.SetParent(background.GetComponent<Transform>());
+        frozenDialogueText.GetComponent<Transform>().position = dialogueTextContainer.GetComponent<Transform>().position;
+        */
     }
 
     /// <summary>
+    /// NOTE: This function doesn't currently work as desired. As such, all its code has been
+    /// commented out for now.
+    /// 
     /// Clears the previous line of dialogue from the screen once the player has chosen an option
     /// and the story continues. Should be called after every choice the player makes.
     /// </summary>
     [YarnCommand("unfreezeDialogueText")]
     public void UnfreezeDialogueText()
     {
+        /*
         GameObject.Destroy(frozenDialogueText);
+        */
     }
 
     /// <summary>
