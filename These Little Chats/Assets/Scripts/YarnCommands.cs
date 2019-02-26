@@ -29,9 +29,11 @@ public class YarnCommands : MonoBehaviour {
     //public GameObject negativePose;
 
     //The sprites that the pose image cycles through based on the character's mood
-    public Sprite positivePoseImage;
+    public Sprite positive2PoseImage;
+    public Sprite positive1PoseImage;
     public Sprite neutralPoseImage;
-    public Sprite negativePoseImage;
+    public Sprite negative1PoseImage;
+    public Sprite negative2PoseImage;
 
     //The sprite for the character's current pose, based on their current mood. This is stored so
     //that a character's pose can be overridden from its current mood-based pose and then changed 
@@ -40,9 +42,11 @@ public class YarnCommands : MonoBehaviour {
 
     //These are used to store the positions of each of the above poses, so they can be
     //lerped towards each other, creating the illusion of bodily movement
-    public Vector3 positivePosePosition;
+    public Vector3 positive2PosePosition;
+    public Vector3 positive1PosePosition;
     public Vector3 neutralPosePosition;
-    public Vector3 negativePosePosition;
+    public Vector3 negative1PosePosition;
+    public Vector3 negative2PosePosition;
 
     //The position of the character's pose sprite, based on their current mood. This is stored so
     //that a character's pose can be overridden from its current mood-based pose and then changed 
@@ -183,14 +187,14 @@ public class YarnCommands : MonoBehaviour {
         //possibly, maybe, IDK.
         if (newPose == "plusTwo")
         {
-            currentDestinationPosePosition = positivePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
+            currentDestinationPosePosition = positive2PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = positive2PoseImage;
             startNewLerp = true;
             lerpInProcess = true;
         } else if (newPose == "plusOne")
         {
-            currentDestinationPosePosition = positivePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
+            currentDestinationPosePosition = positive2PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = positive1PoseImage;
             startNewLerp = true;
             lerpInProcess = true;
         } else if(newPose == "zero")
@@ -201,14 +205,14 @@ public class YarnCommands : MonoBehaviour {
             lerpInProcess = true;
         } else if(newPose == "minusOne")
         {
-            currentDestinationPosePosition = negativePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
+            currentDestinationPosePosition = negative2PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = negative1PoseImage;
             startNewLerp = true;
             lerpInProcess = true;
         } else if(newPose == "minusTwo")
         {
-            currentDestinationPosePosition = negativePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
+            currentDestinationPosePosition = negative2PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = negative2PoseImage;
             startNewLerp = true;
             lerpInProcess = true;
         }
@@ -360,10 +364,10 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(false);
             */
 
-            currentDestinationPosePosition = positivePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
-            defaultPoseImage = positivePoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
-            defaultPosePosition = positivePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
+            currentDestinationPosePosition = positive2PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = positive2PoseImage;
+            defaultPoseImage = positive2PoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
+            defaultPosePosition = positive2PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -399,10 +403,10 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(false);
             */
 
-            currentDestinationPosePosition = positivePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = positivePoseImage;
-            defaultPoseImage = positivePoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
-            defaultPosePosition = positivePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
+            currentDestinationPosePosition = positive1PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = positive1PoseImage;
+            defaultPoseImage = positive1PoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
+            defaultPosePosition = positive1PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -476,10 +480,10 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(true);
             */
 
-            currentDestinationPosePosition = negativePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
-            defaultPoseImage = negativePoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
-            defaultPosePosition = negativePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
+            currentDestinationPosePosition = negative1PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = negative1PoseImage;
+            defaultPoseImage = negative1PoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
+            defaultPosePosition = negative1PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
@@ -514,10 +518,10 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(true);
             */
 
-            currentDestinationPosePosition = negativePosePosition;
-            characterPoseGameObject.GetComponent<Image>().sprite = negativePoseImage;
-            defaultPoseImage = negativePoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
-            defaultPosePosition = negativePosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
+            currentDestinationPosePosition = negative2PosePosition;
+            characterPoseGameObject.GetComponent<Image>().sprite = negative2PoseImage;
+            defaultPoseImage = negative2PoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
+            defaultPosePosition = negative2PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
             startNewLerp = true;
             lerpInProcess = true;
 
