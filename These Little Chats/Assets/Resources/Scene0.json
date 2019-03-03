@@ -2,47 +2,47 @@
 	{
 		"title": "Start",
 		"tags": "",
-		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateSpeechBubble Brynn>>One sec!\r\n<<changeFont Brynn internalMonologue>><<activateSpeechBubble Brynn>>Just gotta put this here and…\r\n<<triggerSound EnvironmentSoundFX placeDMScreen>>\r\n<<changeFont Brynn internalMonologue>><<activateSpeechBubble Brynn>>There!\r\n<<changeFont Brynn outOfCharacter>><<activateSpeechBubble Brynn>>It’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateSpeechBubble Ruby>>Brynn!\r\n<<showCharacter Ruby true>>\r\n<<overridePose Ruby plusTwo>> Oh my God, it’s so good to you! It’s been ages!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn plusOne>>I know, it’s great to see you too!\r\n<<triggerSound EnvironmentSoundFX sitDownTimesTwo>><<characterAppears Ruby true>><<characterAppears Brynn true>>\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusOne>>When did you get back?\r\n<<activateSpeechBubble Brynn>>About three days ago, jet lag and all.\r\n<<activateSpeechBubble Ruby>>You should’ve told me you were coming! I would’ve picked you up from the airport, you know?\r\n<<activateSpeechBubble Brynn>>Yeah, I know, but I wanted to surprise you guys.\r\n<<activateSpeechBubble Ruby>>But I would’ve made a sign!\r\n<<activateSpeechBubble Brynn>>No worries, Ruby. I’m just glad to be back.\r\n<<activateSpeechBubble Ruby>>So, how was it? How was London?\r\n<<freezeDialogueText Ruby>>\r\n[[It was cool!|ItWasCool]]\r\n[[I missed home.|IMissedHome]]",
+		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateSpeechBubble Brynn>>Wait just a sec!\r\n<<changeFont Brynn internalMonologue>><<activateSpeechBubble Brynn>>Just gotta put this here and…\r\n<<triggerSound EnvironmentSoundFX placeDMScreen>>\r\n<<changeFont Brynn internalMonologue>><<activateSpeechBubble Brynn>>There!\r\n<<changeFont Brynn outOfCharacter>><<activateSpeechBubble Brynn>>It’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateSpeechBubble Ruby>>Brynn!\r\n<<showCharacter Ruby true>>\r\n<<overridePose Ruby plusTwo>> Oh my God, it’s so good to you! It’s been ages!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn plusOne>>I know, it’s great to see you too!\r\n<<triggerSound EnvironmentSoundFX sitDownTimesTwo>><<characterAppears Ruby true>><<characterAppears Brynn true>>\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusOne>>When did you get back?\r\n<<activateSpeechBubble Brynn>>About three days ago. The jet lag’s worn off, thankfully!\r\n<<activateSpeechBubble Ruby>>You should’ve told me you were coming! I would’ve picked you up from the airport, you know?\r\n<<activateSpeechBubble Brynn>>Yeah, I know, but I wanted to surprise you guys.\r\n<<activateSpeechBubble Ruby>>But I would’ve made a sign!\r\n<<activateSpeechBubble Brynn>>No worries, Ruby. I’m just glad to be back.\r\n<<activateSpeechBubble Ruby>>So, how was it? How was London?\r\n<<freezeDialogueText Ruby>>\r\n[[It was cool!|ItWasCool]]\r\n[[I missed home.|IMissedHome]]",
 		"position": {
-			"x": 296,
-			"y": -525
+			"x": 294,
+			"y": -527
 		},
 		"colorID": 0
 	},
 	{
 		"title": "ItWasCool",
 		"tags": "",
-		"body": "<<unfreezeDialogueText Ruby>>\r\n<<activateSpeechBubble Brynn>>I loved it!\r\n<<activateSpeechBubble Brynn>>I’ve always wanted to go to England so finally being there was incredible!\r\n<<activateSpeechBubble Brynn>>You know George Orwell, right?\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby zero>>Umm… that’s the author of 1984 right?\r\n<<activateSpeechBubble Brynn>>Yup, and a lot of other books. He spent a lot of time in London.\r\n<<activateSpeechBubble Brynn>>One of my classes was just about reading and breaking down his works.\r\n<<overridePose Ruby plusOne>>Wow, that’s really cool! You must’ve loved it.\r\n<<activateSpeechBubble Brynn>>I did! And I know it’s cliché to say, but Big Ben is actually pretty cool.\r\n<<activateSpeechBubble Ruby>>Knowing you, you must’ve taken an albums’ worth of pictures. I want to see them sometime!\r\n<<activateSpeechBubble Ruby>>Anyway, I’m really glad you had a great time. \r\n<<activateSpeechBubble Ruby>>And now you can channel your new story skills into being Dungeon Master!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby zero>><<overridePose Brynn zero>>: We haven’t played any D&D since you left. We were talking about playing a few one-shots while we waited for you to come back, but, uh…\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>>...We, um... we forgot to really talk about it, I guess.\r\n[[Rebranch1]]",
+		"body": "<<unfreezeDialogueText Ruby>>\r\n<<activateSpeechBubble Brynn>>I loved it!\r\n<<activateSpeechBubble Brynn>>I’ve always wanted to go to England so finally being there was incredible!\r\n<<activateSpeechBubble Brynn>>You know George Orwell, right?\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby zero>>Umm… that’s the author of 1984 right?\r\n<<activateSpeechBubble Brynn>>Yup, and a lot of other books. He spent a lot of time in London.\r\n<<activateSpeechBubble Brynn>>One of my classes was just about reading and breaking down his works.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusOne>>Wow, that’s really cool! You must’ve loved it.\r\n<<activateSpeechBubble Brynn>>I did! And I know it’s cliché to say, but Big Ben is actually pretty cool.\r\n<<activateSpeechBubble Ruby>>Knowing you, you must’ve taken an albums’ worth of pictures. I want to see them!\r\n<<activateSpeechBubble Brynn>>Sure, I’ll dig them out when I can.\r\n<<activateSpeechBubble Ruby>>But yeah, I’m glad you had a great time. \r\n<<activateSpeechBubble Ruby>>And now you can channel your new story skills into being Dungeon Master!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby zero>><<overridePose Brynn zero>>: We haven’t played any D&D since you left. We were talking about playing a few one-shots while we waited for you to come back, but…\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>>...We, um... we forgot to really talk about it, I guess.\r\n[[Rebranch1]]",
 		"position": {
-			"x": 146,
-			"y": -355
+			"x": 47,
+			"y": -391
 		},
 		"colorID": 0
 	},
 	{
 		"title": "IMissedHome",
 		"tags": "",
-		"body": "<<unfreezeDialogueText Ruby>>\r\n<<activateSpeechBubble Brynn>>It was nice! Still I’m glad to be back.\r\n<<activateSpeechBubble Brynn>>The literature courses I took were great and the sightseeing was a lot of fun, but I missed not having to carry an umbrella with me every day.\r\n<<activateSpeechBubble Ruby>>Yeah, I heard it rains a lot.\r\n<<activateSpeechBubble Brynn>>No kidding! And there’s a lot of meat pie. I must’ve had meat pie three times a week.\r\n<<activateSpeechBubble Ruby>>Really?\r\n<<activateSpeechBubble Brynn>>Really! But seriously, I missed you all. And I missed this.\r\n<<activateSpeechBubble Ruby>>We missed you too!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>><<overridePose Brynn zero>>I mean, I’m sure everyone did. It’s been a little while since we talked.\r\n[[Rebranch1]]",
+		"body": "<<unfreezeDialogueText Ruby>>\r\n<<activateSpeechBubble Brynn>>Honestly, I’m glad to be back.\r\n<<activateSpeechBubble Brynn>>The literature courses were great and the sightseeing was fun, but I missed not having to carry an umbrella with me every day.\r\n<<activateSpeechBubble Ruby>>Yeah, I heard it rains a lot.\r\n<<activateSpeechBubble Brynn>>No kidding! And there’s a lot of meat pie. I must’ve had meat pie three times a week.\r\n<<activateSpeechBubble Ruby>>Really?\r\n<<activateSpeechBubble Brynn>>Really! But seriously, I missed you all. And I missed this.\r\n<<activateSpeechBubble Ruby>>We missed you too!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>><<overridePose Brynn zero>>I mean, I’m sure everyone did. It’s been a little while since we talked.\r\n[[Rebranch1]]",
 		"position": {
-			"x": 414,
-			"y": -344
+			"x": 540,
+			"y": -395
 		},
 		"colorID": 0
 	},
 	{
 		"title": "Rebranch1",
 		"tags": "",
-		"body": "<<activateSpeechBubble Ruby>><<overridePose Ruby zero>>Anyway, uh, I’m glad we can get back to the old campaign!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn zero>>Yeah, me too!\r\n<<activateSpeechBubble Brynn>>Sorry I had to leave when you guys were right at a cliffhanger. \r\n<<activateSpeechBubble Brynn>>I can’t wait to see how the campaign wraps up after all these years.\r\n<<activateSpeechBubble Ruby>>It’s okay! And I’m excited too.\r\n<<activateSpeechBubble Ruby>>So… everyone’s coming, right?\r\n<<activateSpeechBubble Brynn>>Yeah, they should be.\r\n<<activateSpeechBubble Ruby>>Like, both Lance and Allison? \r\n<<activateSpeechBubble Ruby>>And even Franklin?\r\n<<activateSpeechBubble Brynn>>Yeah, I’m pretty sure.\r\n<<activateSpeechBubble Ruby>>Okay, uh, good! That’s good.\r\n<<activateSpeechBubble Ruby>>It’ll be nice to finally catch up with everyone.\r\n[[What have you been up to?|WhatHaveYouBeenUpTo]]\r\n[[Is everything okay?|IsEverythingOkay]]",
+		"body": "<<activateSpeechBubble Ruby>><<overridePose Ruby zero>>Anyway, uh, I’m glad we can get back to the old campaign!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn zero>>Yeah, me too!\r\n<<activateSpeechBubble Brynn>>Sorry I had to leave when you guys were right at a cliffhanger. \r\n<<activateSpeechBubble Brynn>>I can’t wait to see how the campaign wraps up after all these years.\r\n<<activateSpeechBubble Ruby>>It’s okay! And I’m excited too.\r\n<<activateSpeechBubble Ruby>>So… everyone’s coming, right?\r\n<<activateSpeechBubble Brynn>>Yeah, they should be.\r\n<<activateSpeechBubble Ruby>>Like, both Lance and Allison? \r\n<<activateSpeechBubble Ruby>>And even Franklin?\r\n<<activateSpeechBubble Brynn>>Yeah, I’m pretty sure.\r\n<<activateSpeechBubble Ruby>>Okay, uh, good! That’s good.\r\n<<activateSpeechBubble Ruby>>It’ll be nice to finally catch up with everyone.\r\n<<freezeDialogueText Ruby>>\r\n[[What have you been up to?|WhatHaveYouBeenUpTo]]\r\n[[Are you alright?|IsEverythingOkay]]",
 		"position": {
-			"x": 275,
-			"y": -186
+			"x": 297,
+			"y": -283
 		},
 		"colorID": 0
 	},
 	{
 		"title": "WhatHaveYouBeenUpTo",
 		"tags": "",
-		"body": "<<activateSpeechBubble Brynn>>For sure! Speaking of, how have you been?\r\n<<activateSpeechBubble Ruby>>Oh! Yeah, pretty good, pretty good!\r\n<<activateSpeechBubble Brynn>>Still doing forensic science and everything?\r\n<<activateSpeechBubble Ruby>>Yeah, for sure. It’s going pretty well!\r\n<<activateSpeechBubble Ruby>>The assignments have gotten harder, but I think I can handle it.\r\n<<activateSpeechBubble Ruby>>I just wish I could find a study group. [Insert relevant class here] is kind of kicking my ass.\r\n<<activateSpeechBubble Brynn>>I’m sure everyone in your class feels that way.\r\n<<activateSpeechBubble Ruby>>Yeah, maybe.\r\n<<activateSpeechBubble Ruby>>It was just... nice, back in high school when we could always go to each other for help.\r\n<<activateSpeechBubble Ruby>>Franklin helped me get through history, and I’m pretty sure you saved my AP English grade!\r\n<<overridePose Brynn plusOne>><<activateSpeechBubble Brynn>>It’s what we’re here for.\r\n<<activateSpeechBubble Ruby>>Yeah…\r\n<<overridePose Ruby minusOne>><<activateSpeechBubble Ruby>>...Yeah.\r\n<<activateSpeechBubble Ruby>>…\r\n[[Is everything okay?|IsEverythingOkay]]",
+		"body": "<<activateSpeechBubble Brynn>>For sure! Speaking of, how have you been?\r\n<<activateSpeechBubble Ruby>>Oh! Yeah, pretty good, pretty good!\r\n<<activateSpeechBubble Brynn>>Still doing forensic science and everything?\r\n<<activateSpeechBubble Ruby>>Yeah, for sure. It’s going pretty well!\r\n<<activateSpeechBubble Ruby>>The assignments have gotten harder, but I think I can handle it.\r\n<<activateSpeechBubble Ruby>>I just wish I could find a study group. Intermediate Trace Evidence is kind of kicking my ass.\r\n<<activateSpeechBubble Brynn>>I’m sure everyone in your class feels that way.\r\n<<activateSpeechBubble Ruby>>Yeah, maybe.\r\n<<activateSpeechBubble Ruby>>It was just... nice, back in high school when we could always go to each other for help.\r\n<<activateSpeechBubble Ruby>>Franklin helped me get through history, and I’m pretty sure you saved my AP English grade!\r\n<<overridePose Brynn plusOne>><<activateSpeechBubble Brynn>>It’s what we’re here for.\r\n<<activateSpeechBubble Ruby>>Yeah…\r\n<<overridePose Ruby minusOne>><<activateSpeechBubble Ruby>>...Yeah.\r\n<<activateSpeechBubble Ruby>>…\r\n<<freezeDialogueText Ruby>>\r\n[[Is everything okay?|IsEverythingOkay]]",
 		"position": {
 			"x": 119,
 			"y": -56
@@ -52,7 +52,7 @@
 	{
 		"title": "IsEverythingOkay",
 		"tags": "",
-		"body": "<<activateSpeechBubble Brynn>>Hey… what’s wrong?\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>>Well… there’s…\r\n<<activateSpeechBubble Ruby>>Since you left, things have been…\r\n<<activateSpeechBubble Ruby>>...a little weird.\r\n<<activateSpeechBubble Ruby>>With us. The group, I mean.\r\n<<activateSpeechBubble Brynn>>Is everyone okay?\r\n<<activateSpeechBubble Ruby>>I don’t know.\r\n<<activateSpeechBubble Ruby>>I’ve barely heard from Franklin in months, and as for Lance and Allison, I think something went really wrong with them.\r\n<<activateSpeechBubble Ruby>>Brynn, I think I... I think we really need your help. I think we’ll fall apart unless you can keep us together.\r\n<<activateSpeechBubble Brynn>>Do you want me to talk everyone?\r\n<<activateSpeechBubble Ruby>>I don’t know, I don’t think anyone wants to talk about what’s going on with them. It’s not like it used to be.\r\n<<overridePose Ruby zero>><<activateSpeechBubble Ruby>>But I was just thinking, we’ve had arguments before when we were playing the D&D, and you helped us through those.\r\n<<activateSpeechBubble Brynn>>But that was in the game, I’m not sure what I can do otherwise.\r\n<<activateSpeechBubble Brynn>>Ruby, what exactly happened to everyone?\r\n<<activateSpeechBubble Ruby>>Well, I heard that Allison and Lance—\r\n<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateSpeechBubble Ruby>>Oh!\r\n<<activateSpeechBubble Lance>>“Honey, I’m ho-ome!”\r\n<<activateSpeechBubble Brynn>>It’s open, Lance!\r\n<<activateSpeechBubble Lance>>Yeah, I figured.\r\n<<showCharacter Lance true>>\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>><<triggerSound EnvironmentSoundFX sitDown>><<characterAppears Lance true>>\r\n<<activateSpeechBubble Lance>>Well, don’t everyone get up to offer me a seat all at once.\r\n<<activateSpeechBubble Lance>>I’m not interrupting anything, am I?\r\n<<activateSpeechBubble Ruby>>No! We were just catching up.\r\n<<activateSpeechBubble Lance>>Good, because I’ve been dying to get back to the campaign. \r\n<<activateSpeechBubble Lance>>And I’m not holding back on any of my skill checks just because y’all are a little rusty.\r\n<<activateSpeechBubble Brynn>>Good to see you too, Mr. Rogue.\r\n<<activateSpeechBubble Lance>>Good to be seen! Also, welcome back stateside, Brynn.\r\n<<activateSpeechBubble Lance>>Ruby, you okay? You seem a little off.\r\n<<activateSpeechBubble Ruby>>Oh! No, yeah, I’m fine. I’m glad you’re here, Lance!\r\n<<activateSpeechBubble Lance>>Yeah, what would anyone do without me?\r\n<<activateSpeechBubble Lance>>After all…\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Arannis Shadowfall’s aim is only ever untrue when he wills it.<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Ruby>>I’ve missed those voices of yours, Lance!\r\n<<activateSpeechBubble Lance>>Yeah, not bad, right?\r\n[[Not bad at all.|NotBadAtAll]]\r\n[[Eh...|Eh]]",
+		"body": "<<activateSpeechBubble Brynn>>Hey, is everything okay? You don’t seem like yourself.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>>Well… there’s…\r\n<<activateSpeechBubble Ruby>>Since you left, things have been…\r\n<<activateSpeechBubble Ruby>>...a little weird.\r\n<<activateSpeechBubble Ruby>>With us. The group, I mean.\r\n<<activateSpeechBubble Brynn>>Is everyone alright?\r\n<<activateSpeechBubble Ruby>>I don’t know.\r\n<<activateSpeechBubble Ruby>>I’ve barely heard from Franklin in months, and as for Lance and Allison, I think something went really wrong with them.\r\n<<activateSpeechBubble Ruby>>Brynn... I think we really need your help. I think we’re falling apart.\r\n<<activateSpeechBubble Brynn>>Do you want me to talk everyone?\r\n<<activateSpeechBubble Ruby>>I don’t know, I don’t think anyone wants to talk about what’s going on with them. It’s not like it used to be.\r\n<<overridePose Ruby zero>><<activateSpeechBubble Ruby>>But I was just thinking, we’ve had arguments before when we were playing the D&D, and you helped us through those.\r\n<<activateSpeechBubble Brynn>>But that was in the game, I’m not sure what I can do otherwise.\r\n<<activateSpeechBubble Brynn>>Ruby, what exactly happened to everyone?\r\n<<activateSpeechBubble Ruby>>Well, I heard that Allison and Lance—\r\n<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateSpeechBubble Ruby>>Oh!\r\n<<activateSpeechBubble Lance>>“Honey, I’m ho-ome!”\r\n<<activateSpeechBubble Brynn>>It’s open, Lance!\r\n<<activateSpeechBubble Lance>>Yeah, I figured.\r\n<<showCharacter Lance true>>\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>><<triggerSound EnvironmentSoundFX sitDown>><<characterAppears Lance true>>\r\n<<activateSpeechBubble Lance>>Well, don’t everyone get up to offer me a seat all at once.\r\n<<activateSpeechBubble Lance>>I’m not interrupting anything, am I?\r\n<<activateSpeechBubble Ruby>>No! We were just catching up.\r\n<<activateSpeechBubble Lance>>Good, because I’ve been dying to get back to the campaign. \r\n<<activateSpeechBubble Lance>>And I’m not holding back on any of my skill checks just because y’all are a little rusty.\r\n<<activateSpeechBubble Brynn>>Good to see you too, Mr. Rogue.\r\n<<activateSpeechBubble Lance>>Good to be seen! Also, welcome back stateside, Brynn.\r\n<<activateSpeechBubble Lance>>Ruby, you okay? You seem a little off.\r\n<<activateSpeechBubble Ruby>>Oh! No, yeah, I’m fine. I’m glad you’re here, Lance!\r\n<<activateSpeechBubble Lance>>Yeah, what would anyone do without me?\r\n<<activateSpeechBubble Lance>>After all…\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Arannis Shadowfall’s aim is only ever untrue when he wills it.<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Ruby>>I’ve missed those voices of yours, Lance!\r\n<<activateSpeechBubble Lance>>Yeah, not bad, right?\r\n<<freezeDialogueText Lance>>\r\n[[Not bad at all.|NotBadAtAll]]\r\n[[Eh...|Eh]]",
 		"position": {
 			"x": 435,
 			"y": -49
@@ -62,7 +62,7 @@
 	{
 		"title": "NotBadAtAll",
 		"tags": "",
-		"body": "<<activateSpeechBubble Brynn>>You haven’t lost your touch.\r\n<<returnToDefaultPose Lance>><<increaseValue Lance>>\r\n<<activateSpeechBubble Lance>>Why, thank you.\r\n<<activateSpeechBubble Lance>>It always makes me happy to have an appreciative audience.\r\n<<decreaseValue Lance>>",
+		"body": "<<activateSpeechBubble Brynn>>You haven’t lost your touch.\r\n<<returnToDefaultPose Lance>><<increaseValue Lance>>\r\n<<activateSpeechBubble Lance>>Why, thank you.\r\n<<activateSpeechBubble Lance>>It always makes me happy to have an appreciative audience.\r\n<<decreaseValue Lance>>\r\n[[Rebranch2]]",
 		"position": {
 			"x": 119,
 			"y": 190
@@ -72,10 +72,220 @@
 	{
 		"title": "Eh",
 		"tags": "",
-		"body": "<<overridePose Brynn plusOne>><<activateSpeechBubble Brynn>>Keep practicing, theatre boy.\r\n<<returnToDefaultPose Lance>><<decreaseValue Lance>>\r\n<<activateSpeechBubble Lance>>Oof. Tough crowd.\r\n<<activateSpeechBubble Ruby>>It’s okay, Lance, she was just teasing.\r\n<<increaseValue Lance>>\r\n<<activateSpeechBubble Lance>>Yeah, I know. Now, if that had been some real slander, Brynn, I might’ve just had to kill you.\r\n<<activateSpeechBubble Brynn>>Sure, sure.<<returnToDefaultPose Brynn>>",
+		"body": "<<overridePose Brynn plusOne>><<activateSpeechBubble Brynn>>Keep practicing, theatre boy.\r\n<<returnToDefaultPose Lance>><<decreaseValue Lance>>\r\n<<activateSpeechBubble Lance>>Oof. Tough crowd.\r\n<<activateSpeechBubble Ruby>>It’s okay, Lance, she was just teasing.\r\n<<increaseValue Lance>>\r\n<<activateSpeechBubble Lance>>Yeah, I know. Now, if that had been some real slander, Brynn, I might’ve just had to kill you.\r\n<<activateSpeechBubble Brynn>>Sure, sure.<<returnToDefaultPose Brynn>>\r\n[[Rebranch2]]",
 		"position": {
 			"x": 431,
 			"y": 180
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch2",
+		"tags": "",
+		"body": "<<activateSpeechBubble Lance>>Hijinx aside, where’s everyone else? I’m ready to get started, here.\r\n<<activateSpeechBubble Brynn>>They should be here pretty soon. Thought we could use the time to catch up.\r\n<<freezeDialogueText Ruby>>\r\n[[Do any performances lately?|DoAnyPerformances]]\r\n[[See Allison around?|SeeAllisonAround]]\r\n",
+		"position": {
+			"x": 225,
+			"y": 455
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DoAnyPerformances",
+		"tags": "",
+		"body": "<<activateSpeechBubble Lance>>Why, of course! I’m in a production that a smaller playhouse in New York City is doing of Fiddler on the Roof.\r\n<<activateSpeechBubble Ruby>>Ooh!\r\n<<activateSpeechBubble Brynn>>Big name show in New York? Not bad at all.\r\n<<activateSpeechBubble Lance>>That’s the hope! And yes, I am learning how to sing for that.\r\n<<activateSpeechBubble Lance>>I mean, of course, I was already learning to sing for, uh, the other thing. \r\n<<activateSpeechBubble Lance>>But yeah, now I’m doing it for real.\r\n<<activateSpeechBubble Brynn>>“Other thing”? You mean the musical you and Allison always talked about writing and performing?\r\n<<activateSpeechBubble Lance>>Right, yeah. Anyway, that hasn’t been me and Allison’s entire life, or anything. Like I was saying—.\r\n[[Rebranch3]]",
+		"position": {
+			"x": 30,
+			"y": 744
+		},
+		"colorID": 0
+	},
+	{
+		"title": "SeeAllisonAround",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Have you been keeping up with Allison? I remember you and her were talking about that musical.\r\n<<activateSpeechBubble Lance>>Oh. Yeah, that’s going pretty good. Can’t complain, can’t complain\r\n<<activateSpeechBubble Brynn>>Settled on a name for that ending number yet?\r\n<<activateSpeechBubble Lance>>Ehh, coming up with song titles is more of Allison’s thing.\r\n<<activateSpeechBubble Brynn>>Gotcha. Knowing her, I’m sure she’ll try to run her ideas for it by us when she gets here. That girl just doesn’t stop.\r\n<<activateSpeechBubble Lance>>Yep. She sure doesn’t.\r\n<<activateSpeechBubble Lance>>Anyway, I’ve been doing other stuff besides the musical, too. For example, there’s this playhouse in New York City that’s doing—.\r\n[[Rebranch3]]",
+		"position": {
+			"x": 454,
+			"y": 725
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch3",
+		"tags": "",
+		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateSpeechBubble Allison>>Brynn! There’s my girl!\r\n<<overridePose Brynn plusOne>><<activateSpeechBubble Brynn>>Hey, Allison! Come on in!\r\n<<triggerSound EnvironmentSoundFX sitDown>><<showCharacter Allison true>>\r\n<<activateSpeechBubble Lance>>(How come I didn’t get a ‘come on in’?)\r\n<<overridePose Allison plusTwo>><<activateSpeechBubble Allison>>Hey, Ruby!\r\n<<activateSpeechBubble Ruby>>Hi!\r\n<<activateSpeechBubble Allison>>Aw man, the gang’s back together! Feels good, yo. How’s everybody doing?\r\n<<activateSpeechBubble Lance>>Hey, Allison! We were just talking about you.\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>Yeah, hey, Lance.<<overridePose Allison zero>>\r\n<<activateSpeechBubble Ruby>>Uh, yeah, everyone’s doing good! Er, I mean, “well”. We’re doing well!\r\n<<activateSpeechBubble Allison>>Hey, Ruby, you okay? \r\n<<activateSpeechBubble Allison>>Is somebody messing with you? ‘Cause I’m not about to let that fly.\r\n<<activateSpeechBubble Ruby>>Oh! No, no, no. Nothing like that. I’m fine! Really.\r\n<<activateSpeechBubble Lance>>Yeah, I asked her about that earlier.\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>Yeah, great, Lance, thanks for your input.\r\n<<activateSpeechBubble Lance>>Uh, yeah... any time?\r\n<<freezeDialogueText Ruby>>\r\n[[Easy, you two.|EasyYouTwo]]\r\n[[How's it going, Allison?|HowsItGoing]]\r\n",
+		"position": {
+			"x": 249,
+			"y": 965
+		},
+		"colorID": 0
+	},
+	{
+		"title": "EasyYouTwo",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Okay, let’s keep it chill, everybody.\r\n<<activateSpeechBubble Ruby>>Yeah, we’re friends! Let’s keep things friendly.\r\n<<activateSpeechBubble Allison>>Alright, alright.\r\n<<activateSpeechBubble Lance>>Yeah, sure.\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>Sorry.\r\n<<overridePose Lance minusOne>><<activateSpeechBubble Lance>>Yeah, it’s fine.\r\n[[Rebranch4]]",
+		"position": {
+			"x": -89,
+			"y": 1290
+		},
+		"colorID": 0
+	},
+	{
+		"title": "HowsItGoing",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>So, Allison, how’ve you been?\r\n<<activateSpeechBubble Allison>>Honestly? Not fantastic.\r\n<<activateSpeechBubble Brynn>>Oh, no. Really?\r\n<<activateSpeechBubble Allison>>Yup. Getting guitar gigs in the city is tough when everyone else with an axe is trying to do the same thing.\r\n<<activateSpeechBubble Allison>>I’ve been trying to sell the fact that I sing and do percussion, too, but that isn’t always enough.\r\n<<activateSpeechBubble Allison>>*Sigh!*\r\n<<activateSpeechBubble Allison>>Someday, man; someday, I’ll make it with this whole singer-songwriter thing.\r\n<<activateSpeechBubble Brynn>>Oof. Still going after it, huh?\r\n<<activateSpeechBubble Allison>>Oh, yeah, never gonna stop. That’s why it’s nice to chill with you every now and again.\r\n<<activateSpeechBubble Allison>>You folks give me strength.\r\n<<activateSpeechBubble Ruby>>Aww, Allison!\r\n<<activateSpeechBubble Brynn>>Glad we can help!\r\n<<activateSpeechBubble Lance>>Yeah, I get that alo—\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>Okay, Lance, you’re in the room. We get it.\r\n[[Rebranch4]]",
+		"position": {
+			"x": 476,
+			"y": 1231
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch4",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>So, Allison, we were just talking about the show.\r\n<<overridePose Allison zero>><<overridePose Lance zero>>Oh. Um, right.\r\n<<activateSpeechBubble Lance>>Yeah, I was just telling Brynn that, uh…\r\n<<activateSpeechBubble Allison>>Yeah, so, here’s the deal. The show’s kind of…\r\n<<activateSpeechBubble Lance>>We sort of decided that we were going to…\r\n<<activateSpeechBubble Allison>>I put it on hiatus.\r\n<<activateSpeechBubble Lance>>...Yeah, exactly.\r\n<<freezeDialogueText Ruby>>\r\n[[What happened?|WhatHappened]]\r\n[[Cool, got it.|CoolGotIt]]",
+		"position": {
+			"x": 245,
+			"y": 1495
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WhatHappened",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>But I thought you were really excited to do Powerhouse of the Cell.\r\n<<activateSpeechBubble Brynn>>You'd been writing it for months, Allison. It was all you and Lance would talk about.\r\n<<activateSpeechBubble Allison>>Yeah, I know.\r\n<<activateSpeechBubble Allison>>We found some actors who could sing and were down to be in a more comedy-focused show.\r\n<<activateSpeechBubble Allison>>We’d even gotten a band lined up to play the punk rock numbers and.\r\n<<activateSpeechBubble Allison>>But then, well...\r\n<<activateSpeechBubble Lance>>Yeah, we just decided to put it aside for now. Focus on other things. You know how it is.\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>…\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>...Right.\r\n[[Rebranch5]]",
+		"position": {
+			"x": -73,
+			"y": 1722
+		},
+		"colorID": 0
+	},
+	{
+		"title": "CoolGotIt",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Aw, that’s too bad. Things happen, I suppose\r\n<<activateSpeechBubble Allison>>Yeah.\r\n<<activateSpeechBubble Allison>>I'll just have to shelf my script for Powerhouse of the Cell for a little while.\r\n<<activateSpeechBubble Lance>>Yeah, just one of those things. You know how it is.\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>…\r\n<<overridePose Allison minusOne>><<activateSpeechBubble Allison>>...Right.\r\n[[Rebranch5]]",
+		"position": {
+			"x": 510,
+			"y": 1694
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch5",
+		"tags": "",
+		"body": "<<activateSpeechBubble Ruby>>Uh, so, we get to start the campaign back up again! That’s good, right?\r\n<<activateSpeechBubble Allison>><<overridePose Allison zero>><<overridePose Lance zero>>Heck yeah.\r\n<<activateSpeechBubble Lance>>Absolutely. I’ve been waiting so long to play Arannis again.\r\n<<activateSpeechBubble Allison>>Can’t wait to see how your story wraps up, Brynn!\r\n<<activateSpeechBubble Allison>>Just don’t kill my character, okay? My dear, sweet Bard-daughter Circe is all I have left in the world.\r\n<<activateSpeechBubble Ruby>>Don’t kill me either, please!\r\n<<activateSpeechBubble Allison>>Yeah, don’t kill Ruby’s character either. We need those Celestial Warlock heals, you hear?\r\n<<activateSpeechBubble Lance>>Relax, everyone.\r\n<<changeFont Lance inCharacter>>Under my command, we’ll easily prevail against Lady Malacatha and her dark forces. <<overridePose Lance zero>><<changeFont Lance outOfCharacter>>\r\n<<freezeDialogueText Ruby>>\r\n[[Let's have fun.|LetsHaveFun]]\r\n[[Don't expect any mercy!|ExpectNoMercy]]",
+		"position": {
+			"x": 263,
+			"y": 1952
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LetsHaveFun",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Enjoy it, folks! This party’s come a long way.\r\n<<activateSpeechBubble Ruby>>Yeah, all the way since high school!\r\n<<activateSpeechBubble Allison>>Right on.\r\n[[Rebranch6]]",
+		"position": {
+			"x": -87,
+			"y": 2218
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ExpectNoMercy",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>><<changeFont Brynn inCharacter>>Perhaps someday, Arannis Puny-Rogue, but not today!<<changeFont Brynn outOfCharacter>>\r\n<<activateSpeechBubble Lance>>Okay, now it’s actually on. I haven’t been building my character since high school for you to kill him now.<<overridePose Brynn zero>>\r\n[[Rebranch6]]",
+		"position": {
+			"x": 576,
+			"y": 2197
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch6",
+		"tags": "",
+		"body": "<<activateSpeechBubble Ruby>>Oh! And Brynn says Franklin’s coming!\r\n<<activateSpeechBubble Lance>>Wait, he is? Really?\r\n<<activateSpeechBubble Allison>>Is he even still alive?\r\n<<freezeDialogueText Ruby>>\r\n[[Is he okay?|IsHeOkay]]\r\n[[I hope he’s well enough for DnD.|HopeHesWell]]\r\n[[Yeah, he's alive.|YeahHesAlive]]",
+		"position": {
+			"x": 214,
+			"y": 2396
+		},
+		"colorID": 0
+	},
+	{
+		"title": "IsHeOkay",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>What do you mean? Did something happen?\r\n<<activateSpeechBubble Ruby>>I don’t know. I haven’t seen him in forever.\r\n<<activateSpeechBubble Allison>>Not me.\r\n<<activateSpeechBubble Lance>>Think I passed him on the street once.\r\n<<activateSpeechBubble Brynn>>He responded to my phone call. He seemed pretty eager to—.\r\n[[Rebranch7]]",
+		"position": {
+			"x": -148,
+			"y": 2678
+		},
+		"colorID": 0
+	},
+	{
+		"title": "HopeHesWell",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>He’s busy as ever, huh? Hope he’s mentally present enough to finish the campaign.\r\n<<activateSpeechBubble Lance>>Unless, of course, you have a follow-up adventure in store...?\r\n<<activateSpeechBubble Brynn>>You’ll just have to wait and see.\r\n<<activateSpeechBubble Allison>>Probably depends on if Franklin isn’t too busy to—.\r\n[[Rebranch7]]",
+		"position": {
+			"x": 245,
+			"y": 2655
+		},
+		"colorID": 0
+	},
+	{
+		"title": "YeahHesAlive",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Seemed pretty alive when I called him.\r\n<<activateSpeechBubble Ruby>>He picked up? I haven’t been able to talk to him in months!\r\n<<activateSpeechBubble Ruby>>Not for more than a few texts, at least.\r\n<<activateSpeechBubble Lance>>I mean, he’s always been a busy overachiever.\r\n<<activateSpeechBubble Ruby>>Yeah, but this is—.\r\n[[Rebranch7]]",
+		"position": {
+			"x": 569,
+			"y": 2640
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch7",
+		"tags": "",
+		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateSpeechBubble Lance>>Aaaand speak of the devil.\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateSpeechBubble Franklin>>Hello? Is everyone there?\r\n<<activateSpeechBubble Ruby>>We’re here, Franklin, come on in!\r\n<<triggerSound EnvironmentSoundFX sitDown>><<showCharacter Franklin true>>\r\n<<activateSpeechBubble Franklin>>Hey, everyone.\r\n<<activateSpeechBubble Ruby>>Franklin! Ohmygosh, you are alive!\r\n<<activateSpeechBubble Allison>>Hey, Frank! Welcome back from whatever hole you’ve been trapped in.\r\n<<activateSpeechBubble Lance>>Yeah, good of you to finally show up!\r\n<<overridePose Franklin plusOne>><<activateSpeechBubble Franklin>>Heh, sorry about that, guys.\r\n<<overridePose Franklin zero>><<activateSpeechBubble Franklin>>Been kind of busy lately.\r\n<<overridePose Franklin plusOne>><<activateSpeechBubble Franklin>>Brynn, it’s good to see you.\r\n<<activateSpeechBubble Brynn>>Good to see you too, Franklin! Glad you could make it.\r\n<<activateSpeechBubble Ruby>>Yeah, we didn’t think you’d be able to come!\r\n<<activateSpeechBubble Allison>>Seriously, dude, what’s up with you ghosting the past couple months?\r\n<<overridePose Franklin zero>><<activateSpeechBubble Franklin>>Oh. Well, I…\r\n<<activateSpeechBubble Franklin>>...Have a new job. Just to help pay some bills.\r\n<<activateSpeechBubble Allison>>Jesus Christ, dude.\r\n<<activateSpeechBubble Ruby>>Another one? Really?\r\n<<activateSpeechBubble Lance>>And I thought I was the overachiever…\r\n<<activateSpeechBubble Brynn>>Are you still doing school? And the compsci internship?\r\n<<activateSpeechBubble Franklin>>Yeah.\r\n<<activateSpeechBubble Franklin>>Like I said, it’s to help pay some bills.\r\n<<activateSpeechBubble Franklin>>…\r\n<<overridePose Franklin plusOne>><<activateSpeechBubble Franklin>>Anyway, I didn’t want to miss Brynn coming back. Or the chance to see you all again.\r\n<<overridePose Franklin zero>><<activateSpeechBubble Franklin>>Um, anyway, if you wouldn’t mind, could we jump back into it?\r\n<<activateSpeechBubble Lance>>Ah, music to my ears! Seriously, let’s get started.\r\n<<activateSpeechBubble Franklin>>Sorry, I know there’s more to catch up on, it’s just…\r\n<<activateSpeechBubble Franklin>>Well, I don’t want to waste any time. Uh, any of your time, I mean.\r\n<<activateSpeechBubble Brynn>>Uh, yeah, sure.\r\n<<overridePose Brynn plusOne>><<activateSpeechBubble Brynn>>Everyone ready?\r\n[[IntroSpeech]]",
+		"position": {
+			"x": 239,
+			"y": 3000
+		},
+		"colorID": 0
+	},
+	{
+		"title": "IntroSpeech",
+		"tags": "",
+		"body": "<<activateSpeechBubble Ruby>><<overridePose Ruby plusTwo>>Yes!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin plusOne>>Sure.\r\n<<activateSpeechBubble Allison>><<overridePose Allison plusTwo>>Okay, let’s do it.\r\n<<activateSpeechBubble Lance>><<overridePose Lance plusOne>>Alright, let’s go already!\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Arannis’ thirst for adventure will not be sated!<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Brynn>>Alright, then.\r\n<<returnToDefaultPose Brynn>>\r\n<<returnToDefaultPose Lance>>\r\n<<returnToDefaultPose Allison>>\r\n<<returnToDefaultPose Ruby>>\r\n<<returnToDefaultPose Franklin>>\r\n<<activateSpeechBubble Brynn>>When last we saw our heroes, the great adventurers of lore, they were continuing their quest to defeat Lady Malacatha and end her reign of tyranny.\r\n<<activateSpeechBubble Brynn>>The heroes had been fighting her for a long, long time. They’d met many friends along the way, some of them brave warriors, some of them ordinary townsfolk…\r\n<<activateSpeechBubble Lance>>Never forget Larry the bagel shop owner, whose shop we destroyed.\r\n<<activateSpeechBubble Brynn>>…Yes, even a merchant selling bagels, despite the fact that bagels didn’t exist in medieval times. Truly, he will never stop being angry about his shop burning down.\r\n<<activateSpeechBubble Ruby>>I’m still really sorry about that!\r\n<<activateSpeechBubble Brynn>>And now, inspired by the heroes, these friends and comrades have begun an assault on Lady Malacatha’s citadel.\r\n<<activateSpeechBubble Brynn>>If all goes well, the group will finally complete the mission they’ve had for so long.\r\n<<activateSpeechBubble Lance>>Okay, so where exactly are we again? We’re near Lady Malacatha’s citadel now, right?\r\n<<activateSpeechBubble Brynn>>Right. You guys are a little ways off to the east of Malacatha’s castle. Currently you’re hiding behind some of the pointed rocks which litter the jagged terrain surrounding it. \r\n<<activateSpeechBubble Brynn>>Peeking out from your hiding spots, you’re able to see the castle straight ahead of you in all its glooming, gothic majesty. \r\n<<activateSpeechBubble Brynn>>To the south, in front of the castle’s main gates, you can see the armies of the Fullcrest alliance that you helped create charging toward a huge gathering of undead monsters guarding the castle.\r\n<<activateSpeechBubble Franklin>>The sooner we reach Malacatha and stop her the better their chances will be. We’ve gotta start moving.\r\n<<activateSpeechBubble Lance>>Exactly what I was going to say. \r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Vel, would you be a dear and start the teleportation spell for us? <<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Ruby>>…?\r\n<<activateSpeechBubble Ruby>>Oh, Vel! That’s me, right! Sorry, it has been a while since I’ve played her, you know? Uh, *ahem*...\r\n<<activateSpeechBubble Ruby>><<changeFont Ruby inCharacter>>Why of course, Arannis!<<changeFont Ruby outOfCharacter>> \r\n<<activateSpeechBubble Ruby>>Where should I teleport us? Straight for the throne room?\r\n<<activateSpeechBubble Lance>>Preferably right on top of Malacatha’s stupid face, if you would.\r\n<<activateSpeechBubble Ruby>>I cast mass teleport!\r\n<<activateSpeechBubble Brynn>>Okay, okay, so as you begin casting mass teleport, I’m going to need you to make a Wisdom check.\r\n<<activateSpeechBubble Ruby>>A Wisdom check? That’s...new. Okay um…\r\n<<activateSpeechBubble Ruby>>18.\r\n<<activateSpeechBubble Brynn>>18? Sorry but as you begin casting mass teleport you begin to feel the influence of something emanating from the direction of the castle, filling your mind with overwhelming pain.\r\n<<activateSpeechBubble Ruby>>Uh… so what happens?\r\n[[You recognize Malacatha's influence.|YouRecognizeTheInfluence]]\r\n[[You take damage!|YouTakeDamage]]\r\n",
+		"position": {
+			"x": 270,
+			"y": 3279
+		},
+		"colorID": 0
+	},
+	{
+		"title": "YouRecognizeTheInfluence",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>You recover, and realize that this must be Lady Malacatha’s doing.\r\n<<activateSpeechBubble Brynn>>Clearly, she didn’t want anyone to be able to assassinate her so easily.\r\n<<activateSpeechBubble Lance>>Or, maybe Brynn the Dungeon Master didn’t want anyone to skip all of her encounters.\r\n<<activateSpeechBubble Brynn>>Maybe so! Sorry, guys.\r\n[[Rebranch8]]",
+		"position": {
+			"x": 10,
+			"y": 3568
+		},
+		"colorID": 0
+	},
+	{
+		"title": "YouTakeDamage",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>From the shock of the sudden pain you drop the spell and the effect fades from you, although you do take…\r\n<<activateSpeechBubble Brynn>>36 points of psychic damage as your head is still pounding from what just happened.\r\n<<activateSpeechBubble Ruby>>36? Oh my God!\r\n<<activateSpeechBubble Lance>>Harsh, Brynn.\r\n<<activateSpeechBubble Brynn>>Just wanted to raise the stakes a little. Can’t have you teleporting all the way through my encounters.\r\n[[Rebranch8]]",
+		"position": {
+			"x": 525,
+			"y": 3566
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch8",
+		"tags": "",
+		"body": "<<activateSpeechBubble Franklin>>Yikes. Well, that sucks for us.\r\n<<activateSpeechBubble Lance>>Yeah no kidding. Any chance you could try again?\r\n<<activateSpeechBubble Ruby>>I don’t know, I don’t think it’d work. I got an 18 on that check and I still failed it, the DC must be really high.\r\n<<activateSpeechBubble Lance>>Looks like we’ve gotta get in the old fashioned way then. Just leave it all to me guys. Arranis has got this.\r\n<<activateSpeechBubble Allison>>Oh, here we go…\r\n<<activateSpeechBubble Lance>>What, Allison?\r\n<<activateSpeechBubble Allison>>Just you doing your whole solo-act thing. That’s what.\r\n<<activateSpeechBubble Allison>>We’re supposed to be a team. This is a team, right everybody? Or was that just my impression?\r\n<<activateSpeechBubble Lance>>Uh, okay, chill for a second. Listen to this, it’s really simple.\r\n<<activateSpeechBubble Lance>>I scale the wall with my ninja skills, quickly and quietly take out anyone who might be on top of the wall, and once the coast is clear I tie a rope to the top and toss it down so you guys can climb up.\r\n<<activateSpeechBubble Lance>>I’m telling ya, it’s foolproof!\r\n<<activateSpeechBubble Allison>>Okay, yeah, sure. Definitely no way anyone on the wall notices that all happening.\r\n<<activateSpeechBubble Allison>>So here’s my plan.\r\n<<activateSpeechBubble Lance>>Oh, brother...\r\n<<activateSpeechBubble Allison>>Instead of that, we just tunnel under the wall with Vel’s magic.\r\n<<activateSpeechBubble Allison>>I’ll make fog so that we don’t get seen approaching the wall. Once we’re next to it, Vel will tunnel us underneath until we reach the closest part of the castle.\r\n<<activateSpeechBubble Allison>>From the plans we saw, the nearest room of the castle should only be about 50 feet from the edge of the wall. We tunnel under it, then we all burst up into it and take out anyone in it before they have a chance to alert anyone!\r\n<<activateSpeechBubble Ruby>>That sounds like it could really work!\r\n<<activateSpeechBubble Lance>>Yeah but it’s way more complicated then just getting onto the wall. Besides, we have no idea what or who is in that room but you want to just rush into it?\r\n<<activateSpeechBubble Allison>>As a team? Yup, I do. Besides, can’t be much riskier than leaving the fate of this mission entirely up to you. If you get seen once it’s all over now. We don’t have teleportation as an option anymore.\r\n",
+		"position": {
+			"x": 270,
+			"y": 3805
 		},
 		"colorID": 0
 	}

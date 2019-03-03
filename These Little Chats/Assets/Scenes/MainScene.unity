@@ -208,7 +208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &24952847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &100721520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.7863455
+  orthographic size: 5.376042
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   neutralPoseImage: {fileID: 21300000, guid: 0e5cc705dc4d98c42a4db24bda7cf5c9, type: 3}
   negative1PoseImage: {fileID: 21300000, guid: 5ddbef330c2a3be48b732276c9eceae3, type: 3}
   negative2PoseImage: {fileID: 21300000, guid: 5ddbef330c2a3be48b732276c9eceae3, type: 3}
-  positive2PosePosition: {x: 1.009166, y: 1.009166, z: 0}
+  positive2PosePosition: {x: 2.260319, y: 1.009166, z: 0}
   positive1PosePosition: {x: 2.260319, y: 1.009166, z: 0}
   neutralPosePosition: {x: 2.448294, y: 1.009166, z: 0}
   negative1PosePosition: {x: 2.135595, y: 1.009166, z: 0}
@@ -1979,11 +1979,11 @@ MonoBehaviour:
   dialogueTextContainer: {fileID: 585938869}
   dialogueText: {fileID: 2157378}
   characterPoseGameObject: {fileID: 1566938073}
-  positive2PoseImage: {fileID: 0}
-  positive1PoseImage: {fileID: 0}
-  neutralPoseImage: {fileID: 21300000, guid: ea0b9e49734481449afb955d2cb59971, type: 3}
-  negative1PoseImage: {fileID: 0}
-  negative2PoseImage: {fileID: 0}
+  positive2PoseImage: {fileID: 21300000, guid: 6fba779c7f04bb14593d0453dd87b7b3, type: 3}
+  positive1PoseImage: {fileID: 21300000, guid: 6fba779c7f04bb14593d0453dd87b7b3, type: 3}
+  neutralPoseImage: {fileID: 21300000, guid: cc54c955b0fac4c4497a41454f0f4d28, type: 3}
+  negative1PoseImage: {fileID: 21300000, guid: cc54c955b0fac4c4497a41454f0f4d28, type: 3}
+  negative2PoseImage: {fileID: 21300000, guid: cc54c955b0fac4c4497a41454f0f4d28, type: 3}
   positive2PosePosition: {x: -2.426973, y: -1.275671, z: 0}
   positive1PosePosition: {x: -2.426973, y: -1.275671, z: 0}
   neutralPosePosition: {x: -3.208722, y: -1.275671, z: 0}
@@ -2835,7 +2835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1566938074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3038,7 +3038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1638700102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3375,7 +3375,7 @@ MonoBehaviour:
   lineText: {fileID: 2157379}
   lineTextBackground: {fileID: 1967288580}
   continuePrompt: {fileID: 985056961}
-  textSpeed: 0.001
+  textSpeed: 0.0001
   optionButtons:
   - {fileID: 1805894199}
   - {fileID: 29550114}
@@ -3522,8 +3522,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286.9, y: -55.6}
-  m_SizeDelta: {x: 153, y: 88.9}
+  m_AnchoredPosition: {x: -286.9, y: -65.68}
+  m_SizeDelta: {x: 153, y: 109.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967288582
 MonoBehaviour:
