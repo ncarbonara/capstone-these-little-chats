@@ -114,7 +114,21 @@ namespace Yarn.Unity
 
             // Load all scripts
             if (sourceText != null) {
-                foreach (var source in sourceText) {
+
+                ///SOME IN-PROGRESS STUFF NICK THREW IN HERE
+
+                /*
+                string sourceTextString = sourceText.ToString();
+
+                if(sourceTextString.Contains("Brynn: ") == true)
+                {
+                    int indexOfBrynn = sourceTextString.IndexOf("Brynn: ");
+                    sourceTextString.Remove(indexOfBrynn, indexOfBrynn + 6);   //Removes the name marker from the string
+                    sourceTextString.Insert(indexOfBrynn, "<<activateNeutralPortrait Brynn>>");
+                }
+                */
+
+                foreach(var source in sourceText) {
 
 
                     ///SOME IN-PROGRESS STUFF NICK THREW IN HERE
@@ -127,6 +141,7 @@ namespace Yarn.Unity
                         source.text.Insert(0, "<<activateNeutralPortrait Brynn>>");
                     }
                     */
+                    
 
                     ///MORE IN-PROGRESS STUFF
 
@@ -166,6 +181,20 @@ namespace Yarn.Unity
 
         /// Add a string of text to a script
         public void AddScript(string text) {
+
+            /*
+            Debug.Log("The text script is this: " + text);
+
+            ///SOME IN-PROGRESS STUFF NICK THREW IN HERE
+            if(text.Contains("Brynn:") == true)
+            {
+                Debug.Log("Brynn-colon is here!");
+                int indexOfBrynn = text.IndexOf("Brynn:");
+                text.Remove(indexOfBrynn, indexOfBrynn + 5);   //Removes the name marker from the string
+                text.Insert(indexOfBrynn, " <<activateSpeechBubble Brynn>>");
+            }
+            */
+
             dialogue.LoadString(text);
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UI;   //Let's us talk to UI stuff.
-using Yarn.Unity;   //Lets us talk to Yarn stuff, I believe.
+using Yarn.Unity;   //Lets us talk to Yarn stuff.
 
 /// <summary>
 /// Contains all of the functions that can be called from a Yarn sheet to alter character values,
