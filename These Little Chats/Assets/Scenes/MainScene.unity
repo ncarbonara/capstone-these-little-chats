@@ -2002,6 +2002,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorKnock: {fileID: 8300000, guid: 7d091beb6384578499af409ffc292f22, type: 3}
+  placeDMScreen: {fileID: 0}
+  doorOpenClose: {fileID: 0}
+  sitDown: {fileID: 0}
 --- !u!1 &825971803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3839,10 +3842,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1900772046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1749fc827a1d2478b1efee887dca09, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d3233b75034b344fadd42e5152dd603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorKnock: {fileID: 0}
+  musicTrackOne: {fileID: 0}
+  musicTrackTwo: {fileID: 0}
+  musicTrackThree: {fileID: 0}
+  musicTrackFour: {fileID: 0}
 --- !u!1 &1967288580
 GameObject:
   m_ObjectHideFlags: 0
