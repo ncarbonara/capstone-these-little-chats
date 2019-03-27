@@ -3709,7 +3709,7 @@ MonoBehaviour:
   overrideLanguage: 10
   variableStorage: {fileID: 1822770182}
   dialogueUI: {fileID: 1822770186}
-  startNode: IntroSpeech
+  startNode: MajorChoice1
   startAutomatically: 1
   automaticCommands: 0
 --- !u!4 &1822770185
