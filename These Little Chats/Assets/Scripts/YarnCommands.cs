@@ -64,7 +64,11 @@ public class YarnCommands : MonoBehaviour {
     float distanceCovered;
     float fracJourney;
 
+    //Public variables used to handle the location and sprite used by the textbox for each character.
     public Vector3 characterTextBoxPosition;
+    public GameObject speechBubble;
+    public Sprite characterSpeechBubbleSprite;
+    public Color characterNameColor;
 
     //Character variables handled directly in this script. Set initial values in the inspector!
     public int value;
@@ -155,6 +159,8 @@ public class YarnCommands : MonoBehaviour {
     public void ActivateSpeechBubble()
     {
         dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
+        speechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
+        nameText.GetComponent<Text>().color = characterNameColor;
         nameText.GetComponent<Text>().text = this.gameObject.name;
     }
 

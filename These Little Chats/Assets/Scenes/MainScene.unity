@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &29550113
 RectTransform:
   m_ObjectHideFlags: 0
@@ -374,14 +374,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7d200aaa4f2a30d42b32fee34793a9a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd9bb37a88fb37e4b8155948856abd2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -731,7 +731,7 @@ RectTransform:
   m_Children:
   - {fileID: 654006967}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1078,7 +1078,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319291415
 GameObject:
@@ -1333,7 +1333,11 @@ MonoBehaviour:
   negative1PosePosition: {x: -1.788072, y: 1.162638, z: 0}
   negative2PosePosition: {x: -1.788072, y: 1.162638, z: 0}
   poseLerpSpeed: 4
-  characterTextBoxPosition: {x: 6.51694, y: 4.409772, z: 0}
+  characterTextBoxPosition: {x: 6.31694, y: 4.709772, z: 0}
+  speechBubble: {fileID: 1967288580}
+  characterSpeechBubbleSprite: {fileID: 21300000, guid: 0c0762de598edf54586c25c7f3b52e4b,
+    type: 3}
+  characterNameColor: {r: 0.82745105, g: 0, b: 0.11764707, a: 1}
   value: 0
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $allison_is_very_pleased
@@ -1360,7 +1364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1607,7 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1825,7 +1829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398.2, y: -17.2}
+  m_AnchoredPosition: {x: -398.2, y: -21.8}
   m_SizeDelta: {x: 545.93, y: 140.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680974435
@@ -1915,7 +1919,11 @@ MonoBehaviour:
   negative2PosePosition: {x: 2.135595, y: 1.009166, z: 0}
   poseLerpSpeed: 4
   characterTextBoxPosition: {x: 14.33087, y: 4.551908, z: 0}
-  value: 0
+  speechBubble: {fileID: 1967288580}
+  characterSpeechBubbleSprite: {fileID: 21300000, guid: 03799228f2eaf7b4e8592d09962380ac,
+    type: 3}
+  characterNameColor: {r: 0.07058824, g: 0.5294118, b: 0.3921569, a: 1}
+  value: -1
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $lance_is_very_pleased
   somewhatPleasedValueThreshold: 1
@@ -1941,7 +1949,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753566318
 GameObject:
@@ -2135,7 +2143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &767738827
 MonoBehaviour:
@@ -2202,7 +2210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2231,6 +2239,46 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 825971803}
   m_CullTransparentMesh: 0
+--- !u!1 &849035715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849035717}
+  - component: {fileID: 849035716}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &849035716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 849035715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665707f6d89c1974ab578433b5d4b9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &849035717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 849035715}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 370.5, y: 127.37703, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &985056961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,7 +2404,11 @@ MonoBehaviour:
   negative1PosePosition: {x: -3.208722, y: -1.275671, z: 0}
   negative2PosePosition: {x: -3.208722, y: -1.275671, z: 0}
   poseLerpSpeed: 4
-  characterTextBoxPosition: {x: 5.248376, y: 2.238643, z: 0}
+  characterTextBoxPosition: {x: 5.148376, y: 2.638643, z: 0}
+  speechBubble: {fileID: 1967288580}
+  characterSpeechBubbleSprite: {fileID: 21300000, guid: 0c0762de598edf54586c25c7f3b52e4b,
+    type: 3}
+  characterNameColor: {r: 0.003921569, g: 0.2392157, b: 0.5058824, a: 1}
   value: 0
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $franklin_is_very_pleased
@@ -2383,7 +2435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055677819
 GameObject:
@@ -2752,7 +2804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1424110142
 GameObject:
@@ -2832,7 +2884,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486543987
 GameObject:
@@ -2852,7 +2904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1486543988
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2939,14 +2991,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7d200aaa4f2a30d42b32fee34793a9a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd9bb37a88fb37e4b8155948856abd2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3012,7 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+  m_Color: {r: 0.86274517, g: 0.454902, b: 0.5921569, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3157,6 +3209,10 @@ MonoBehaviour:
   negative2PosePosition: {x: 3.148315, y: -1.435575, z: 0}
   poseLerpSpeed: 4
   characterTextBoxPosition: {x: 15.24054, y: 1.972138, z: 0}
+  speechBubble: {fileID: 1967288580}
+  characterSpeechBubbleSprite: {fileID: 21300000, guid: 03799228f2eaf7b4e8592d09962380ac,
+    type: 3}
+  characterNameColor: {r: 0.34509805, g: 0.3019608, b: 0.27450982, a: 1}
   value: 0
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $ruby_is_very_pleased
@@ -3183,7 +3239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566938073
 GameObject:
@@ -3301,6 +3357,10 @@ MonoBehaviour:
   negative2PosePosition: {x: 0.1812235, y: 2.07874, z: 0}
   poseLerpSpeed: 4
   characterTextBoxPosition: {x: 8.009369, y: 4.832627, z: 0}
+  speechBubble: {fileID: 1967288580}
+  characterSpeechBubbleSprite: {fileID: 21300000, guid: 49b80be622c7dfc4f97e9b8d487edc90,
+    type: 3}
+  characterNameColor: {r: 0.8705883, g: 0.454902, b: 0.59607846, a: 1}
   value: 0
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: 
@@ -3327,7 +3387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582667712
 GameObject:
@@ -3544,7 +3604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1805894198
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3632,14 +3692,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7d200aaa4f2a30d42b32fee34793a9a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd9bb37a88fb37e4b8155948856abd2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3710,7 +3770,7 @@ MonoBehaviour:
   overrideLanguage: 10
   variableStorage: {fileID: 1822770182}
   dialogueUI: {fileID: 1822770186}
-  startNode: Rebranch9
+  startNode: MajorChoice1
   startAutomatically: 1
   automaticCommands: 0
 --- !u!4 &1822770185
@@ -3724,7 +3784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1822770186
 MonoBehaviour:
@@ -3851,7 +3911,7 @@ RectTransform:
   - {fileID: 1164686726}
   - {fileID: 985056962}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3981,7 +4041,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1900772049
 MonoBehaviour:
@@ -4009,7 +4069,7 @@ GameObject:
   - component: {fileID: 1967288583}
   - component: {fileID: 1967288582}
   m_Layer: 5
-  m_Name: Text Background
+  m_Name: Speech Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4030,8 +4090,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -377.71, y: -52.31}
-  m_SizeDelta: {x: 119.98, y: 56.08}
+  m_AnchoredPosition: {x: -379.76, y: -48.99}
+  m_SizeDelta: {x: 124.08, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967288582
 MonoBehaviour:
@@ -4052,8 +4112,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cbd17f3bc858b1043b2bd5038f1fd53a, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 03799228f2eaf7b4e8592d09962380ac, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4187,7 +4247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

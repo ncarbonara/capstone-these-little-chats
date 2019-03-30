@@ -292,20 +292,20 @@
 	{
 		"title": "WallsGoUnderground",
 		"tags": "",
-		"body": "<<activateSpeechBubble Brynn>>An important detail about your surroundings: According to the plans of the castle you saw, the metal walls descend deep into the earth.\r\n<<activateSpeechBubble Brynn>>Given that the Move Earth spell doesn’t work on metal, I’m afraid Vel won’t be able to dig a way in.\r\n<<decreaseValue Allison>><<increaseValue Lance>>\r\n<<activateSpeechBubble Allison>>What? Really?\r\n<<activateSpeechBubble Brynn>>It is a fortified castle, after all. The only way in appears to be up and over.\r\n<<activateSpeechBubble Lance>>Well, alright then! Who’s ready for some sick Arannis maneuvers?\r\n<<activateSpeechBubble Allison>>Oh, for the love of…\r\n<<activateSpeechBubble Lance>>Don’t worry, everyone, I’ve still got my 10+ for acrobatics from my amulet. Everybody ready for this?\r\n<<activateSpeechBubble Ruby>>Uh, yeah! Impress us.\r\n<<activateSpeechBubble Franklin>>Sure. Just as long as it gets us in there the fastest.\r\n<<activateSpeechBubble Allison>>...\r\n<<activateSpeechBubble Lance>>Alright, so I take off my cloak and hand it to Byren. (That’s you, Franklin).\r\n<<activateSpeechBubble Franklin>>What? Oh, uh, yeah. I take it, I guess.\r\n<<activateSpeechBubble Lance>>I stretch my legs, I stretch my arms, I flex a little...\r\n<<activateSpeechBubble Lance>>Then I run full-force at the castle wall and parkour up the side. And I add a couple of flips for some flourish to reflect Arannis’ skill.\r\n<<activateSpeechBubble Brynn>>Okay, I’m going to need you to roll for that.\r\n<<rollDie Lance>>\r\n<<activateSpeechBubble Lance>>28! Not bad, if I do say so myself.\r\n<<activateSpeechBubble Allison>>Whatever, you barely even did anything…\r\n<<activateSpeechBubble Lance>>What?\r\n<<activateSpeechBubble Ruby>><<changeFont Ruby inCharacter>>Uh, good job, Arannis! Surely your skills are—<<changeFont Ruby outOfCharacter>>\r\n<<activateSpeechBubble Allison>>You barely did anything. You just rolled a die and it worked out for you. Don’t get all excited about it.\r\n<<activateSpeechBubble Lance>>Yeah, sure. All I did was plan out a great character build, do the rules research, balance my stats really well and really invest in the game… Didn’t do anything at all.\r\n<<activateSpeechBubble Lance>>Allison, your plans aren’t always going to work out, okay? You need to chill out.\r\n<<activateSpeechBubble Ruby>>Uh… Brynn! The game! What happens in the game?\r\n<<activateSpeechBubble Brynn>>Right. Arannis, would you like to describe how you get over the wall?\r\n<<activateSpeechBubble Lance>>Sure! I vault off a piece of rubble near the castle, flip gloriously in the air, then leap between any outcroppings on the wall until I reach the top.\r\n<<activateSpeechBubble Lance>>I then roll on top of the wall, look around to make sure I’m undetected, then stand up and straighten the collar of my shirt.\r\n<<activateSpeechBubble Lance>>After that, I find somewhere to tie something and let down a rope for everyone to follow.\r\n<<activateSpeechBubble Brynn>>One of the spaces between the crenellations will work for that. Is everyone climbing up?\r\n<<activateSpeechBubble Ruby>>Yes.\r\n<<activateSpeechBubble Franklin>>Sure.\r\n<<activateSpeechBubble Allison>>Fine, whatever.\r\n<<activateSpeechBubble Brynn>>Okay, you all climb up and enter the castle.\r\n[[MajorChoice2]]",
+		"body": "<<activateSpeechBubble Brynn>>An important detail about your surroundings: According to the plans of the castle you saw, the metal walls descend deep into the earth.\r\n<<activateSpeechBubble Brynn>>Given that the Move Earth spell doesn’t work on metal, I’m afraid Vel won’t be able to dig a way in.\r\n<<decreaseValue Allison>><<increaseValue Lance>>\r\n<<activateSpeechBubble Allison>>What? Really?\r\n<<activateSpeechBubble Brynn>>It is a fortified castle, after all. The only way in appears to be up and over.\r\n<<activateSpeechBubble Lance>>Well, alright then! Who’s ready for some sick Arannis maneuvers?\r\n<<if $allison_is_very_angry is true>>\r\n[[AllisonLeaves]]\r\n<<endif>>\r\n<<activateSpeechBubble Allison>>Oh, for the love of…\r\n<<activateSpeechBubble Lance>>Don’t worry, everyone, I’ve still got my 10+ for acrobatics from my amulet. Everybody ready for this?\r\n<<activateSpeechBubble Ruby>>Uh, yeah! Impress us.\r\n<<activateSpeechBubble Franklin>>Sure. Just as long as it gets us in there the fastest.\r\n<<activateSpeechBubble Allison>>...\r\n<<activateSpeechBubble Lance>>Alright, so I take off my cloak and hand it to Byren. (That’s you, Franklin).\r\n<<activateSpeechBubble Franklin>>What? Oh, uh, yeah. I take it, I guess.\r\n<<activateSpeechBubble Lance>>I stretch my legs, I stretch my arms, I flex a little...\r\n<<activateSpeechBubble Lance>>Then I run full-force at the castle wall and parkour up the side. And I add a couple of flips for some flourish to reflect Arannis’ skill.\r\n<<activateSpeechBubble Brynn>>Okay, I’m going to need you to roll for that.\r\n<<rollDie Lance>>\r\n<<activateSpeechBubble Lance>>28! Not bad, if I do say so myself.\r\n<<activateSpeechBubble Allison>>Whatever, you barely even did anything…\r\n<<activateSpeechBubble Lance>>What?\r\n<<activateSpeechBubble Ruby>><<changeFont Ruby inCharacter>>Uh, good job, Arannis! Surely your skills are—<<changeFont Ruby outOfCharacter>>\r\n<<activateSpeechBubble Allison>>You barely did anything. You just rolled a die and it worked out for you. Don’t get all excited about it.\r\n<<activateSpeechBubble Lance>>Yeah, sure. All I did was plan out a great character build, do the rules research, balance my stats really well and really invest in the game… Didn’t do anything at all.\r\n<<activateSpeechBubble Lance>>Allison, your plans aren’t always going to work out, okay? You need to chill out.\r\n<<activateSpeechBubble Ruby>>Uh… Brynn! The game! What happens in the game?\r\n<<activateSpeechBubble Brynn>>Right. Arannis, would you like to describe how you get over the wall?\r\n<<activateSpeechBubble Lance>>Sure! I vault off a piece of rubble near the castle, flip gloriously in the air, then leap between any outcroppings on the wall until I reach the top.\r\n<<activateSpeechBubble Lance>>I then roll on top of the wall, look around to make sure I’m undetected, then stand up and straighten the collar of my shirt.\r\n<<activateSpeechBubble Lance>>After that, I find somewhere to tie something and let down a rope for everyone to follow.\r\n<<activateSpeechBubble Brynn>>One of the spaces between the crenellations will work for that. Is everyone climbing up?\r\n<<activateSpeechBubble Ruby>>Yes.\r\n<<activateSpeechBubble Franklin>>Sure.\r\n<<activateSpeechBubble Allison>>Fine, whatever.\r\n<<activateSpeechBubble Brynn>>Okay, you all climb up and enter the castle.\r\n[[MajorChoice2]]",
 		"position": {
-			"x": -22,
-			"y": 4046
+			"x": 558,
+			"y": 4049
 		},
 		"colorID": 0
 	},
 	{
 		"title": "GuardsOnTheWalls",
 		"tags": "",
-		"body": "<<activateSpeechBubble Brynn>>Well, Lance, there are undead guards up on the wall. A lot of them, in fact.\r\n<<activateSpeechBubble Lance>>Like, how many?\r\n<<activateSpeechBubble Brynn>>About 10-15. They haven’t noticed your approach, but they definitely will if you try to scale the wall by yourself.\r\n<<increaseValue Allison>><<decreaseValue Lance>>\r\n<<activateSpeechBubble Allison>>So in other words, it won’t work. Which means tunnelling under is our most sound option. I’ll go ahead and cast fog so we can approach the castle undetected.\r\n<<activateSpeechBubble Brynn>>You do so. Is everyone moving forward?\r\n<<activateSpeechBubble Ruby>>Yep!\r\n<<activateSpeechBubble Franklin>>Sure.\r\n<<activateSpeechBubble Lance>>Okay, I’ll use my 40ft movement speed to—\r\n<<activateSpeechBubble Allison>>No dice, Lance. We need to stick together where I can provide cloud cover.\r\n<<activateSpeechBubble Lance>>I can get there faster. Besides, I can roll for stealth.\r\n<<activateSpeechBubble Allison>>Why take the chance? This plan will probably work as is.\r\n<<activateSpeechBubble Lance>><<overridePose Lance minusOne>> Yeah, another Allison plan…\r\n<<activateSpeechBubble Allison>><<overridePose Allison minusOne>>Excuse me?\r\n<<activateSpeechBubble Ruby>>Uh… Brynn! We’re moving forward! What happens?\r\n\r\n\r\n<<returnToDefaultPose Allison>><<returnToDefaultPose Lance>>\r\n<<activateSpeechBubble Brynn>>All four of you proceed forward under the cloud cover, and eventually you make it to the wall. There’s no indication that you’ve been noticed.\r\n<<activateSpeechBubble Brynn>>Ruby, do you cast Move Earth?\r\n<<activateSpeechBubble Ruby>>Yes! Here, let me roll…\r\n<<rollDie Ruby>>\r\n<<activateSpeechBubble Ruby>>Okay, I got 20 total.\r\n<<activateSpeechBubble Ruby>>Wait! What if that thing with my spells happens again?\r\n<<activateSpeechBubble Brynn>>Well, you start tunnelling and nothing else seems to happen.\r\n<<activateSpeechBubble Allison>>Yeah, I figured that Malacatha’s anti-magic-whatever only applied to teleportation spells.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusTwo>>Ah, cool. Good thinking, Allison!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin plusOne>>Yeah, good plan.\r\n<<returnToDefaultPose Franklin>><<returnToDefaultPose Ruby>>\r\n<<activateSpeechBubble Lance>>My way would’ve been faster. Just saying.\r\n<<activateSpeechBubble Allison>>Whatever. It was a good plan, and it worked.\r\n<<activateSpeechBubble Allison>>Now let’s get in that castle already!\r\n<<activateSpeechBubble Franklin>>Yeah, agreed.\r\n<<activateSpeechBubble Brynn>>Okay, you enter the castle.\r\n[[MajorChoice2]]\r\n",
+		"body": "<<activateSpeechBubble Brynn>>Well, Lance, there are undead guards up on the wall. A lot of them, in fact.\r\n<<activateSpeechBubble Lance>>Like, how many?\r\n<<activateSpeechBubble Brynn>>About 10-15. They haven’t noticed your approach, but they definitely will if you try to scale the wall by yourself.\r\n<<increaseValue Allison>><<decreaseValue Lance>>\r\n<<activateSpeechBubble Allison>>So in other words, it won’t work. Which means tunnelling under is our most sound option. I’ll go ahead and cast fog so we can approach the castle undetected.\r\n<<if $lance_is_very_angry is true>>\r\n[[LanceLeaves]]\r\n<<endif>>\r\n<<activateSpeechBubble Brynn>>You do so. Is everyone moving forward?\r\n<<activateSpeechBubble Ruby>>Yep!\r\n<<activateSpeechBubble Franklin>>Sure.\r\n<<activateSpeechBubble Lance>>Okay, I’ll use my 40ft movement speed to—\r\n<<activateSpeechBubble Allison>>No dice, Lance. We need to stick together where I can provide cloud cover.\r\n<<activateSpeechBubble Lance>>I can get there faster. Besides, I can roll for stealth.\r\n<<activateSpeechBubble Allison>>Why take the chance? This plan will probably work as is.\r\n<<activateSpeechBubble Lance>><<overridePose Lance minusOne>> Yeah, another Allison plan…\r\n<<activateSpeechBubble Allison>><<overridePose Allison minusOne>>Excuse me?\r\n<<activateSpeechBubble Ruby>>Uh… Brynn! We’re moving forward! What happens?\r\n\r\n\r\n<<returnToDefaultPose Allison>><<returnToDefaultPose Lance>>\r\n<<activateSpeechBubble Brynn>>All four of you proceed forward under the cloud cover, and eventually you make it to the wall. There’s no indication that you’ve been noticed.\r\n<<activateSpeechBubble Brynn>>Ruby, do you cast Move Earth?\r\n<<activateSpeechBubble Ruby>>Yes! Here, let me roll…\r\n<<rollDie Ruby>>\r\n<<activateSpeechBubble Ruby>>Okay, I got 20 total.\r\n<<activateSpeechBubble Ruby>>Wait! What if that thing with my spells happens again?\r\n<<activateSpeechBubble Brynn>>Well, you start tunnelling and nothing else seems to happen.\r\n<<activateSpeechBubble Allison>>Yeah, I figured that Malacatha’s anti-magic-whatever only applied to teleportation spells.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusTwo>>Ah, cool. Good thinking, Allison!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin plusOne>>Yeah, good plan.\r\n<<returnToDefaultPose Franklin>><<returnToDefaultPose Ruby>>\r\n<<activateSpeechBubble Lance>>My way would’ve been faster. Just saying.\r\n<<activateSpeechBubble Allison>>Whatever. It was a good plan, and it worked.\r\n<<activateSpeechBubble Allison>>Now let’s get in that castle already!\r\n<<activateSpeechBubble Franklin>>Yeah, agreed.\r\n<<activateSpeechBubble Brynn>>Okay, you enter the castle.\r\n[[MajorChoice2]]\r\n",
 		"position": {
-			"x": 447,
-			"y": 4037
+			"x": -90,
+			"y": 4064
 		},
 		"colorID": 0
 	},
@@ -322,7 +322,7 @@
 	{
 		"title": "RichDecadent",
 		"tags": "",
-		"body": "Empty Text",
+		"body": "<<activateSpeechBubble Brynn>>It’s like a mansion. Thick velvet rugs cover the floors. Massive oak tables and bookshelves line the walls.\r\n<<activateSpeechBubble Brynn>>Candles hanging from the ceilings casts a glow over paintings of Lady Malacatha, as well as her many trophies.\r\n<<activateSpeechBubble Brynn>>You see suits of armor bearing the sigil of the Fullcrest Alliance. Some of them still have the bloodstains on them.\r\n<<activateSpeechBubble Allison>>Jesus, so she’s evil and rich.\r\n<<activateSpeechBubble Lance>>Probably got all that wealth from a lifetime of conquering. Her reign ends today.\r\n[[Rebranch8]]",
 		"position": {
 			"x": 605,
 			"y": 4727
@@ -332,20 +332,110 @@
 	{
 		"title": "AustereMilitaristic",
 		"tags": "",
-		"body": "Empty Text",
+		"body": "<<activateSpeechBubble Brynn>>Everything is made of gray, hard stone. \r\n<<activateSpeechBubble Brynn>>Pale light flits in through long glass-less windows that stretch all the way to the incredibly high ceiling.\r\n<<activateSpeechBubble Brynn>>There are dark, twisted looking swords and other weapons in wall racks. Many still have entrails hanging from them.\r\n<<activateSpeechBubble Allison>>Gross. Figures she would be one for a militarized vibe.\r\n<<activateSpeechBubble Lance>>Definitely squares up with her drive for world domination. It’s time someone put her down.\r\n[[Rebranch8]]",
 		"position": {
 			"x": 210,
-			"y": 4761
+			"y": 4756
 		},
 		"colorID": 0
 	},
 	{
 		"title": "DarkMystical",
 		"tags": "",
-		"body": "Empty Text",
+		"body": "<<activateSpeechBubble Brynn>>It’s like the entire inside of the building is made of dark, misty glass.\r\n<<activateSpeechBubble Brynn>>Sloping downward from the ceiling are large crystals casting an unearthly purple glow everywhere.\r\n<<activateSpeechBubble Brynn>>You see green glass vats lining the walls. On closer inspection, you see half-disintegrated bodies inside.\r\n<<activateSpeechBubble Allison>>Oh, God. That’s really fucked up.\r\n<<activateSpeechBubble Lance>>Yeah. I can’t wait to finally kill her and end this.\r\n[[Rebranch8]]",
 		"position": {
 			"x": -172,
 			"y": 4767
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch8",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>You find a staircase that leads up into the higher parts of the castle.\r\n<<activateSpeechBubble Allison>>Okay, it seems a little too quiet, but I guess we’ll just have to be careful. I go up the stairs.\r\n<<activateSpeechBubble Lance>>I follow.\r\n<<activateSpeechBubble Ruby>>Me too.\r\n<<activateSpeechBubble Franklin>>Same.\r\n<<activateSpeechBubble Brynn>>The staircase ends at a strange room, about midway up the castle.\r\n<<activateSpeechBubble Brynn>>There’s an unearthly blue light coming from somewhere. A strange mist is weaving around, and you swear you smell something rotting…\r\n<<activateSpeechBubble Allison>>Oh, boy.\r\n<<activateSpeechBubble Brynn>>Okay, everyone…\r\n<<activateSpeechBubble Brynn>>...A horde of skeletons emerges from the mist on all sides. Roll initiative!\r\n<<activateSpeechBubble Allison>>Of course.\r\n<<activateSpeechBubble Ruby>>Knew it!\r\n<<rollDie Lance>>\r\n<<rollDie Allison>>\r\n<<rollDie Ruby>>\r\n<<rollDie Franklin>>\r\n<<activateSpeechBubble Brynn>>Okay, Ruby, you’re first.\r\n<<activateSpeechBubble Lance>>Ah, well, at least I’m second.\r\n<<activateSpeechBubble Brynn>>The mist clears, and you can see that you’re standing next to what seem like hundreds of bones on the floor.\r\n<<activateSpeechBubble Brynn>>Meanwhile, a man wearing necromancer robes steps out of the exit on the other side of the room. He removes his hood and cackles maniacally, looking right at you, Lance.\r\n<<activateSpeechBubble Brynn>><<changeFont Brynn inCharacter>>Shadowfall! Didn’t expect to see you again so soon after our last encounter! Are you prepared to lose another of your loved ones?<<changeFont Brynn outOfCharacter>>\r\n<<activateSpeechBubble Lance>><<overridePose Lance plusTwo>>Holy shit! Is that Narravar, the Bone Weaver?\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>><<overridePose Lance minusOne>>In memory of my father, Narravar, I swear I’ll put you down!<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Lance>><<overridePose Lance plusOne>>Had a feeling he would come back at some point. He’s probably the most interesting character in my backstory.\r\n<<returnToDefaultPose Lance>>\r\n<<activateSpeechBubble Ruby>>I cast Teleport, so I can get behind him!\r\n<<activateSpeechBubble Brynn>>Again? You sure?\r\n<<activateSpeechBubble Ruby>>Yes!\r\n<<activateSpeechBubble Brynn>>Okay, roll for it.\r\n<<rollDie Ruby>>\r\n<<activateSpeechBubble Ruby>>Uh… 17?\r\n<<freezeDialogue Brynn>>\r\n[[Sorry, no good.|SorryNoGood]]\r\n[[Well, we can fudge it.|WeCanFudgeIt]]",
+		"position": {
+			"x": 252,
+			"y": 5088
+		},
+		"colorID": 0
+	},
+	{
+		"title": "SorryNoGood",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>No good. You feel Malacatha’s influence hit you again.\r\n<<activateSpeechBubble Ruby>>Ah, okay.\r\n[[Rebranch9]]",
+		"position": {
+			"x": -163,
+			"y": 5434
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WeCanFudgeIt",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Tell you what, we can say that works this time.\r\n<<activateSpeechBubble Lance>>Uh, no we can’t.\r\n<<activateSpeechBubble Lance>>Just fudging things totally ruins the stakes of the game. Arannis’ skills don’t mean anything. \r\n<<activateSpeechBubble Allison>>Okay, Lance, we get it.\r\n<<activateSpeechBubble Allison>>But… yeah. I don’t think you should nerf challenges for us, Brynn. It just feels less fulfilling.\r\n<<activateSpeechBubble Ruby>>Yeah, don’t worry Brynn. It wasn’t that urgent this time.\r\n<<activateSpeechBubble Brynn>>Well, okay. If that’s what everyone’s comfortable with, the teleportation spell fails.\r\n[[Rebranch9]]",
+		"position": {
+			"x": 588,
+			"y": 5416
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch9",
+		"tags": "",
+		"body": "<<activateSpeechBubble Allison>>Alright, so if we stick together in a tight circular formation, we can probably cover attacks from all sides.\r\n<<activateSpeechBubble Allison>>Franklin and Ruby, let’s form a triangle. Lance, stay at the center and… just try to stay out of the way.\r\n<<activateSpeechBubble Lance>>Uh, no. It’s my turn, so I move over to where Narravar is and hit him with—.\r\n<<activateSpeechBubble Allison>>Lance!\r\n<<activateSpeechBubble Lance>>He’s my nemesis! Besides, I could take him out in, like, one hit!\r\n<<activateSpeechBubble Allison>>If you run off, we’ll get overrun by skeletons!\r\n<<activateSpeechBubble Lance>>Oh, sure, so now I’m needed.\r\n<<activateSpeechBubble Allison>>Oh, I think you know how needed you were.\r\n<<activateSpeechBubble Franklin>>Wait, if you kill him, don’t all of the skeletons die?\r\n<<activateSpeechBubble Lance>>Yeah, I mean, probably. That worked against him the last time we crossed paths.\r\n<<activateSpeechBubble Franklin>>We should probably do that, then. Wrap this up quick.\r\n<<activateSpeechBubble Allison>>Um, what’s your hurry?\r\n<<activateSpeechBubble Franklin>>I have things to do after this.\r\n<<activateSpeechBubble Franklin>>It would, um…\r\n<<activateSpeechBubble Franklin>>...It would just mean a lot if we could wrap this up a little more… quickly.\r\n<<activateSpeechBubble Allison>>Uh, sure?\r\n<<activateSpeechBubble Lance>>Exactly why I should go attack Narravar, Allison.\r\n<<activateSpeechBubble Allison>>Okay, Lance, look…\r\n<<freezeDialogue Brynn>>\r\n[[Actually, Narravar leaves.|NarravarLeaves]]\r\n[[Narravar charges in with his troops.|NarravarChargesIn]]",
+		"position": {
+			"x": 233,
+			"y": 5757
+		},
+		"colorID": 0
+	},
+	{
+		"title": "NarravarLeaves",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>*Ahem*!\r\n<<activateSpeechBubble Brynn>>So, after taunting you, Narravar says the following.\r\n<<activateSpeechBubble Brynn>><<changeFont Brynn inCharacter>>It’s been a pleasure, Arannis, but there are bigger things at stake than our rivalry.\r\n<<activateSpeechBubble Brynn>>I must reinforce our troops with the corpses of your own feeble army. In the meantime, my skeleton warriors shall be your undoing!<<changeFont Brynn outOfCharacter>>\r\n<<activateSpeechBubble Brynn>>He snaps his fingers, and vanishes in a puff of magical smoke.\r\n<<decreaseValue Lance>>\r\n<<increaseValue Allison>>\r\n<<decreaseValue Franklin>>\r\n<<activateSpeechBubble Lance>>Brynn, seriously? The fight would’ve been beautiful. Why’d you take that from me?\r\n<<activateSpeechBubble Allison>>Maybe because she knows you’d just flake on us if you were tempted to.\r\n<<if $lance_is_very_angry is true>>\r\n[[LanceLeaves]]\r\n<<endif>>\r\n<<activateSpeechBubble Franklin>>So, I guess we have to fight all these skeletons, then...\r\n<<activateSpeechBubble Lance>>Fine. I’ll stay put, as long as my input isn’t valued.\r\n<<activateSpeechBubble Allison>>Great. I’m next, so I fire a bunch of crossbow bolts at the closest skeletons.\r\n<<activateSpeechBubble Brynn>>Okay, roll for it.\r\n<<rollDie Allison>>\r\n<<activateSpeechBubble Brynn>>Alright, that’s a hit. Franklin, you’re up.\r\n<<activateSpeechBubble Franklin>>How long will this take?\r\n<<activateSpeechBubble Brynn>>However long until all 20 of the skeletons are defeated.\r\n<<activateSpeechBubble Franklin>>Right…\r\n<<activateSpeechBubble Franklin>>I attack them with my sword, I guess.\r\n<<activateSpeechBubble Brynn>>Roll for it.\r\n<<rollDie Franklin>>\r\n<<activateSpeechBubble Brynn>>Okay, that’s a hit. One of the skeletons takes damage.\r\n<<activateSpeechBubble Franklin>>Are they bloodied?\r\n<<activateSpeechBubble Brynn>>Well, it’s a skeleton. But if you’re asking if they’ve taken half damage, they don’t seem to have.\r\n<<activateSpeechBubble Allison>>No worries, if we keep a tight formation then they won’t be able to land a hit on us.\r\n<<activateSpeechBubble Allison>>We just have to dig in and hold out. So, Ruby, now that it’s your turn—\r\n<<activateSpeechBubble Franklin>>I run for the exit.\r\n<<activateSpeechBubble Allison>>What?\r\n<<activateSpeechBubble Franklin>>I still have a movement action left, so I use it to sprint for the exit.\r\n<<activateSpeechBubble Brynn>>Um, you’ll incur attacks of opportunity from the skeletons. Are you sure?\r\n<<activateSpeechBubble Franklin>>Yes. Is everyone coming?\r\n[[Rebranch10]]",
+		"position": {
+			"x": -28,
+			"y": 6104
+		},
+		"colorID": 0
+	},
+	{
+		"title": "NarravarChargesIn",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>*Ahem*!\r\n<<activateSpeechBubble Brynn>>After he says all that, Narravar draws a mace and charges in!\r\n<<activateSpeechBubble Brynn>>He’s moving with his troops, so he’s another unit you can attack like all the others.\r\n<<activateSpeechBubble Allison>>Wait, so…\r\n<<activateSpeechBubble Lance>>I could fight him but stay where I am.\r\n<<activateSpeechBubble Brynn>>Yeah, basically.\r\n<<activateSpeechBubble Ruby>>Hey, that’s cool, right? We can do both things?\r\n<<activateSpeechBubble Lance>>Uh, not quite. If I want to be able to use the full extent of my movement abilities, I’ll need to move outside this little “Allison triangle.”\r\n<<increaseValue Lance>>\r\n<<decreaseValue Allison>>\r\n<<increaseValue Franklin>>\r\n<<activateSpeechBubble Lance>>Still better off going solo. Brynn, I use the amulet and take two dash actions to get to where Narravar is and stab him in the back.\r\n<<if $allison_is_very_angry is true>>\r\n[[AllisonLeaves]]\r\n<<endif>>\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby minusOne>>Oh. Right.\r\n<<activateSpeechBubble Franklin>>As long as we’re getting things done.\r\n<<returnToDefaultPose Ruby>>\r\n<<rollDie Lance>>\r\n<<activateSpeechBubble Lance>>I believe a 22 hits, Brynn, does it not? Especially with my amulet’s assassination bonus?\r\n<<activateSpeechBubble Brynn>>Yikes, it does. In fact, it looks like you take him out.\r\n<<activateSpeechBubble Brynn>>According to the rules of his spell, all the skeletons disintegrate. There goes the rest of the encounter, I suppose.\r\n<<activateSpeechBubble Allison>>Lance, that was super-reckless. If you’d screwed up that roll, we might’ve died.\r\n<<activateSpeechBubble Lance>>Except I didn’t! Maybe you’re better off just letting me be a solo act!\r\n<<activateSpeechBubble Franklin>>Okay, you two, just—!\r\n<<activateSpeechBubble Franklin>>Just stop. Uh... please.\r\n<<activateSpeechBubble Franklin>>...\r\n<<activateSpeechBubble Franklin>>I run towards the exit.\r\n[[Rebranch10]]",
+		"position": {
+			"x": 557,
+			"y": 6123
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch10",
+		"tags": "",
+		"body": "<<activateSpeechBubble Allison>>Jesus, Franklin; alright.\r\n<<activateSpeechBubble Ruby>>Franklin, is everything okay?\r\n<<activateSpeechBubble Franklin>>I’m through the exit, Brynn. What’s next?\r\nTO BE CONTINUED...",
+		"position": {
+			"x": 242,
+			"y": 6438
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceLeaves",
+		"tags": "",
+		"body": "<<activateSpeechBubble Lance>>[Insert Lance angry outburst here]\n<<activateSpeechBubble Lance>>[Maybe he even has a sprite where he stands up out of his chair?]\n<<showCharacter Lance false>>\n<<activateSpeechBubble Brynn>>[And then everyone else is like \"What was that all about?\"]\n<<activateFailScreen SceneManager>>",
+		"position": {
+			"x": -1554,
+			"y": 5216
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AllisonLeaves",
+		"tags": "",
+		"body": "<<activateSpeechBubble Allison>>[Insert Lance angry outburst here]\n<<activateSpeechBubble Allison>>[Maybe he even has a sprite where he stands up out of his chair?]\n<<showCharacter Allison false>>\n<<activateSpeechBubble Brynn>>[And then everyone else is like \"What was that all about?\"]\n<<activateFailScreen SceneManager>>",
+		"position": {
+			"x": 1539,
+			"y": 5037
 		},
 		"colorID": 0
 	}
