@@ -276,12 +276,10 @@ public class YarnCommands : MonoBehaviour {
     public void FreezeDialogueText()
     {
         nameText.GetComponent<Text>().text = " ";
-        /*
         frozenDialogueText = Instantiate(dialogueTextContainer);
         GameObject background = GameObject.Find("Background");
         frozenDialogueText.transform.SetParent(background.GetComponent<Transform>());
         frozenDialogueText.GetComponent<Transform>().position = dialogueTextContainer.GetComponent<Transform>().position;
-        */
     }
 
     /// <summary>

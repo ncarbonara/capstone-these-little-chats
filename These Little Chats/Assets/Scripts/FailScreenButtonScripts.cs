@@ -12,9 +12,34 @@ using Yarn.Unity;   //Lets us talk to Yarn stuff
 /// </summary>
 public class FailScreenButtonScripts : MonoBehaviour {
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void RetryGame()
     {
         SceneManager.LoadScene("MainScene");
+
+        //This is all code that was meant to start the scene from partway through rather than at the
+        //very beginning when the player restarts the game. It doesn't work yet, unfortunately.
+
+        /*
+        GameObject dialogue = GameObject.Find("Dialogue");
+        GameObject brynnPose = GameObject.Find("Brynn Pose");
+        GameObject lancePose = GameObject.Find("Lance Pose");
+        GameObject allisonPose = GameObject.Find("Allison Pose");
+        GameObject franklinPose = GameObject.Find("Franklin Pose");
+        GameObject rubyPose = GameObject.Find("Ruby Pose");
+
+        dialogue.GetComponent<DialogueRunner>().startNode = "MajorChoice1";
+
+        lancePose.SetActive(true);
+        allisonPose.SetActive(true);
+        franklinPose.SetActive(true);
+        rubyPose.SetActive(true);
+        */
+
     }
 
     public void QuitGame()
