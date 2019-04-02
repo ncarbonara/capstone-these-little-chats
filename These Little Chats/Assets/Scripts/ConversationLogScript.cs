@@ -7,10 +7,42 @@ using UnityEngine.UI;   //Let's us talk to UI stuff.
 public class ConversationLogScript : MonoBehaviour {
 
     public GameObject dialogueText;
+    public GameObject characterNameText;
 
-    // Update is called once per frame
-    void Update () {
-        string lineToAdd = dialogueText.GetComponent<Text>().text;
-        this.GetComponent<Text>().text = this.GetComponent<Text>().text + lineToAdd;
+    string lineToAdd;
+    string previousLineToAdd;
+
+    Queue<string> linesInLog = new Queue <string>();
+
+    void Start()
+    {
+        
+    }
+
+    public void AddToConversationLog () {
+        lineToAdd = dialogueText.GetComponent<Text>().text;
+
+        if(lineToAdd != previousLineToAdd
+            && lineToAdd != " "
+            && lineToAdd.Contains("Displayed Text Goes Here") == false)
+        {
+            Debug.Log("Line to Add: " + lineToAdd + " / Previous Line to Add: " + previousLineToAdd);
+            string lineToAddWithCharcterName = characterNameText.GetComponent<Text>().text + ": " + lineToAdd;
+            this.GetComponent<Text>().text = this.GetComponent<Text>().text + "\n" + lineToAddWithCharcterName;
+            previousLineToAdd = lineToAdd;
+            linesInLog.Enqueue(lineToAddWithCharcterName);
+
+            if (linesInLog.Count > 10)
+            {
+                string oldestLineWithCharacterName = linesInLog.Dequeue();
+                string currentConversationLogText = this.GetComponent<Text>().text;
+                currentConversationLogText.Replace(oldestLineWithCharacterName, " ");
+                this.GetComponent<Text>().text = currentConversationLogText;
+
+            }
+        }
+
+
+
     }
 }

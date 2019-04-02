@@ -80,6 +80,8 @@ namespace Yarn.Unity.Example {
         /// dialogue is active and to restore them when dialogue ends
         public RectTransform gameControlsContainer;
 
+        public GameObject conversationLog;
+
         void Awake ()
         {
             // Start by hiding the container, line and option buttons
@@ -114,9 +116,16 @@ namespace Yarn.Unity.Example {
                     lineText.text = stringBuilder.ToString ();
                     yield return new WaitForSeconds (textSpeed);
                 }
+
+                //Once the line is finished displaying, it is recorded in the conversation log
+                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog();
+
             } else {
                 // Display the line immediately if textSpeed == 0
                 lineText.text = line.text;
+
+                //Once the line is finished displaying, it is recorded in the conversation log
+                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog();
             }
 
             // Show the 'press any key' prompt when done, if we have one

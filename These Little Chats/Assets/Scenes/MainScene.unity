@@ -656,7 +656,7 @@ RectTransform:
   m_Children:
   - {fileID: 654006967}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -964,46 +964,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 136571103}
   m_CullTransparentMesh: 0
---- !u!1 &264624101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 264624103}
-  - component: {fileID: 264624102}
-  m_Layer: 0
-  m_Name: GameplayVariablesManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &264624102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 264624101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25258853aa07d504082787d4d6fa6b7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &264624103
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 264624101}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319291415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
+  gameplayVariablesManager: {fileID: 0}
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 0}
@@ -1288,7 +1248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1752,7 +1712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
+  gameplayVariablesManager: {fileID: 0}
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 0}
@@ -1775,7 +1735,7 @@ MonoBehaviour:
   characterSpeechBubbleSprite: {fileID: 21300000, guid: 03799228f2eaf7b4e8592d09962380ac,
     type: 3}
   characterNameColor: {r: 0.07058824, g: 0.5294118, b: 0.3921569, a: 1}
-  value: -1
+  value: 0
   veryPleasedValueThreshold: 2
   veryPleasedYarnBool: $lance_is_very_pleased
   somewhatPleasedValueThreshold: 1
@@ -1801,7 +1761,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753566318
 GameObject:
@@ -2238,7 +2198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
+  gameplayVariablesManager: {fileID: 0}
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 0}
@@ -2287,7 +2247,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055677819
 GameObject:
@@ -2691,8 +2651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: 281}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -308, y: 113}
+  m_SizeDelta: {x: 160, y: 366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368943228
 MonoBehaviour:
@@ -2706,6 +2666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 2157378}
+  characterNameText: {fileID: 680974433}
 --- !u!114 &1368943229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,7 +2785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486543987
 GameObject:
@@ -3130,7 +3091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
+  gameplayVariablesManager: {fileID: 0}
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 0}
@@ -3179,7 +3140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566938073
 GameObject:
@@ -3278,7 +3239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableManager: {fileID: 1822770182}
-  gameplayVariablesManager: {fileID: 264624101}
+  gameplayVariablesManager: {fileID: 0}
   characterPortraitGameObject: {fileID: 0}
   nameText: {fileID: 680974433}
   portraitBackground: {fileID: 0}
@@ -3327,7 +3288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582667712
 GameObject:
@@ -3747,6 +3708,7 @@ MonoBehaviour:
   - {fileID: 29550114}
   - {fileID: 1486543989}
   gameControlsContainer: {fileID: 0}
+  conversationLog: {fileID: 1368943226}
 --- !u!1 &1850045823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +3813,7 @@ RectTransform:
   - {fileID: 1164686726}
   - {fileID: 985056962}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
