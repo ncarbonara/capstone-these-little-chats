@@ -17,10 +17,10 @@ public class YarnCommands : MonoBehaviour {
 
     //Note to Self: gameplayVariablesManager is kind of poorly named and confusing, because of the
     //naming of VariableStorageBehaviour. Should probably fix.
-    public GameObject gameplayVariablesManager;
+    //public GameObject gameplayVariablesManager;
     public GameObject characterPortraitGameObject;
     public GameObject nameText;
-    public GameObject portraitBackground;
+    //public GameObject portraitBackground;
     public GameObject dialogueTextContainer;
     public GameObject dialogueText;
 
@@ -103,7 +103,7 @@ public class YarnCommands : MonoBehaviour {
     // Use this for initialization
     void Start () {
         nameText.GetComponent<Text>().text = null;
-        portraitBackground.gameObject.SetActive(false);
+        //portraitBackground.gameObject.SetActive(false);
 
         variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
 

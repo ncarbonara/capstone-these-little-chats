@@ -14,11 +14,6 @@ public class ConversationLogScript : MonoBehaviour {
 
     Queue<string> linesInLog = new Queue <string>();
 
-    void Start()
-    {
-        
-    }
-
     public void AddToConversationLog () {
         lineToAdd = dialogueText.GetComponent<Text>().text;
 
@@ -27,19 +22,20 @@ public class ConversationLogScript : MonoBehaviour {
             && lineToAdd.Contains("Displayed Text Goes Here") == false)
         {
             Debug.Log("Line to Add: " + lineToAdd + " / Previous Line to Add: " + previousLineToAdd);
-            string lineToAddWithCharcterName = characterNameText.GetComponent<Text>().text + ": " + lineToAdd;
-            this.GetComponent<Text>().text = this.GetComponent<Text>().text + "\n" + lineToAddWithCharcterName;
+            string lineToAddWithCharcterName = "\n" + characterNameText.GetComponent<Text>().text + ": " + lineToAdd;
+            this.GetComponent<Text>().text = this.GetComponent<Text>().text + lineToAddWithCharcterName;
             previousLineToAdd = lineToAdd;
             linesInLog.Enqueue(lineToAddWithCharcterName);
+        }
 
-            if (linesInLog.Count > 10)
-            {
-                string oldestLineWithCharacterName = linesInLog.Dequeue();
-                string currentConversationLogText = this.GetComponent<Text>().text;
-                currentConversationLogText.Replace(oldestLineWithCharacterName, " ");
-                this.GetComponent<Text>().text = currentConversationLogText;
+        if(linesInLog.Count > 10)
+        {
+            Debug.Log("Many lines!");
+            string oldestLineWithCharacterName = linesInLog.Dequeue();
+            string currentConversationLogText = this.GetComponent<Text>().text;
+            currentConversationLogText = currentConversationLogText.Replace(oldestLineWithCharacterName, "");
+            this.GetComponent<Text>().text = currentConversationLogText;
 
-            }
         }
 
 
