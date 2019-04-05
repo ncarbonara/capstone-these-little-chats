@@ -68,6 +68,7 @@ public class YarnCommands : MonoBehaviour {
     public Vector3 characterTextBoxPosition;
     public GameObject speechBubble;
     public Sprite characterSpeechBubbleSprite;
+    public Sprite characterOffScreenSpeechBubbleSprite;
     public Color characterNameColor;
 
     //Character variables handled directly in this script. Set initial values in the inspector!
@@ -160,6 +161,19 @@ public class YarnCommands : MonoBehaviour {
     {
         dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
         speechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
+        nameText.GetComponent<Text>().color = characterNameColor;
+        nameText.GetComponent<Text>().text = this.gameObject.name;
+    }
+
+    /// <summary>
+    /// Does the same thing as the ActivateSpeechBubble() function, except with a speech bubble
+    /// that's pointing off screen
+    /// </summary>
+    [YarnCommand("activateOffScreenSpeechBubble")]
+    public void ActivateOffScreenSpeechBubble()
+    {
+        dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
+        speechBubble.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
         nameText.GetComponent<Text>().color = characterNameColor;
         nameText.GetComponent<Text>().text = this.gameObject.name;
     }
