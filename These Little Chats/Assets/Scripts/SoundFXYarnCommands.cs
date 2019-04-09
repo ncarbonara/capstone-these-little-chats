@@ -14,6 +14,7 @@ public class SoundFXYarnCommands : MonoBehaviour {
     public AudioClip placeDMScreen;
     public AudioClip doorOpenClose;
     public AudioClip sitDown;
+    public AudioClip d20Roll;
 
     [YarnCommand("triggerSound")]
     public void TriggerSound(string sound)
@@ -36,6 +37,11 @@ public class SoundFXYarnCommands : MonoBehaviour {
         else if(sound == "sitDown")
         {
             this.GetComponent<AudioSource>().clip = sitDown;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "d20Roll")
+        {
+            this.GetComponent<AudioSource>().clip = d20Roll;
             this.GetComponent<AudioSource>().Play();
         }
     }

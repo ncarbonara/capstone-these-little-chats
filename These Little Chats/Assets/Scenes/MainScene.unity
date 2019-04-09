@@ -211,12 +211,12 @@ GameObject:
   - component: {fileID: 24952849}
   - component: {fileID: 24952848}
   m_Layer: 5
-  m_Name: Allison Pose
+  m_Name: Allison Pose, Neutral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &24952847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -301,7 +301,7 @@ RectTransform:
   m_Children:
   - {fileID: 825971804}
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 17
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -426,7 +426,7 @@ RectTransform:
   m_LocalScale: {x: 0.50008416, y: 0.50008416, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 8
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -484,6 +484,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40429049}
   m_CullTransparentMesh: 0
+--- !u!1 &65107139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65107140}
+  m_Layer: 0
+  m_Name: Lance D20 End Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &65107140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 65107139}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.2, y: 33.4, z: -0.61600333}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &89926401
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,12 +709,12 @@ GameObject:
   - component: {fileID: 100721522}
   - component: {fileID: 100721521}
   m_Layer: 5
-  m_Name: Lance Pose
+  m_Name: Lance Pose, Neutral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &100721520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -698,7 +726,7 @@ RectTransform:
   m_LocalScale: {x: 0.9998872, y: 0.9998872, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -767,7 +795,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 9
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -888,7 +916,7 @@ RectTransform:
   m_LocalScale: {x: 0.50008416, y: 0.50008416, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 11
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -923,7 +951,7 @@ RectTransform:
   m_LocalScale: {x: 0.50008416, y: 0.50008416, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 13
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -964,6 +992,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 136571103}
   m_CullTransparentMesh: 0
+--- !u!1 &295363055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295363056}
+  - component: {fileID: 295363058}
+  - component: {fileID: 295363057}
+  m_Layer: 5
+  m_Name: Allison's D20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &295363056
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295363055}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -36.8, y: 49.5}
+  m_SizeDelta: {x: 3, y: 3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &295363057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295363055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &295363058
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295363055}
+  m_CullTransparentMesh: 0
 --- !u!1 &319291415
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1089,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 12
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1033,6 +1130,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319291415}
   m_CullTransparentMesh: 0
+--- !u!1 &358019795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358019798}
+  - component: {fileID: 358019797}
+  - component: {fileID: 358019796}
+  m_Layer: 5
+  m_Name: Ruby's D20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &358019796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358019795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &358019797
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358019795}
+  m_CullTransparentMesh: 0
+--- !u!224 &358019798
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358019795}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 55.100002, y: -16.500004}
+  m_SizeDelta: {x: 3, y: 3}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &369698402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,7 +1227,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1214,7 +1380,12 @@ MonoBehaviour:
   neutralPosePosition: {x: -1.965031, y: 1.162638, z: 0}
   negative1PosePosition: {x: -1.788072, y: 1.162638, z: 0}
   negative2PosePosition: {x: -1.788072, y: 1.162638, z: 0}
-  poseLerpSpeed: 4
+  poseLerpSpeed: 2.5
+  plusTwoPoseGameObject: {fileID: 717752710}
+  plusOnePoseGameObject: {fileID: 717752710}
+  zeroPoseGameObject: {fileID: 24952846}
+  minusOnePoseGameObject: {fileID: 674173372}
+  minusTwoPoseGameObject: {fileID: 674173372}
   characterTextBoxPosition: {x: 6.31694, y: 4.709772, z: 0}
   speechBubble: {fileID: 1967288580}
   characterSpeechBubbleSprite: {fileID: 21300000, guid: 0c0762de598edf54586c25c7f3b52e4b,
@@ -1237,6 +1408,10 @@ MonoBehaviour:
   outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   inCharacterFontSize: 80
   outOfCharacterFontSize: 60
+  d20RollLerpStartMarker: {fileID: 1614739538}
+  d20RollLerpEndMarker: {fileID: 1515845641}
+  d20: {fileID: 295363055}
+  d20LerpSpeed: 2
 --- !u!4 &448017639
 Transform:
   m_ObjectHideFlags: 0
@@ -1249,6 +1424,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &510526199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510526200}
+  m_Layer: 0
+  m_Name: Ruby D20 End Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &510526200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510526199}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 55.5, y: -36.7, z: -0.6160034}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1356,7 +1559,7 @@ RectTransform:
   m_LocalScale: {x: 0.5000842, y: 0.5000842, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1441,7 +1644,7 @@ Transform:
   m_Children:
   - {fileID: 1967288581}
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 15
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602769409
 GameObject:
@@ -1738,6 +1941,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!1 &674173372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 674173373}
+  - component: {fileID: 674173375}
+  - component: {fileID: 674173374}
+  m_Layer: 5
+  m_Name: Allison Pose, Minus 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &674173373
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674173372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -55.020016, y: 58.219}
+  m_SizeDelta: {x: 69.21, y: 69.211}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &674173374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674173372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 3641ff20016d9334f8a5d38e6b818457, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &674173375
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674173372}
+  m_CullTransparentMesh: 0
 --- !u!1 &680974433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,6 +2085,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680974433}
   m_CullTransparentMesh: 0
+--- !u!1 &717752710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717752711}
+  - component: {fileID: 717752713}
+  - component: {fileID: 717752712}
+  m_Layer: 5
+  m_Name: Allison Pose, Plus 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &717752711
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 717752710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -41.999985, y: 58.219}
+  m_SizeDelta: {x: 69.21, y: 69.211}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &717752712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 717752710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: f426eff247e0a304a8ea4330e327377c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &717752713
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 717752710}
+  m_CullTransparentMesh: 0
 --- !u!1 &741036654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +2198,11 @@ MonoBehaviour:
   negative1PosePosition: {x: 2.135595, y: 1.009166, z: 0}
   negative2PosePosition: {x: 2.135595, y: 1.009166, z: 0}
   poseLerpSpeed: 4
+  plusTwoPoseGameObject: {fileID: 1083595498}
+  plusOnePoseGameObject: {fileID: 1083595498}
+  zeroPoseGameObject: {fileID: 100721519}
+  minusOnePoseGameObject: {fileID: 948973039}
+  minusTwoPoseGameObject: {fileID: 948973039}
   characterTextBoxPosition: {x: 14.33087, y: 4.551908, z: 0}
   speechBubble: {fileID: 1967288580}
   characterSpeechBubbleSprite: {fileID: 21300000, guid: 03799228f2eaf7b4e8592d09962380ac,
@@ -1879,6 +2225,10 @@ MonoBehaviour:
   outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   inCharacterFontSize: 80
   outOfCharacterFontSize: 60
+  d20RollLerpStartMarker: {fileID: 1259266036}
+  d20RollLerpEndMarker: {fileID: 65107139}
+  d20: {fileID: 2126211374}
+  d20LerpSpeed: 2
 --- !u!4 &741036656
 Transform:
   m_ObjectHideFlags: 0
@@ -1973,7 +2323,7 @@ GameObject:
   - component: {fileID: 767738827}
   m_Layer: 0
   m_Name: EnvironmentSoundFX
-  m_TagString: Untagged
+  m_TagString: SoundFXGameObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2101,6 +2451,7 @@ MonoBehaviour:
   placeDMScreen: {fileID: 0}
   doorOpenClose: {fileID: 0}
   sitDown: {fileID: 0}
+  d20Roll: {fileID: 8300000, guid: 1fddccc384edf5141b0d5103c6623f93, type: 3}
 --- !u!1 &792788609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2641,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &948973039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948973040}
+  - component: {fileID: 948973042}
+  - component: {fileID: 948973041}
+  m_Layer: 5
+  m_Name: Lance Pose, Minus 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &948973040
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948973039}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 55.4, y: 53.899994}
+  m_SizeDelta: {x: 76.28, y: 76.277}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &948973041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948973039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 5ddbef330c2a3be48b732276c9eceae3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &948973042
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948973039}
+  m_CullTransparentMesh: 0
 --- !u!1 &985056961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2833,11 @@ MonoBehaviour:
   negative1PosePosition: {x: -3.208722, y: -1.275671, z: 0}
   negative2PosePosition: {x: -3.208722, y: -1.275671, z: 0}
   poseLerpSpeed: 4
+  plusTwoPoseGameObject: {fileID: 0}
+  plusOnePoseGameObject: {fileID: 0}
+  zeroPoseGameObject: {fileID: 0}
+  minusOnePoseGameObject: {fileID: 0}
+  minusTwoPoseGameObject: {fileID: 0}
   characterTextBoxPosition: {x: 5.148376, y: 2.638643, z: 0}
   speechBubble: {fileID: 1967288580}
   characterSpeechBubbleSprite: {fileID: 21300000, guid: 0c0762de598edf54586c25c7f3b52e4b,
@@ -2435,6 +2860,10 @@ MonoBehaviour:
   outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   inCharacterFontSize: 80
   outOfCharacterFontSize: 60
+  d20RollLerpStartMarker: {fileID: 2104142919}
+  d20RollLerpEndMarker: {fileID: 1223981049}
+  d20: {fileID: 1007468495}
+  d20LerpSpeed: 2
 --- !u!4 &991207496
 Transform:
   m_ObjectHideFlags: 0
@@ -2448,6 +2877,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1007468495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007468496}
+  - component: {fileID: 1007468498}
+  - component: {fileID: 1007468497}
+  m_Layer: 5
+  m_Name: Franklin's D20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1007468496
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007468495}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -67.8, y: -31.9}
+  m_SizeDelta: {x: 3, y: 3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1007468497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007468495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1007468498
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007468495}
+  m_CullTransparentMesh: 0
 --- !u!1 &1055677819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +3044,7 @@ RectTransform:
   m_LocalScale: {x: 0.50008416, y: 0.50008416, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2604,6 +3102,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1077351351}
   m_CullTransparentMesh: 0
+--- !u!1 &1083595498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083595499}
+  - component: {fileID: 1083595501}
+  - component: {fileID: 1083595500}
+  m_Layer: 5
+  m_Name: Lance Pose, Plus 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1083595499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083595498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 58.90999, y: 53.899994}
+  m_SizeDelta: {x: 76.28, y: 76.277}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1083595500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083595498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 42474ee1bcbe55749ac93cc95901600e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1083595501
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083595498}
+  m_CullTransparentMesh: 0
 --- !u!1 &1164686725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,20 +3199,37 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1728637148}
+  - {fileID: 2125862894}
   - {fileID: 520603442}
   - {fileID: 2118412063}
   - {fileID: 1541126440}
   - {fileID: 100721520}
+  - {fileID: 1083595499}
+  - {fileID: 948973040}
+  - {fileID: 2126211375}
+  - {fileID: 1259266037}
+  - {fileID: 65107140}
   - {fileID: 1077351352}
   - {fileID: 369698403}
   - {fileID: 24952847}
+  - {fileID: 717752711}
+  - {fileID: 674173373}
+  - {fileID: 295363056}
+  - {fileID: 1614739539}
+  - {fileID: 1515845642}
   - {fileID: 40429050}
   - {fileID: 109466957}
   - {fileID: 1566938074}
+  - {fileID: 1007468496}
+  - {fileID: 2104142920}
+  - {fileID: 1223981050}
   - {fileID: 112773152}
   - {fileID: 319291416}
   - {fileID: 136571104}
   - {fileID: 1638700102}
+  - {fileID: 358019798}
+  - {fileID: 1976497533}
+  - {fileID: 510526200}
   - {fileID: 585938870}
   - {fileID: 1805894198}
   - {fileID: 29550113}
@@ -2693,6 +3277,62 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164686725}
   m_CullTransparentMesh: 0
+--- !u!1 &1223981049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223981050}
+  m_Layer: 0
+  m_Name: Franklin D20 End Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223981050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223981049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -57.8, y: -18.6, z: -0.61600333}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1259266036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259266037}
+  m_Layer: 0
+  m_Name: Lance D20 Start Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259266037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259266036}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.90001, y: 49.2, z: -0.61600333}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261753351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,7 +3699,7 @@ RectTransform:
   m_Children:
   - {fileID: 602769410}
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 18
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3234,6 +3874,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503785761}
   m_CullTransparentMesh: 0
+--- !u!1 &1515845641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515845642}
+  m_Layer: 0
+  m_Name: Allison D20 End Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1515845642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515845641}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -31.6, y: 31.4, z: -0.6160033}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541126439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,7 +3930,7 @@ RectTransform:
   m_LocalScale: {x: 0.50008416, y: 0.50008416, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3347,6 +4015,11 @@ MonoBehaviour:
   negative1PosePosition: {x: 3.148315, y: -1.435575, z: 0}
   negative2PosePosition: {x: 3.148315, y: -1.435575, z: 0}
   poseLerpSpeed: 4
+  plusTwoPoseGameObject: {fileID: 0}
+  plusOnePoseGameObject: {fileID: 0}
+  zeroPoseGameObject: {fileID: 0}
+  minusOnePoseGameObject: {fileID: 0}
+  minusTwoPoseGameObject: {fileID: 0}
   characterTextBoxPosition: {x: 15.24054, y: 1.972138, z: 0}
   speechBubble: {fileID: 1967288580}
   characterSpeechBubbleSprite: {fileID: 21300000, guid: 03799228f2eaf7b4e8592d09962380ac,
@@ -3369,6 +4042,10 @@ MonoBehaviour:
   outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   inCharacterFontSize: 80
   outOfCharacterFontSize: 60
+  d20RollLerpStartMarker: {fileID: 1976497532}
+  d20RollLerpEndMarker: {fileID: 510526199}
+  d20: {fileID: 358019795}
+  d20LerpSpeed: 2
 --- !u!4 &1565551905
 Transform:
   m_ObjectHideFlags: 0
@@ -3393,12 +4070,12 @@ GameObject:
   - component: {fileID: 1566938076}
   - component: {fileID: 1566938075}
   m_Layer: 5
-  m_Name: Franklin Pose
+  m_Name: Franklin Pose, Neutral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1566938074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3410,7 +4087,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 10
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3495,6 +4172,11 @@ MonoBehaviour:
   negative1PosePosition: {x: 0.1812235, y: 2.07874, z: 0}
   negative2PosePosition: {x: 0.1812235, y: 2.07874, z: 0}
   poseLerpSpeed: 4
+  plusTwoPoseGameObject: {fileID: 0}
+  plusOnePoseGameObject: {fileID: 2125862893}
+  zeroPoseGameObject: {fileID: 0}
+  minusOnePoseGameObject: {fileID: 0}
+  minusTwoPoseGameObject: {fileID: 0}
   characterTextBoxPosition: {x: 8.009369, y: 4.832627, z: 0}
   speechBubble: {fileID: 1967288580}
   characterSpeechBubbleSprite: {fileID: 21300000, guid: 49b80be622c7dfc4f97e9b8d487edc90,
@@ -3516,6 +4198,10 @@ MonoBehaviour:
   outOfCharacterFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   inCharacterFontSize: 80
   outOfCharacterFontSize: 60
+  d20RollLerpStartMarker: {fileID: 0}
+  d20RollLerpEndMarker: {fileID: 0}
+  d20: {fileID: 0}
+  d20LerpSpeed: 0
 --- !u!4 &1575548909
 Transform:
   m_ObjectHideFlags: 0
@@ -3558,7 +4244,7 @@ RectTransform:
   m_LocalScale: {x: 0.9190171, y: 0.9190171, z: 0.9190171}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 19
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3588,6 +4274,34 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!1 &1614739538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614739539}
+  m_Layer: 0
+  m_Name: Allison D20 Start Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1614739539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614739538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.1, y: 49.2, z: -0.6160033}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638700101
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,12 +4313,12 @@ GameObject:
   - component: {fileID: 1638700104}
   - component: {fileID: 1638700103}
   m_Layer: 5
-  m_Name: Ruby Pose
+  m_Name: Ruby Pose, Neutral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1638700102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3616,7 +4330,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 14
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3668,7 +4382,7 @@ GameObject:
   - component: {fileID: 1728637150}
   - component: {fileID: 1728637149}
   m_Layer: 5
-  m_Name: Brynn Pose
+  m_Name: Brynn Pose, Neutral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3759,7 +4473,7 @@ RectTransform:
   - {fileID: 2020745764}
   - {fileID: 1503785762}
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 16
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3910,7 +4624,7 @@ MonoBehaviour:
   overrideLanguage: 10
   variableStorage: {fileID: 1822770182}
   dialogueUI: {fileID: 1822770186}
-  startNode: AltRebranch3
+  startNode: MajorChoice1
   startAutomatically: 1
   automaticCommands: 0
 --- !u!4 &1822770185
@@ -3941,7 +4655,7 @@ MonoBehaviour:
   lineText: {fileID: 2157379}
   lineTextBackground: {fileID: 1967288580}
   continuePrompt: {fileID: 985056961}
-  textSpeed: 0.0001
+  textSpeed: 0
   optionButtons:
   - {fileID: 1805894199}
   - {fileID: 29550114}
@@ -4270,6 +4984,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967288580}
   m_CullTransparentMesh: 0
+--- !u!1 &1976497532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976497533}
+  m_Layer: 0
+  m_Name: Ruby D20 Start Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976497533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976497532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 54.800003, y: -16.800013, z: -0.6160034}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020745763
 GameObject:
   m_ObjectHideFlags: 0
@@ -4556,6 +5298,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2092680462}
   m_CullTransparentMesh: 0
+--- !u!1 &2104142919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104142920}
+  m_Layer: 0
+  m_Name: Franklin D20 Start Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104142920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104142919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -68.1, y: -32.200012, z: -0.61600333}
+  m_LocalScale: {x: 28.142046, y: 28.142046, z: 28.142046}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118412062
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,7 +5354,7 @@ RectTransform:
   m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
   m_Children: []
   m_Father: {fileID: 1164686726}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4624,4 +5394,142 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118412062}
+  m_CullTransparentMesh: 0
+--- !u!1 &2125862893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125862894}
+  - component: {fileID: 2125862896}
+  - component: {fileID: 2125862895}
+  m_Layer: 5
+  m_Name: Brynn Pose, Plus 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2125862894
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125862893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.7000003, y: 84.00001}
+  m_SizeDelta: {x: 67.19, y: 67.19}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2125862895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125862893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 9a3c7740052702249a1988039d8eb891, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2125862896
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125862893}
+  m_CullTransparentMesh: 0
+--- !u!1 &2126211374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126211375}
+  - component: {fileID: 2126211377}
+  - component: {fileID: 2126211376}
+  m_Layer: 5
+  m_Name: Lance's D20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2126211375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126211374}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99988693, y: 0.99988693, z: 0.99988693}
+  m_Children: []
+  m_Father: {fileID: 1164686726}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 36.20001, y: 49.500004}
+  m_SizeDelta: {x: 3, y: 3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2126211376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126211374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2126211377
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126211374}
   m_CullTransparentMesh: 0

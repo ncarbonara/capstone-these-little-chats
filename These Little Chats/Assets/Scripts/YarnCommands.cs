@@ -24,11 +24,8 @@ public class YarnCommands : MonoBehaviour {
     public GameObject dialogueTextContainer;
     public GameObject dialogueText;
 
-    //public GameObject positivePose;
-    public GameObject characterPoseGameObject;
-    //public GameObject negativePose;
-
     //The sprites that the pose image cycles through based on the character's mood
+    public GameObject characterPoseGameObject;
     public Sprite positive2PoseImage;
     public Sprite positive1PoseImage;
     public Sprite neutralPoseImage;
@@ -57,12 +54,22 @@ public class YarnCommands : MonoBehaviour {
     Vector3 currentStartingPosePosition;
     Vector3 currentDestinationPosePosition;
     public float poseLerpSpeed;
-    float startTime;
-    bool startNewLerp;
-    bool lerpInProcess;
-    float journeyLength;
-    float distanceCovered;
-    float fracJourney;
+    float poseLerpStartTime;
+    bool startNewPoseLerp;
+    bool poseLerpInProcess;
+    float poseLerpJourneyLength;
+    float poseLerpDistanceCovered;
+    float poseLerpFracJourney;
+
+    //GameObjects for an alternative system of switching through pose sprites that uses multiple
+    //gameObjects instead of just one
+    public GameObject plusTwoPoseGameObject;
+    public GameObject plusOnePoseGameObject;
+    public GameObject zeroPoseGameObject;
+    public GameObject minusOnePoseGameObject;
+    public GameObject minusTwoPoseGameObject;
+
+    GameObject defaultPoseGameObject;
 
     //Public variables used to handle the location and sprite used by the textbox for each character.
     public Vector3 characterTextBoxPosition;
@@ -101,8 +108,23 @@ public class YarnCommands : MonoBehaviour {
     //got to a choice selection point
     GameObject frozenDialogueText;
 
+    //Variables and gameObjects needed for moving D20s onscreen
+    public GameObject d20RollLerpStartMarker;
+    public GameObject d20RollLerpEndMarker;
+    public GameObject d20;
+    public float d20LerpSpeed;
+    float d20LerpStartTime;
+    bool startNewD20Lerp;
+    bool d20LerpInProcess;
+    float d20LerpJourneyLength;
+    float d20LerpDistanceCovered;
+    float d20LerpFracJourney;
+
+    //The game object that handles sound effects, for functions that also need to trigger some FX
+    GameObject soundFXGameObject;
+
     // Use this for initialization
-    void Start () {
+    void Start() {
         nameText.GetComponent<Text>().text = null;
         //portraitBackground.gameObject.SetActive(false);
 
@@ -114,41 +136,73 @@ public class YarnCommands : MonoBehaviour {
         negativePosePosition = negativePose.GetComponent<Transform>().position;
         */
 
-        startNewLerp = false;
+        startNewPoseLerp = false;
 
         currentStartingPosePosition = neutralPosePosition;
 
         defaultPoseImage = neutralPoseImage;
         defaultPosePosition = neutralPosePosition;
+
+        defaultPoseGameObject = zeroPoseGameObject;
+
+        soundFXGameObject = GameObject.FindGameObjectWithTag("SoundFXGameObject");
     }
 
     void Update()
     {
         //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
-        if(lerpInProcess == true)
+        if(poseLerpInProcess == true)
         {
-            if(startNewLerp == true)
+            if(startNewPoseLerp == true)
             {
-                startTime = Time.time;
-                startNewLerp = false;
+                poseLerpStartTime = Time.time;
+                startNewPoseLerp = false;
             }
 
-            journeyLength = Vector3.Distance(currentStartingPosePosition, currentDestinationPosePosition);
-            Debug.Log(this.gameObject.name.ToString() + "'s Journey Length: " + journeyLength.ToString());
+            poseLerpJourneyLength = Vector3.Distance(currentStartingPosePosition, currentDestinationPosePosition);
+            Debug.Log(this.gameObject.name.ToString() + "'s Journey Length: " + poseLerpJourneyLength.ToString());
 
-            distanceCovered = (Time.time - startTime) * poseLerpSpeed;
-            Debug.Log(this.gameObject.name.ToString() + "'s Distance Covered: " + distanceCovered.ToString());
+            poseLerpDistanceCovered = (Time.time - poseLerpStartTime) * poseLerpSpeed;
+            Debug.Log(this.gameObject.name.ToString() + "'s Distance Covered: " + poseLerpDistanceCovered.ToString());
 
-            fracJourney = distanceCovered / journeyLength;
-            Debug.Log(this.gameObject.name.ToString() + "'s Frac Journey: " + fracJourney.ToString());
+            poseLerpFracJourney = poseLerpDistanceCovered / poseLerpJourneyLength;
+            Debug.Log(this.gameObject.name.ToString() + "'s Frac Journey: " + poseLerpFracJourney.ToString());
 
-            characterPoseGameObject.GetComponent<Transform>().position = Vector3.Lerp(currentStartingPosePosition, currentDestinationPosePosition, fracJourney);
+            characterPoseGameObject.GetComponent<Transform>().position = Vector3.Lerp(currentStartingPosePosition, currentDestinationPosePosition, poseLerpFracJourney);
 
             //Stops the lerp
             if(characterPoseGameObject.GetComponent<Transform>().position == currentDestinationPosePosition)
             {
-                lerpInProcess = false;
+                poseLerpInProcess = false;
                 currentStartingPosePosition = currentDestinationPosePosition;
+            }
+        }
+
+        //Moves the character's D20 die if they've just rolled it
+        if(d20LerpInProcess == true)
+        {
+            if(startNewD20Lerp == true)
+            {
+                d20LerpStartTime = Time.time;
+                startNewD20Lerp = false;
+            }
+
+            d20LerpJourneyLength = Vector3.Distance(d20RollLerpStartMarker.GetComponent<Transform>().position, d20RollLerpEndMarker.GetComponent<Transform>().position);
+            //Debug.Log(this.gameObject.name.ToString() + "'s Journey Length: " + journeyLength.ToString());
+
+            d20LerpDistanceCovered = (Time.time - d20LerpStartTime) * d20LerpSpeed;
+            //Debug.Log(this.gameObject.name.ToString() + "'s Distance Covered: " + distanceCovered.ToString());
+
+            d20LerpFracJourney = d20LerpDistanceCovered / d20LerpJourneyLength;
+            //Debug.Log(this.gameObject.name.ToString() + "'s Frac Journey: " + fracJourney.ToString());
+
+            d20.GetComponent<Transform>().position = Vector3.Lerp(d20RollLerpStartMarker.GetComponent<Transform>().position, d20RollLerpEndMarker.GetComponent<Transform>().position, d20LerpFracJourney);
+
+            //Stops the lerp
+            if(d20.GetComponent<Transform>().position == d20RollLerpEndMarker.GetComponent<Transform>().position)
+            {
+                d20LerpInProcess = false;
+                StartCoroutine(DelayBeforeD20GoesAway());
             }
         }
     }
@@ -187,10 +241,10 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("showCharacter")]
     public void showCharacter(string characterIsOnScreen)
     {
-        if (characterIsOnScreen == "true")
+        if(characterIsOnScreen == "true")
         {
             characterPoseGameObject.SetActive(true);
-        } else if (characterIsOnScreen == "false")
+        } else if(characterIsOnScreen == "false")
         {
             characterPoseGameObject.SetActive(false);
         }
@@ -205,36 +259,36 @@ public class YarnCommands : MonoBehaviour {
         //NOTE: Currently these lines also cause the pose image to lerp to the appropriate
         //position. We may not need these in prototypes that have more finalized art,
         //possibly, maybe, IDK.
-        if (newPose == "plusTwo")
+        if(newPose == "plusTwo")
         {
             currentDestinationPosePosition = positive2PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = positive2PoseImage;
-            startNewLerp = true;
-            lerpInProcess = true;
-        } else if (newPose == "plusOne")
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
+        } else if(newPose == "plusOne")
         {
             currentDestinationPosePosition = positive2PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = positive1PoseImage;
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
         } else if(newPose == "zero")
         {
             currentDestinationPosePosition = neutralPosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = neutralPoseImage;
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
         } else if(newPose == "minusOne")
         {
             currentDestinationPosePosition = negative2PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = negative1PoseImage;
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
         } else if(newPose == "minusTwo")
         {
             currentDestinationPosePosition = negative2PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = negative2PoseImage;
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
         }
     }
 
@@ -242,13 +296,23 @@ public class YarnCommands : MonoBehaviour {
     /// Returns a character's current pose from a non-mood-based pose (set by the OverridePose 
     /// function) to their default mood-based pose
     /// </summary>
-    [YarnCommand ("returnToDefaultPose")]
+    [YarnCommand("returnToDefaultPose")]
     public void ReturnToDefaultPose()
     {
         currentDestinationPosePosition = defaultPosePosition;
         characterPoseGameObject.GetComponent<Image>().sprite = defaultPoseImage;
-        startNewLerp = true;
-        lerpInProcess = true;
+        startNewPoseLerp = true;
+        poseLerpInProcess = true;
+    }
+
+    //Triggers the animation and sound that plays when the character rolls their D20 die
+    [YarnCommand("rollD20")]
+    public void RollD20()
+    {
+        soundFXGameObject.GetComponent<SoundFXYarnCommands>().TriggerSound("d20Roll");
+        d20.gameObject.SetActive(true);
+        startNewD20Lerp = true;
+        d20LerpInProcess = true;
     }
 
     /// <summary>
@@ -382,12 +446,39 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(false);
             */
 
+            //Code for handling sprite transitions via activating gameObjects rather
+            //than lerping a single gameObject
+            float oldPoseImageAlpha = defaultPoseGameObject.GetComponent<Image>().color.a;
+            oldPoseImageAlpha -= .01f;
+            if (oldPoseImageAlpha < 0f)
+            {
+                oldPoseImageAlpha = 0f;
+            }
+            defaultPoseGameObject.GetComponent<Image>().color = new Color(1, 1, 1, oldPoseImageAlpha);
+            if (defaultPoseGameObject.GetComponent<Image>().color == new Color(1, 1, 1, 0))
+            {
+                defaultPoseGameObject.gameObject.SetActive(false);
+                defaultPoseGameObject = plusTwoPoseGameObject;
+            }
+
+            plusTwoPoseGameObject.gameObject.SetActive(true);
+            float newPoseImageAlpha = plusTwoPoseGameObject.GetComponent<Image>().color.a;
+            newPoseImageAlpha += .01f;
+            if(newPoseImageAlpha > 1f)
+            {
+                newPoseImageAlpha = 1f;
+            }
+            plusTwoPoseGameObject.GetComponent<Image>().color = new Color(1, 1, 1, newPoseImageAlpha);
+
+            //OUTDATED LERP CODE
+            /*
             currentDestinationPosePosition = positive2PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = positive2PoseImage;
             defaultPoseImage = positive2PoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
             defaultPosePosition = positive2PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
+            */
 
             /*
             //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
@@ -421,12 +512,38 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(false);
             */
 
+            //Code for handling sprite transitions via activating gameObjects rather
+            //than lerping a single gameObject
+            float oldPoseImageAlpha = defaultPoseGameObject.GetComponent<Image>().color.a;
+            oldPoseImageAlpha -= .01f;
+            if(oldPoseImageAlpha < 0f)
+            {
+                oldPoseImageAlpha = 0f;
+            }
+            defaultPoseGameObject.GetComponent<Image>().color = new Color(1, 1, 1, oldPoseImageAlpha);
+            if(defaultPoseGameObject.GetComponent<Image>().color == new Color(1, 1, 1, 0))
+            {
+                defaultPoseGameObject.gameObject.SetActive(false);
+                defaultPoseGameObject = plusOnePoseGameObject;
+            }
+
+            plusOnePoseGameObject.gameObject.SetActive(true);
+            float newPoseImageAlpha = plusOnePoseGameObject.GetComponent<Image>().color.a;
+            newPoseImageAlpha += .01f;
+            if(newPoseImageAlpha > 1f)
+            {
+                newPoseImageAlpha = 1f;
+            }
+            plusOnePoseGameObject.GetComponent<Image>().color = new Color(1, 1, 1, newPoseImageAlpha);
+
+            /*
             currentDestinationPosePosition = positive1PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = positive1PoseImage;
             defaultPoseImage = positive1PoseImage;   //Sets the new default pose image to this mood, in case we need to override this default image and then go back to it at any point
             defaultPosePosition = positive1PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
+            */
 
             /*
             //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
@@ -459,12 +576,20 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(false);
             */
 
+            //Code for handling sprite transitions via activating gameObjects rather
+            //than lerping a single gameObject
+            defaultPoseGameObject.gameObject.SetActive(false);
+            zeroPoseGameObject.gameObject.SetActive(true);
+            defaultPoseGameObject = zeroPoseGameObject;
+
+            /*
             currentDestinationPosePosition = neutralPosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = neutralPoseImage;
             defaultPoseImage = neutralPoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
             defaultPosePosition = neutralPosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
+            */
 
             /*
             //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
@@ -498,12 +623,20 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(true);
             */
 
+            //Code for handling sprite transitions via activating gameObjects rather
+            //than lerping a single gameObject
+            defaultPoseGameObject.gameObject.SetActive(false);
+            minusOnePoseGameObject.gameObject.SetActive(true);
+            defaultPoseGameObject = minusOnePoseGameObject;
+
+            /*
             currentDestinationPosePosition = negative1PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = negative1PoseImage;
             defaultPoseImage = negative1PoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
             defaultPosePosition = negative1PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
+            */
 
             /*
             //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
@@ -536,12 +669,20 @@ public class YarnCommands : MonoBehaviour {
             negativePose.gameObject.SetActive(true);
             */
 
+            //Code for handling sprite transitions via activating gameObjects rather
+            //than lerping a single gameObject
+            defaultPoseGameObject.gameObject.SetActive(false);
+            minusOnePoseGameObject.gameObject.SetActive(true);
+            defaultPoseGameObject = minusOnePoseGameObject;
+
+            /*
             currentDestinationPosePosition = negative2PosePosition;
             characterPoseGameObject.GetComponent<Image>().sprite = negative2PoseImage;
             defaultPoseImage = negative2PoseImage;   //Sets the new default pose image to this mood, in case we need to override it and then go back to it at any point
             defaultPosePosition = negative2PosePosition; //Sets the new default pose image position to that of this mood, again, if we need to temporarily override it
-            startNewLerp = true;
-            lerpInProcess = true;
+            startNewPoseLerp = true;
+            poseLerpInProcess = true;
+            */
 
             /*
             //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
@@ -558,4 +699,17 @@ public class YarnCommands : MonoBehaviour {
             */
         }
     }
+
+    /// <summary>
+    /// Used to put a delay on the amount of time it takes for the D20 to disappear from the screen
+    /// after a character has rolled it.
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator DelayBeforeD20GoesAway()
+    {
+        yield return new WaitForSeconds(1f);
+        d20.gameObject.SetActive(false);
+        d20.GetComponent<Transform>().position = d20RollLerpStartMarker.GetComponent<Transform>().position;
+    }
+
 }
