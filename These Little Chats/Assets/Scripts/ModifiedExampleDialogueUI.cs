@@ -82,6 +82,8 @@ namespace Yarn.Unity.Example {
 
         public GameObject conversationLog;
 
+        public bool lineIsInterrupted;
+
         void Awake ()
         {
             // Start by hiding the container, line and option buttons
@@ -133,8 +135,12 @@ namespace Yarn.Unity.Example {
                 continuePrompt.SetActive (true);
 
             // Wait for any user input
-            while (Input.anyKeyDown == false) {
-                yield return null;
+            //IN-PROGRESS INTERRUPTION CODE
+            while(Input.anyKeyDown == false
+                && lineIsInterrupted == false) {
+
+                    yield return null;
+                
             }
 
             // Hide the text and prompt

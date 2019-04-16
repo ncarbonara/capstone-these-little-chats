@@ -1,0 +1,22 @@
+[
+	{
+		"title": "LanceBeingAJerk",
+		"tags": "",
+		"body": "<<overridePose Lance minusTwo>>\n<<activateSimultaneousSpeechBubble Lance>>I don't know why you're making this such a huge deal.\nListen, I don't care...\nLook--\nHey, shut up!",
+		"position": {
+			"x": 532,
+			"y": 221
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceInterrupting",
+		"tags": "",
+		"body": "<<overridePose Lance minusTwo>>\n<<activateInterruptingSpeechBubble Lance>>This plan is stupid!",
+		"position": {
+			"x": 820,
+			"y": 140
+		},
+		"colorID": 0
+	}
+]
