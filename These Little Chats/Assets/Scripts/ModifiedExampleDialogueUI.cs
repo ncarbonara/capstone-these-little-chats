@@ -120,14 +120,14 @@ namespace Yarn.Unity.Example {
                 }
 
                 //Once the line is finished displaying, it is recorded in the conversation log
-                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog();
+                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
 
             } else {
                 // Display the line immediately if textSpeed == 0
                 lineText.text = line.text;
 
                 //Once the line is finished displaying, it is recorded in the conversation log
-                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog();
+                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
             }
 
             // Show the 'press any key' prompt when done, if we have one
@@ -135,13 +135,22 @@ namespace Yarn.Unity.Example {
                 continuePrompt.SetActive (true);
 
             // Wait for any user input
-            //IN-PROGRESS INTERRUPTION CODE
             while(Input.anyKeyDown == false
                 && lineIsInterrupted == false) {
 
                     yield return null;
                 
             }
+
+            //COMMENTED OUT UNTIL FUNCTIONAL
+            //Updates the conversation log when the player presses to continue through text
+            //(in order to make added lines appear in the correct order in the log)
+            /*
+            if(Input.anyKeyDown == true)
+            {
+                //conversationLog.GetComponent<ConversationLogScript>().LoadToConversationLog();
+            }
+            */
 
             // Hide the text and prompt
             lineText.gameObject.SetActive (false);

@@ -2,7 +2,7 @@
 	{
 		"title": "AllisonBeingAJerk",
 		"tags": "",
-		"body": "<<overridePose Allison minusTwo>>\n<<peopleTalkingOver Allison LanceBeingAJerk>>\n<<activateSpeechBubble Allison>>What is your--\n<<activateSpeechBubble Allison>>You have no idea what you're even...\nThe hell is--\nHey, shut up!",
+		"body": "<<overridePose Allison minusTwo>>\n<<peopleTalkingOver Allison LanceBeingAJerk>>\n<<activateSpeechBubble Allison>>What is your--\nYou have no idea what you're even...\nThe hell is--\nHey, shut up!",
 		"position": {
 			"x": 529,
 			"y": 223
