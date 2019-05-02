@@ -10,6 +10,10 @@ using Yarn.Unity;   //Lets us talk to Yarn stuff.
 /// </summary>
 public class MusicYarnCommands : MonoBehaviour {
 
+    bool fadeOutSound;
+    bool fadeInSound;
+    float defaultAudioVolume;
+
     //MAJOR MUSIC TRACKS (CuedMusicStings gameObject only)
     public AudioClip musicTrackOne;
     public AudioClip musicTrackTwo;
@@ -20,6 +24,46 @@ public class MusicYarnCommands : MonoBehaviour {
     public AudioClip lowTensionLayer;
     public AudioClip midTensionLayer;
     public AudioClip highTensionLayer;
+
+    void Start()
+    {
+        fadeInSound = false;
+        fadeOutSound = false;
+
+        //First checks what the developer has set the desired volume to, saves this, then sets the
+        //starting volume to 0.
+        defaultAudioVolume = this.GetComponent<AudioSource>().volume;
+        this.GetComponent<AudioSource>().volume = 0f;
+    }
+
+    void Update()
+    {
+
+        //Triggered when it's time for an audio track to fade out
+        if(fadeInSound == true)
+        {
+            this.GetComponent<AudioSource>().volume += Time.deltaTime;
+
+            if(this.GetComponent<AudioSource>().volume >= defaultAudioVolume)
+            {
+                this.GetComponent<AudioSource>().volume = defaultAudioVolume;
+                fadeInSound = false;
+            }
+        }
+
+        //Triggered when it's time for an audio track to fade out
+        if (fadeOutSound == true)
+        {
+            this.GetComponent<AudioSource>().volume -= Time.deltaTime / 2f;
+
+            if (this.GetComponent<AudioSource>().volume <= 0f)
+            {
+                this.GetComponent<AudioSource>().Stop();
+                //this.GetComponent<AudioSource>().volume = defaultAudioVolume;
+                fadeOutSound = false;
+            }
+        }
+    }
 
     [YarnCommand("triggerSound")]
     public void TriggerSound(string sound)
@@ -68,5 +112,25 @@ public class MusicYarnCommands : MonoBehaviour {
             this.GetComponent<AudioSource>().Play();
             this.GetComponent<AudioSource>().time = currentPlaybackPosition;
         }
+
+        fadeInSound = true;
+    }
+
+    /// <summary>
+    /// Tells the audio source to gradually fade out the sound
+    /// </summary>
+    [YarnCommand("fadeOutSound")]
+    public void FadeOutSound()
+    {
+        fadeOutSound = true;
+    }
+
+    /// <summary>
+    /// Tells the audio source to stop playing music altogether.
+    /// </summary>
+    [YarnCommand("stopSound")]
+    public void StopSound()
+    {
+        this.GetComponent<AudioSource>().Stop();
     }
 }

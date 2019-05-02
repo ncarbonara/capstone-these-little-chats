@@ -18,5 +18,45 @@
 			"y": 140
 		},
 		"colorID": 0
+	},
+	{
+		"title": "RubyAlrightOkay",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Ruby>><<overridePose Ruby happy>><<triggerSound VocalBarkSoundFX sampleLaugh>>Alright, okay! Sounds like you had an awesome time...",
+		"position": {
+			"x": 249,
+			"y": -334
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AllisonSureFine",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Allison>>SURE. FINE. There, are you happy now? Can we finally stop talking about it?\r\n",
+		"position": {
+			"x": 660,
+			"y": -405
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceCauseYouWont",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Lance>>Cause you won’t fucking talk to me otherwise!",
+		"position": {
+			"x": 964,
+			"y": -447
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceAwkwardPause",
+		"tags": "",
+		"body": "<<activateOffScreenSimultaneousSpeechBubble Lance>>...",
+		"position": {
+			"x": 584,
+			"y": -164
+		},
+		"colorID": 0
 	}
 ]

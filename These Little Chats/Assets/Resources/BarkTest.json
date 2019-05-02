@@ -1,0 +1,12 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "<<triggerSound CuedMusicStings musicTrackOne>>\n<<activateSpeechBubble Franklin>>Lance, is that you?\n<<activateSpeechBubble Lance>><<overridePose Lance happy>><<triggerSound VocalBarkSoundFX sampleGreeting>>Sure is!\n<<activateSpeechBubble Lance>>It's the hair, isn't it?\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>><<triggerSound VocalBarkSoundFX sampleLaugh>>Heh, yeah it sure is different.\n<<activateSpeechBubble Franklin>>In a good way, though.\n<<activateSpeechBubble Lance>><<overridePose Lance neutral>>Good, I spent forever getting it like this.\n<<activateSpeechBubble Lance>>So where's Allison, anyway?\n<<activateSpeechBubble Franklin>><<overridePose Franklin neutral>><<triggerSound VocalBarkSoundFX sampleThinking>>Honestly, I'm not sure. She said she'd be here.\n<<activateSpeechBubble Lance>><<overridePose Lance irritated>><<triggerSound VocalBarkSoundFX sampleUgh>><i>Perfect.</i>",
+		"position": {
+			"x": 532,
+			"y": 221
+		},
+		"colorID": 0
+	}
+]

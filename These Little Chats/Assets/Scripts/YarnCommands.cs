@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UI;   //Let's us talk to UI stuff.
@@ -22,8 +21,8 @@ public class YarnCommands : MonoBehaviour {
     public GameObject secondaryNameText;
     
     //The main gameObjects for dialogue text
-    public GameObject dialogueTextContainer;
-    public GameObject dialogueText;
+    public GameObject primaryDialogueTextContainer;
+    public GameObject primaryDialogueText;
 
     //Secondary objects for dialogue text, used when two characters are speaking at once
     public GameObject secondaryDialogueTextContainer;
@@ -33,12 +32,19 @@ public class YarnCommands : MonoBehaviour {
     public GameObject secondaryDialogue;
 
     //The sprites that the pose image cycles through based on the character's mood
+    /*
     public GameObject characterPoseGameObject;
-    public Sprite positive2PoseImage;
-    public Sprite positive1PoseImage;
+    public Sprite veryHappyPoseImage;
+    public Sprite happyPoseImage;
     public Sprite neutralPoseImage;
-    public Sprite negative1PoseImage;
-    public Sprite negative2PoseImage;
+    public Sprite irritatedPoseImage;
+    public Sprite veryAngryPoseImage;
+    public Sprite rollingD20PoseImage;
+    public Sprite shockedPoseImage;
+    public Sprite dungeonMasterNarrationPoseImage;
+    public Sprite rantingPoseImage;
+    public Sprite sadPoseImage;
+    */
 
     //The sprite for the character's current pose, based on their current mood. This is stored so
     //that a character's pose can be overridden from its current mood-based pose and then changed 
@@ -47,11 +53,18 @@ public class YarnCommands : MonoBehaviour {
 
     //These are used to store the positions of each of the above poses, so they can be
     //lerped towards each other, creating the illusion of bodily movement
-    public Vector3 positive2PosePosition;
-    public Vector3 positive1PosePosition;
+    /*
+    public Vector3 veryHappyPosePosition;
+    public Vector3 happyPosePosition;
     public Vector3 neutralPosePosition;
-    public Vector3 negative1PosePosition;
-    public Vector3 negative2PosePosition;
+    public Vector3 irritatedPosePosition;
+    public Vector3 veryAngryPosePosition;
+    public Vector3 rollingD20PosePosition;
+    public Vector3 shockedPosePosition;
+    public Vector3 dungeonMasterNarrationPosePosition;
+    public Vector3 rantingPosePosition;
+    public Vector3 sadPosePosition;
+    */
 
     //The position of the character's pose sprite, based on their current mood. This is stored so
     //that a character's pose can be overridden from its current mood-based pose and then changed 
@@ -71,16 +84,20 @@ public class YarnCommands : MonoBehaviour {
 
     //GameObjects for an alternative system of switching through pose sprites that uses multiple
     //gameObjects instead of just one
-    public GameObject plusTwoPoseGameObject;
-    public GameObject plusOnePoseGameObject;
-    public GameObject zeroPoseGameObject;
-    public GameObject minusOnePoseGameObject;
-    public GameObject minusTwoPoseGameObject;
-    public GameObject rollingD20Pose;
+    public GameObject veryHappyPoseGameObject;
+    public GameObject happyPoseGameObject;
+    public GameObject neutralPoseGameObject;
+    public GameObject irritatedPoseGameObject;
+    public GameObject veryAngryPoseGameObject;
+    public GameObject rollingD20PoseGameObject;
+    public GameObject shockedPoseGameObject;
+    public GameObject dungeonMasterNarrationPoseGameObject;
+    public GameObject rantingPoseGameObject;
+    public GameObject sadPoseGameObject;
 
     GameObject defaultPoseGameObject;
-    GameObject temporaryPoseGameObject;
     GameObject newPoseGameObject;
+    GameObject preD20RollPoseGameObject;
 
     //A bool used to determine when this script should fade-in/fade-out a character's different 
     //poses
@@ -92,6 +109,7 @@ public class YarnCommands : MonoBehaviour {
     public Vector3 characterTextBoxPosition;
     public Sprite characterSpeechBubbleSprite;
     public Sprite characterOffScreenSpeechBubbleSprite;
+    public Sprite characterInterruptingSpeechBubbleSprite;
     public Color characterSpeechBubbleColor;
 
     //The primary speech bubble gameObject
@@ -156,7 +174,8 @@ public class YarnCommands : MonoBehaviour {
     bool secondarySpeechBubbleLerpInProcess;
 
     //The game object that handles sound effects, for functions that also need to trigger some FX
-    GameObject soundFXGameObject;
+    public GameObject soundFXGameObject;
+    GameObject d20RollSoundFXGameObject;
 
     //Variables used to help manage when people interrupt each other
     bool someoneWillInterrupt;
@@ -172,14 +191,13 @@ public class YarnCommands : MonoBehaviour {
 
         startNewPoseLerp = false;
 
-        currentStartingPosePosition = neutralPosePosition;
+        //currentStartingPosePosition = neutralPosePosition;
 
-        defaultPoseImage = neutralPoseImage;
-        defaultPosePosition = neutralPosePosition;
+        //defaultPoseImage = neutralPoseImage;
+        //defaultPosePosition = neutralPosePosition;
 
-        defaultPoseGameObject = zeroPoseGameObject;
-
-        soundFXGameObject = GameObject.FindGameObjectWithTag("SoundFXGameObject");
+        defaultPoseGameObject = neutralPoseGameObject;
+        preD20RollPoseGameObject = neutralPoseGameObject;
 
         poseIsChanging = false;
     }
@@ -187,6 +205,7 @@ public class YarnCommands : MonoBehaviour {
     void Update()
     {
         //Causes the pose sprite to Lerp to the needed position and change to the needed sprite
+        /*
         if(poseLerpInProcess == true)
         {
             if(startNewPoseLerp == true)
@@ -213,6 +232,7 @@ public class YarnCommands : MonoBehaviour {
                 currentStartingPosePosition = currentDestinationPosePosition;
             }
         }
+        */
 
         //Moves the character's D20 die if they've just rolled it
         if(d20LerpInProcess == true)
@@ -347,37 +367,20 @@ public class YarnCommands : MonoBehaviour {
 
         primarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
         primarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+        primaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
         nameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
-    /// Tells Unity to pull up a second text bubble to show text from one person speaking over 
-    /// another
+    /// Tells Unity to pull up a second text bubble to show text from one person speaking at the 
+    /// same time as another
     /// </summary>
     /// <param name="nodeName"></param>
-    [YarnCommand("peopleTalkingOver")]
-    public void CueSecondarySpeechBubble(string nodeName)
+    [YarnCommand("cueSimultaneousDialogue")]
+    public void CueSimultaneousDialogue(string nodeName)
     {
         secondaryDialogue.GetComponent<DialogueRunner>().startNode = nodeName;
         secondaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
-    }
-
-    /// <summary>
-    /// Used to make one character interrupt another partway through a sentence
-    /// </summary>
-    /// <param name="nodeName"></param>
-    /// <param name="waitForSecondsAmount"></param>
-    [YarnCommand("someoneInterrupting")]
-    public void SomeoneInterrupting (string nodeName, string waitForSecondsAmount)
-    {
-        waitTimeBeforeInterrupting = float.Parse(waitForSecondsAmount);
-        someoneWillInterrupt = true;
-        interruptionTextNodeName = nodeName;
-
-        Vector3 tempSecondaryDialogueContainerPos = new Vector3 (0, 0, 0);
-        tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.x + 1f;
-        tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.y - 0.25f;
-        secondaryDialogueTextContainer.GetComponent<Transform>().position = tempSecondaryDialogueContainerPos;
     }
 
     /// <summary>
@@ -410,7 +413,60 @@ public class YarnCommands : MonoBehaviour {
 
         secondarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
         secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+        secondaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
         secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
+    }
+
+    /// <summary>
+    /// Does the same thing as ActivateSimultaneousSpeechBubble() except with an offscreen speech
+    /// bubble.
+    /// NOTE: This code could probably stand to be more efficient with it's line use.
+    /// </summary>
+    [YarnCommand("activateOffScreenSimultaneousSpeechBubble")]
+    public void ActivateOffScreenSimultaneousSpeechBubble()
+    {
+        /*
+        secondaryDialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
+        secondarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
+        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
+        */
+
+        //Only starts the lerp if the speech bubble is not already where it needs to be
+        if(secondarySpeechBubble.GetComponent<Transform>().position != speechBubbleLerpEndMarker.GetComponent<Transform>().position)
+        {
+            //dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
+            secondarySpeechBubble.GetComponent<Transform>().position =
+                new Vector3(speechBubbleLerpStartMarker.GetComponent<Transform>().position.x,
+                speechBubbleLerpStartMarker.GetComponent<Transform>().position.y,
+                speechBubbleLerpStartMarker.GetComponent<Transform>().position.z);
+            secondarySpeechBubble.GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
+
+            startNewSecondarySpeechBubbleLerp = true;
+            secondarySpeechBubbleLerpInProcess = true;
+        }
+
+        secondarySpeechBubble.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
+        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
+    }
+
+    /// <summary>
+    /// Used to make one character interrupt another partway through a sentence
+    /// </summary>
+    /// <param name="nodeName"></param>
+    /// <param name="waitForSecondsAmount"></param>
+    [YarnCommand("someoneInterrupting")]
+    public void SomeoneInterrupting (string nodeName, string waitForSecondsAmount)
+    {
+        waitTimeBeforeInterrupting = float.Parse(waitForSecondsAmount);
+        someoneWillInterrupt = true;
+        interruptionTextNodeName = nodeName;
+
+        Vector3 tempSecondaryDialogueContainerPos = new Vector3 (0, 0, 0);
+        tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.x + 1f;
+        tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.y - 0.25f;
+        secondaryDialogueTextContainer.GetComponent<Transform>().position = tempSecondaryDialogueContainerPos;
     }
 
     /// <summary>
@@ -420,9 +476,10 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("activateInterruptingSpeechBubble")]
     public void ActivateInterruptingSpeechBubble()
     {
-        secondaryDialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
-        secondarySpeechBubble.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
+        secondarySpeechBubble.GetComponent<Transform>().position = new Vector3(primarySpeechBubble.GetComponent<Transform>().position.x, primarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, primarySpeechBubble.GetComponent<Transform>().position.z);
+        secondarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
         secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+        secondaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
         secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
@@ -449,6 +506,7 @@ public class YarnCommands : MonoBehaviour {
 
         primarySpeechBubble.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
         primarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+        primaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
         nameText.GetComponent<Text>().text = this.gameObject.name;
 
         /*
@@ -471,10 +529,11 @@ public class YarnCommands : MonoBehaviour {
     {
         if(characterIsOnScreen == "true")
         {
-            characterPoseGameObject.SetActive(true);
+            //characterPoseGameObject.SetActive(true);
+            neutralPoseGameObject.SetActive(true);
         } else if(characterIsOnScreen == "false")
         {
-            characterPoseGameObject.SetActive(false);
+            neutralPoseGameObject.SetActive(false);
         }
     }
 
@@ -487,10 +546,11 @@ public class YarnCommands : MonoBehaviour {
         //NOTE: Currently these lines also cause the pose image to lerp to the appropriate
         //position. We may not need these in prototypes that have more finalized art,
         //possibly, maybe, IDK.
-        if(newPose == "plusTwo")
+        if(newPose == "veryHappy")
         {
-            newPoseGameObject = plusTwoPoseGameObject;
-            
+            newPoseGameObject = veryHappyPoseGameObject;
+            preD20RollPoseGameObject = veryHappyPoseGameObject;
+
             //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
             /*
             plusTwoPoseGameObject.gameObject.SetActive(true);
@@ -506,9 +566,10 @@ public class YarnCommands : MonoBehaviour {
             poseLerpInProcess = true;
             */
 
-        } else if(newPose == "plusOne")
+        } else if(newPose == "happy")
         {
-            newPoseGameObject = plusOnePoseGameObject;
+            newPoseGameObject = happyPoseGameObject;
+            preD20RollPoseGameObject = happyPoseGameObject;
 
             //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
             /*
@@ -524,9 +585,10 @@ public class YarnCommands : MonoBehaviour {
             startNewPoseLerp = true;
             poseLerpInProcess = true;
             */
-        } else if(newPose == "zero")
+        } else if(newPose == "neutral")
         {
-            newPoseGameObject = zeroPoseGameObject;
+            newPoseGameObject = neutralPoseGameObject;
+            preD20RollPoseGameObject = neutralPoseGameObject;
 
             //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
             /*
@@ -543,9 +605,10 @@ public class YarnCommands : MonoBehaviour {
             poseLerpInProcess = true;
             */
         }
-        else if(newPose == "minusOne")
+        else if(newPose == "irritated")
         {
-            newPoseGameObject = minusOnePoseGameObject;
+            newPoseGameObject = irritatedPoseGameObject;
+            preD20RollPoseGameObject = irritatedPoseGameObject;
 
             //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
             /*
@@ -562,9 +625,10 @@ public class YarnCommands : MonoBehaviour {
             poseLerpInProcess = true;
             */
         }
-        else if(newPose == "minusTwo")
+        else if(newPose == "veryAngry")
         {
-            newPoseGameObject = minusTwoPoseGameObject;
+            newPoseGameObject = veryAngryPoseGameObject;
+            preD20RollPoseGameObject = veryAngryPoseGameObject;
 
             //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
             /*
@@ -580,6 +644,22 @@ public class YarnCommands : MonoBehaviour {
             startNewPoseLerp = true;
             poseLerpInProcess = true;
             */
+        } else if (newPose == "shocked")
+        {
+            newPoseGameObject = shockedPoseGameObject;
+            preD20RollPoseGameObject = shockedPoseGameObject;
+        } else if(newPose == "dungeonMasterNarration")
+        {
+            newPoseGameObject = dungeonMasterNarrationPoseGameObject;
+            preD20RollPoseGameObject = dungeonMasterNarrationPoseGameObject;
+        } else if(newPose == "ranting")
+        {
+            newPoseGameObject = rantingPoseGameObject;
+            preD20RollPoseGameObject = rantingPoseGameObject;
+        } else if(newPose == "sad")
+        {
+            newPoseGameObject = sadPoseGameObject;
+            preD20RollPoseGameObject = sadPoseGameObject;
         }
 
         poseIsChanging = true;
@@ -592,26 +672,27 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("returnToDefaultPose")]
     public void ReturnToDefaultPose()
     {
-        //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
-        /*
-        temporaryPoseGameObject.gameObject.SetActive(false);
-        defaultPoseGameObject.gameObject.SetActive(true);
-        */
+        newPoseGameObject = defaultPoseGameObject;
+        preD20RollPoseGameObject = defaultPoseGameObject;
+        poseIsChanging = true;
 
         //OUTDATED LERP CODE
+        /*
         currentDestinationPosePosition = defaultPosePosition;
         characterPoseGameObject.GetComponent<Image>().sprite = defaultPoseImage;
         startNewPoseLerp = true;
         poseLerpInProcess = true;
+        */
     }
 
     //Triggers the animation and sound that plays when the character rolls their D20 die
-    [YarnCommand("rollDie")]
-    public void RollDie()
+    [YarnCommand("rollD20")]
+    public void RollD20()
     {
         soundFXGameObject.GetComponent<SoundFXYarnCommands>().TriggerSound("d20Roll");
-        defaultPoseGameObject.SetActive(false);
-        rollingD20Pose.SetActive(true);
+        //d20RollSoundFXGameObject.GetComponent<SoundFXYarnCommands>().TriggerSound("d20Roll");
+        newPoseGameObject = rollingD20PoseGameObject;
+        poseIsChanging = true;
         d20.gameObject.SetActive(true);
         startNewD20Lerp = true;
         d20LerpInProcess = true;
@@ -627,54 +708,20 @@ public class YarnCommands : MonoBehaviour {
     {
         if (font == "inCharacter")
         {
-            dialogueText.GetComponent<Text>().font = inCharacterFont;
-            dialogueText.GetComponent<Text>().fontSize = inCharacterFontSize;
-            dialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
+            primaryDialogueText.GetComponent<Text>().font = inCharacterFont;
+            primaryDialogueText.GetComponent<Text>().fontSize = inCharacterFontSize;
+            primaryDialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         } else if (font == "outOfCharacter")
         {
-            dialogueText.GetComponent<Text>().font = outOfCharacterFont;
-            dialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
-            dialogueText.GetComponent<Text>().fontStyle = FontStyle.Normal;
+            primaryDialogueText.GetComponent<Text>().font = outOfCharacterFont;
+            primaryDialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
+            primaryDialogueText.GetComponent<Text>().fontStyle = FontStyle.Normal;
         } else if(font == "internalMonologue")
         {
-            dialogueText.GetComponent<Text>().font = outOfCharacterFont;
-            dialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
-            dialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
+            primaryDialogueText.GetComponent<Text>().font = outOfCharacterFont;
+            primaryDialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
+            primaryDialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         }
-    }
-
-    /// <summary>
-    /// NOTE: This function doesn't currently work as desired. As such, all its code has been
-    /// commented out for now, and an extra line added so that it now just clears the character name
-    /// text offscreen.
-    /// 
-    /// Takes the previous line of dialogue text and keeps it onscreen by copying the object itself
-    /// even though YarnSpinner clears the original. Should be called before every choice that
-    /// appears onscreen.
-    /// </summary>
-    [YarnCommand("freezeDialogueText")]
-    public void FreezeDialogueText()
-    {
-        nameText.GetComponent<Text>().text = " ";
-        frozenDialogueText = Instantiate(dialogueTextContainer);
-        GameObject background = GameObject.Find("Background");
-        frozenDialogueText.transform.SetParent(background.GetComponent<Transform>());
-        frozenDialogueText.GetComponent<Transform>().position = dialogueTextContainer.GetComponent<Transform>().position;
-    }
-
-    /// <summary>
-    /// NOTE: This function doesn't currently work as desired. As such, all its code has been
-    /// commented out for now.
-    /// 
-    /// Clears the previous line of dialogue from the screen once the player has chosen an option
-    /// and the story continues. Should be called after every choice the player makes.
-    /// </summary>
-    [YarnCommand("unfreezeDialogueText")]
-    public void UnfreezeDialogueText()
-    {
-        /*
-        GameObject.Destroy(frozenDialogueText);
-        */
     }
 
     /// <summary>
@@ -741,7 +788,8 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is very pleased.");
 
-            newPoseGameObject = plusTwoPoseGameObject;
+            newPoseGameObject = veryHappyPoseGameObject;
+            preD20RollPoseGameObject = veryHappyPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -778,7 +826,8 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is somewhat pleased.");
 
-            newPoseGameObject = plusOnePoseGameObject;
+            newPoseGameObject = happyPoseGameObject;
+            preD20RollPoseGameObject = happyPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -814,7 +863,8 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is feeling neutral.");
 
-            newPoseGameObject = zeroPoseGameObject;
+            newPoseGameObject = neutralPoseGameObject;
+            preD20RollPoseGameObject = neutralPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -851,7 +901,8 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is somewhat angry.");
 
-            newPoseGameObject = minusOnePoseGameObject;
+            newPoseGameObject = irritatedPoseGameObject;
+            preD20RollPoseGameObject = irritatedPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -887,7 +938,8 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(true));
             Debug.Log(this.gameObject.name + " is very angry.");
 
-            newPoseGameObject = minusTwoPoseGameObject;
+            newPoseGameObject = veryAngryPoseGameObject;
+            preD20RollPoseGameObject = veryAngryPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -926,8 +978,8 @@ public class YarnCommands : MonoBehaviour {
     {
         yield return new WaitForSeconds(1f);
         d20.gameObject.SetActive(false);
-        rollingD20Pose.SetActive(false);
-        defaultPoseGameObject.SetActive(true);
+        newPoseGameObject = preD20RollPoseGameObject;
+        poseIsChanging = true;
         d20.GetComponent<Transform>().position = d20RollLerpStartMarker.GetComponent<Transform>().position;
     }
 

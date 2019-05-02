@@ -19,10 +19,10 @@ public class SoundFXYarnCommands : MonoBehaviour {
     public AudioClip d20Roll;
 
     //VOCAL BARKS (used only in VocalBarkSoundFX)
-    public AudioClip lanceSampleBark;
-    public AudioClip allisonSampleBark;
-    public AudioClip rubySampleBark;
-    public AudioClip franklinSampleBark;
+    public AudioClip sampleLaugh;
+    public AudioClip sampleGreeting;
+    public AudioClip sampleThinking;
+    public AudioClip sampleUgh;
 
     [YarnCommand("triggerSound")]
     public void TriggerSound(string sound)
@@ -51,21 +51,21 @@ public class SoundFXYarnCommands : MonoBehaviour {
         {
             this.GetComponent<AudioSource>().clip = d20Roll;
             this.GetComponent<AudioSource>().Play();
-        } else if (sound == "lanceSampleBark")  //VOCAL BARKS
+        } else if (sound == "sampleLaugh")  //VOCAL BARKS
         {
-            this.GetComponent<AudioSource>().clip = lanceSampleBark;
+            this.GetComponent<AudioSource>().clip = sampleLaugh;
             this.GetComponent<AudioSource>().Play();
-        } else if(sound == "allisonSampleBark")
+        } else if(sound == "sampleGreeting")
         {
-            this.GetComponent<AudioSource>().clip = allisonSampleBark;
+            this.GetComponent<AudioSource>().clip = sampleGreeting;
             this.GetComponent<AudioSource>().Play();
-        } else if(sound == "rubySampleBark")
+        } else if(sound == "sampleThinking")
         {
-            this.GetComponent<AudioSource>().clip = rubySampleBark;
+            this.GetComponent<AudioSource>().clip = sampleThinking;
             this.GetComponent<AudioSource>().Play();
-        } else if(sound == "franklinSampleBark")
+        } else if(sound == "sampleUgh")
         {
-            this.GetComponent<AudioSource>().clip = franklinSampleBark;
+            this.GetComponent<AudioSource>().clip = sampleUgh;
             this.GetComponent<AudioSource>().Play();
         }
     }

@@ -442,7 +442,7 @@
 	{
 		"title": "AltStart",
 		"tags": "",
-		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateSpeechBubble Brynn>>It’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<activateOffScreenSpeechBubble Ruby>>Brynn!\r\n<<showCharacter Ruby true>><<triggerSound EnvironmentSoundFX sitDown>>\r\n<<showCharacter Franklin true>><<triggerSound EnvironmentSoundFX sitDown>>\r\n<<triggerSound VocalBarkSoundFX rubySampleBark>>\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusTwo>>Oh my God, it’s so good to see you!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn plusOne>>I know, it’s great to see you too!\r\n<<activateSpeechBubble Ruby>>Franklin and I got to the door at the same time. We were just talking about how long it’s been! Right, Franklin?\r\n<<activateSpeechBubble Franklin>>…\r\n<<triggerSound VocalBarkSoundFX franklinSampleBark>>\r\n<<activateSpeechBubbleFranklin>><<overridePose Franklin plusTwo>>Oh! Uh, sorry, I must’ve spaced. I didn’t realize you wanted me to talk.\r\n<<activateSpeechBubble Ruby>>Of course we do, silly!\r\n<<activateSpeechBubble Franklin>>Right, my bad. But yeah, how was studying abroad in London, Brynn?\r\n[[It was cool!|AltItWasCool]]\r\n[[I missed home.|AltIMissedHome]]",
+		"body": "<<activateSpeechBubble Brynn>>It’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<triggerSound CuedMusicTensionLayers lowTensionLayer>>\r\n<<activateOffScreenSpeechBubble Ruby>>Brynn!\r\n<<showCharacter Ruby true>><<triggerSound EnvironmentSoundFX sitDown>>\r\n<<showCharacter Franklin true>><<triggerSound EnvironmentSoundFX sitDown>>\r\n<<triggerSound VocalBarkSoundFX rubySampleBark>>\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby plusTwo>>Oh my God, it’s so good to see you!\r\n<<triggerSound CuedMusicTensionLayers midTensionLayer>>\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn plusOne>>I know, it’s great to see you too!\r\n<<activateSpeechBubble Ruby>>Franklin and I got to the door at the same time. We were just talking about how long it’s been! Right, Franklin?\r\n<<activateSpeechBubble Franklin>>…\r\n<<triggerSound CuedMusicTensionLayers highTensionLayer>>\r\n<<triggerSound VocalBarkSoundFX franklinSampleBark>>\r\n<<activateSpeechBubbleFranklin>><<overridePose Franklin plusTwo>>Oh! Uh, sorry, I must’ve spaced. I didn’t realize you wanted me to talk.\r\n<<activateSpeechBubble Ruby>>Of course we do, silly!\r\n<<activateSpeechBubble Franklin>>Right, my bad. But yeah, how was studying abroad in London, Brynn?\r\n[[It was cool!|AltItWasCool]]\r\n[[I missed home.|AltIMissedHome]]",
 		"position": {
 			"x": 1071,
 			"y": -439
@@ -586,6 +586,86 @@
 		"position": {
 			"x": 2084,
 			"y": 133
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Draft2Start",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>It’s open!\r\n<<overridePose Brynn happy>>\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateOffScreenSpeechBubble Ruby>>Brynn!\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<showCharacter Ruby true>>\r\n<<overridePose Ruby veryHappy>>\r\n<<triggerSound VocalBarkSoundFX sampleGreeting>>\r\n<<activateSpeechBubble Ruby>>Oh my God, it’s so good to finally see you!\r\n<<activateSpeechBubble Ruby>>I was beginning to think you were just going to stay in London forever.\r\n<<activateSpeechBubble Brynn>>Honestly, I wish I could’ve. It was incredible!\r\n<<someoneInterrupting Brynn RubyAlrightOkay 0.75>>The classes...the sightseeing...the events...the FOOD...\r\n<<overridePose Brynn happy>>I did! I really did, but…\r\n<<activateSpeechBubble Brynn>>I also missed you all a lot.\r\n<<fadeOutSound CuedMusicStings>>\r\n<<activateSpeechBubble Brynn>>You guys are my best friends, you know?\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<activateSpeechBubble Ruby>>Aww, thank you Brynn! \r\n<<activateSpeechBubble Ruby>><<overridePose Ruby neutral>>Yeah, I’m glad we can get back to the old campaign!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>Me too!\r\n<<activateSpeechBubble Brynn>>I can’t wait to see how it wraps up after all these years.\r\n<<activateSpeechBubble Brynn>>I’m kind of sad to see it end, but at the same time I also really want to see what you all do.\r\n<<activateSpeechBubble Ruby>>I feel the same way. We’ve been playing these characters together for so long. I’m gonna miss them.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>But then we get to start all over with new people, and that’s always really fun.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Yeah, for sure!\r\n[[How's the forensics program?|HowsTheForensics]]\r\n[[New character ideas?|NewCharacter]]\r\n",
+		"position": {
+			"x": 3322,
+			"y": -433
+		},
+		"colorID": 0
+	},
+	{
+		"title": "HowsTheForensics",
+		"tags": "",
+		"body": "<<overridePose Brynn neutral>>\r\n<<overridePose Ruby neutral>>\r\n<<activateSpeechBubble Brynn>>How’s that forensic degree coming?\r\n<<activateSpeechBubble Ruby>>It’s going pretty well!\r\n<<activateSpeechBubble Ruby>>Is what I would say if I wasn’t taking Organic Chemistry. That class is killing me.\r\n<<activateSpeechBubble Brynn>>I don’t want to know, do I?\r\n<<activateSpeechBubble Ruby>>Nope.\r\n<<activateSpeechBubble Ruby>>I just wish I could find a study group, but...talking to people is hard.\r\n<<activateSpeechBubble Brynn>>I’m sure everyone in your class feels that way, too.\r\n<<activateSpeechBubble Ruby>>Yeah, maybe.\r\n<<activateSpeechBubble Ruby>>It was just... nice, back in high school when we could always go to each other for help.\r\n<<activateSpeechBubble Ruby>>Franklin helped me get through history, and I’m pretty sure you saved my AP English grade!\r\n<<activateSpeechBubble Brynn>>It’s what we’re here for.\r\n<<activateSpeechBubble Ruby>>Yeah…\r\n[[FranklinArrival]]",
+		"position": {
+			"x": 2980,
+			"y": -66
+		},
+		"colorID": 0
+	},
+	{
+		"title": "NewCharacter",
+		"tags": "",
+		"body": "<<overridePose Brynn neutral>>\r\n<<overridePose Ruby neutral>>\r\n<<activateSpeechBubble Brynn>>So have any ideas about who your next character will be?\r\n<<activateSpeechBubble Ruby>>Hmmm…\r\n<<activateSpeechBubble Ruby>>I don’t know, Vel is the best character I’ve ever made so topping her is going to be pretty hard.\r\n<<activateSpeechBubble Ruby>>Honestly I might just make someone similar to her.\r\n<<activateSpeechBubble Ruby>>Oh, oh! What if I played her twin?\r\n<<activateSpeechBubble Brynn>>Vel has a twin?\r\n<<activateSpeechBubble Ruby>>Well she doesn’t right now, but she could!\r\n<<activateSpeechBubble Ruby>>Oooh! Twins who were separated at birth! \r\n<<activateSpeechBubble Ruby>>Maybe the other one grew up somewhere else with a different family, but like Vel she discovered she had an affinity for magic.\r\n<<activateSpeechBubble Ruby>>And then when Vel got super famous for being awesome, people started to confuse the other twin for Vel and then the twin got really confused and...\r\n<<activateSpeechBubble Brynn>>Wait, Ruby, you know I’m always more than happy to go along with whoever you guys want to be...\r\n<<activateSpeechBubble Brynn>>but are you sure you’re not interested in trying someone else?\r\n<<activateSpeechBubble Ruby>>Well I don’t know I...I just love the way it feels to play her. \r\n<<activateSpeechBubble Ruby>>She’s kind and caring, yet powerful. So powerful that she can keep all the people she cares about standing strong. People rely on her and look up to her.\r\n<<activateSpeechBubble Brynn>>She is pretty incredible. Sorry, I didn’t...of course you could play her twin if you wanted to.\r\n<<activateSpeechBubble Ruby>>Thanks Brynn! I know it’s not the most original idea, though. I’ll probably check out the handbook one more time and see if I get any other bright ideas.\r\n[[FranklinArrival]]",
+		"position": {
+			"x": 3544,
+			"y": -160
+		},
+		"colorID": 0
+	},
+	{
+		"title": "FranklinArrival",
+		"tags": "",
+		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateOffScreenSpeechBubble Franklin>>It’s me!\r\n<<overridePose Ruby veryHappy>>\r\n<<activateSpeechBubble Ruby>>Woah, Franklin’s here?\r\n<<activateSpeechBubble Brynn>>Door’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<showCharacter Franklin true>>\r\n<<overridePose Franklin happy>>\r\n<<activateSpeechBubble Franklin>>Hey guys!\r\n<<overridePose Brynn happy>>\r\n<<overridePose Ruby happy>>\r\n<<activateSpeechBubble Ruby>>Wow, look who’s on time for once!\r\n<<activateSpeechBubble Brynn>>I’m so proud of you! Is this gonna be a regular thing?\r\n<<activateSpeechBubble Franklin>>I wouldn’t bet on it, you know how much my manager loves keeping me past clock out.\r\n<<activateSpeechBubble Brynn>>Every single time.\r\n<<activateSpeechBubble Ruby>>So what changed?\r\n<<activateSpeechBubble Franklin>>Well, I might’ve told him a bit about this really cool friend of mine who had just come back to the states.\r\n<<activateSpeechBubble Brynn>>Very nice! Maybe after working for there for years, you’ve finally wormed your way into his little old heart.\r\n<<activateSpeechBubble Brynn>>So, when do I get to meet this really cool friend of yours?\r\n<<activateSpeechBubble Franklin>>Oh, shut up! \r\n<<activateSpeechBubble Franklin>>It’s good to have you back, Brynn.\r\n<<activateSpeechBubble Brynn>>It’s good to be back!\r\n<<activateSpeechBubble Ruby>>Ahem!\r\n<<activateSpeechBubble Franklin>>It’s great to see you too Ruby, as always.\r\n<<overridePose Franklin neutral>>\r\n<<activateSpeechBubble Franklin>>And about not being able to meet up, I’m sorry.\r\n<<activateSpeechBubble Franklin>>Scheduling these past few months has been-\r\n<<activateSpeechBubble Ruby>>It’s okay! Really, don’t worry about it.\r\n[[Been working a lot these days?|WorkingALot]]\r\n[[Remember how your character works?|RememberHow]]",
+		"position": {
+			"x": 3300,
+			"y": 141
+		},
+		"colorID": 0
+	},
+	{
+		"title": "RememberHow",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Need any help getting back up to speed?\r\n<<activateSpeechBubble Franklin>>I think I’ve got it. I had a few minutes to look over my character sheet yesterday.\r\n<<activateSpeechBubble Franklin>>I can’t rage when wearing heavy armor, right?\r\n<<activateSpeechBubble Brynn>>Correct!\r\n<<activateSpeechBubble Franklin>>Cool, got it. Been looking forward to just chilling out and being your big damage dealer again.\r\n[[ThreePersonBanter]]",
+		"position": {
+			"x": 3576,
+			"y": 316
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Node262",
+		"tags": "",
+		"body": "Empty Text",
+		"position": {
+			"x": 3047,
+			"y": 339
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WorkingALot",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Is your schedule still the same?\r\n<<activateSpeechBubble Franklin>>*Sigh* Yes, unfortunately. \r\n<<activateSpeechBubble Franklin>>Well, no, it’s not that bad. It’s just this, plus school. \r\n<<activateSpeechBubble Franklin>>You know what I mean.\r\n<<activateSpeechBubble Brynn>>Yeah, I get it.\r\n<<activateSpeechBubble Brynn>>Just don’t push yourself too hard.\r\n<<activateSpeechBubble Ruby>>Yeah, take breaks so we can actually see you!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>>Don’t worry, that’s why I’m here. To sit back, relax, and Barbarian-smack some skeletons.\r\n[[ThreePersonBanter]]",
+		"position": {
+			"x": 3047,
+			"y": 339
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ThreePersonBanter",
+		"tags": "",
+		"body": "<<activateSpeechBubble Franklin>>So what about you, Brynn? How are you?\r\n<<activateSpeechBubble Brynn>>Oh, I’m good! Even better now that I’m back here with you guys.\r\n<<activateSpeechBubble Brynn>>Let me tell you, going cold turkey on RPG’s after playing once a week for two years?\r\n<<activateSpeechBubble Brynn>>Not fun.\r\n<<activateSpeechBubble Ruby>>No kidding! How do you think we felt?\r\n<<activateSpeechBubble Franklin>>Yeah, and at the very least you know what’s coming next. Us? You left us right as we got to Lady Malacatha’s castle!\r\n<<activateSpeechBubble Ruby>>Do you know how horrible this wait has been Brynn?! You should be charged with war crimes!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>><<triggerSound franklinLaugh>> “War crimes” ...\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>><<triggerSound brynnLaugh>> I’m sorry, I’m sorry!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>I’ll have you know there are laws against that sort of thing!\r\n<<activateSpeechBubble Brynn>>But I had to catch my flight!\r\n<<stopSound CuedMusicStings>>\r\n<<overridePose Franklin neutral>>\r\n<<overridePose Ruby neutral>>\r\n<<overridePose Brynn neutral>>\r\n<<activateOffScreenSpeechBubble Allison>>Can you just shut up already?\r\n<<activateOffScreenSpeechBubble Lance>><<someoneInterrupting Lance AllisonSureFine 1.5>>I would if you’d listen to me for five seconds. I’m just trying to get you to...understand me here. Can you at least...\r\n<<activateSpeechBubble Brynn>>Um, is that…?\r\n<<activateSpeechBubble Franklin>><<triggerSound franklinSigh>> *sigh* Allison and Lance? Yup.\r\n<<activateSpeechBubble Ruby>>Sorry Brynn, I should’ve warned you about this but I...didn’t really know how to bring it up.\r\n<<activateOffScreenSpeechBubble Lance>>Jesus Allison, why are you still so hung up over this? I’ve already told you...\r\n<<activateOffScreenSpeechBubble Allison>><<someoneInterrupting Allison LanceCauseYouWont 1.5>>Me?! I’m not hung up over shit! You’re the one who keeps bringing it up...\r\n<<activateOffScreenSpeechBubble Allison>>Well maybe you should’ve thought about the consequences of your selfishness BEFORE you indulged it!\r\n<<activateSpeechBubble Brynn>>So this has been a thing then?\r\n<<activateSpeechBubble Franklin>>For the past few months, yeah.\r\n<<activateSpeechBubble Ruby>><<triggerSound rubyAffirmative>> Every time I’ve gotten them together it ends up with them arguing over that show…\r\n<<activateSpeechBubble Franklin>><<triggerSound franklinSigh>>It just never ends.\r\n<<activateOffScreenSpeechBubble Lance>>WHAT? What fantasy world are you living in where you think I’m the selfish one here?\r\n<<activateOffScreenSpeechBubble Allison>>REALITY.\r\n<<activateSpeechBubble Franklin>>HEY. GUYS. THE DOOR’S OPEN.\r\n<<activateOffScreenSpeechBubble Allison>><<cueSimultaneousDialogue Lance LanceAwkwardPause>>...\r\n<<showCharacter Lance true>>\r\n<<showCharacter Allison true>>\r\n<<activateSpeechBubble Allison>>So, how much of that did you guys hear?\r\n<<activateSpeechBubble Franklin>>Enough.\r\n<<activateSpeechBubble Allison>>*sigh*\r\n<<activateSpeechBubble Allison>>Sorry about that.\r\n<<activateSpeechBubble Lance>>Yeah, sorry.\r\n<<activateSpeechBubble Allison>><<overridePose Allison veryHappy>>It’s really good to see you Brynn. How’s my girl been?\r\n<<activateSpeechBubble Brynn>>I’m good but...you two don’t-\r\n<<activateSpeechBubble Allison>><<overridePose Allison neutral>>Brynn, I really am sorry about that, okay? But I really don’t wanna talk about that.\r\n<<activateSpeechBubble Allison>>Not when you’re finally back with us!\r\n<<activateSpeechBubble Lance>>Not to mention our best buds Ruby and Franklin over here. It’s been some time since we’ve all hung out, huh?\r\n<<activateSpeechBubble Brynn>>TO BE CONTINUED...",
+		"position": {
+			"x": 3369,
+			"y": 599
 		},
 		"colorID": 0
 	}

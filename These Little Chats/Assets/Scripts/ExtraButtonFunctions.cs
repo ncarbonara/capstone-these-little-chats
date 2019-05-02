@@ -20,8 +20,12 @@ public class ExtraButtonFunctions : MonoBehaviour {
         Application.Quit();
     }
 
+    /// <summary>
+    /// Opens and closes the conversation log
+    /// </summary>
     public void OpenAndCloseConversationLog()
     {
+
         if (conversationLogIsOpen == false)
         {
             conversationLog.gameObject.SetActive(true);

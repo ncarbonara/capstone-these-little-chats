@@ -37,7 +37,8 @@ above license. It has the added feature of displaying/hiding a gameObject backgr
 text, but is otherwise identical to the original script.
 */
 
-namespace Yarn.Unity.Example {
+namespace Yarn.Unity.Example
+{
     /// Displays dialogue lines to the player, and sends
     /// user choices back to the dialogue system.
 
@@ -81,48 +82,54 @@ namespace Yarn.Unity.Example {
         public RectTransform gameControlsContainer;
 
         public GameObject conversationLog;
+        public GameObject conversationLogButton;
 
         public bool lineIsInterrupted;
 
-        void Awake ()
+        void Awake()
         {
             // Start by hiding the container, line and option buttons
-            if (dialogueContainer != null)
+            if(dialogueContainer != null)
                 dialogueContainer.SetActive(false);
 
-                lineText.gameObject.SetActive (false);
-                lineTextBackground.gameObject.SetActive(false);
+            lineText.gameObject.SetActive(false);
+            lineTextBackground.gameObject.SetActive(false);
 
-            foreach (var button in optionButtons) {
-                button.gameObject.SetActive (false);
+            foreach(var button in optionButtons)
+            {
+                button.gameObject.SetActive(false);
             }
 
             // Hide the continue prompt if it exists
-            if (continuePrompt != null)
-                continuePrompt.SetActive (false);
+            if(continuePrompt != null)
+                continuePrompt.SetActive(false);
         }
 
         /// Show a line of dialogue, gradually
-        public override IEnumerator RunLine (Yarn.Line line)
+        public override IEnumerator RunLine(Yarn.Line line)
         {
             // Show the text
-            lineText.gameObject.SetActive (true);
+            lineText.gameObject.SetActive(true);
             lineTextBackground.gameObject.SetActive(true);
 
-            if (textSpeed > 0.0f) {
+            if(textSpeed > 0.0f)
+            {
                 // Display the line one character at a time
-                var stringBuilder = new StringBuilder ();
+                var stringBuilder = new StringBuilder();
 
-                foreach (char c in line.text) {
-                    stringBuilder.Append (c);
-                    lineText.text = stringBuilder.ToString ();
-                    yield return new WaitForSeconds (textSpeed);
+                foreach(char c in line.text)
+                {
+                    stringBuilder.Append(c);
+                    lineText.text = stringBuilder.ToString();
+                    yield return new WaitForSeconds(textSpeed);
                 }
 
                 //Once the line is finished displaying, it is recorded in the conversation log
                 conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
 
-            } else {
+            }
+            else
+            {
                 // Display the line immediately if textSpeed == 0
                 lineText.text = line.text;
 
@@ -131,15 +138,58 @@ namespace Yarn.Unity.Example {
             }
 
             // Show the 'press any key' prompt when done, if we have one
-            if (continuePrompt != null)
-                continuePrompt.SetActive (true);
+            if(continuePrompt != null
+                && lineText.GetComponent<TextGradualVisibilityScript>().allTextShown == true)
+                continuePrompt.SetActive(true);
 
             // Wait for any user input
             while(Input.anyKeyDown == false
-                && lineIsInterrupted == false) {
+            && lineIsInterrupted == false)
+            {
 
-                    yield return null;
-                
+                yield return null;
+            }
+
+
+            //Prevents the dialogue from moving forward while the conversation log is open
+            while(conversationLog.activeInHierarchy == true)
+            {
+                yield return null;
+            }
+
+            //DOESN'T WORK
+            //Prevents the dialogue from moving forward while the mouse is hovering over the
+            //conversation log button
+            while(conversationLogButton.GetComponent<ButtonHoverChecker>().mouseHoveringOverButton == true)
+            {
+                yield return null;
+            }
+
+            //COMMENTED OUT UNTIL FULLY FUNCTIONAL
+            /*
+            //While a line of text still hasn't been changed entirely to white, don't let the
+            //player move to the next line of dialogue
+            while(lineText.GetComponent<TextGradualVisibilityScript>().allTextShown == false)
+            {
+                yield return null;
+            }
+            */
+
+            //DELETE WHEN ABOVE IS FIXED
+            //For some reason, this code keeps the player from accidentally skipping forward too
+            //many lines of dialogue
+            if(lineText.GetComponent<TextGradualVisibilityScript>().allTextShown == false)
+            {
+                yield return null;
+            }
+
+
+            //SOME NICK CODE
+            if(Input.anyKeyDown == true
+                && lineText.GetComponent<TextGradualVisibilityScript>().allTextShown == true)
+            {
+                lineText.GetComponent<TextGradualVisibilityScript>().ResetTextColor();
+                //lineText.GetComponent<TextGradualVisibilityScript>().resetTextColor = true;
             }
 
             //COMMENTED OUT UNTIL FUNCTIONAL
@@ -153,29 +203,31 @@ namespace Yarn.Unity.Example {
             */
 
             // Hide the text and prompt
-            lineText.gameObject.SetActive (false);
+            lineText.gameObject.SetActive(false);
             lineTextBackground.gameObject.SetActive(false);
 
-            if (continuePrompt != null)
-                continuePrompt.SetActive (false);
+            if(continuePrompt != null)
+                continuePrompt.SetActive(false);
 
         }
 
         /// Show a list of options, and wait for the player to make a selection.
-        public override IEnumerator RunOptions (Yarn.Options optionsCollection, 
+        public override IEnumerator RunOptions(Yarn.Options optionsCollection,
                                                 Yarn.OptionChooser optionChooser)
         {
             // Do a little bit of safety checking
-            if (optionsCollection.options.Count > optionButtons.Count) {
+            if(optionsCollection.options.Count > optionButtons.Count)
+            {
                 Debug.LogWarning("There are more options to present than there are" +
                                  "buttons to present them in. This will cause problems.");
             }
 
             // Display each option in a button, and make it visible
             int i = 0;
-            foreach (var optionString in optionsCollection.options) {
-                optionButtons [i].gameObject.SetActive (true);
-                optionButtons [i].GetComponentInChildren<Text> ().text = optionString;
+            foreach(var optionString in optionsCollection.options)
+            {
+                optionButtons[i].gameObject.SetActive(true);
+                optionButtons[i].GetComponentInChildren<Text>().text = optionString;
                 i++;
             }
 
@@ -183,48 +235,51 @@ namespace Yarn.Unity.Example {
             SetSelectedOption = optionChooser;
 
             // Wait until the chooser has been used and then removed (see SetOption below)
-            while (SetSelectedOption != null) {
+            while(SetSelectedOption != null)
+            {
                 yield return null;
             }
 
             // Hide all the buttons
-            foreach (var button in optionButtons) {
-                button.gameObject.SetActive (false);
+            foreach(var button in optionButtons)
+            {
+                button.gameObject.SetActive(false);
             }
         }
 
         /// Called by buttons to make a selection.
-        public void SetOption (int selectedOption)
+        public void SetOption(int selectedOption)
         {
 
             // Call the delegate to tell the dialogue system that we've
             // selected an option.
-            SetSelectedOption (selectedOption);
+            SetSelectedOption(selectedOption);
 
             // Now remove the delegate so that the loop in RunOptions will exit
-            SetSelectedOption = null; 
+            SetSelectedOption = null;
         }
 
         /// Run an internal command.
-        public override IEnumerator RunCommand (Yarn.Command command)
+        public override IEnumerator RunCommand(Yarn.Command command)
         {
             // "Perform" the command
-            Debug.Log ("Command: " + command.text);
+            Debug.Log("Command: " + command.text);
 
             yield break;
         }
 
         /// Called when the dialogue system has started running.
-        public override IEnumerator DialogueStarted ()
+        public override IEnumerator DialogueStarted()
         {
-            Debug.Log ("Dialogue starting!");
+            Debug.Log("Dialogue starting!");
 
             // Enable the dialogue controls.
-            if (dialogueContainer != null)
+            if(dialogueContainer != null)
                 dialogueContainer.SetActive(true);
 
             // Hide the game controls.
-            if (gameControlsContainer != null) {
+            if(gameControlsContainer != null)
+            {
                 gameControlsContainer.gameObject.SetActive(false);
             }
 
@@ -232,16 +287,17 @@ namespace Yarn.Unity.Example {
         }
 
         /// Called when the dialogue system has finished running.
-        public override IEnumerator DialogueComplete ()
+        public override IEnumerator DialogueComplete()
         {
-            Debug.Log ("Complete!");
+            Debug.Log("Complete!");
 
             // Hide the dialogue interface.
-            if (dialogueContainer != null)
+            if(dialogueContainer != null)
                 dialogueContainer.SetActive(false);
 
             // Show the game controls.
-            if (gameControlsContainer != null) {
+            if(gameControlsContainer != null)
+            {
                 gameControlsContainer.gameObject.SetActive(true);
             }
 
