@@ -52,7 +52,7 @@
 	{
 		"title": "LanceAwkwardPause",
 		"tags": "",
-		"body": "<<activateOffScreenSimultaneousSpeechBubble Lance>>...",
+		"body": "<<activateOffScreenSimultaneousSpeechBubble Lance speakerTwo>>...",
 		"position": {
 			"x": 584,
 			"y": -164

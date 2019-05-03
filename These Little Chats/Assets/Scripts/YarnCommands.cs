@@ -13,23 +13,33 @@ using Yarn.Unity;   //Lets us talk to Yarn stuff.
 public class YarnCommands : MonoBehaviour {
 
     public VariableStorageBehaviour variableManager;
-
-    //The name of the character
-    public GameObject nameText;
-
-    //Additional name text, for when two characters are speaking at once
-    public GameObject secondaryNameText;
     
     //The main gameObjects for dialogue text
     public GameObject primaryDialogueTextContainer;
     public GameObject primaryDialogueText;
+    public GameObject primarySpeechBubble;
+    public GameObject primaryNameText;
 
-    //Secondary objects for dialogue text, used when two characters are speaking at once
+    //Secondary objects for dialogue text, used when TWO characters are speaking at once
     public GameObject secondaryDialogueTextContainer;
     public GameObject secondaryDialogueText;
-
-    //The dialogue gameObject that runs secondary text for when two characters are speaking at once
     public GameObject secondaryDialogue;
+    public GameObject secondarySpeechBubble;
+    public GameObject secondaryNameText;
+
+    //Tertiary objects for dialogue text, used when THREE characters are speaking at once
+    public GameObject tertiaryDialogueTextContainer;
+    public GameObject tertiaryDialogueText;
+    public GameObject tertiaryDialogue;
+    public GameObject tertiarySpeechBubble;
+    public GameObject tertiaryNameText;
+
+    //Tertiary objects for dialogue text, used when FOUR characters are speaking at once
+    public GameObject quaternaryDialogueTextContainer;
+    public GameObject quaternaryDialogueText;
+    public GameObject quaternaryDialogue;
+    public GameObject quaternarySpeechBubble;
+    public GameObject quaternaryNameText;
 
     //The sprites that the pose image cycles through based on the character's mood
     /*
@@ -112,11 +122,6 @@ public class YarnCommands : MonoBehaviour {
     public Sprite characterInterruptingSpeechBubbleSprite;
     public Color characterSpeechBubbleColor;
 
-    //The primary speech bubble gameObject
-    public GameObject primarySpeechBubble;
-
-    //The secondary speech bubble gameObject, for when characters are talking over each other
-    public GameObject secondarySpeechBubble;
 
     //Character variables handled directly in this script. Set initial values in the inspector!
     public int value;
@@ -172,6 +177,18 @@ public class YarnCommands : MonoBehaviour {
     float secondarySpeechBubbleLerpFracJourney;
     bool startNewSecondarySpeechBubbleLerp;
     bool secondarySpeechBubbleLerpInProcess;
+    float tertiarySpeechBubbleLerpStartTime;
+    float tertiarySpeechBubbleLerpJourneyLength;
+    float tertiarySpeechBubbleLerpDistanceCovered;
+    float tertiarySpeechBubbleLerpFracJourney;
+    bool startNewTertiarySpeechBubbleLerp;
+    bool tertiarySpeechBubbleLerpInProcess;
+    float quaternarySpeechBubbleLerpStartTime;
+    float quaternarySpeechBubbleLerpJourneyLength;
+    float quaternarySpeechBubbleLerpDistanceCovered;
+    float quaternarySpeechBubbleLerpFracJourney;
+    bool startNewQuaternarySpeechBubbleLerp;
+    bool quaternarySpeechBubbleLerpInProcess;
 
     //The game object that handles sound effects, for functions that also need to trigger some FX
     public GameObject soundFXGameObject;
@@ -184,7 +201,7 @@ public class YarnCommands : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        nameText.GetComponent<Text>().text = null;
+        primaryNameText.GetComponent<Text>().text = null;
         //portraitBackground.gameObject.SetActive(false);
 
         variableManager.SetValue(neutralYarnBool, new Yarn.Value(true));
@@ -311,6 +328,58 @@ public class YarnCommands : MonoBehaviour {
             }
         }
 
+        //Causes the TERTIARY speech bubble sprite to Lerp to the needed position when a character
+        //begins speaking
+        if(tertiarySpeechBubbleLerpInProcess == true)
+        {
+            if(startNewTertiarySpeechBubbleLerp == true)
+            {
+                tertiarySpeechBubbleLerpStartTime = Time.time;
+                startNewTertiarySpeechBubbleLerp = false;
+            }
+
+            tertiarySpeechBubbleLerpJourneyLength = Vector3.Distance(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position);
+
+            tertiarySpeechBubbleLerpDistanceCovered = (Time.time - secondarySpeechBubbleLerpStartTime) * speechBubbleLerpSpeed;
+
+            tertiarySpeechBubbleLerpFracJourney = secondarySpeechBubbleLerpDistanceCovered / secondarySpeechBubbleLerpJourneyLength;
+
+            tertiarySpeechBubble.GetComponent<Transform>().position = Vector3.Lerp(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position, secondarySpeechBubbleLerpFracJourney);
+            tertiarySpeechBubble.GetComponent<Transform>().localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1, 1, 1), secondarySpeechBubbleLerpFracJourney);
+
+            //Stops the lerp
+            if(tertiarySpeechBubble.GetComponent<Transform>().position == speechBubbleLerpEndMarker.GetComponent<Transform>().position)
+            {
+                tertiarySpeechBubbleLerpInProcess = false;
+            }
+        }
+
+        //Causes the QUATERNARY speech bubble sprite to Lerp to the needed position when a character
+        //begins speaking
+        if(quaternarySpeechBubbleLerpInProcess == true)
+        {
+            if(startNewQuaternarySpeechBubbleLerp == true)
+            {
+                quaternarySpeechBubbleLerpStartTime = Time.time;
+                startNewQuaternarySpeechBubbleLerp = false;
+            }
+
+            quaternarySpeechBubbleLerpJourneyLength = Vector3.Distance(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position);
+
+            quaternarySpeechBubbleLerpDistanceCovered = (Time.time - secondarySpeechBubbleLerpStartTime) * speechBubbleLerpSpeed;
+
+            quaternarySpeechBubbleLerpFracJourney = secondarySpeechBubbleLerpDistanceCovered / secondarySpeechBubbleLerpJourneyLength;
+
+            quaternarySpeechBubble.GetComponent<Transform>().position = Vector3.Lerp(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position, secondarySpeechBubbleLerpFracJourney);
+            quaternarySpeechBubble.GetComponent<Transform>().localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1, 1, 1), secondarySpeechBubbleLerpFracJourney);
+
+            //Stops the lerp
+            if(quaternarySpeechBubble.GetComponent<Transform>().position == speechBubbleLerpEndMarker.GetComponent<Transform>().position)
+            {
+                quaternarySpeechBubbleLerpInProcess = false;
+            }
+        }
+
         //Creates a delay until the point at which a character interrupts another
         if(someoneWillInterrupt == true)
         {
@@ -368,19 +437,25 @@ public class YarnCommands : MonoBehaviour {
         primarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
         primarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
         primaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
-        nameText.GetComponent<Text>().text = this.gameObject.name;
+        primaryNameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
     /// Tells Unity to pull up a second text bubble to show text from one person speaking at the 
     /// same time as another
     /// </summary>
-    /// <param name="nodeName"></param>
+    /// <param name="secondaryNodeName"></param>
     [YarnCommand("cueSimultaneousDialogue")]
-    public void CueSimultaneousDialogue(string nodeName)
+    public void CueSimultaneousDialogue(string secondaryNodeName, string tertiaryNodeName, string quaternaryNodeName)
     {
-        secondaryDialogue.GetComponent<DialogueRunner>().startNode = nodeName;
+        secondaryDialogue.GetComponent<DialogueRunner>().startNode = secondaryNodeName;
         secondaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
+
+        tertiaryDialogue.GetComponent<DialogueRunner>().startNode = tertiaryNodeName;
+        tertiaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
+
+        quaternaryDialogue.GetComponent<DialogueRunner>().startNode = quaternaryNodeName;
+        quaternaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
     }
 
     /// <summary>
@@ -388,33 +463,62 @@ public class YarnCommands : MonoBehaviour {
     /// character and another character are speaking at the same time
     /// </summary>
     [YarnCommand("activateSimultaneousSpeechBubble")]
-    public void ActivateSimultaneousSpeechBubble()
+    public void ActivateSimultaneousSpeechBubble(string speakerNumber)
     {
-        /*
-        secondaryDialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
-        secondarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
-        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
-        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
-        */
+        GameObject speechBubbleToMove = null;
+        GameObject dialogueTextToUse = null;
+        GameObject nameTextToUse = null;
+
+        if(speakerNumber == "speakerTwo")
+        {
+            speechBubbleToMove = secondarySpeechBubble;
+            dialogueTextToUse = secondaryDialogueText;
+            nameTextToUse = secondaryNameText;
+        }
+        else if(speakerNumber == "speakerThree")
+        {
+            speechBubbleToMove = tertiarySpeechBubble;
+            dialogueTextToUse = tertiaryDialogueText;
+            nameTextToUse = tertiaryNameText;
+        }
+        else if(speakerNumber == "speakerFour")
+        {
+            speechBubbleToMove = quaternarySpeechBubble;
+            dialogueTextToUse = quaternaryDialogueText;
+            nameTextToUse = quaternaryNameText;
+        }
 
         //Only starts the lerp if the speech bubble is not already where it needs to be
-        if(secondarySpeechBubble.GetComponent<Transform>().position != speechBubbleLerpEndMarker.GetComponent<Transform>().position)
+        if(speechBubbleToMove.GetComponent<Transform>().position != speechBubbleLerpEndMarker.GetComponent<Transform>().position)
         {
             //dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
-            secondarySpeechBubble.GetComponent<Transform>().position =
+            speechBubbleToMove.GetComponent<Transform>().position =
                 new Vector3(speechBubbleLerpStartMarker.GetComponent<Transform>().position.x,
                 speechBubbleLerpStartMarker.GetComponent<Transform>().position.y,
                 speechBubbleLerpStartMarker.GetComponent<Transform>().position.z);
-            secondarySpeechBubble.GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
+            speechBubbleToMove.GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
 
-            startNewSecondarySpeechBubbleLerp = true;
-            secondarySpeechBubbleLerpInProcess = true;
+            if(speakerNumber == "speakerTwo")
+            {
+                startNewSecondarySpeechBubbleLerp = true;
+                secondarySpeechBubbleLerpInProcess = true;
+            }
+            else if(speakerNumber == "speakerThree")
+            {
+                startNewTertiarySpeechBubbleLerp = true;
+                tertiarySpeechBubbleLerpInProcess = true;
+            }
+            else if(speakerNumber == "speakerFour")
+            {
+                startNewQuaternarySpeechBubbleLerp = true;
+                quaternarySpeechBubbleLerpInProcess = true;
+            }
+
+            speechBubbleToMove.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
+            speechBubbleToMove.GetComponent<Image>().color = characterSpeechBubbleColor;
+            dialogueTextToUse.GetComponent<Text>().color = characterSpeechBubbleColor;
+            nameTextToUse.GetComponent<Text>().text = this.gameObject.name;
         }
-
-        secondarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
-        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
-        secondaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
-        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
@@ -423,32 +527,62 @@ public class YarnCommands : MonoBehaviour {
     /// NOTE: This code could probably stand to be more efficient with it's line use.
     /// </summary>
     [YarnCommand("activateOffScreenSimultaneousSpeechBubble")]
-    public void ActivateOffScreenSimultaneousSpeechBubble()
+    public void ActivateOffScreenSimultaneousSpeechBubble(string speakerNumber)
     {
-        /*
-        secondaryDialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
-        secondarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
-        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
-        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
-        */
+        GameObject speechBubbleToMove = null;
+        GameObject dialogueTextToUse = null;
+        GameObject nameTextToUse = null;
+
+        if(speakerNumber == "speakerTwo")
+        {
+            speechBubbleToMove = secondarySpeechBubble;
+            dialogueTextToUse = secondaryDialogueText;
+            nameTextToUse = secondaryNameText;
+        }
+        else if(speakerNumber == "speakerThree")
+        {
+            speechBubbleToMove = tertiarySpeechBubble;
+            dialogueTextToUse = tertiaryDialogueText;
+            nameTextToUse = tertiaryNameText;
+        }
+        else if(speakerNumber == "speakerFour")
+        {
+            speechBubbleToMove = quaternarySpeechBubble;
+            dialogueTextToUse = quaternaryDialogueText;
+            nameTextToUse = quaternaryNameText;
+        }
 
         //Only starts the lerp if the speech bubble is not already where it needs to be
-        if(secondarySpeechBubble.GetComponent<Transform>().position != speechBubbleLerpEndMarker.GetComponent<Transform>().position)
+        if(speechBubbleToMove.GetComponent<Transform>().position != speechBubbleLerpEndMarker.GetComponent<Transform>().position)
         {
             //dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
-            secondarySpeechBubble.GetComponent<Transform>().position =
+            speechBubbleToMove.GetComponent<Transform>().position =
                 new Vector3(speechBubbleLerpStartMarker.GetComponent<Transform>().position.x,
                 speechBubbleLerpStartMarker.GetComponent<Transform>().position.y,
                 speechBubbleLerpStartMarker.GetComponent<Transform>().position.z);
-            secondarySpeechBubble.GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
+            speechBubbleToMove.GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
 
-            startNewSecondarySpeechBubbleLerp = true;
-            secondarySpeechBubbleLerpInProcess = true;
+            if(speakerNumber == "speakerTwo")
+            {
+                startNewSecondarySpeechBubbleLerp = true;
+                secondarySpeechBubbleLerpInProcess = true;
+            }
+            else if(speakerNumber == "speakerThree")
+            {
+                startNewTertiarySpeechBubbleLerp = true;
+                tertiarySpeechBubbleLerpInProcess = true;
+            }
+            else if(speakerNumber == "speakerFour")
+            {
+                startNewQuaternarySpeechBubbleLerp = true;
+                quaternarySpeechBubbleLerpInProcess = true;
+            }
+
+            speechBubbleToMove.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
+            speechBubbleToMove.GetComponent<Image>().color = characterSpeechBubbleColor;
+            dialogueTextToUse.GetComponent<Text>().color = characterSpeechBubbleColor;
+            nameTextToUse.GetComponent<Text>().text = this.gameObject.name;
         }
-
-        secondarySpeechBubble.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
-        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
-        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
     }
 
     /// <summary>
@@ -507,7 +641,7 @@ public class YarnCommands : MonoBehaviour {
         primarySpeechBubble.GetComponent<Image>().sprite = characterOffScreenSpeechBubbleSprite;
         primarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
         primaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
-        nameText.GetComponent<Text>().text = this.gameObject.name;
+        primaryNameText.GetComponent<Text>().text = this.gameObject.name;
 
         /*
         dialogueTextContainer.GetComponent<Transform>().position = new Vector3(characterTextBoxPosition.x, characterTextBoxPosition.y, characterTextBoxPosition.z);
@@ -685,7 +819,9 @@ public class YarnCommands : MonoBehaviour {
         */
     }
 
-    //Triggers the animation and sound that plays when the character rolls their D20 die
+    /// <summary>
+    /// Triggers the animation and sound that plays when the character rolls their D20 die
+    /// </summary>
     [YarnCommand("rollD20")]
     public void RollD20()
     {
