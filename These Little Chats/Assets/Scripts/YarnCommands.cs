@@ -3,6 +3,7 @@ using UnityEngine;
 
 using UnityEngine.UI;   //Let's us talk to UI stuff.
 using Yarn.Unity;   //Lets us talk to Yarn stuff.
+using Yarn.Unity.Example;   //Lets us talk to the ModifiedExampleDialogueUI.cs script
 
 /// <summary>
 /// Contains all of the functions that can be called from a Yarn sheet to alter character values,
@@ -17,6 +18,7 @@ public class YarnCommands : MonoBehaviour {
     //The main gameObjects for dialogue text
     public GameObject primaryDialogueTextContainer;
     public GameObject primaryDialogueText;
+    public GameObject primaryDialogue;
     public GameObject primarySpeechBubble;
     public GameObject primaryNameText;
 
@@ -198,6 +200,7 @@ public class YarnCommands : MonoBehaviour {
     bool someoneWillInterrupt;
     float waitTimeBeforeInterrupting;
     string interruptionTextNodeName;
+    string interruptionNumber;
 
     // Use this for initialization
     void Start() {
@@ -342,10 +345,10 @@ public class YarnCommands : MonoBehaviour {
 
             tertiarySpeechBubbleLerpDistanceCovered = (Time.time - secondarySpeechBubbleLerpStartTime) * speechBubbleLerpSpeed;
 
-            tertiarySpeechBubbleLerpFracJourney = secondarySpeechBubbleLerpDistanceCovered / secondarySpeechBubbleLerpJourneyLength;
+            tertiarySpeechBubbleLerpFracJourney = tertiarySpeechBubbleLerpDistanceCovered / tertiarySpeechBubbleLerpJourneyLength;
 
-            tertiarySpeechBubble.GetComponent<Transform>().position = Vector3.Lerp(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position, secondarySpeechBubbleLerpFracJourney);
-            tertiarySpeechBubble.GetComponent<Transform>().localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1, 1, 1), secondarySpeechBubbleLerpFracJourney);
+            tertiarySpeechBubble.GetComponent<Transform>().position = Vector3.Lerp(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position, tertiarySpeechBubbleLerpFracJourney);
+            tertiarySpeechBubble.GetComponent<Transform>().localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1, 1, 1), tertiarySpeechBubbleLerpFracJourney);
 
             //Stops the lerp
             if(tertiarySpeechBubble.GetComponent<Transform>().position == speechBubbleLerpEndMarker.GetComponent<Transform>().position)
@@ -366,12 +369,12 @@ public class YarnCommands : MonoBehaviour {
 
             quaternarySpeechBubbleLerpJourneyLength = Vector3.Distance(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position);
 
-            quaternarySpeechBubbleLerpDistanceCovered = (Time.time - secondarySpeechBubbleLerpStartTime) * speechBubbleLerpSpeed;
+            quaternarySpeechBubbleLerpDistanceCovered = (Time.time - quaternarySpeechBubbleLerpStartTime) * speechBubbleLerpSpeed;
 
-            quaternarySpeechBubbleLerpFracJourney = secondarySpeechBubbleLerpDistanceCovered / secondarySpeechBubbleLerpJourneyLength;
+            quaternarySpeechBubbleLerpFracJourney = quaternarySpeechBubbleLerpDistanceCovered / quaternarySpeechBubbleLerpJourneyLength;
 
-            quaternarySpeechBubble.GetComponent<Transform>().position = Vector3.Lerp(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position, secondarySpeechBubbleLerpFracJourney);
-            quaternarySpeechBubble.GetComponent<Transform>().localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1, 1, 1), secondarySpeechBubbleLerpFracJourney);
+            quaternarySpeechBubble.GetComponent<Transform>().position = Vector3.Lerp(speechBubbleLerpStartMarker.GetComponent<Transform>().position, speechBubbleLerpEndMarker.GetComponent<Transform>().position, quaternarySpeechBubbleLerpFracJourney);
+            quaternarySpeechBubble.GetComponent<Transform>().localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1, 1, 1), quaternarySpeechBubbleLerpFracJourney);
 
             //Stops the lerp
             if(quaternarySpeechBubble.GetComponent<Transform>().position == speechBubbleLerpEndMarker.GetComponent<Transform>().position)
@@ -591,16 +594,30 @@ public class YarnCommands : MonoBehaviour {
     /// <param name="nodeName"></param>
     /// <param name="waitForSecondsAmount"></param>
     [YarnCommand("someoneInterrupting")]
-    public void SomeoneInterrupting (string nodeName, string waitForSecondsAmount)
+    public void SomeoneInterrupting(string nodeName, string waitForSecondsAmount, string number)
     {
+
         waitTimeBeforeInterrupting = float.Parse(waitForSecondsAmount);
         someoneWillInterrupt = true;
         interruptionTextNodeName = nodeName;
+        interruptionNumber = number;
 
-        Vector3 tempSecondaryDialogueContainerPos = new Vector3 (0, 0, 0);
-        tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.x + 1f;
-        tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.y - 0.25f;
-        secondaryDialogueTextContainer.GetComponent<Transform>().position = tempSecondaryDialogueContainerPos;
+        /*
+        if(interruptionNumber == "interruptionOne")
+        {
+            Vector3 tempSecondaryDialogueContainerPos = new Vector3(0, 0, 0);
+            tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.x + 1f;
+            tempSecondaryDialogueContainerPos.x = characterTextBoxPosition.y - 0.25f;
+            secondaryDialogueTextContainer.GetComponent<Transform>().position = tempSecondaryDialogueContainerPos;
+        }
+        else if(interruptionNumber == "interruptionTwo")
+        {
+            Vector3 tempTertiaryDialogueContainerPos = new Vector3(0, 0, 0);
+            tempTertiaryDialogueContainerPos.x = characterTextBoxPosition.x + 1f;
+            tempTertiaryDialogueContainerPos.x = characterTextBoxPosition.y - 0.25f;
+            tertiaryDialogueTextContainer.GetComponent<Transform>().position = tempTertiaryDialogueContainerPos;
+        }
+        */
     }
 
     /// <summary>
@@ -608,13 +625,23 @@ public class YarnCommands : MonoBehaviour {
     /// to simulate the experience of one character interrupting another
     /// </summary>
     [YarnCommand("activateInterruptingSpeechBubble")]
-    public void ActivateInterruptingSpeechBubble()
+    public void ActivateInterruptingSpeechBubble(string interruptionNumber)
     {
-        secondarySpeechBubble.GetComponent<Transform>().position = new Vector3(primarySpeechBubble.GetComponent<Transform>().position.x, primarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, primarySpeechBubble.GetComponent<Transform>().position.z);
-        secondarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
-        secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
-        secondaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
-        secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
+        if(interruptionNumber == "interruptionOne")
+        {
+            secondarySpeechBubble.GetComponent<Transform>().position = new Vector3(primarySpeechBubble.GetComponent<Transform>().position.x, primarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, primarySpeechBubble.GetComponent<Transform>().position.z);
+            secondarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
+            secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+            secondaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
+            secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
+        } else if (interruptionNumber == "interruptionTwo")
+        {
+            tertiarySpeechBubble.GetComponent<Transform>().position = new Vector3(secondarySpeechBubble.GetComponent<Transform>().position.x, secondarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, secondarySpeechBubble.GetComponent<Transform>().position.z);
+            tertiarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
+            tertiarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
+            tertiaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
+            tertiaryNameText.GetComponent<Text>().text = this.gameObject.name;
+        }
     }
 
     /// <summary>
@@ -1126,12 +1153,35 @@ public class YarnCommands : MonoBehaviour {
     /// <returns></returns>
     IEnumerator WaitBeforeSomeoneInterrupts(float waitForSecondsAmount)
     {
-        //Waits awhile until it's the person's time to interrupt
-        yield return new WaitForSeconds(waitForSecondsAmount);
+        if(interruptionNumber == "interruptionOne")
+        {
+            //Blocks click-to-continue
+            primaryDialogue.GetComponent<ModifiedExampleDialogueUI>().lineIsInterrupted = true;
 
-        //Activates the secondary dialogue bubble
-        secondaryDialogue.GetComponent<DialogueRunner>().startNode = interruptionTextNodeName;
-        secondaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
+            //Waits awhile until it's the person's time to interrupt
+            yield return new WaitForSeconds(waitForSecondsAmount);
 
+            //Activates the secondary dialogue bubble
+            secondaryDialogue.GetComponent<DialogueRunner>().startNode = interruptionTextNodeName;
+            secondaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
+
+            //Unblocks click-to-continue
+            primaryDialogue.GetComponent<ModifiedExampleDialogueUI>().lineIsInterrupted = false;
+        }
+        else if(interruptionNumber == "interruptionTwo")
+        {
+            //Blocks click-to-continue
+            secondaryDialogue.GetComponent<ModifiedExampleDialogueUI>().lineIsInterrupted = true;
+
+            //Waits awhile until it's the person's time to interrupt
+            yield return new WaitForSeconds(waitForSecondsAmount);
+
+            //Activates the secondary dialogue bubble
+            tertiaryDialogue.GetComponent<DialogueRunner>().startNode = interruptionTextNodeName;
+            tertiaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
+
+            //Unblocks click-to-continue
+            secondaryDialogue.GetComponent<ModifiedExampleDialogueUI>().lineIsInterrupted = false;
+        }
     }
 }

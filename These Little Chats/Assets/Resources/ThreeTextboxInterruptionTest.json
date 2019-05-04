@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "<<someoneInterrupting Allison InterruptionOne 1 interruptionOne>>\n<<activateSpeechBubble Allison>>Have you considered that...",
+		"position": {
+			"x": 345,
+			"y": 145
+		},
+		"colorID": 0
+	},
+	{
+		"title": "InterruptionOne",
+		"tags": "",
+		"body": "<<someoneInterrupting Lance InterruptionTwo 3 interruptionTwo>>\n<<activateInterruptingSpeechBubble Lance interruptionOne>>Oh, sure, but did you ever think that--",
+		"position": {
+			"x": 642,
+			"y": 150
+		},
+		"colorID": 0
+	},
+	{
+		"title": "InterruptionTwo",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Allison interruptionTwo>>Yes! As a matter of fact I did!\n<<activateSpeechBubble Allison>>And you know what? I also hate you!",
+		"position": {
+			"x": 919,
+			"y": 150
+		},
+		"colorID": 0
+	}
+]

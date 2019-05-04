@@ -83,6 +83,7 @@ namespace Yarn.Unity.Example
 
         public GameObject conversationLog;
         public GameObject conversationLogButton;
+        public bool conversationLogButtonIsBeingHoveredOver;
 
         public bool lineIsInterrupted;
 
@@ -103,11 +104,14 @@ namespace Yarn.Unity.Example
             // Hide the continue prompt if it exists
             if(continuePrompt != null)
                 continuePrompt.SetActive(false);
+
+            conversationLogButtonIsBeingHoveredOver = false;
         }
 
         /// Show a line of dialogue, gradually
         public override IEnumerator RunLine(Yarn.Line line)
         {
+
             // Show the text
             lineText.gameObject.SetActive(true);
             lineTextBackground.gameObject.SetActive(true);
@@ -143,24 +147,31 @@ namespace Yarn.Unity.Example
                 continuePrompt.SetActive(true);
 
             // Wait for any user input
-            while(Input.anyKeyDown == false
-            && lineIsInterrupted == false)
+            while(Input.anyKeyDown == false)
             {
 
                 yield return null;
             }
 
-
             //Prevents the dialogue from moving forward while the conversation log is open
             while(conversationLog.activeInHierarchy == true)
             {
-                yield return null;
+                //yield return null;
             }
 
             //DOESN'T WORK
             //Prevents the dialogue from moving forward while the mouse is hovering over the
             //conversation log button
+            /*
             while(conversationLogButton.GetComponent<ButtonHoverChecker>().mouseHoveringOverButton == true)
+            {
+              yield return null;
+            }
+            */
+
+            //Prevents the dialogue from moving forward when there's an interrupting line of
+            //dialogue that comes after it
+            while(lineIsInterrupted == true)
             {
                 yield return null;
             }
@@ -202,13 +213,13 @@ namespace Yarn.Unity.Example
             }
             */
 
+
             // Hide the text and prompt
             lineText.gameObject.SetActive(false);
             lineTextBackground.gameObject.SetActive(false);
 
             if(continuePrompt != null)
                 continuePrompt.SetActive(false);
-
         }
 
         /// Show a list of options, and wait for the player to make a selection.
@@ -289,7 +300,8 @@ namespace Yarn.Unity.Example
         /// Called when the dialogue system has finished running.
         public override IEnumerator DialogueComplete()
         {
-            Debug.Log("Complete!");
+            //Modified from example to show which dialogue runner is claiming to be complete
+            Debug.Log(this.gameObject.name + ": Complete!");
 
             // Hide the dialogue interface.
             if(dialogueContainer != null)
