@@ -36,4 +36,12 @@ public class ExtraButtonFunctions : MonoBehaviour {
             conversationLogIsOpen = false;
         }
     }
+
+    /// <summary>
+    /// Causes audio to be played whenever the player presses an option button.
+    /// </summary>
+    public void PlayOptionButtonAudio()
+    {
+        this.GetComponent<AudioSource>().Play();
+    }
 }

@@ -22,7 +22,7 @@
 	{
 		"title": "RubyAlrightOkay",
 		"tags": "",
-		"body": "<<activateInterruptingSpeechBubble Ruby>><<overridePose Ruby happy>><<triggerSound VocalBarkSoundFX sampleLaugh>>Alright, okay! Sounds like you had an awesome time...",
+		"body": "<<activateInterruptingSpeechBubble Ruby interruptionOne>><<overridePose Ruby happy>>Alright, okay! Sounds like you had an awesome time...",
 		"position": {
 			"x": 249,
 			"y": -334

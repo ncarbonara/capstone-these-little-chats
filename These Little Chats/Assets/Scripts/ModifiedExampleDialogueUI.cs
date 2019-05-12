@@ -83,9 +83,13 @@ namespace Yarn.Unity.Example
 
         public GameObject conversationLog;
         public GameObject conversationLogButton;
+        public GameObject environmentSoundFXGameObject;
         public bool conversationLogButtonIsBeingHoveredOver;
 
         public bool lineIsInterrupted;
+        public bool soundEffectIsPlaying;
+
+        public int timesContinuePromptWasShown;
 
         void Awake()
         {
@@ -106,45 +110,51 @@ namespace Yarn.Unity.Example
                 continuePrompt.SetActive(false);
 
             conversationLogButtonIsBeingHoveredOver = false;
+
+            timesContinuePromptWasShown = 0;
         }
 
         /// Show a line of dialogue, gradually
         public override IEnumerator RunLine(Yarn.Line line)
         {
 
-            // Show the text
-            lineText.gameObject.SetActive(true);
-            lineTextBackground.gameObject.SetActive(true);
+                // Show the text
+                lineText.gameObject.SetActive(true);
+                lineTextBackground.gameObject.SetActive(true);
 
-            if(textSpeed > 0.0f)
-            {
-                // Display the line one character at a time
-                var stringBuilder = new StringBuilder();
 
-                foreach(char c in line.text)
+                if(textSpeed > 0.0f)
                 {
-                    stringBuilder.Append(c);
-                    lineText.text = stringBuilder.ToString();
-                    yield return new WaitForSeconds(textSpeed);
+                    // Display the line one character at a time
+                    var stringBuilder = new StringBuilder();
+
+                    foreach(char c in line.text)
+                    {
+                        stringBuilder.Append(c);
+                        lineText.text = stringBuilder.ToString();
+                        yield return new WaitForSeconds(textSpeed);
+                    }
+
+                    //Once the line is finished displaying, it is recorded in the conversation log
+                    conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
+
+                }
+                else
+                {
+                    // Display the line immediately if textSpeed == 0
+                    lineText.text = line.text;
+
+                    //Once the line is finished displaying, it is recorded in the conversation log
+                    conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
                 }
 
-                //Once the line is finished displaying, it is recorded in the conversation log
-                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
-
-            }
-            else
-            {
-                // Display the line immediately if textSpeed == 0
-                lineText.text = line.text;
-
-                //Once the line is finished displaying, it is recorded in the conversation log
-                conversationLog.GetComponent<ConversationLogScript>().AddToConversationLog(this.gameObject);
-            }
-
-            // Show the 'press any key' prompt when done, if we have one
-            if(continuePrompt != null
-                && lineText.GetComponent<TextGradualVisibilityScript>().allTextShown == true)
-                continuePrompt.SetActive(true);
+                // Show the 'press any key' prompt when done, if we have one.
+                //Modified so that it only appears for the first three lines of dialogue the player
+                //sees.
+                if(continuePrompt != null
+                    && timesContinuePromptWasShown < 3)
+                    continuePrompt.SetActive(true);
+                    timesContinuePromptWasShown++;
 
             // Wait for any user input
             while(Input.anyKeyDown == false)
@@ -156,7 +166,7 @@ namespace Yarn.Unity.Example
             //Prevents the dialogue from moving forward while the conversation log is open
             while(conversationLog.activeInHierarchy == true)
             {
-                //yield return null;
+                yield return null;
             }
 
             //DOESN'T WORK
@@ -172,6 +182,12 @@ namespace Yarn.Unity.Example
             //Prevents the dialogue from moving forward when there's an interrupting line of
             //dialogue that comes after it
             while(lineIsInterrupted == true)
+            {
+                yield return null;
+            }
+
+            //Prevents dialogue from continuing until a sound effect has stopped playing
+            while (soundEffectIsPlaying == true)
             {
                 yield return null;
             }

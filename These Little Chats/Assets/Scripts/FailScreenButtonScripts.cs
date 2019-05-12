@@ -12,6 +12,10 @@ using Yarn.Unity;   //Lets us talk to Yarn stuff
 /// </summary>
 public class FailScreenButtonScripts : MonoBehaviour {
 
+    public GameObject primaryDialogue;
+    public string desiredRestartNode;
+    public GameObject failScreenObjects;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -19,7 +23,11 @@ public class FailScreenButtonScripts : MonoBehaviour {
 
     public void RetryGame()
     {
-        SceneManager.LoadScene("MainScene");
+        primaryDialogue.GetComponent<DialogueRunner>().startNode = desiredRestartNode;
+        primaryDialogue.GetComponent<DialogueRunner>().StartDialogue();
+        failScreenObjects.SetActive(false);
+
+        //SceneManager.LoadScene("MainScene");
 
         //This is all code that was meant to start the scene from partway through rather than at the
         //very beginning when the player restarts the game. It doesn't work yet, unfortunately.
@@ -47,6 +55,7 @@ public class FailScreenButtonScripts : MonoBehaviour {
         Application.Quit();
     }
 
+    /*
     /// <summary>
     /// Triggers the fail screen from the Yarn file when the player has caused someone to leave
     /// </summary>
@@ -55,4 +64,5 @@ public class FailScreenButtonScripts : MonoBehaviour {
     {
         SceneManager.LoadScene("FailScreen");
     }
+    */
 }

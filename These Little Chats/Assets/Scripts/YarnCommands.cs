@@ -43,6 +43,9 @@ public class YarnCommands : MonoBehaviour {
     public GameObject quaternarySpeechBubble;
     public GameObject quaternaryNameText;
 
+    //Contains the fail screen
+    public GameObject failScreenObjects;
+
     //The sprites that the pose image cycles through based on the character's mood
     /*
     public GameObject characterPoseGameObject;
@@ -102,7 +105,7 @@ public class YarnCommands : MonoBehaviour {
     public GameObject irritatedPoseGameObject;
     public GameObject veryAngryPoseGameObject;
     public GameObject rollingD20PoseGameObject;
-    public GameObject shockedPoseGameObject;
+    public GameObject uncomfortablePoseGameObject;
     public GameObject dungeonMasterNarrationPoseGameObject;
     public GameObject rantingPoseGameObject;
     public GameObject sadPoseGameObject;
@@ -192,8 +195,10 @@ public class YarnCommands : MonoBehaviour {
     bool startNewQuaternarySpeechBubbleLerp;
     bool quaternarySpeechBubbleLerpInProcess;
 
-    //The game object that handles sound effects, for functions that also need to trigger some FX
+    //The game objects that handle sound effects and music, for functions that also need to trigger
+    //FX or music in addition to their other operations
     public GameObject soundFXGameObject;
+    public GameObject musicGameObject;
     GameObject d20RollSoundFXGameObject;
 
     //Variables used to help manage when people interrupt each other
@@ -686,7 +691,7 @@ public class YarnCommands : MonoBehaviour {
     /// </summary>
     /// <param name="characterIsOnScreen"></param>
     [YarnCommand("showCharacter")]
-    public void showCharacter(string characterIsOnScreen)
+    public void ShowCharacter(string characterIsOnScreen)
     {
         if(characterIsOnScreen == "true")
         {
@@ -704,20 +709,11 @@ public class YarnCommands : MonoBehaviour {
     [YarnCommand("overridePose")]
     public void OverridePose(string newPose)
     {
-        //NOTE: Currently these lines also cause the pose image to lerp to the appropriate
-        //position. We may not need these in prototypes that have more finalized art,
-        //possibly, maybe, IDK.
         if(newPose == "veryHappy")
         {
             newPoseGameObject = veryHappyPoseGameObject;
             preD20RollPoseGameObject = veryHappyPoseGameObject;
-
-            //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
-            /*
-            plusTwoPoseGameObject.gameObject.SetActive(true);
-            defaultPoseGameObject.gameObject.SetActive(false);
-            temporaryPoseGameObject = plusTwoPoseGameObject;
-            */
+            poseIsChanging = true;
 
             //OUTDATED LERP CODE
             /*
@@ -731,13 +727,7 @@ public class YarnCommands : MonoBehaviour {
         {
             newPoseGameObject = happyPoseGameObject;
             preD20RollPoseGameObject = happyPoseGameObject;
-
-            //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
-            /*
-            plusOnePoseGameObject.gameObject.SetActive(true);
-            defaultPoseGameObject.gameObject.SetActive(false);
-            temporaryPoseGameObject = plusOnePoseGameObject;
-            */
+            poseIsChanging = true;
 
             //OUTDATED LERP CODE
             /*
@@ -750,13 +740,7 @@ public class YarnCommands : MonoBehaviour {
         {
             newPoseGameObject = neutralPoseGameObject;
             preD20RollPoseGameObject = neutralPoseGameObject;
-
-            //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
-            /*
-            zeroPoseGameObject.gameObject.SetActive(true);
-            defaultPoseGameObject.gameObject.SetActive(false);
-            temporaryPoseGameObject = zeroPoseGameObject;
-            */
+            poseIsChanging = true;
 
             //OUTDATED LERP CODE
             /*
@@ -770,13 +754,7 @@ public class YarnCommands : MonoBehaviour {
         {
             newPoseGameObject = irritatedPoseGameObject;
             preD20RollPoseGameObject = irritatedPoseGameObject;
-
-            //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
-            /*
-            minusOnePoseGameObject.gameObject.SetActive(true);
-            defaultPoseGameObject.gameObject.SetActive(false);
-            temporaryPoseGameObject = minusOnePoseGameObject;
-            */
+            poseIsChanging = true;
 
             //OUTDATED LERP CODE
             /*
@@ -790,13 +768,7 @@ public class YarnCommands : MonoBehaviour {
         {
             newPoseGameObject = veryAngryPoseGameObject;
             preD20RollPoseGameObject = veryAngryPoseGameObject;
-
-            //Stand-in, simplified gameObject code until I figure out the fade-in/fade-out
-            /*
-            minusTwoPoseGameObject.gameObject.SetActive(true);
-            defaultPoseGameObject.gameObject.SetActive(false);
-            temporaryPoseGameObject = minusTwoPoseGameObject;
-            */
+            poseIsChanging = true;
 
             //OUTDATED LERP CODE
             /*
@@ -805,25 +777,27 @@ public class YarnCommands : MonoBehaviour {
             startNewPoseLerp = true;
             poseLerpInProcess = true;
             */
-        } else if (newPose == "shocked")
+        } else if (newPose == "uncomfortable")
         {
-            newPoseGameObject = shockedPoseGameObject;
-            preD20RollPoseGameObject = shockedPoseGameObject;
+            newPoseGameObject = uncomfortablePoseGameObject;
+            preD20RollPoseGameObject = uncomfortablePoseGameObject;
+            poseIsChanging = true;
         } else if(newPose == "dungeonMasterNarration")
         {
             newPoseGameObject = dungeonMasterNarrationPoseGameObject;
             preD20RollPoseGameObject = dungeonMasterNarrationPoseGameObject;
+            poseIsChanging = true;
         } else if(newPose == "ranting")
         {
             newPoseGameObject = rantingPoseGameObject;
             preD20RollPoseGameObject = rantingPoseGameObject;
+            poseIsChanging = true;
         } else if(newPose == "sad")
         {
             newPoseGameObject = sadPoseGameObject;
             preD20RollPoseGameObject = sadPoseGameObject;
+            poseIsChanging = true;
         }
-
-        poseIsChanging = true;
     }
 
     /// <summary>
@@ -873,17 +847,10 @@ public class YarnCommands : MonoBehaviour {
         {
             primaryDialogueText.GetComponent<Text>().font = inCharacterFont;
             primaryDialogueText.GetComponent<Text>().fontSize = inCharacterFontSize;
-            primaryDialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         } else if (font == "outOfCharacter")
         {
             primaryDialogueText.GetComponent<Text>().font = outOfCharacterFont;
             primaryDialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
-            primaryDialogueText.GetComponent<Text>().fontStyle = FontStyle.Normal;
-        } else if(font == "internalMonologue")
-        {
-            primaryDialogueText.GetComponent<Text>().font = outOfCharacterFont;
-            primaryDialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
-            primaryDialogueText.GetComponent<Text>().fontStyle = FontStyle.Italic;
         }
     }
 
@@ -903,6 +870,16 @@ public class YarnCommands : MonoBehaviour {
     public void DecreaseValue()
     {
         ChangeValue(false);
+    }
+
+    /// <summary>
+    /// Sends the player to the fail screen
+    /// </summary>
+    [YarnCommand("sendToFailScreen")]
+    public void SendToFailScreen()
+    {
+        musicGameObject.GetComponent<MusicYarnCommands>().FadeOutSound();
+        failScreenObjects.SetActive(true);
     }
 
     /// <summary>

@@ -592,7 +592,7 @@
 	{
 		"title": "Draft2Start",
 		"tags": "",
-		"body": "<<activateSpeechBubble Brynn>>It’s open!\r\n<<overridePose Brynn happy>>\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateOffScreenSpeechBubble Ruby>>Brynn!\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<showCharacter Ruby true>>\r\n<<overridePose Ruby veryHappy>>\r\n<<triggerSound VocalBarkSoundFX sampleGreeting>>\r\n<<activateSpeechBubble Ruby>>Oh my God, it’s so good to finally see you!\r\n<<activateSpeechBubble Ruby>>I was beginning to think you were just going to stay in London forever.\r\n<<activateSpeechBubble Brynn>>Honestly, I wish I could’ve. It was incredible!\r\n<<someoneInterrupting Brynn RubyAlrightOkay 0.75>>The classes...the sightseeing...the events...the FOOD...\r\n<<overridePose Brynn happy>>I did! I really did, but…\r\n<<activateSpeechBubble Brynn>>I also missed you all a lot.\r\n<<fadeOutSound CuedMusicStings>>\r\n<<activateSpeechBubble Brynn>>You guys are my best friends, you know?\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<activateSpeechBubble Ruby>>Aww, thank you Brynn! \r\n<<activateSpeechBubble Ruby>><<overridePose Ruby neutral>>Yeah, I’m glad we can get back to the old campaign!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>Me too!\r\n<<activateSpeechBubble Brynn>>I can’t wait to see how it wraps up after all these years.\r\n<<activateSpeechBubble Brynn>>I’m kind of sad to see it end, but at the same time I also really want to see what you all do.\r\n<<activateSpeechBubble Ruby>>I feel the same way. We’ve been playing these characters together for so long. I’m gonna miss them.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>But then we get to start all over with new people, and that’s always really fun.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Yeah, for sure!\r\n[[How's the forensics program?|HowsTheForensics]]\r\n[[New character ideas?|NewCharacter]]\r\n",
+		"body": "<<activateSpeechBubble Brynn>>It’s open!\r\n<<overridePose Brynn happy>>\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateOffScreenSpeechBubble Ruby>>Brynn!\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<showCharacter Ruby true>>\r\n<<overridePose Ruby veryHappy>>\r\n<<triggerSound EnvironmentSoundFX sitDown>>\r\n<<triggerSound VocalBarkSoundFX rubyIntroHey>>\r\n<<activateSpeechBubble Ruby>>Oh my God, it’s so good to finally see you!\r\n<<activateSpeechBubble Ruby>>I was beginning to think you were just going to stay in London forever.\r\n<<triggerSound VocalBarkSoundFX brynnIntroHey>>\r\n<<activateSpeechBubble Brynn>>Honestly, I wish I could’ve. It was incredible!\r\n<<sendToFailScreen Brynn>>\r\n<<someoneInterrupting Brynn RubyAlrightOkay 0.75 interruptionOne>>The classes...the sightseeing...the events...the FOOD...\r\n<<overridePose Brynn happy>>I did! I really did, but…\r\n<<activateSpeechBubble Brynn>>I also missed you all a lot.\r\n<<activateSpeechBubble Brynn>>You guys are my best friends, you know?\r\n<<activateSpeechBubble Ruby>>Aww, thank you Brynn! \r\n<<activateSpeechBubble Ruby>><<overridePose Ruby neutral>>Yeah, I’m glad we can get back to the old campaign!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>Me too!\r\n<<activateSpeechBubble Brynn>>I can’t wait to see how it wraps up after all these years.\r\n<<activateSpeechBubble Brynn>>I’m kind of sad to see it end, but at the same time I also really want to see what you all do.\r\n<<activateSpeechBubble Ruby>>I feel the same way. We’ve been playing these characters together for so long. I’m gonna miss them.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>But then we get to start all over with new people, and that’s always really fun.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Yeah, for sure!\r\n[[How's the forensics program?|HowsTheForensics]]\r\n[[New character ideas?|NewCharacter]]\r\n",
 		"position": {
 			"x": 3322,
 			"y": -433
@@ -666,6 +666,16 @@
 		"position": {
 			"x": 3369,
 			"y": 599
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Draft2IntroSpeech",
+		"tags": "",
+		"body": "<<showCharacter Allison true>>\n<<showCharacter Franklin true>>\n<<showCharacter Lance true>>\n<<showCharacter Ruby true>>\n<<overridePose Allison neutral>>\n<<overridePose Franklin neutral>>\n<<overridePose Lance neutral>>\n<<overridePose Ruby neutral>>\n(INTRO SPEECH)",
+		"position": {
+			"x": 3330,
+			"y": 888
 		},
 		"colorID": 0
 	}
