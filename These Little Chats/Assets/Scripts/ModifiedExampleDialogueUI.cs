@@ -152,7 +152,7 @@ namespace Yarn.Unity.Example
                 //Modified so that it only appears for the first three lines of dialogue the player
                 //sees.
                 if(continuePrompt != null
-                    && timesContinuePromptWasShown < 3)
+                    && timesContinuePromptWasShown < 1)
                     continuePrompt.SetActive(true);
                     timesContinuePromptWasShown++;
 

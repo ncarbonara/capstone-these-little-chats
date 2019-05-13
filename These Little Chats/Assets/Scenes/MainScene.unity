@@ -881,7 +881,7 @@ MonoBehaviour:
   rubyIntroHey: {fileID: 8300000, guid: 1f0061719397adc49988e6223cdff4c4, type: 3}
   franklinUgh: {fileID: 8300000, guid: 5ee88b02cbc4c824197ec98c2e79e614, type: 3}
   allisonSeriously: {fileID: 8300000, guid: 3a8ae784de74e3148a6b45539d76b232, type: 3}
-  lanceNegativeComeOn: {fileID: 8300000, guid: a0eed43eaf727484387a12eaf626fa7a, type: 3}
+  lanceComeOn: {fileID: 8300000, guid: a0eed43eaf727484387a12eaf626fa7a, type: 3}
 --- !u!82 &131235126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3898,7 +3898,7 @@ MonoBehaviour:
   rubyIntroHey: {fileID: 0}
   franklinUgh: {fileID: 0}
   allisonSeriously: {fileID: 0}
-  lanceNegativeComeOn: {fileID: 0}
+  lanceComeOn: {fileID: 0}
 --- !u!1 &812836834
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,7 +5375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: 08518f8aa77c9154b819f58fff857eed, type: 3}
+  - {fileID: 4900000, guid: d8fa84fde0d69df48ae6cafb8c5f7d5b, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -6337,7 +6337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: beceec5119b20fd4cbc482edf24f2194, type: 3}
+  - {fileID: 4900000, guid: d8fa84fde0d69df48ae6cafb8c5f7d5b, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -6772,7 +6772,7 @@ MonoBehaviour:
   rubyIntroHey: {fileID: 0}
   franklinUgh: {fileID: 0}
   allisonSeriously: {fileID: 0}
-  lanceNegativeComeOn: {fileID: 0}
+  lanceComeOn: {fileID: 0}
 --- !u!82 &1487660543
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8380,13 +8380,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: f3b7a01777a70bc45a45b613e112ae43, type: 3}
+  - {fileID: 4900000, guid: d8fa84fde0d69df48ae6cafb8c5f7d5b, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
   variableStorage: {fileID: 1822770182}
   dialogueUI: {fileID: 1822770186}
-  startNode: ThreePersonBanter
+  startNode: IntroSpeech
   startAutomatically: 0
   automaticCommands: 0
 --- !u!4 &1822770185
@@ -9016,7 +9016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: beceec5119b20fd4cbc482edf24f2194, type: 3}
+  - {fileID: 4900000, guid: d8fa84fde0d69df48ae6cafb8c5f7d5b, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10

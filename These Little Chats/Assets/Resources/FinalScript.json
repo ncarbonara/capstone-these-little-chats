@@ -1,0 +1,342 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>It’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateOffScreenSpeechBubble Ruby>>Brynn!\r\n<<triggerSound EnvironmentSoundFX sitDown>>\r\n<<showCharacter Ruby true>>\r\n<<overridePose Ruby veryHappy>>\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<activateSpeechBubble Ruby>><<triggerSound VocalBarkSoundFX rubyIntroHey>>It’s so good to finally see you!\r\n<<activateSpeechBubble Ruby>>I was starting to think you were going to stay in London forever.\r\n<<activateSpeechBubble Brynn>>Honestly, I wish I could’ve. It was incredible!\r\n<<activateSpeechBubble Brynn>><<someoneInterrupting Brynn RubyOkayOkay 1 interruptionOne>>The classes... the sightseeing... the <i>food</i>...\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>> I did! I’m glad I got the chance to study abroad but...\r\n<<activateSpeechBubble Brynn>>I also missed you all a lot.\r\n<<activateSpeechBubble Brynn>>You guys are my best friends, you know?\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>Aww, Brynn! I missed you too!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby neutral>>Without you everyone’s kind of been doing their own thing... \r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>> ... but now that our DM’s here, at least we can get back to D&D!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Yeah! I can’t wait to see how the campaign wraps up after all these years.\r\n<<activateSpeechBubble Brynn>>I’m so excited to see you guys finally battle Lady Malacatha!\r\n<<activateSpeechBubble Ruby>><<triggerSound VocalBarkSoundFX rubyPositive>>I know, I can’t believe we finally cornered her! \r\n<<activateSpeechBubble Ruby>> And all it took to get here was a teensy alliance between nations.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>You’ll be needing that alliance! She’s pretty powerful normally, but who knows what she’ll do now that you’ve backed her into a corner?\r\n<<activateSpeechBubble Ruby>>Hey, we’re the heroes of the Fullcrest Alliance! We can take anything she can throw at us.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Of course! \r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>So I guess this’ll be the last session. I’m kind of sad to see it end, but at the same time I can’t wait to bring you guys a new campaign.\r\n<<activateSpeechBubble Ruby>>I feel the same way. We’ve been playing these characters together for so long. I’m really gonna miss them.\r\n<<activateSpeechBubble Ruby>>But then we get to create new characters, and that’s always a fun time.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Yeah, for sure!\r\n[[How are things with you?|HowAreThings]]\r\n[[Have any new character ideas?|HaveAnyNew]]",
+		"position": {
+			"x": 532,
+			"y": 221
+		},
+		"colorID": 0
+	},
+	{
+		"title": "RubyOkayOkay",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Ruby interruptionOne>><<triggerSound VocalBarkSoundFX rubyLaugh>>Alright, alright! Sounds like you had an awesome time, huh.",
+		"position": {
+			"x": 1081,
+			"y": 219
+		},
+		"colorID": 0
+	},
+	{
+		"title": "HowAreThings",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>So have things been?\r\n<<activateSpeechBubble Ruby>>Everything’s been okay. Sort of...\r\n<<activateSpeechBubble Brynn>>Only sort of? Why?\r\n<<activateSpeechBubble Ruby>><<triggerSound VocalBarkSoundFX rubyUh>>Uh, ‘cause...\r\n<<activateSpeechBubble Ruby>>... ‘cause I’m taking Organic Chemistry this semester! Yeah, that class is killing me.\r\n<<activateSpeechBubble Brynn>>Oh, I don’t want to know, do I?\r\n<<activateSpeechBubble Ruby>><i>Nope</i>.\r\n<<activateSpeechBubble Ruby>>I tried finding a study group but... talking to people is hard.\r\n<<activateSpeechBubble Brynn>>I’m sure everyone in your class feels that way, too.\r\n<<activateSpeechBubble Ruby>>Yeah, maybe.\r\n<<activateSpeechBubble Ruby>>It was just nice back in high school when we could always go to each other for help.\r\n<<activateSpeechBubble Ruby>>Franklin helped me get through history, and I’m pretty sure you saved my AP English grade!\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>You know we’ve got your back! \r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>But, if you’re having trouble, you’ve gotta make sure to ask for help, okay?\r\n<<activateSpeechBubble Brynn>>Promise you’ll look into getting some tutoring?\r\n<<activateSpeechBubble Ruby>>Yeah, of course.\r\n[[Rebranch1]]\r\n\r\n\r\n\r\n",
+		"position": {
+			"x": 293,
+			"y": 504
+		},
+		"colorID": 0
+	},
+	{
+		"title": "HaveAnyNew",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>So have any ideas about who your next character will be?\r\n<<activateSpeechBubble Ruby>><<triggerSound VocalBarkSoundFX rubyThinking>>Hmmm...\r\n<<activateSpeechBubble Ruby>>I don’t know, Vel is the best character I’ve ever made so topping her is going to be pretty hard.\r\n<<activateSpeechBubble Ruby>>Oh, oh! What if I played her twin?\r\n<<activateSpeechBubble Brynn>>Vel has a twin?\r\n<<activateSpeechBubble Ruby>>Well she doesn’t right now, but she could!\r\n<<activateSpeechBubble Ruby>>Oooh! Twins who were separated at birth! \r\n<<activateSpeechBubble Ruby>>Maybe the other one grew up somewhere else with a different family, but like Vel she discovered she had an affinity for magic, or something.\r\n<<activateSpeechBubble Brynn>>Fair enough, but are you sure you’re not interested in trying someone else?\r\n<<activateSpeechBubble Ruby>>Well I don’t know, I just love the way it feels to play her. \r\n<<activateSpeechBubble Ruby>>She’s kind and caring, yet powerful. So powerful that she can keep all the people she cares about standing strong. People rely on her and look up to her.\r\n<<activateSpeechBubble Brynn>>She <i>is</i> pretty incredible. Alright, you could play her twin if you wanted to.\r\n<<activateSpeechBubble Ruby>>Thanks Brynn! I know it’s not the most original idea, though. I’ll probably check out the handbook one more time and see if I get any other bright ideas.\r\n[[Rebranch1]]",
+		"position": {
+			"x": 758,
+			"y": 511
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch1",
+		"tags": "",
+		"body": "<<triggerSound EnvironmentSoundFX doorKnock>>\r\n<<activateOffScreenSpeechBubble Franklin>>It’s me!\r\n<<activateSpeechBubble Brynn>>Door’s open!\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateSpeechBubble Ruby>>Woah, Franklin’s here already?\r\n<<triggerSound EnvironmentSoundFX sitDown>>\r\n<<showCharacter Franklin true>>\r\n<<activateSpeechBubble Franklin>><<triggerSound VocalBarkSoundFX franklinIntroHey>> Hey, guys!\r\n<<activateSpeechBubble Ruby>>Wow, look who’s on time for once!\r\n<<activateSpeechBubble Brynn>>I’m so proud of you! Is this gonna be a regular thing?\r\n<<activateSpeechBubble Franklin>>I wouldn’t bet on it, you know how much my manager loves keeping me past clock out.\r\n<<activateSpeechBubble Ruby>>So what happened?\r\n<<activateSpeechBubble Franklin>>Well, I might’ve told him about this awesome friend of mine who had just come back to the states. He let me leave a little early to meet with them.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Very nice! Maybe after working for there for years, you’ve finally wormed your way into his little old heart.\r\n<<activateSpeechBubble Brynn>>So, when do I get to meet this really cool friend of yours?\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>> <<triggerSound VocalBarkSoundFX franklinLaugh>>Oh, shut up.\r\n<<activateSpeechBubble Franklin>>It’s good to have you back, Brynn.\r\n<<activateSpeechBubble Brynn>>It’s good to be back!\r\n<<activateSpeechBubble Ruby>>Ahem!\r\n<<activateSpeechBubble Franklin>>It’s great to see you too, Ruby, as always.\r\n<<activateSpeechBubble Franklin>><<someoneInterrupting Franklin RubyItsOkayReally 2 interruptionOne>>And about not being able to meet up, I’m sorry. Scheduling these past few months has been... well—\r\n[[Been working a lot these days?|BeenWorkingALot]]\r\n[[Ready to jump back in?|ReadyToJump]]",
+		"position": {
+			"x": 509,
+			"y": 760
+		},
+		"colorID": 0
+	},
+	{
+		"title": "RubyItsOkayReally",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Ruby interruptionOne>><<overridePose Ruby happy>>It’s okay! Really, don’t worry about it. ",
+		"position": {
+			"x": 1109,
+			"y": 762
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ReadyToJump",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Need any help getting back up to speed?\r\n<<activateSpeechBubble Franklin>><<triggerSound VocalBarkSoundFX franklinThinking>>I think I’ve got it. I had a few minutes to look over my character sheet yesterday.\r\n<<activateSpeechBubble Franklin>>Barbarians can’t rage when wearing heavy armor, right?\r\n<<activateSpeechBubble Brynn>>Correct.\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>>Cool, got it. Been looking forward to being the big damage-dealer again.\r\n[[Rebranch2]]",
+		"position": {
+			"x": 786,
+			"y": 969
+		},
+		"colorID": 0
+	},
+	{
+		"title": "BeenWorkingALot",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Is your schedule still the same?\r\n<<activateSpeechBubble Franklin>><<triggerSound VocalBarkSoundFX franklinUgh>>Yep, unfortunately. \r\n<<activateSpeechBubble Franklin>>I mean, school and work are fine on their own, but, like, the <i>both</i> of them together?\r\n<<activateSpeechBubble Franklin>>You know what I mean.\r\n<<activateSpeechBubble Brynn>>I get it. Just don’t push yourself too hard.\r\n<<activateSpeechBubble Ruby>>Yeah, take breaks so we can actually <i>see</i> you!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>>That’s why I’m here. To sit back, relax, and roll crits on some monsters.\r\n[[Rebranch2]]",
+		"position": {
+			"x": 255,
+			"y": 980
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch2",
+		"tags": "",
+		"body": "<<activateSpeechBubble Franklin>>So what about you, Brynn? How are you?\r\n<<activateSpeechBubble Brynn>>Oh, I’m good! Even better now that I’m back here with you guys.\r\n<<activateSpeechBubble Brynn>>Let me tell you, going cold turkey on RPG’s after playing once a week for two years?\r\n<<activateSpeechBubble Brynn>>Not fun.\r\n<<activateSpeechBubble Ruby>>No kidding! How do you think we felt?\r\n<<activateSpeechBubble Franklin>>Yeah, and at the very least you know what’s coming next. Us? You left us right as we got to Lady Malacatha’s castle last session! <i>Lady Malacatha</i>.\r\n<<activateSpeechBubble Ruby>>Seriously! Do you know how horrible this wait has been Brynn?! \r\n<<activateSpeechBubble Ruby>>There are laws against torturing people like that! You should’ve been charged with war crimes!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>><<triggerSound VocalBarkSoundFX franklinLaugh>><i>War crimes</i>... \r\n<<activateSpeechBubble Brynn>><<triggerSound VocalBarkSoundFX brynnLaugh>>I’m sorry, I’m sorry! I had to catch my flight!\r\n<<activateSpeechBubble Ruby>>Uh huh, likely story. But no excuses this time! Today’s the day we finally end Malacatha’s tyrannical reign, right, Franklin?\r\n<<activateSpeechBubble Franklin>>Damn right! Assuming everything goes smoothly, anyway.\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin neutral>><<triggerSound VocalBarkSoundFX franklinThinking>>And, uh, speaking of things going smoothly, are those two still...?\r\n<<activateSpeechBubble Ruby>><<overridePose Franklin neutral>><<overridePose Ruby neutral>><<triggerSound VocalBarkSoundFX rubyUh>>Oh... um... yeah. At least... if anything’s changed, I haven’t heard.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn neutral>>Heard about what, exactly?\r\n<<activateSpeechBubble Franklin>>The Allison and Lance mess.\r\n<<activateSpeechBubble Brynn>>The... what?\r\n<<activateSpeechBubble Ruby>>Frank, she just got back.\r\n<<activateSpeechBubble Franklin>>Oh, duh, of course you wouldn’t know.\r\n<<activateSpeechBubble Franklin>>Well, where do I begin...\r\n<<activateSpeechBubble Franklin>>Do you remember that musical they were trying to produce together?\r\n<<activateSpeechBubble Brynn>>Yeah. Are they still looking for playhouses where they can to show it?\r\n<<activateSpeechBubble Ruby>>Wait a sec. I mean, maybe we don’t have to get into this right now. What if they show up and they’re fine? It has been a while since—\r\n[[LanceAllisonArrival]]",
+		"position": {
+			"x": 499,
+			"y": 1266
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceAllisonArrival",
+		"tags": "",
+		"body": "<<stopSound CuedMusicStings>>\r\n<<activateOffScreenSpeechBubble Allison>><<triggerSound VocalBarkSoundFX allisonSeriously>>What part of “we’re not talking about this today” didn’t you get?  Can you just shut up? \r\n<<activateOffScreenSpeechBubble Lance>><<someoneInterrupting Lance AllisonSureFine 3 interruptionOne>><<triggerSound VocalBarkSoundFX lanceComeOn>> I would if you’d listen to me for five seconds; I’m just trying to get you to understand me here. Can you at least—\r\n\r\n<<activateSpeechBubble Ruby>><<triggerSound VocalBarkSoundFX rubyUh>>Nevermind...\r\n<<activateSpeechBubble Brynn>>That’s...?\r\n<<activateSpeechBubble Franklin>><<triggerSound VocalBarkSoundFX franklinUgh>>*sigh* Allison and Lance? Yup.\r\n<<activateSpeechBubble Ruby>>Sorry Brynn, I should’ve warned you about this but I... didn’t really know how to bring it up.\r\n<<activateOffScreenSpeechBubble Lance>>Jesus, Allison, why are you still so hung up over this? I’ve already told you—\r\n<<activateOffScreenSpeechBubble Allison>><<someoneInterrupting Allison LanceCauseYouWont 2 interruptionOne>>Me?! I’m not hung up about anything! You’re the one who keeps bringing it—\r\n\r\n<<activateOffScreenSpeechBubble Allison>>Well, maybe you should’ve thought about that before you made me look like a complete dumbass!\r\n<<activateSpeechBubble Brynn>>So this has been a thing?\r\n<<activateSpeechBubble Franklin>>For the past few months, yeah.\r\n<<activateSpeechBubble Ruby>>Every time I’ve gotten them together it ends up with them arguing over that show...\r\n<<activateSpeechBubble Franklin>>It just never ends.\r\n<<activateOffScreenSpeechBubble Lance>>WHAT? What fantasy world are you living in where you think I’m the selfish one here?\r\n<<activateOffScreenSpeechBubble Allison>>REALITY.\r\n<<overridePose Allison angry>>\r\n<<overridePose Lance angry>>\r\n<<activateSpeechBubble Franklin>><<triggerSound VocalBarkSoundFX franklinAngryHey>> HEY. GUYS. THE DOOR’S OPEN.\r\n<<triggerSound EnvironmentSoundFX doorOpenClose>>\r\n<<activateOffScreenSpeechBubble Allison>><<cueSimultaneousDialogue Allison LanceAwkwardSilence none none>>...\t\r\n\r\n<<showCharacter Lance true>>\r\n<<showCharacter Allison true>>\r\n<<triggerSound EnvironmentSoundFX sitDown>>\r\n<<activateSpeechBubble Allison>>...\r\n\r\n<<overridePose Allison neutral>>\r\n<<overridePose Lance neutral>>\r\n<<activateSpeechBubble Allison>>So... how much of that did you guys hear?\r\n<<activateSpeechBubble Franklin>>Enough.\r\n<<activateSpeechBubble Allison>><<triggerSound VocalBarkSoundFX allisonSigh>>...Sorry about that.\r\n<<activateSpeechBubble Lance>><<triggerSound VocalBarkSoundFX lanceSigh>>Yeah, sorry... \r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>><<triggerSound VocalBarkSoundFX allisonIntroHey>>It’s really good to see you Brynn. How’s my girl been?\r\n<<activateSpeechBubble Brynn>><<someoneInterrupting Brynn AllisonBoyAmI 1 interruptionOne>>I’m good but... um—\r\n\r\n<<activateSpeechBubble Allison>><<overridePose Allison neutral>> Would it kill you to message someone back the same day?\r\n<<activateSpeechBubble Brynn>>Sorry I... I was just so busy I’d forget every now and then.\r\n<<activateSpeechBubble Allison>>Well, no use sweating about it. Hardly matters when you’re finally back with us!\r\n<<activateSpeechBubble Lance>>It’s <i>absolutely</i> astounding to see you again Brynn!\r\n<<triggerSound CuedMusicStings musicTrackOne>>\r\n<<activateSpeechBubble Lance>><<triggerSound VocalBarkSoundFX lanceIntroHey>>And Ruby and Franklin as well! It’s been some time since we’ve all hung out, huh?\r\n<<activateSpeechBubble Ruby>>Uh, yeah!\r\n<<activateSpeechBubble Ruby>>I hope things have been going well! Err, I mean, I hope that things have been... uh...\r\n<<activateSpeechBubble Allison>>Things’ve been fine. Actually, they’ve been pretty great.\r\n[[Getting any work?|GettingAnyWork]]\r\n[[Ready to jump back into <i>D&D</i>?|ReadyToJumpTwo]]",
+		"position": {
+			"x": 472,
+			"y": 1631
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AllisonSureFine",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Allison interruptionOne>>SURE. FINE. There, are you happy now? Can we finally stop talking about it?\r\n",
+		"position": {
+			"x": 798,
+			"y": 1636
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceAwkwardSilence",
+		"tags": "",
+		"body": "<<activateOffScreenSimultaneousSpeechBubble Lance speakerTwo>>...\n<<activateSimultaneousSpeechBubble Lance speakerTwo>>...",
+		"position": {
+			"x": 1296,
+			"y": 1628
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceCauseYouWont",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Lance interruptionOne>>Cause you won’t fucking talk to me without being a passive aggressive nightmare!",
+		"position": {
+			"x": 1050,
+			"y": 1635
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AllisonBoyAmI",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Allison interruptionOne>><<triggerSound VocalBarkSoundFX allisonPositive>>Boy am I glad to hear that! You had us pretty worried at times honestly.",
+		"position": {
+			"x": 1557,
+			"y": 1619
+		},
+		"colorID": 0
+	},
+	{
+		"title": "GettingAnyWork",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>So... how have you both been? Getting any work?\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>>Ooh, I never told you guys! I’ve been scoring guitar gigs!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>Oh, really?! That’s great to hear!\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>> Thanks! I’m totally stoked. I’m finally making money after all that effort.\r\n<<activateSpeechBubble Ruby>>And Lance, I heard that you’re in a show in the playhouse downtown.\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>>That I am! I’m in a production of <i>Fiddler on the Roof</i>.  \r\n<<activateSpeechBubble Lance>><<overridePose Lance neutral>>I mean it’s not on <i>Broadway</i> or anything, but y’know, still pretty cool.\r\n<<activateSpeechBubble Ruby>>That’s so cool! For both of you.\r\n<<activateSpeechBubble Brynn>>For sure! But, uh... if you don’t mind my asking, what about your musical? Is that going okay?\r\n[[Rebranch3]]",
+		"position": {
+			"x": 208,
+			"y": 1879
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ReadyToJumpTwo",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>So, you both ready for the big finale?\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>><i>Oh</i>, yeah!\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>>Definitely.\r\n<<activateSpeechBubble Lance>>It’s been far too long since I was...\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Arannis Shadowfall. Dashing gentleman, masterful rogue, and sworn enemy of injustice.\r\n<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>>Yep, classic.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Good to see you as always, Arannis.\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Good to be seen!\r\n<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Brynn>>Allison, think you’re ready for all the encounters in the castle?\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>>I mean, as ready as I can be!\r\n<<activateSpeechBubble Allison>><<overridePose Allison neutral>>But yeah, we can beat any of the traps that get thrown our way, as long as we don’t do anything <i>stupid</i>.\r\n<<activateSpeechBubble Lance>><<overridePose Lance neutral>>What’s that supposed to mean?\r\n<<activateSpeechBubble Allison>>Uh, it didn’t <i>mean</i> anything. Just don’t be chaotic-stupid, or whatever.\r\n<<activateSpeechBubble Lance>>Yeah, I know when someone’s trying to call me out.\r\n<<activateSpeechBubble Allison>><<overridePose Allison irritated>><<someoneInterrupting Allison BrynnOkayOkay 1 interruptionOne>>Jesus, are you <i>that</i> insecure—?\r\n[[Rebranch3]]",
+		"position": {
+			"x": 628,
+			"y": 1914
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch3",
+		"tags": "",
+		"body": "<<overridePose Allison neutral>>\r\n<<overridePose Lance neutral>>\r\n<<activateSpeechBubble Lance>>Um, well...\r\n<<activateSpeechBubble Allison>>Right, so, here’s the deal. The show’s kind of...\r\n<<activateSpeechBubble Lance>>We sort of decided that we were going to...\r\n<<activateSpeechBubble Allison>>Put it on hiatus.\r\n<<activateSpeechBubble Lance>>...Yeah, exactly.\r\n<<activateSpeechBubble Brynn>>I’m sorry to hear that. I know it meant a lot to you, Allison.\r\n<<activateSpeechBubble Allison>>It’s fine. I’m over it. Besides, we just couldn’t seem to work well together.\r\n<<activateSpeechBubble Lance>>Yeah, you know how it is. Some people just get so invested in a project that if any little thing goes wrong suddenly it’s the end of the world.\r\n<<activateSpeechBubble Allison>><<someoneInterrupting Allison LanceHeyIWasHonest 3 interruptionOne>>I mean, when <i>someone else</i> misses a ton of rehearsals and an <i>absolutely</i> critical meeting with playhouse owners—\r\n\r\n<<activateSpeechBubble Brynn>>Okay! I’m sorry, we don’t have to keep talking about it. I didn’t mean to make things awkward.\r\n<<activateSpeechBubble Lance>>No it’s... it’s okay. We’re fine.\r\n<<activateSpeechBubble Brynn>>How about we just try playing some D&D? We won’t have to worry about anything else that’s going on, just relax and have fun for a bit.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>We’ve come a long way. It would be shame to just let Lady Malacatha’s plans come to fruition, right?\r\n<<activateSpeechBubble Allison>>Yeah, you’re right. I’ve missed this too much.\r\n<<activateSpeechBubble Lance>>True enough.\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>><<changeFont Lance inCharacter>><<triggerSound VocalBarkSoundFX lanceCharacter>>Fear not, everyone. Arannis Shadowfall is at your side!\r\n<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Brynn>>Okay, everyone ready?\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>>Yeah, let’s do it!\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby happy>>Yes!\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>>You bet.\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>><<changeFont Lance inCharacter>>Onward to victory!\r\n<<changeFont Lance outOfCharacter>>\r\n[[IntroSpeech]]\r\n",
+		"position": {
+			"x": 430,
+			"y": 2222
+		},
+		"colorID": 0
+	},
+	{
+		"title": "BrynnOkayOkay",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Brynn interruptionOne>>Okay, okay! What’s wrong you two? What happened with the musical?",
+		"position": {
+			"x": 1038,
+			"y": 1913
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceHeyIWasHonest",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Lance interruptionOne>><<overridePose Lance irritated>>Hey! I was honest about my other commitments. I can’t put my life on pause just for one little—",
+		"position": {
+			"x": 992,
+			"y": 2258
+		},
+		"colorID": 0
+	},
+	{
+		"title": "IntroSpeech",
+		"tags": "",
+		"body": "<<fadeOutSound CuedMusicStings>>\r\n<<overridePose Brynn neutral>>\r\n<<overridePose Allison neutral>>\r\n<<overridePose Franklin neutral>>\r\n<<overridePose Lance neutral>>\r\n<<overridePose Ruby neutral>>\r\n<<activateSpeechBubble Brynn>>Alright, then.\r\n<<triggerSound CuedMusicStings musicTrackTwo>>\r\n<<activateSpeechBubble Brynn>>When last we saw our heroes, the great adventurers of lore, they were continuing their quest to defeat Lady Malacatha and end her reign of tyranny.\r\n<<activateSpeechBubble Brynn>>The heroes had been fighting her for a long time. They’d met many friends along the way, some of them brave warriors, some of them ordinary townsfolk...\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>>Like Garth, the tavern owner.\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>>Oh my God, do you think he’s still angry at us?\r\n<<activateSpeechBubble Lance>>Hey, it’s not our fault he didn’t have fire insurance for his tavern.\r\n<<activateSpeechBubble Ruby>>I’m still really sorry about that!\r\n<<overridePose Franklin neutral>>\r\n<<overridePose Lance neutral>>\r\n<<activateSpeechBubble Brynn>>And now, inspired by the heroes, these friends and comrades have begun an assault on Lady Malacatha’s castle.\r\n<<activateSpeechBubble Brynn>>If all goes well, the group will finally complete the mission they’ve had for so long.\r\n<<activateSpeechBubble Allison>>Alright, so we’d snuck up next to the castle, right? What’s the area look like again, Brynn?\r\n[[Rocky, and covered in sand.|RockySandy]]\r\n[[Cracked by lava fissures.|Lava]]\r\n[[Covered in snow.|Snow]]",
+		"position": {
+			"x": 415,
+			"y": 2548
+		},
+		"colorID": 0
+	},
+	{
+		"title": "RockySandy",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>There are huge points of obsidian rock coming out of the pale desert ground surrounding her glooming, gothic castle. \r\nIt should give you adequate cover with which to approach.\r\n<<activateSpeechBubble Allison>>Solid, good to know.\r\n<<activateSpeechBubble Brynn>>The dune on which you’re standing gives you a good view of the battle below. \r\nThe Fullcrest Alliance is fighting Malacatha’s forces in a vast desert plain about a mile away.\r\n[[Rebranch4]]",
+		"position": {
+			"x": 63,
+			"y": 3010
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Lava",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Her castle is surrounded by lava flows from the foot of the nearby volcano...\r\n... the glow from which highlights the castle’s glooming, gothic silhouette.\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>>Oooh, super-ominous. Love it.\r\n<<activateSpeechBubble Brynn>>The rocky hill on which you’re standing gives you a good view of the battle below. \r\nThe Fullcrest Alliance is fighting Malacatha’s forces in a vast rocky plain about a mile away.\r\n[[Rebranch4]]",
+		"position": {
+			"x": 422,
+			"y": 3011
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Snow",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>Underneath a stormy sky, the entire landscape is covered in snow and ice. A billowing storm is sending more snow down upon you.\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>>I have to say, Brynn. As far as locations for final showdowns go, this is pretty unique.\r\n<<activateSpeechBubble Brynn>><<overridePose Brynn happy>>Thanks!\r\n<<overridePose Brynn neutral>>\r\n<<activateSpeechBubble Brynn>>There’s snow in the air, but you can still see the battle in the clearing below.\r\nThe Fullcrest Alliance is fighting Malacatha’s forces in a tundra expanse about a mile away.\r\n[[Rebranch4]]",
+		"position": {
+			"x": 735,
+			"y": 3011
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Rebranch4",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>As far as you can tell, Malacatha’s forces haven’t noticed that you’ve split away from the Alliance.\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Brilliant. We have the element of surprise.\r\n<<activateSpeechBubble Allison>><<triggerSound VocalBarkSoundFX allisonCharacter>>Yes, it seems the plan’s worked perfectly. Perhaps you should have had more faith in me, Arannis.\r\n<<activateSpeechBubble Lance>>Yes, yes, Tiana, you and your plans.\r\n<<activateSpeechBubble Allison>>Whine if you like. Gundren, are you ready for battle?\r\n<<changeFont Allison outOfCharacter>>\r\n<<activateSpeechBubble Franklin>>Jumping in just like that, huh? Alright, let me see if I can find the voice...\r\n<<activateSpeechBubble Franklin>><<changeFont Franklin inCharacter>><<triggerSound VocalBarkSoundFX franklinCharacter>>The sooner we reach Malacatha and slay her, the better. Let’s move.\r\n<<activateSpeechBubble Lance>>I couldn’t agree more! Have your Teleportation spell handy, Vel?\r\n<<activateSpeechBubble Ruby>><<triggerSound VocalBarkSoundFX rubyCharacter>>Why of course, Arannis! \r\n<<activateSpeechBubble Ruby>>Where should I teleport us again? The throne room?\r\n<<activateSpeechBubble Lance>>Precisely! Preferably right on top of Malacatha’s miserable face, if you would.\r\n<<changeFont Ruby outOfCharacter>>\r\n<<activateSpeechBubble Ruby>>Alright, I cast Teleport!\r\n<<activateSpeechBubble Brynn>>Okay, okay, so as you begin casting Teleport, I’m going to need you to make a Wisdom check.\r\n<<activateSpeechBubble Ruby>>A Wisdom check? That’s... new. Okay um...\r\n<<rollD20 Ruby>>\r\n<<activateSpeechBubble Ruby>>18.\r\n<<activateSpeechBubble Brynn>>18? Sorry, but you feel the influence of something emanating from the castle. Some dark and twisted presence clouds your mind.\r\n<<activateSpeechBubble Ruby>>Uh-oh... What happens?\r\n[[Your spell is blocked.|SpellIsBlocked]]\r\n[[You take damage.|YouTakeDamage]]\r\n",
+		"position": {
+			"x": 326,
+			"y": 3410
+		},
+		"colorID": 0
+	},
+	{
+		"title": "SpellIsBlocked",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>You recover, and realize that your spell isn’t working.\r\n<<activateSpeechBubble Brynn>>Clearly, Lady Malacatha didn’t want anyone to be able to reach her so easily.\r\n<<activateSpeechBubble Ruby>><<changeFont Ruby inCharacter>>Everyone, something’s not right. My spell won’t work.\r\n[[MajorChoice1]]",
+		"position": {
+			"x": 46,
+			"y": 3745
+		},
+		"colorID": 0
+	},
+	{
+		"title": "YouTakeDamage",
+		"tags": "",
+		"body": "<<activateSpeechBubble Brynn>>From the shock of the sudden pain, you drop the spell aaand...\r\n<<activateSpeechBubble Brynn>>[Dice Rolling] ...take 36 points of psychic damage! You stumble to the ground, your head pounding from whatever just happened.\r\n<<activateSpeechBubble Ruby>><i>36?</i> Oh my God!\r\n<<activateSpeechBubble Allison>><<changeFont Allison inCharacter>>Vel? Vel, what’s wrong?\r\n<<activateSpeechBubble Ruby>>Ow...it’s nothing. I’m okay.\r\n<<activateSpeechBubble Ruby>>Something stopped me from teleporting us in. This must be Malacatha’s doing.\r\n[[MajorChoice1]]",
+		"position": {
+			"x": 649,
+			"y": 3747
+		},
+		"colorID": 0
+	},
+	{
+		"title": "MajorChoice1",
+		"tags": "",
+		"body": "<<changeFont Ruby outOfCharacter>>\r\n<<activateSpeechBubble Brynn>>Anyway, Vel, you can discern that this anti-magic field seems to emanate from the castle itself. You doubt you’ll be able to teleport within its walls.\r\n<<activateSpeechBubble Ruby>>Oh, yikes. I do so, then report all of this to the party.\r\n<<activateSpeechBubble Allison>><<changeFont Allison inCharacter>>Well, <i>that</i> complicates things. Vel, do you think you could try again?\r\n<<changeFont Allison outOfCharacter>>\r\n<<activateSpeechBubble Ruby>><<someoneInterrupting Ruby RubyErrIMean 3 interruptionOne>>I don’t know, I don’t think so. I’d probably need to roll at least a 19 to—\r\n\r\n<<activateSpeechBubble Franklin>>Damn. So we can’t teleport in, and we probably can’t smash our way in, either.\r\n<<fadeOutSound CuedMusicStings>>\r\n<<activateSpeechBubble Lance>> Hardly a problem when Arannis Shadowfall is at your side! Stand back, everyone.\r\n<<changeFont Allison outOfCharacter>>\r\n<<activateSpeechBubble Allison>><<overridePose Allison irritated>><<triggerSound VocalBarkSoundFX allisonNegative>>Oh, God...\r\n<<activateSpeechBubble Lance>><<someoneInterrupting Lance AllisonYeeeahNo 3 interruptionOne>>Alright, so I stretch my arms and jog in place for a moment, then beeline towards the castle wall—\r\n\r\n<<activateSpeechBubble Lance>><<overridePose Lance irritated>>Wh—? <i>*Sigh*</i>\r\n<<triggerSound CuedMusicStings musicTrackThree>>\r\n<<changeFont Allison inCharacter>><<activateSpeechBubble Allison>><<overridePose Allison irritated>><<triggerSound VocalBarkSoundFX allisonSeriously>>Arannis, what are you doing?\r\n<<activateSpeechBubble Lance>>Why, no less than saving the mission, <i>Tiana</i>. You know how agile I am. I can vault up the side of the wall and then tie a rope for you all to climb up.\r\n<<activateSpeechBubble Allison>>It’s the enemy’s fortress! There could be undead guards up there; they’d attack you immediately.\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>>They’d try.\r\n<<changeFont Lance outOfCharacter>>\r\n<<activateSpeechBubble Lance>>And then Arannis winks, and cracks his knuckles.\r\n<<activateSpeechBubble Allison>>For the love of...\r\n<<activateSpeechBubble Allison>><<changeFont Allison inCharacter>>No. That could completely ruin our chances of getting in undetected. Don’t be an idiot, Arannis.\r\n<<activateSpeechBubble Lance>><<overridePose Lance irritated>><<triggerSound VocalBarkSoundFX lanceComeOn>>Look here Tiana, I realize that ever since you got us out of that snake pit you’ve fancied yourself as some great tactician...  \r\n<<activateSpeechBubble Lance>> ...but right now my skills are all you need. Aren’t I right, everyone?\r\n<<activateSpeechBubble Allison>>Oh, your <i>“skills”</i>? The ones that got us trapped in that snake pit in the first place? I don’t think so. We have to work as a team.\r\n<<activateSpeechBubble Lance>>Well, what do <i>you</i> propose, then, oh wise-and-noble leader?\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby uncomfortable>><<triggerSound VocalBarkSoundFX rubyUh>>Uh... Arannis? Tiana? I’m sure we’ll all be happy to get inside regardless of what approach we take.\r\n<<activateSpeechBubble Franklin>>Agreed. Are we getting in the castle, or not?\r\n<<activateSpeechBubble Allison>>We will, once <i>Arannis</i> decides to stand down and we find a more intelligent way to proceed.\r\n<<activateSpeechBubble Lance>>This is a fortified castle! What other way could there possibly be to get in?\r\n<<changeFont Lance outOfCharacter>>\r\n[[(Add more details to the castle)|AddDetails]]\r\n[[(Nudge them forward)|NudgeThemForward]]",
+		"position": {
+			"x": 327,
+			"y": 4050
+		},
+		"colorID": 0
+	},
+	{
+		"title": "RubyErrIMean",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Ruby interruption>><<changeFont Ruby inCharacter>><<triggerSound VocalBarkSoundFX rubyUh>>Err... I mean, her anti-magic is probably too strong for my spells to overcome!",
+		"position": {
+			"x": 925,
+			"y": 4060
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AllisonYeeeahNo",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Allison interruptionOne>>Yeeeah, no. Brynn, I stop him. I block his path.",
+		"position": {
+			"x": 1311,
+			"y": 4042
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AddDetails",
+		"tags": "",
+		"body": "<<decreaseValue Lance>>\r\n<<increaseValue Allison>>\r\n<<overridePose Ruby neutral>>\r\n<<activateSpeechBubble Brynn>>*Ahem!* I should point out that there are a few noteworthy elements of the castle, if they’re relevant to whatever you decide. \r\nThere a few high windows here and there along its outer wall, most of which are covered by metal bars. Also...\r\n<<activateSpeechBubble Brynn>>... Every now and again you can see a skeleton archer or two walk across the top of the wall. \r\n<<activateSpeechBubble Brynn>>Finally, you notice a vast column of undead warriors pouring out from the main gates on the other side of the castle towards the nearby battle.\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>><<someoneInterrupting Lance AllisonOhShitWait 2 interruptionOne>>Even with those skeleton archers, I could easily—\r\n\r\n<<activateSpeechBubble Allison>><<changeFont Allison inCharacter>>Alright, Arannis, you want a better idea? How about this, everyone. \r\n<<activateSpeechBubble Allison>>I’ll use Seeming to disguise us all as undead, and we’ll all sneak in through the front gate. \r\n<<activateSpeechBubble Allison>>There’s a smaller chance of us being spotted, and we don’t have to depend the entirety of the mission on our Rogue’s luckiness.\r\n<<activateSpeechBubble Lance>>What? That’s such a roundabout approach! My way is simpler.\r\n<<fadeOutSound CuedMusicStings>>\r\n<<activateSpeechBubble Ruby>>Actually... I like Tiana’s plan. With so many undead marching out the front, they wouldn’t notice a few extra of their number going back inside.\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>>Exactly!\r\n<<activateSpeechBubble Franklin>>Hm, that sounds fine to me.\r\n<<activateSpeechBubble Allison>>Then we’re agreed! Sorry, you’re outvoted, Arannis.\r\n<<activateSpeechBubble Lance>><<triggerSound VocalBarkSoundFX lanceComeOn>>But my way works all the time! You’ve never had a problem with it before!\r\n<<activateSpeechBubble Allison>>The stakes are too high this time. We <i>absolutely</i> cannot be detected before reaching Malacatha.\r\n<<activateSpeechBubble Allison>>Sorry, Arannis, but you can show off some other time, okay?\r\n<<changeFont Allison outOfCharacter>>\r\n<<activateSpeechBubble Lance>>...Sure. Whatever. I go along with it.\r\n<<overridePose Lance neutral>>\r\n<<activateSpeechBubble Allison>>I discreetly make my way around to the front of the castle. Everyone coming?\r\n<<activateSpeechBubble Ruby>>Yep!\r\n<<activateSpeechBubble Franklin>>Sure.\r\n<<activateSpeechBubble Lance>>...Yeah.\r\n<<activateSpeechBubble Brynn>>Alright. You make your way around to the front of the castle. Malacatha’s army is there, as you saw previously. There are skeletons emerging from the castle, in a long, clattering column, alongside various undead.\r\n<<activateSpeechBubble Allison>>Alright, folks, I cast Seeming on everyone, making us all look like... let’s say zombies. Then we move inside.\r\n<<activateSpeechBubble Allison>>Oh, and we should shamble. Like zombies.\r\n<<activateSpeechBubble Brynn>>Sounds good. There’s space for you to enter on either side of the column, and the undead aren’t intelligent enough to perceive you entering. Eventually all the real undead exit and you’re safely alone, for the time being.\r\n<<activateSpeechBubble Franklin>><<overridePose Franklin happy>><<triggerSound VocalBarkSoundFX franklinPositive>>Not bad.\r\n<<activateSpeechBubble Ruby>><<overridePose Ruby veryHappy>><<triggerSound VocalBarkSoundFX rubyYes>>Yeah, that worked like a charm!\r\n<<activateSpeechBubble Allison>><<overridePose Allison happy>><<triggerSound VocalBarkSoundFX allisonSuccess>> Nothing to it.\r\n<<activateSpeechBubble Lance>>Yeah. I mean, my way would’ve worked fine, but if everyone prefers to let Allison tell them what to do, then sure.\r\n<<activateSpeechBubble Allison>><<overridePose Allison irritated>>Lance—! \r\n<<activateSpeechBubble Allison>>...Forget it. Let’s just keep going. \r\n<<activateSpeechBubble Allison>><<overridePose Allison neutral>>Brynn, we’re inside the castle. What now?\r\n[[MajorChoice2]]",
+		"position": {
+			"x": -62,
+			"y": 4395
+		},
+		"colorID": 0
+	},
+	{
+		"title": "NudgeThemForward",
+		"tags": "",
+		"body": "<<increaseValue Lance>>\r\n<<decreaseValue Allison>>\r\n<<overridePose Ruby neutral>>\r\n<<activateSpeechBubble Brynn>>Try not to take too long to decide. This is only the first encounter, you know.\r\n<<activateSpeechBubble Lance>>Yeah, seriously...\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Enough of this! I’m going up the wall.\r\n<<activateSpeechBubble Allison>><<overridePose Allison irritated>><<changeFont Allison inCharacter>>You are <i>not!</i>\r\n<<activateSpeechBubble Franklin>><<changeFont Franklin inCharacter>><<overridePose Franklin irritated>>If Arannis can do it, he should. We can’t kill Malacatha until we get inside.\r\n<<activateSpeechBubble Allison>><<changeFont Allison inCharacter>><<someoneInterrupting Allison LanceOhYouKnow 2 interruptionOne>Gundren, you know him. If he keeps this up—\r\n\r\n<<activateSpeechBubble Franklin>><<triggerSound VocalBarkSoundFX franklinUgh>>Can you two just...? Nevermind.\r\n<<activateSpeechBubble Franklin>><<changeFont Franklin inCharacter>><<overridePose Franklin neutral>>If it gets us in faster, I support Arannis’ plan.\r\n<<activateSpeechBubble Ruby>><<changeFont Ruby inCharacter>>I do, too...I guess.\r\n<<changeFont Ruby outOfCharacter>>\r\n<<activateSpeechBubble Ruby>>I mean, we <i>should</i> get going...\r\n<<activateSpeechBubble Allison>>No, no. It’s fine...\r\n<<activateSpeechBubble Lance>>So you step out of the way?\r\n<<activateSpeechBubble Allison>><i>Sure</i>\r\n<<fadeOutSound CuedMusicStings>>\r\n<<activateSpeechBubble Lance>>Great. I run at the wall and parkour up the side.\r\n<<activateSpeechBubble Brynn>>Okay, give me an acrobatics check.\r\n<<rollD20 Lance>>\r\n<<activateSpeechBubble Lance>>Plus all bonuses, that’s a 25.\r\n<<activateSpeechBubble Brynn>>Alright, you for sure make it up that wall. Do you want to add any flourishes?\r\n<<activateSpeechBubble Lance>><<overridePose Lance happy>><i>Absolutely.</i>\r\n<<activateSpeechBubble Lance>>I grab outcroppings and protruding bricks and things, and do little flips to leap between them.\r\n<<activateSpeechBubble Lance>>When I get to the top, I cartwheel up the ledge, take out two knives and throw them into one guard each.\r\n<<activateSpeechBubble Brynn>>I never <i>said</i> there were guards.\r\n<<activateSpeechBubble Lance>>You never needed to.\r\n<<activateSpeechBubble Brynn>>Well, as it happens, there is a pair skeletons up there. Given your dexterity, I’ll let you have the first attack.\r\n<<activateSpeechBubble Lance>>Nice.\r\n<<rollD20 Lance>>\r\n<<activateSpeechBubble Lance>><<triggerSound VocalBarkSoundFX lancePositive>>Aaand, that’s a crit!\r\n<<activateSpeechBubble Brynn>>Oof! Honestly, for these guards we can skip the damage roll and assume you take them out, given that it was a surprise attack.\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>What’s wrong, my sorry, undead friends? Is Arannis’ speed too much for you?\r\n<<activateSpeechBubble Allison>><<changeFont Allison inCharacter>>Get on with it, Arannis!\r\n<<changeFont Allison outOfCharacter>>\r\n<<activateSpeechBubble Lance>><<overridePose Lance irritated>>Okay, chill.\r\n<<activateSpeechBubble Lance>><<overridePose Lance neutral>>Anyway, I tie a rope onto one of the crenellations and let it down for everyone to climb up on.\r\n<<activateSpeechBubble Lance>><<changeFont Lance inCharacter>>Were my skills to your satisfaction, Tiana?\r\n<<changeFont Lance outOfcharacter>>\r\n<<activateSpeechBubble Allison>>Whatever. Let’s just get inside.\r\n<<activateSpeechBubble Brynn>>Once you’ve all climbed up, you find a trapdoor into the castle on the wall.\r\n[[MajorChoice2]]",
+		"position": {
+			"x": 659,
+			"y": 4387
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AllisonOhShitWait",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Allison interruptionOne>><<changeFont Allison outOfCharacter>><<overridePose Allison neutral>>Oh, shit. Wait a sec...",
+		"position": {
+			"x": 1155,
+			"y": 4355
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LanceOhYouKnow",
+		"tags": "",
+		"body": "<<activateInterruptingSpeechBubble Lance interruptionOne>><<changeFont Lance inCharacter>>Oh, you <i>know</i> me. I see, I see...",
+		"position": {
+			"x": 1660,
+			"y": 4358
+		},
+		"colorID": 0
+	},
+	{
+		"title": "MajorChoice2",
+		"tags": "",
+		"body": "Empty Text",
+		"position": {
+			"x": 286,
+			"y": 4732
+		},
+		"colorID": 0
+	}
+]

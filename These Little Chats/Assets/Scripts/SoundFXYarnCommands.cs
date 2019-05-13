@@ -32,7 +32,7 @@ public class SoundFXYarnCommands : MonoBehaviour {
     public AudioClip rubyIntroHey;
     public AudioClip franklinUgh;
     public AudioClip allisonSeriously;
-    public AudioClip lanceNegativeComeOn;
+    public AudioClip lanceComeOn;
 
     List<AudioClip> soundList = new List<AudioClip>(); 
 
@@ -106,9 +106,9 @@ public class SoundFXYarnCommands : MonoBehaviour {
         {
             this.GetComponent<AudioSource>().clip = allisonSeriously;
             this.GetComponent<AudioSource>().Play();
-        } else if(sound == "lanceNegativeComeOn")
+        } else if(sound == "lanceComeOn")
         {
-            this.GetComponent<AudioSource>().clip = lanceNegativeComeOn;
+            this.GetComponent<AudioSource>().clip = lanceComeOn;
             this.GetComponent<AudioSource>().Play();
         }
     }
