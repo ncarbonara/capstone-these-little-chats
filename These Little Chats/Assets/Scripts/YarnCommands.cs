@@ -928,8 +928,9 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is very pleased.");
 
-            newPoseGameObject = veryHappyPoseGameObject;
-            preD20RollPoseGameObject = veryHappyPoseGameObject;
+            //Cutting pose change stuff, as pose changes are no longer tied to values
+            //newPoseGameObject = veryHappyPoseGameObject;
+            //preD20RollPoseGameObject = veryHappyPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -966,8 +967,9 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is somewhat pleased.");
 
-            newPoseGameObject = happyPoseGameObject;
-            preD20RollPoseGameObject = happyPoseGameObject;
+            //Cutting pose change stuff, as pose changes are no longer tied to values
+            //newPoseGameObject = happyPoseGameObject;
+            //preD20RollPoseGameObject = happyPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -1003,8 +1005,9 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is feeling neutral.");
 
-            newPoseGameObject = neutralPoseGameObject;
-            preD20RollPoseGameObject = neutralPoseGameObject;
+            //Cutting pose change stuff, as pose changes are no longer tied to values
+            //newPoseGameObject = neutralPoseGameObject;
+            //preD20RollPoseGameObject = neutralPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -1041,8 +1044,9 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(false));
             Debug.Log(this.gameObject.name + " is somewhat angry.");
 
-            newPoseGameObject = irritatedPoseGameObject;
-            preD20RollPoseGameObject = irritatedPoseGameObject;
+            //Cutting pose change stuff, as pose changes are no longer tied to values
+            //newPoseGameObject = irritatedPoseGameObject;
+            //preD20RollPoseGameObject = irritatedPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
@@ -1078,8 +1082,9 @@ public class YarnCommands : MonoBehaviour {
             variableManager.SetValue(veryAngryYarnBool, new Yarn.Value(true));
             Debug.Log(this.gameObject.name + " is very angry.");
 
-            newPoseGameObject = veryAngryPoseGameObject;
-            preD20RollPoseGameObject = veryAngryPoseGameObject;
+            //Cutting pose change stuff, as pose changes are no longer tied to values
+            //newPoseGameObject = veryAngryPoseGameObject;
+            //preD20RollPoseGameObject = veryAngryPoseGameObject;
 
             //OUTDATED LERP CODE
             /*
