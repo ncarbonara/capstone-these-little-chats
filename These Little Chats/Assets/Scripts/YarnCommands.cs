@@ -854,6 +854,21 @@ public class YarnCommands : MonoBehaviour {
         }
     }
 
+    [YarnCommand("changeFontSimultaneousDialogue")]
+    public void ChangeFontSimultaneousDialogue(string font)
+    {
+        if(font == "inCharacter")
+        {
+            secondaryDialogueText.GetComponent<Text>().font = inCharacterFont;
+            secondaryDialogueText.GetComponent<Text>().fontSize = inCharacterFontSize;
+        }
+        else if(font == "outOfCharacter")
+        {
+            secondaryDialogueText.GetComponent<Text>().font = outOfCharacterFont;
+            secondaryDialogueText.GetComponent<Text>().fontSize = outOfCharacterFontSize;
+        }
+    }
+
     /// <summary>
     /// Increases the character's value.
     /// </summary>
