@@ -634,15 +634,35 @@ public class YarnCommands : MonoBehaviour {
     {
         if(interruptionNumber == "interruptionOne")
         {
-            secondarySpeechBubble.GetComponent<Transform>().position = new Vector3(primarySpeechBubble.GetComponent<Transform>().position.x, primarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, primarySpeechBubble.GetComponent<Transform>().position.z);
-            secondarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
+            //secondarySpeechBubble.GetComponent<Transform>().position = new Vector3(primarySpeechBubble.GetComponent<Transform>().position.x, primarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, primarySpeechBubble.GetComponent<Transform>().position.z);
+           
+            //Revised approach, where speech bubbles no longer overlap
+            secondarySpeechBubble.GetComponent<Transform>().position =
+                new Vector3(speechBubbleLerpStartMarker.GetComponent<Transform>().position.x,
+                speechBubbleLerpStartMarker.GetComponent<Transform>().position.y,
+                speechBubbleLerpStartMarker.GetComponent<Transform>().position.z);
+            startNewSecondarySpeechBubbleLerp = true;
+            secondarySpeechBubbleLerpInProcess = true;
+            secondarySpeechBubble.GetComponent<Image>().sprite = characterSpeechBubbleSprite;
+
+            //secondarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
             secondarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
             secondaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
             secondaryNameText.GetComponent<Text>().text = this.gameObject.name;
         } else if (interruptionNumber == "interruptionTwo")
         {
-            tertiarySpeechBubble.GetComponent<Transform>().position = new Vector3(secondarySpeechBubble.GetComponent<Transform>().position.x, secondarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, secondarySpeechBubble.GetComponent<Transform>().position.z);
+            //tertiarySpeechBubble.GetComponent<Transform>().position = new Vector3(secondarySpeechBubble.GetComponent<Transform>().position.x, secondarySpeechBubble.GetComponent<Transform>().position.y - 1.5f, secondarySpeechBubble.GetComponent<Transform>().position.z);
+           
+            //Revised approach, where speech bubbles no longer overlap
+            tertiarySpeechBubble.GetComponent<Transform>().position =
+                new Vector3(speechBubbleLerpStartMarker.GetComponent<Transform>().position.x,
+                speechBubbleLerpStartMarker.GetComponent<Transform>().position.y,
+                speechBubbleLerpStartMarker.GetComponent<Transform>().position.z);
+            startNewTertiarySpeechBubbleLerp = true;
+            tertiarySpeechBubbleLerpInProcess = true;
             tertiarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
+
+            //tertiarySpeechBubble.GetComponent<Image>().sprite = characterInterruptingSpeechBubbleSprite;
             tertiarySpeechBubble.GetComponent<Image>().color = characterSpeechBubbleColor;
             tertiaryDialogueText.GetComponent<Text>().color = characterSpeechBubbleColor;
             tertiaryNameText.GetComponent<Text>().text = this.gameObject.name;
@@ -695,11 +715,13 @@ public class YarnCommands : MonoBehaviour {
     {
         if(characterIsOnScreen == "true")
         {
-            //characterPoseGameObject.SetActive(true);
             neutralPoseGameObject.SetActive(true);
         } else if(characterIsOnScreen == "false")
         {
-            neutralPoseGameObject.SetActive(false);
+            //neutralPoseGameObject.SetActive(false);
+            poseIsChanging = false;
+            defaultPoseGameObject.SetActive(false);
+            newPoseGameObject.SetActive(false);
         }
     }
 
