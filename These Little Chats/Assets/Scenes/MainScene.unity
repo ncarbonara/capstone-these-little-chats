@@ -165,8 +165,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Oh man, yeah! I\u2019m just glad none of the named NPCs got killed. We
-    were taking a <i>huge</i> gamble with that flanking maneuver at the end."
+  m_Text: " Oh, why bother, Vel? Arannis has this <i>under control</i>. He can retrieve
+    our fried corpses once he\u2019s finished playing around in there."
 --- !u!222 &2157380
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &24952847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &100721520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -888,9 +888,12 @@ MonoBehaviour:
   allisonTiana: {fileID: 0}
   allisonThinking: {fileID: 0}
   allisonSeriously: {fileID: 8300000, guid: 3a8ae784de74e3148a6b45539d76b232, type: 3}
+  allisonSeriouslyDoor: {fileID: 8300000, guid: f5a281af9dd598444acaf879934ba225,
+    type: 3}
   lanceGameStart: {fileID: 0}
   lanceArannis: {fileID: 0}
   lanceComeOn: {fileID: 8300000, guid: a0eed43eaf727484387a12eaf626fa7a, type: 3}
+  lanceComeOnDoor: {fileID: 8300000, guid: d3b85a5d9613ddc488f1ec573b79e641, type: 3}
 --- !u!82 &131235126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4201,9 +4204,11 @@ MonoBehaviour:
   allisonTiana: {fileID: 0}
   allisonThinking: {fileID: 0}
   allisonSeriously: {fileID: 0}
+  allisonSeriouslyDoor: {fileID: 0}
   lanceGameStart: {fileID: 0}
   lanceArannis: {fileID: 0}
   lanceComeOn: {fileID: 0}
+  lanceComeOnDoor: {fileID: 0}
 --- !u!1 &812836834
 GameObject:
   m_ObjectHideFlags: 0
@@ -7427,9 +7432,11 @@ MonoBehaviour:
   allisonTiana: {fileID: 0}
   allisonThinking: {fileID: 0}
   allisonSeriously: {fileID: 0}
+  allisonSeriouslyDoor: {fileID: 0}
   lanceGameStart: {fileID: 0}
   lanceArannis: {fileID: 0}
   lanceComeOn: {fileID: 0}
+  lanceComeOnDoor: {fileID: 0}
 --- !u!82 &1487660543
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7688,7 +7695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1566938074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8100,7 +8107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1638700102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9043,7 +9050,7 @@ MonoBehaviour:
   overrideLanguage: 10
   variableStorage: {fileID: 1822770182}
   dialogueUI: {fileID: 1822770186}
-  startNode: Start
+  startNode: LanceAllisonArrival
   startAutomatically: 0
   automaticCommands: 0
 --- !u!4 &1822770185

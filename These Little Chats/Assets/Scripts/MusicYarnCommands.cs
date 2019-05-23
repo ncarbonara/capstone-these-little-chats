@@ -19,6 +19,7 @@ public class MusicYarnCommands : MonoBehaviour {
     public AudioClip musicTrackTwo;
     public AudioClip musicTrackThree;
     public AudioClip musicTrackFour;
+    public AudioClip musicTrackFive;
 
     //TENSION LEVEL AUDIO LAYERS (CuedMusicTensionLayers gameObject only)
     public AudioClip lowTensionLayer;
@@ -87,6 +88,11 @@ public class MusicYarnCommands : MonoBehaviour {
         else if(sound == "musicTrackFour")
         {
             this.GetComponent<AudioSource>().clip = musicTrackFour;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "musicTrackFive")
+        {
+            this.GetComponent<AudioSource>().clip = musicTrackFive;
             this.GetComponent<AudioSource>().Play();
         }
 
