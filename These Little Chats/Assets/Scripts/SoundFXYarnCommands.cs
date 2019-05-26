@@ -31,29 +31,40 @@ public class SoundFXYarnCommands : MonoBehaviour {
 
     public AudioClip brynnIntroHey;
     public AudioClip brynnEvilLaugh;
+    public AudioClip brynnUh;
+    public AudioClip brynnThinking;
 
     public AudioClip rubyIntroHey;
     public AudioClip rubyGameStart;
     public AudioClip rubyVel;
     public AudioClip rubyThinking;
     public AudioClip rubyUh;
+    public AudioClip rubyYes;
 
     public AudioClip franklinIntroHey;
     public AudioClip franklinGameStart;
     public AudioClip franklinGundren;
     public AudioClip franklinUgh;
     public AudioClip franklinAngryHey;
+    public AudioClip franklinNotTooSure;
+    public AudioClip franklinHeyNice;
+    public AudioClip franklinThinking;
 
     public AudioClip allisonGameStart;
     public AudioClip allisonTiana;
     public AudioClip allisonThinking;
     public AudioClip allisonSeriously;
     public AudioClip allisonSeriouslyDoor;
+    public AudioClip allisonYes;
+    public AudioClip allisonHey;
 
     public AudioClip lanceGameStart;
     public AudioClip lanceArannis;
     public AudioClip lanceComeOn;
     public AudioClip lanceComeOnDoor;
+    public AudioClip lanceYeahNice;
+    public AudioClip lanceThinking;
+    public AudioClip lanceHey;
 
     List<AudioClip> soundList = new List<AudioClip>(); 
 
@@ -126,6 +137,16 @@ public class SoundFXYarnCommands : MonoBehaviour {
             this.GetComponent<AudioSource>().clip = brynnEvilLaugh;
             this.GetComponent<AudioSource>().Play();
         }
+        else if(sound == "brynnUh")
+        {
+            this.GetComponent<AudioSource>().clip = brynnUh;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "brynnThinking")
+        {
+            this.GetComponent<AudioSource>().clip = brynnThinking;
+            this.GetComponent<AudioSource>().Play();
+        }
         else if(sound == "rubyIntroHey")
         {
             this.GetComponent<AudioSource>().clip = rubyIntroHey;
@@ -149,6 +170,11 @@ public class SoundFXYarnCommands : MonoBehaviour {
         else if(sound == "rubyThinking")
         {
             this.GetComponent<AudioSource>().clip = rubyThinking;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "rubyYes")
+        {
+            this.GetComponent<AudioSource>().clip = rubyYes;
             this.GetComponent<AudioSource>().Play();
         }
         else if(sound == "franklinIntroHey")
@@ -176,6 +202,21 @@ public class SoundFXYarnCommands : MonoBehaviour {
             this.GetComponent<AudioSource>().clip = franklinAngryHey;
             this.GetComponent<AudioSource>().Play();
         }
+        else if(sound == "franklinNotTooSure")
+        {
+            this.GetComponent<AudioSource>().clip = franklinNotTooSure;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "franklinHeyNice")
+        {
+            this.GetComponent<AudioSource>().clip = franklinHeyNice;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "franklinThinking")
+        {
+            this.GetComponent<AudioSource>().clip = franklinThinking;
+            this.GetComponent<AudioSource>().Play();
+        }
         else if(sound == "allisonSeriously")
         {
             this.GetComponent<AudioSource>().clip = allisonSeriously;
@@ -201,6 +242,16 @@ public class SoundFXYarnCommands : MonoBehaviour {
             this.GetComponent<AudioSource>().clip = allisonThinking;
             this.GetComponent<AudioSource>().Play();
         }
+        else if(sound == "allisonYes")
+        {
+            this.GetComponent<AudioSource>().clip = allisonYes;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "allisonHey")
+        {
+            this.GetComponent<AudioSource>().clip = allisonHey;
+            this.GetComponent<AudioSource>().Play();
+        }
         else if(sound == "lanceComeOn")
         {
             this.GetComponent<AudioSource>().clip = lanceComeOn;
@@ -219,6 +270,21 @@ public class SoundFXYarnCommands : MonoBehaviour {
         else if(sound == "lanceArannis")
         {
             this.GetComponent<AudioSource>().clip = lanceArannis;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "lanceYeahNice")
+        {
+            this.GetComponent<AudioSource>().clip = lanceYeahNice;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "lanceThinking")
+        {
+            this.GetComponent<AudioSource>().clip = lanceThinking;
+            this.GetComponent<AudioSource>().Play();
+        }
+        else if(sound == "lanceHey")
+        {
+            this.GetComponent<AudioSource>().clip = lanceHey;
             this.GetComponent<AudioSource>().Play();
         }
     }

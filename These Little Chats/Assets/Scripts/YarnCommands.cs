@@ -46,6 +46,9 @@ public class YarnCommands : MonoBehaviour {
     //Contains the fail screen
     public GameObject failScreenObjects;
 
+    //Contains the not-fail screen
+    public GameObject winScreenObjects;
+
     //The sprites that the pose image cycles through based on the character's mood
     /*
     public GameObject characterPoseGameObject;
@@ -110,7 +113,7 @@ public class YarnCommands : MonoBehaviour {
     public GameObject rantingPoseGameObject;
     public GameObject sadPoseGameObject;
 
-    GameObject defaultPoseGameObject;
+    public GameObject defaultPoseGameObject;
     GameObject newPoseGameObject;
     GameObject preD20RollPoseGameObject;
 
@@ -221,7 +224,7 @@ public class YarnCommands : MonoBehaviour {
         //defaultPoseImage = neutralPoseImage;
         //defaultPosePosition = neutralPosePosition;
 
-        defaultPoseGameObject = neutralPoseGameObject;
+        //defaultPoseGameObject = neutralPoseGameObject;
         preD20RollPoseGameObject = neutralPoseGameObject;
 
         poseIsChanging = false;
@@ -720,7 +723,7 @@ public class YarnCommands : MonoBehaviour {
         {
             //neutralPoseGameObject.SetActive(false);
             poseIsChanging = false;
-            defaultPoseGameObject.SetActive(false);
+            //defaultPoseGameObject.SetActive(false);
             newPoseGameObject.SetActive(false);
         }
     }
@@ -917,6 +920,15 @@ public class YarnCommands : MonoBehaviour {
     {
         musicGameObject.GetComponent<MusicYarnCommands>().FadeOutSound();
         failScreenObjects.SetActive(true);
+    }
+
+    /// <summary>
+    /// Sends the player to the victory screen
+    /// </summary>
+    [YarnCommand("sendToWinScreen")]
+    public void SendToWinScreen()
+    {
+        winScreenObjects.SetActive(true);
     }
 
     /// <summary>
@@ -1148,7 +1160,7 @@ public class YarnCommands : MonoBehaviour {
             */
         }
 
-        poseIsChanging = true;
+        //poseIsChanging = true;
     }
 
     /// <summary>

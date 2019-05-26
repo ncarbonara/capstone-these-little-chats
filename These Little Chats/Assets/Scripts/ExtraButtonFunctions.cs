@@ -7,9 +7,16 @@ public class ExtraButtonFunctions : MonoBehaviour {
     public GameObject conversationLog;
     bool conversationLogIsOpen;
 
+    public GameObject creditsPage;
+    public GameObject title;
+    public GameObject startButton;
+    public GameObject creditsButton;
+    bool creditsPageIsOpen;
+
     void Start()
     {
         conversationLogIsOpen = false;
+        creditsPageIsOpen = false;
     }
 
     /// <summary>
@@ -36,6 +43,29 @@ public class ExtraButtonFunctions : MonoBehaviour {
             conversationLogIsOpen = false;
         }
     }
+
+    public void OpenAndCloseCreditsPage()
+    {
+        if(creditsPageIsOpen == false)
+        {
+            title.gameObject.SetActive(false);
+            startButton.gameObject.SetActive(false);
+            creditsButton.gameObject.SetActive(false);
+
+            creditsPage.gameObject.SetActive(true);
+            creditsPageIsOpen = true;
+        }
+        else if(creditsPageIsOpen == true)
+        {
+            title.gameObject.SetActive(true);
+            startButton.gameObject.SetActive(true);
+            creditsButton.gameObject.SetActive(true);
+
+            creditsPage.gameObject.SetActive(false);
+            creditsPageIsOpen = false;
+        }
+    }
+
 
     /// <summary>
     /// Causes audio to be played whenever the player presses an option button.

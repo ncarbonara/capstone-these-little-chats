@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 6a6500bb490ca9c409b8fbb610ce8261
-  - enabled: 1
-    path: Assets/Scenes/FailScreen.unity
-    guid: 21782e0da0437674b9936f46b484e67b
   m_configObjects: {}

@@ -55,6 +55,11 @@ public class FailScreenButtonScripts : MonoBehaviour {
         Application.Quit();
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+
     /*
     /// <summary>
     /// Triggers the fail screen from the Yarn file when the player has caused someone to leave
