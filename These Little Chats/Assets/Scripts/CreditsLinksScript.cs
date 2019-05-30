@@ -37,4 +37,25 @@ public class CreditsLinksScript : MonoBehaviour {
     {
         Application.OpenURL("https://www.dafont.com/dumbledor.font");
     }
+
+    public void EmmaLink()
+    {
+        Application.OpenURL("https://emmaraine.myportfolio.com/work");
+    }
+
+    public void EricLink()
+    {
+        Application.OpenURL("https://wiki.unity3d.com/index.php/AspectRatioEnforcer");
+    }
+
+    public void EricLicenseLink()
+    {
+        Application.OpenURL("https://creativecommons.org/licenses/by-sa/3.0/");
+    }
+
+    public void YarnSpinnerLicenseLink()
+    {
+        Application.OpenURL("https://github.com/thesecretlab/YarnSpinner/blob/master/LICENSE.md");
+    }
+
 }

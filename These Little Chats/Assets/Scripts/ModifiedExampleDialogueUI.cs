@@ -31,10 +31,10 @@ using System.Text;
 using System.Collections.Generic;
 
 /*
-NICK AND BEN NOTE: 
+"DON'T SPLIT THE PARTY," NICK AND BEN NOTE: 
 This script is a MODIFIED version of the example script supplied by the fine people who wrote the 
-above license. It has the added feature of displaying/hiding a gameObject background behind the 
-text, but is otherwise identical to the original script.
+above license. It includes new lines of code by us, some of which are marked with our names in
+a comment, and some of which are not.
 */
 
 namespace Yarn.Unity.Example

@@ -48,6 +48,7 @@ public class CameraMovementScript : MonoBehaviour {
     void Update()
     {
 
+        /*
         if(Input.anyKeyDown
             && gameStarted == false)
         {
@@ -62,6 +63,7 @@ public class CameraMovementScript : MonoBehaviour {
                 GameStartCameraMovement();
             }
         }
+        */
 
         if(lerpInProcess == true)
         {

@@ -11,6 +11,7 @@ public class ExtraButtonFunctions : MonoBehaviour {
     public GameObject title;
     public GameObject startButton;
     public GameObject creditsButton;
+    public GameObject quitButton;
     bool creditsPageIsOpen;
 
     void Start()
@@ -51,6 +52,7 @@ public class ExtraButtonFunctions : MonoBehaviour {
             title.gameObject.SetActive(false);
             startButton.gameObject.SetActive(false);
             creditsButton.gameObject.SetActive(false);
+            quitButton.gameObject.SetActive(false);
 
             creditsPage.gameObject.SetActive(true);
             creditsPageIsOpen = true;
@@ -60,6 +62,7 @@ public class ExtraButtonFunctions : MonoBehaviour {
             title.gameObject.SetActive(true);
             startButton.gameObject.SetActive(true);
             creditsButton.gameObject.SetActive(true);
+            quitButton.gameObject.SetActive(true);
 
             creditsPage.gameObject.SetActive(false);
             creditsPageIsOpen = false;
