@@ -8,9 +8,14 @@ public class CreditsLinksScript : MonoBehaviour {
         Application.OpenURL("mailto:bellob02@nyu.edu");
     }
 
+    public void BenWebsite()
+    {
+        Application.OpenURL("http://bit.ly/BBello");
+    }
+
     public void NickWebsite()
     {
-        Application.OpenURL("https://ncarbonara235.wixsite.com/portfolio");
+        Application.OpenURL("https://www.nickcarbonara.com/");
     }
 
     public void SnippyWebsite()
@@ -45,7 +50,7 @@ public class CreditsLinksScript : MonoBehaviour {
 
     public void EricLink()
     {
-        Application.OpenURL("https://wiki.unity3d.com/index.php/AspectRatioEnforcer");
+        Application.OpenURL("http://wiki.unity3d.com/index.php?title=AspectRatioEnforcer");
     }
 
     public void EricLicenseLink()
@@ -58,4 +63,18 @@ public class CreditsLinksScript : MonoBehaviour {
         Application.OpenURL("https://github.com/thesecretlab/YarnSpinner/blob/master/LICENSE.md");
     }
 
+    public void CaitlinEmail()
+    {
+        Application.OpenURL("mailto:caitlin.e.falls@gmail.com");
+    }
+
+    public void BryannaEmail()
+    {
+        Application.OpenURL("mailto:bryannagary@gmail.com");
+    }
+
+    public void RileeWebsite()
+    {
+        Application.OpenURL("https://rilee51.wixsite.com/rileehorowitz/work");
+    }
 }

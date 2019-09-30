@@ -63,6 +63,13 @@ public class MusicYarnCommands : MonoBehaviour {
                 //this.GetComponent<AudioSource>().volume = defaultAudioVolume;
                 fadeOutSound = false;
             }
+
+            //Keeps a sound fade-out command from preventing a later fade-in command from
+            //working
+            if (fadeInSound == true)
+            {
+                fadeOutSound = false;
+            }
         }
     }
 
