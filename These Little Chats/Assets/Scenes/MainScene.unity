@@ -402,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 472.54, y: 264.14203}
+  m_AnchoredPosition: {x: 375.94, y: 265.062}
   m_SizeDelta: {x: 8434.7, y: 3761.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &21975971
@@ -4902,7 +4902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &546673649
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5233,7 +5233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.558, y: 96.178024}
+  m_AnchoredPosition: {x: 18.558, y: 99}
   m_SizeDelta: {x: 3686.3, y: 5608.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557999079
@@ -5269,14 +5269,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Design & Writing:\n\n \nArt:\n\nMusic:\n\nVoicework:\n\n\n\n\n\n<i>Don't
-    Split the Party</i> was created using a modified version of Yarn Spinner, an interpreter
-    for the Yarn language. The original version of Yarn Spinner was created by Secret
-    Lab Pty. Ltd.\n\nDoor sounds effects taken from the BBC Sound Effects Library,
-    bbc.co.uk \uFF0D \xA9 2018 BBC.\n\n\"Dumbledor\" Typeface by Graham Meade.\n\"Patrick
-    Hand\" Typeface by Patrick Wagesreiter.\n\n\"AspectUtility\" C# script written
-    by Unify Community Wiki users Eric Haines (a.k.a. Eric5h5), Akobylarek, Tomol,
-    Neil Carter (a.k.a. NCarter), and Panajev."
+  m_Text: "Game Design / Story by Benjamin Bello and Nick Carbonara.\n\nArt by Snippy
+    Nguyen.\n\nMusic by Lonnie Jordan.\n\nVoiceover by Caitlin Falls (as Brynn), Emma
+    Raine (as Ruby), Benjamin Bello (as Franklin), Bryanna Gary (as Allison), and
+    Rilee Horowitz (as Lance).\n\n<i>Don't Split the Party</i> makes reference to
+    the tabletop roleplaying game <i>Dungeons & Dragons</i>, which is published by
+    Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. We do not claim to own
+    <i>Dungeons & Dragons</i> in any way.\n\n<i>Don't Split the Party</i> was created
+    using the Yarn Spinner tool, which was created by Secret Lab Pty. Ltd.\n\nDoor
+    sounds effects taken from the BBC Sound Effects Library, bbc.co.uk \uFF0D \xA9
+    2018 BBC.\n\n\"Dumbledor\" Typeface by Graham Meade.\n\"Patrick Hand\" Typeface
+    by Patrick Wagesreiter.\n\n\"AspectUtility\" C# script written by Unify Community
+    Wiki users Eric Haines (a.k.a. Eric5h5), Akobylarek, Tomol, Neil Carter (a.k.a.
+    NCarter), and Panajev."
 --- !u!222 &557999080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7009,7 +7014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &759459759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7026,7 +7031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.804, y: 96.178024}
+  m_AnchoredPosition: {x: 17.804, y: 99}
   m_SizeDelta: {x: 3686.3, y: 5608.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759459760
@@ -10507,7 +10512,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ben's Portfolio
+  m_Text: "Ben's \nPortfolio & Contact"
 --- !u!222 &1108190837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15457,7 +15462,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Email Ben
 
-    (bellob02@nyu.edu)'
+    (benbello2@gmail.com)'
 --- !u!222 &1800460366
 CanvasRenderer:
   m_ObjectHideFlags: 0

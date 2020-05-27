@@ -10,7 +10,7 @@ public class CreditsLinksScript : MonoBehaviour {
 
     public void BenWebsite()
     {
-        Application.OpenURL("http://bit.ly/BBello");
+        Application.OpenURL("https://sites.google.com/nyu.edu/bbello");
     }
 
     public void NickWebsite()
@@ -75,6 +75,6 @@ public class CreditsLinksScript : MonoBehaviour {
 
     public void RileeWebsite()
     {
-        Application.OpenURL("https://rilee51.wixsite.com/rileehorowitz/work");
+        Application.OpenURL("https://rileehorowitz.com/");
     }
 }
